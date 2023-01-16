@@ -34,7 +34,7 @@ const Signin = () => {
       <Box
         sx={{
           backgroundImage: `url(${img2})`,
-          width: "40%",
+          width: "30%",
           height: "700px",
           borderRadius: "7px",
           //   background:'linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
@@ -104,7 +104,8 @@ const Signin = () => {
                     backdropFilter: " blur(10px)",
                     borderRadius: "12px",
                     color: "#ffffff",
-                    bgcolor:'rgba(255, 255, 255, 0.2)'
+                    bgcolor:'rgba(255, 255, 255, 0.2)',
+                    mt:'20px'
                     
                   }}
                   placeholder="password"
@@ -117,13 +118,8 @@ const Signin = () => {
                 // value={value}
                 // onChange={handleChange}
               >
-                <FormControlLabel
-                  value="female"
-                  control={<Radio sx={{color:'#ffffff'}} />}
-                  sx={{ color: "#ffffff" }}
-                  label="I agree with user agreement, and confirm that I am at least 18 years old!"
-                />
-                {/* <FormControlLabel value="male" control={<Radio />} label="Male" /> */}
+               <Typography sx={{color:'#ffffff',fontSize:'14px',fontWeight:'300',ml:'60%', }}>Forgot Password?</Typography>
+
               </RadioGroup>
               {/* button group box */}
               <Box sx={{ mt: "30px", display: "flex", gap: 2 }}>
@@ -208,7 +204,7 @@ const Signin = () => {
                     lineHeight: "60px",
                     textTransform: "uppercase",
                     color:'#ffffff',
-                    fontFamily:'poppins'
+                   
                   }}
                 >
                   Log in directly with:{" "}

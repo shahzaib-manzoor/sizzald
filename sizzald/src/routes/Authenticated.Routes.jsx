@@ -1,28 +1,39 @@
 import { lazy } from 'react';
 import Login from '../components/Login';
+import Signup from '../components/Signup';
 
 // project import
- 
+
 
 // login option 3 routing
-const AuthLogin =   import('../components/Login');
- 
+const AuthLogin = import('../components/Login');
+
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //
 
 const AuthenticationRoutes = {
-    path: '/',
-    element: <Login />,
+     
+
     children: [
         {
             path: '/',
-            element: <AuthLogin />
+             
+            element: <Login />,
+        },
+        {
+            path: '/signup',
+            
+            element: <Signup />,
+
         },
         
 
-       
+
+
+
+
     ]
-    
+
 };
 
 export default AuthenticationRoutes;

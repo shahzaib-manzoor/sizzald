@@ -2,21 +2,21 @@ import { lazy } from 'react';
 
  
 import Dashboard from '../components/Dashboard';
- 
- 
-
+import Signup from '../components/Signup';
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-    path: '/',
-    element: <Dashboard />,
-    children: [
+ 
+    children: [ 
         {
             path: '/',
-            element: <Dashboard />
+            element: <Dashboard />,
         },
+         
+         
          
     ]
 };
+
 
 export default MainRoutes;

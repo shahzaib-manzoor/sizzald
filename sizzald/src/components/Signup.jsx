@@ -17,7 +17,7 @@ import {
   import img5 from '../assets/Ellipse 175.png'
   import img6 from '../assets/fox 1.png'
   
-  const Signin = () => {
+  const Signup = () => {
     return (
       <Box
         sx={{
@@ -208,7 +208,7 @@ import {
                       lineHeight: "60px",
                       textTransform: "uppercase",
                       color:'#ffffff',
-                      fontFamily:'poppins'
+                     
                     }}
                   >
                     Log in directly with:{" "}
@@ -245,6 +245,6 @@ import {
     );
   };
   
-  export default Signin;
+  export default Signup;
   
   
