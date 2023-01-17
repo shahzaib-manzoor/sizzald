@@ -17,7 +17,7 @@ import logo from "../../assets/sizzld-logo.png";
 import menuIcon from "../../assets/Vector.png";
 import Avatar from "@mui/material/Avatar";
 import MessageIcon from "@mui/icons-material/Message";
-// import "./style/navBar.css";
+import "./style/style.css";
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
