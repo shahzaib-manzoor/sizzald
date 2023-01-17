@@ -1,7 +1,3 @@
-
-
 export default function Header() {
-  return (
-    <div>Header</div>
-  )
+  return <div className="bg-black p-5">Header</div>;
 }
