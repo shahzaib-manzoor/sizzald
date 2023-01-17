@@ -1,22 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import Routes from './routes'
-import {BrowserRouter } from 'react-router-dom'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import Routes from "./routes";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./layout/Header";
 function App() {
+  console.log(<Routes />);
 
-    console.log(<Routes/>)
-
-    
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter>
- 
-     <Routes exact/>
-  
-    </BrowserRouter>
-  )
+    // <BrowserRouter>
+
+    //  <Routes exact/>
+
+    // </BrowserRouter>
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;
