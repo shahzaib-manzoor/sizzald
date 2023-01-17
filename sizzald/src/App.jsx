@@ -10,14 +10,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    // <BrowserRouter>
-
-    //  <Routes exact/>
-
-    // </BrowserRouter>
-    <div className="App">
-      <Header />
-    </div>
+    <BrowserRouter>
+      <Routes exact />
+    </BrowserRouter>
   );
 }
 
