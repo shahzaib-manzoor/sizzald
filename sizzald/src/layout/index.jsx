@@ -7,8 +7,8 @@ const Layout = ()  =>{
     <div className='Layout DBlock'>
       <Header />
       <SideBar/>
-      <Outlet />
-      <Footer />
+       <Outlet   />
+      <Footer /> 
     </div>
   );
 };
