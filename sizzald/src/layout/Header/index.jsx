@@ -12,17 +12,18 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { Button } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import logo from "../../assets/sizzld-logo.png";
 import menuIcon from "../../assets/Vector.png";
 import Avatar from "@mui/material/Avatar";
 import MessageIcon from "@mui/icons-material/Message";
-import "./style/style.css";
+// import "./style/style.css";
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
-
+import { NoEncryption } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -58,8 +59,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
+    [theme.breakpoints.up("xs")]: {
+      width: "15ch",
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "18ch",
+    },
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "22ch",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "22ch",
     },
   },
 }));
@@ -74,7 +84,7 @@ export default function PrimarySearchAppBar() {
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
+  // const button ={color:'red',height:'50',padding :'50px'} sx={{button}}
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
@@ -166,16 +176,19 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar className="bg-clBlue">
-          <IconButton className="alignment-flex" size="small" color="inherit">
-            <img className="navMenu" src={menuIcon} alt="menu" />
+          <IconButton className="alignment-flex" size="large" color="inherit">
+            <MenuIcon />
           </IconButton>
-          <IconButton size="large" color="inherit">
+          <Stack
+            sx={{ height: "45px", pl: 2, display: { xs: "none", sm: "block" } }}
+          >
             <img className="navLogo" src={logo} alt="logo" />
-          </IconButton>
+          </Stack>
+
           {/* <img src={logo} alt="" /> */}
           <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ display: { xs: "none", lg: "flex" } }}>
             <div
               className="grid  grid-cols-2  rounded-xl !bg-clwhite p-1"
               x-data="app"
@@ -190,7 +203,7 @@ export default function PrimarySearchAppBar() {
                 />
                 <label
                   htmlFor="1"
-                  className="px-5 py-2 block cursor-pointer select-none rounded-xl  text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
+                  className="px-5 py-2 block cursor-pointer select-none rounded-xl   text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
                 >
                   Casino
                 </label>
@@ -213,14 +226,17 @@ export default function PrimarySearchAppBar() {
             </div>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <Search className="searchNav">
+          <Box sx={{ display: "flex" }}>
+            <Search sx={{ borderRadius: "50px" }}>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
                 className="inputNav"
                 placeholder="Search…"
+                sx={{
+                  height: "38px",
+                }}
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
@@ -228,65 +244,113 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 3 }} />
           <Box
             className="flex-nav "
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+            }}
           >
+            <Stack
+              sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}
+            >
+              <IconButton
+                className="!bg-clwhite "
+                sx={{
+                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
+                  height: "40px",
+                  width: "40px",
+                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
+                }}
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={4} color="error">
+                  <MailIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                className="!bg-clwhite "
+                // sx={{ md: { mx: 2 }, lg: { mx: 1 }, p: 1 }}
+                sx={{
+                  marginLeft: { xs: "2px", md: "5px", lg: "10px" },
+                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
+                  height: "40px",
+                  width: "40px",
+                }}
+                size="large"
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={17} color="error">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <IconButton
+                className="!bg-clwhite"
+                sx={{
+                  marginLeft: { xs: "2px", md: "5px", lg: "10px" },
+                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
+                  height: "40px",
+                  width: "40px",
+                }}
+                size="large"
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
+                <Badge badgeContent={17} color="error">
+                  <MessageIcon />
+                </Badge>
+              </IconButton>
+              <Button
+                className="!bg-clwhite"
+                sx={{
+                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
+                  borderRadius: "50px",
+                  height: "40px",
+                }}
+                variant="contained"
+                startIcon={<img className="w-5" src={bitcoin} alt="bitcoin" />}
+                endIcon={
+                  <img
+                    className="w-5 endIconNav"
+                    src={arrowDown}
+                    alt="dropdown"
+                  />
+                }
+              >
+                BTC
+              </Button>
+              <Button
+                className="!bg-clwhite"
+                sx={{
+                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
+                  borderRadius: "50px",
+                  height: "40px",
+                }}
+                variant="contained"
+                startIcon={<img className="w-5" src={bitcoin} alt="bitcoin" />}
+              >
+                Wallet
+              </Button>
+            </Stack>
+            <Avatar
+              sx={{
+                height: "32px",
+                width: "32px",
+                marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
+              }}
+              alt="avator"
+              src={avator}
+            />
             <IconButton
-              className="!bg-clwhite !mx-1 !p-2"
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
+              className="!text-white !mx-0.5"
+              aria-label="avator-arrow"
             >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              className="!bg-clwhite !mx-1 !p-2"
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              className="!bg-clwhite !mx-1 !p-2"
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge badgeContent={17} color="error">
-                <MessageIcon />
-              </Badge>
-            </IconButton>
-            <Button
-              className="!bg-clwhite !rounded-3xl !mx-1"
-              variant="contained"
-              startIcon={<img className="w-4" src={bitcoin} alt="bitcoin" />}
-              endIcon={
-                <img
-                  className="w-5 endIconNav"
-                  src={arrowDown}
-                  alt="dropdown"
-                />
-              }
-            >
-              BTC
-            </Button>
-            <Button
-              className="!bg-clwhite !rounded-3xl !mx-1"
-              variant="contained"
-              startIcon={<img className="w-4" src={wallet} alt="wallet" />}
-            >
-              Wallet
-            </Button>
-            <Avatar className="avator !mx-1" alt="avator" src={avator} />
-            <IconButton className="!text-white !mx-1" aria-label="avator-arrow">
               <img src={arrowDown} alt="" />
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: "none" }}>
             <IconButton
               size="large"
               aria-label="show more"
