@@ -1,18 +1,15 @@
-
- 
 import Slider from "react-slick";
 
-export default function SimpleSlider({children}) {
+export default function SimpleSlider({ children, carousalRef }) {
   var settings = {
-    
     infinite: true,
-    speed: 10000,
+    speed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 1
+    arrows: false,
   };
   return (
-    <Slider {...settings}>
-       {children}
+    <Slider ref={carousalRef} {...settings}>
+      {children}
     </Slider>
   );
 }
