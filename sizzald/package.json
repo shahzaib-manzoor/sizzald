@@ -23,6 +23,8 @@
  
     "react-social-login": "^3.4.16",
  
+    "react-telegram-login": "^1.1.2",
+    "reactjs-social-login": "^2.6.1",
     "tailwind-colors": "^1.1.0"
   },
   "devDependencies": {
