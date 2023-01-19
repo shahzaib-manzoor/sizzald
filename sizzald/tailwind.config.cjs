@@ -15,6 +15,7 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
+      clBlueContainer: "#01022F",
       clDarkBlue: "rgba(43, 45, 80, 1)",
       clBlue: "rgba(32, 36, 71, 0.6)",
       clDarkPurple: "#4C0082",
@@ -26,7 +27,7 @@ module.exports = {
       clPurple: "#8447E9",
       clRed: "#FF013E",
       clwhite: "rgba(255, 255, 255, 0.2)",
-
+      clIconBackground: "rgba(0,0,0,0.3)",
       clGray: "#A0A0A0",
       clLightGray: "#FCFAFF",
       clGray: "#919191",
