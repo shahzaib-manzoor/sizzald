@@ -14,15 +14,14 @@ export default function Dashboard() {
         sx={{ textAlign: "right", paddingRight: "25px", paddingTop: "30px" }}
       >
         <IconButton
-          className="!bg-clIconBackground"
-          sx={{ color: "white", marginRight: "8px" }}
+          hover={{ background: "#FFFFFF33" }}
+          sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
           onClick={() => slider?.current?.slickPrev()}
         >
           <KeyboardBackspaceIcon />
         </IconButton>
         <IconButton
-          className="!bg-clIconBackground"
-          sx={{ color: "white" }}
+          sx={{ color: "white", background: "#FFFFFF33" }}
           onClick={() => slider?.current?.slickNext()}
         >
           <ArrowRightAltIcon />

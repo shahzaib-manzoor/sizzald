@@ -3,11 +3,9 @@ import PromCard1 from "../../assets/Prom-card1.png";
 export const cardContainer = { padding: "40px 0px" };
 export const cardMain = {
   //   maxWidth: "420px",
+  borderRadius: "7px",
   margin: "0 20px",
-  background: `url(${PromCard1}) center/cover`,
-  // backgroundSize: "cover",
-  // objectFit: "center",
-  // objectFit: "center",
+  background: `linear-gradient(357.95deg, rgba(0, 0, 0, 0.4) 32.88%, rgba(0, 0, 0, 0) 98.27%, rgba(0, 0, 0, 0) 98.27%),url(${PromCard1}) center/cover`,
   position: "relative",
   padding: "0px 0px",
   display: "flex",
@@ -46,5 +44,6 @@ export const cardContentTextWar = {
 };
 export const cardContentIcon = {
   color: "white",
+  boxShadow: "2px 2px 12px 0px #45D91E1F",
 };
 export const cardContentIconSize = { fontSize: "14px" };

@@ -1,29 +1,32 @@
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import InputBase from "@mui/material/InputBase";
-import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  InputBase,
+  Badge,
+  MenuItem,
+  Menu,
+  Button,
+  Stack,
+  Avatar,
+} from "@mui/material";
+
+import EmailIcon from "@mui/icons-material/Email";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import { Button, Stack } from "@mui/material";
+import MoreIcon from "@mui/icons-material/More";
+import Message from "@mui/icons-material/Message";
 import logo from "../../assets/sizzld-logo.png";
 import menuIcon from "../../assets/Vector.png";
-import Avatar from "@mui/material/Avatar";
-import MessageIcon from "@mui/icons-material/Message";
-// import "./style/style.css";
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
-import { NoEncryption } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -131,7 +134,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
-            <MailIcon />
+            <EmailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -257,7 +260,7 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
               >
                 <Badge badgeContent={4} color="error">
-                  <MailIcon />
+                  <EmailIcon />
                 </Badge>
               </IconButton>
               <IconButton
@@ -290,7 +293,7 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
               >
                 <Badge badgeContent={17} color="error">
-                  <MessageIcon />
+                  <Message />
                 </Badge>
               </IconButton>
               <Button
