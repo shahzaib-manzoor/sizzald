@@ -7,6 +7,7 @@ export const cardMain = {
   background: `url(${PromCard1}) center/cover`,
   // backgroundSize: "cover",
   // objectFit: "center",
+  // objectFit: "center",
   position: "relative",
   padding: "0px 0px",
   display: "flex",
@@ -17,6 +18,7 @@ export const cardMain = {
 export const cardContent = {
   display: "flex",
   height: "250px",
+
   alignItems: " flex-start",
   flexDirection: "column",
   justifyContent: "flex-end",
