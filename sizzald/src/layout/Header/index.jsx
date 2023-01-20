@@ -69,7 +69,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar({handleDrawer}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -171,7 +171,7 @@ export default function PrimarySearchAppBar() {
     <Box className="!bg-clBlueContainer" sx={style.containerNav}>
       <AppBar className="!bg-clBlue " position="fixed">
         <Toolbar sx={style.Toolbar}>
-          <IconButton size="large" color="inherit">
+          <IconButton size="large" color="inherit" onClick={handleDrawer}>
             <MenuIcon />
           </IconButton>
           <Stack sx={style.headerLogo}>

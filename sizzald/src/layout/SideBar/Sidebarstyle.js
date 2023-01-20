@@ -8,6 +8,7 @@ export const style={
     // overflowY: "hidden",
     position:'fixed',
     // overflow: 'hidden auto'
+    overflowY:"auto"
 }
 export const firstChild={
    background:'rgba(95, 95, 111, 0.6)',

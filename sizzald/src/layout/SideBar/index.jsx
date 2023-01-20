@@ -15,7 +15,7 @@ import { height } from '@mui/system';
 
 export default function SideBar() {
   return (
-    <div style={{position:'relative'}} >
+    <div style={{position:'relative',overflow:'hidden'}} >
       <Box sx={style}>
         <Box sx={firstChild}>
           <Box>
