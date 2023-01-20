@@ -10,11 +10,19 @@ const MainRoutes = {
     path:'/',   
     element: <Layout />,
     children: [ 
+        
         {
             path: '/',
             element: <Dashboard />,
         },
-         
+        {
+            path: '/D',
+            element: <Dashboard />,
+        },
+        {
+            path: '/',
+            element: <Dashboard />,
+        },
          
          
     ]

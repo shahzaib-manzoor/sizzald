@@ -12,12 +12,27 @@ import {
 import img from "../assets/background.png";
 import img2 from "../assets/backgroundSign.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import img3 from '../assets/Vector.png'
+import img3 from '../assets/facebook.png'
 import img4 from '../assets/VectorA.png'
 import img5 from '../assets/Ellipse 175.png'
 import img6 from '../assets/fox 1.png'
+import SocialButton from "../ui-components/SocialButton";
+import {
+  LoginSocialGoogle,
+  LoginSocialFacebook
+
+} from 'reactjs-social-login'
 
 const Signin = () => {
+  const handleSocialLogin = (user, err) => {
+    console.log(user);
+    console.log(err);
+  };
+
+  const handleSocialLoginFailure = (err) => {
+    console.error(err);
+  };
+
   return (
     <Box
       sx={{
@@ -44,13 +59,13 @@ const Signin = () => {
           // opacity:1
         }}
       >
-        <Box 
-        sx={{
-          
-           padding:'10px',
-        }}
+        <Box
+          sx={{
+
+            padding: '10px',
+          }}
         >
-          <Box sx={{mt:'60px'}}>
+          <Box sx={{ mt: '60px' }}>
             <Typography
               sx={{
                 fontWeight: 700,
@@ -85,7 +100,7 @@ const Signin = () => {
                   justifyContent: "center",
                   gap: 2,
                   mt: "30px",
-                 
+
                 }}
               >
                 <OutlinedInput
@@ -94,7 +109,7 @@ const Signin = () => {
                     backdropFilter: " blur(10px)",
                     borderRadius: "12px",
                     color: "#ffffff",
-                    bgcolor:'rgba(255, 255, 255, 0.2)'
+                    bgcolor: 'rgba(255, 255, 255, 0.2)'
                   }}
                   placeholder="Enter user name"
                 ></OutlinedInput>
@@ -104,9 +119,9 @@ const Signin = () => {
                     backdropFilter: " blur(10px)",
                     borderRadius: "12px",
                     color: "#ffffff",
-                    bgcolor:'rgba(255, 255, 255, 0.2)',
-                    mt:'20px'
-                    
+                    bgcolor: 'rgba(255, 255, 255, 0.2)',
+                    mt: '20px'
+
                   }}
                   placeholder="password"
                 ></OutlinedInput>
@@ -114,11 +129,11 @@ const Signin = () => {
               <RadioGroup
                 aria-labelledby="demo-controlled-radio-buttons-group"
                 name="controlled-radio-buttons-group"
-                sx={{mt:'20px'}}
-                // value={value}
-                // onChange={handleChange}
+                sx={{ mt: '20px' }}
+              // value={value}
+              // onChange={handleChange}
               >
-               <Typography sx={{color:'#ffffff',fontSize:'14px',fontWeight:'300',ml:'60%', }}>Forgot Password?</Typography>
+                <Typography sx={{ color: '#ffffff', fontSize: '14px', fontWeight: '300', ml: '60%', }}>Forgot Password?</Typography>
 
               </RadioGroup>
               {/* button group box */}
@@ -143,9 +158,9 @@ const Signin = () => {
                     }}
                   >
                     <Typography
-                    sx={{
-                    marginLeft:'10px'
-                    }}
+                      sx={{
+                        marginLeft: '10px'
+                      }}
                     >Login</Typography>
 
                     <Avatar sx={{ bgcolor: "#ffffff" }}>
@@ -191,9 +206,9 @@ const Signin = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                flexDirection:'column',
-                mt:'40px'
-            
+                flexDirection: 'column',
+                mt: '40px'
+
               }}
             >
               <Box>
@@ -203,34 +218,61 @@ const Signin = () => {
                     fontWeight: 400,
                     lineHeight: "60px",
                     textTransform: "uppercase",
-                    color:'#ffffff',
-                   
+                    color: '#ffffff',
+
                   }}
                 >
                   Log in directly with:{" "}
                 </Typography>
               </Box>
-              <Box sx={{display:'flex',gap:2}}>
+              <Box sx={{ display: 'flex', gap: 2 }}>
                 <Box>
-                  <Avatar sx={{bgcolor:"#F44336"}}>G+</Avatar>
+                  <Avatar sx={{ bgcolor: "#F44336" }}>
+                    <LoginSocialGoogle
+                      client_id="946817544465-31rm30bug4pt6mommmqpc0ttnjmolpst.apps.googleusercontent.com"
+                      buttonText="Login"
+                      onResolve={({ provider, data }) => {
+                        handleSocialLogin(data)
+                      }}
+                      onReject={(err) => {
+                        handleSocialLoginFailure(err)
+                      }}
+                      cookiePolicy={'single_host_origin'}
+
+                    >G+</LoginSocialGoogle>
+
+                  </Avatar>
                 </Box>
                 <Box>
-                  <Avatar sx={{bgcolor:"#039BE5"}}><img src={img3}></img></Avatar>
+                  <LoginSocialFacebook
+                    appId="539547948236247"
+                    autoLoad={false}
+                    fields="name,email,picture"
+                    onResolve={({ provider, data }) => {
+                      handleSocialLogin(data)
+                    }}
+                    onReject={(err) => {
+                      handleSocialLoginFailure(err)
+                    }}>
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img3}></img>
+                
+                  </Avatar>
+             </LoginSocialFacebook>
                 </Box>
                 <Box>
-                  <Avatar sx={{bgcolor:"#039BE5"}}><img src={img4}></img></Avatar>
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
                 </Box>
                 <Box>
-                  <Avatar sx={{bgcolor:'#ffffff'}}>
+                  <Avatar sx={{ bgcolor: '#ffffff' }}>
                     <img
                       src={img6}
                       alt=""
                     />
-                  
+
                   </Avatar>
                 </Box>
                 <Box>
-                  <Avatar sx={{bgcolor:"#ffffff"}}> <img src={img5}></img></Avatar>
+                  <Avatar sx={{ bgcolor: "#ffffff" }}> <img src={img5}></img></Avatar>
                 </Box>
               </Box>
             </Box>
