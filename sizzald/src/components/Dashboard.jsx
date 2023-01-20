@@ -9,7 +9,7 @@ export default function Dashboard() {
   const slider = React.useRef(null);
 
   return (
-    <section className="!bg-clBlueContainer">
+    <section   className="!bg-clBlueContainer " >
       <Box
         sx={{
           textAlign: "right",
