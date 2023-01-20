@@ -2,9 +2,9 @@ import { Box, Typography, IconButton } from "@mui/material";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import * as style from "./Style";
 
-const CCard = () => {
+const CustomCard = () => {
   return (
-    <Box sx={style.cardContainer} className="bg-clBlueContainer">
+    <Box>
       <Box sx={style.cardMain}>
         <Box sx={style.cardContent}>
           <Typography sx={style.cardContentText} variant="h6" component="div">
@@ -39,4 +39,4 @@ const CCard = () => {
   );
 };
 
-export default CCard;
+export default CustomCard;
