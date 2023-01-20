@@ -199,14 +199,14 @@ export default function Dashboard() {
         carousalRef={sliderTwo}
         settingCard={settingCardTwo}
       >
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd9} />
+        <CustomCardTwo img={customCardd6} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo img={customCardd2} />
       </CustomCarousal>
       <Box
         sx={{
