@@ -7,3 +7,6 @@
   margin: 0;
   padding: 0;
 }
+.css-qvzsud-MuiCardContent-root:last-child{
+  padding-bottom: 0px !important;
+}

@@ -12,12 +12,23 @@ import avator from "../../assets/avator.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import IconButton from "@mui/material/IconButton";
 
-export default function CustomCardTwo() {
+export default function CustomCardTwo({ img }) {
   return (
-    <Card sx={{ maxWidth: 345, background: "rgba(43, 45, 80, 1)" }}>
+    <Card
+      sx={{
+        marginTop: "10px",
+        width: "90%",
+        background: "rgba(43, 45, 80, 1)",
+        marginLeft: "20px",
+        // paddingLeft:'20'
+      }}
+    >
       <CardMedia
-        sx={{ height: 315 }}
-        image={CustomCardTwoImg}
+        sx={{
+          height: 260,
+          background: `url(${img}) center/cover`,
+          borderRadius: "12px 12px 22px 22px",
+        }}
         title="green iguana"
       />
       <CardContent sx={style.cardFlex}>
@@ -33,7 +44,7 @@ export default function CustomCardTwo() {
           </Box>
         </Box>
         <Box>
-          <IconButton className="!bg-clIconBackground">
+          <IconButton sx={{ background: "rgba(255, 255, 255, 0.3)" }}>
             <NorthEastIcon sx={style.cardContentIconSize} />
           </IconButton>
         </Box>
