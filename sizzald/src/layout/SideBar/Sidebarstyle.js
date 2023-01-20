@@ -1,14 +1,11 @@
+import { positions } from "@mui/system"
+
 export const style={
     width:'100%',
-    // backgroundColor:'red',
-    // background:'#01022F'
     height:'100%',
-    overFlowX:'hidden',
-    overFlowY:'auto',
-    
-    
-
-   
+    // overflowX: "scroll",
+    // overflowY: "auto",
+    // position:'fixed',
 }
 export const firstChild={
    background:'rgba(95, 95, 111, 0.6)',
