@@ -1,4 +1,8 @@
-export const containerNav = { flexGrow: 1, padding: "20px 0px",position:'relative' };
+export const containerNav = {
+  flexGrow: 1,
+  padding: "20px 0px",
+  position: "relative",
+};
 export const Toolbar = { boxShadow: "0px 0px 6px 0px #5F5F6F" };
 export const headerLogo = {
   height: "45px",
