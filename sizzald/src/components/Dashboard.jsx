@@ -9,11 +9,25 @@ import customCardTwo from ".././assets/customCardTwo.png";
 import customCardThree from ".././assets/customCardThree.png";
 import customCardFour from ".././assets/customCardFour.png";
 import customCardFive from ".././assets/customCardFive.png";
- import Lobby from  "../ui-components/Lobby"
+import Lobby from "../ui-components/Lobby";
+import customCard1 from ".././assets/customCard1.png";
+import customCard2 from ".././assets/customCard2.png";
+import customCard3 from ".././assets/customCard3.png";
+import customCardd1 from ".././assets/customCardd1.png";
+import customCardd2 from ".././assets/customCardd2.png";
+import customCardd3 from ".././assets/customCardd3.png";
+import customCardd4 from ".././assets/customCardd4.png";
+import customCardd5 from ".././assets/customCardd5.png";
+import customCardd6 from ".././assets/customCardd6.png";
+import customCardd7 from ".././assets/customCardd7.png";
+import customCardd8 from ".././assets/customCardd8.png";
+import customCardd9 from ".././assets/customCardd9.png";
+
 export default function Dashboard() {
   const slider = React.useRef(null);
   const sliderTwo = React.useRef(null);
   const sliderThree = React.useRef(null);
+  const sliderFour = React.useRef(null);
 
   var settingCardOne = {
     slidesToShow: 3,
@@ -52,6 +66,26 @@ export default function Dashboard() {
     ],
   };
   var settingCardThree = {
+    slidesToShow: 4,
+    rows: 2,
+    slidesPerRow: 1,
+
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
+  var settingCardFour = {
     slidesToShow: 4,
     rows: 2,
     slidesPerRow: 1,
@@ -112,12 +146,12 @@ export default function Dashboard() {
         </Box>
       </Box>
       <CustomCarousal carousalRef={slider} settingCard={settingCardOne}>
-        <CustomCard />
-        <CustomCard />
-        <CustomCard />
-        <CustomCard />
-        <CustomCard />
-        <CustomCard />
+        <CustomCard img={customCard1} />
+        <CustomCard img={customCard2} />
+        <CustomCard img={customCard3} />
+        <CustomCard img={customCard1} />
+        <CustomCard img={customCard2} />
+        <CustomCard img={customCard3} />
       </CustomCarousal>
       <Box
         sx={{
@@ -235,14 +269,14 @@ export default function Dashboard() {
         </Box>
       </Box>
       <CustomCarousal carousalRef={sliderThree} settingCard={settingCardThree}>
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
+        <CustomCardTwo img={customCardd5} />
+        <CustomCardTwo img={customCardd6} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo img={customCardd2} />
+        <CustomCardTwo img={customCardd3} />
+        <CustomCardTwo img={customCardd4} />
       </CustomCarousal>
       <Box
         sx={{
@@ -272,7 +306,7 @@ export default function Dashboard() {
           <IconButton
             hover={{ background: "#FFFFFF33" }}
             sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
-            onClick={() => sliderThree?.current?.slickPrev()}
+            onClick={() => sliderFour?.current?.slickPrev()}
           >
             <KeyboardBackspaceIcon />
           </IconButton>
@@ -298,23 +332,23 @@ export default function Dashboard() {
           </Typography>
           <IconButton
             sx={{ color: "white", background: "#FFFFFF33" }}
-            onClick={() => sliderThree?.current?.slickNext()}
+            onClick={() => sliderFour?.current?.slickNext()}
           >
             <ArrowRightAltIcon />
           </IconButton>
         </Box>
       </Box>
-      <CustomCarousal carousalRef={sliderThree} settingCard={settingCardThree}>
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
-        <CustomCardTwo img={customCardTwo} />
-        <CustomCardTwo img={customCardThree} />
-        <CustomCardTwo img={customCardFour} />
-        <CustomCardTwo img={customCardFive} />
+      <CustomCarousal carousalRef={sliderFour} settingCard={settingCardFour}>
+        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo img={customCardd2} />
+        <CustomCardTwo img={customCardd3} />
+        <CustomCardTwo img={customCardd4} />
+        <CustomCardTwo img={customCardd5} />
+        <CustomCardTwo img={customCardd6} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
       </CustomCarousal>
-      <Lobby/>
+      <Lobby />
     </section>
   );
 }
