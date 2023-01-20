@@ -15,7 +15,7 @@ import { height } from '@mui/system';
 
 export default function SideBar() {
   return (
-    <div >
+    <div  >
       <Box sx={style}>
         <Box sx={firstChild}>
           <Box>
@@ -73,13 +73,13 @@ export default function SideBar() {
               <Card
                 text={'bONUSCODE'}
                 img={group}
-                background={'#FFA325'}
+                background={'linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)'}
                 unlocked={'vip 22'}
               />
               <Card
                 text={'bONUS'}
                 img={gold}
-                background={'#FFA325'}
+                background={'linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)'}
                 unlocked={'vip 22'}
                 marginRight={'10px'}
               />
