@@ -9,7 +9,7 @@ import Layout from '../layout';
 
 export default function ThemeRoutes() {
     // const { isAuthenticated } = useSelector((state) => state.auth);
-    const isAuthenticated= true
+    const isAuthenticated= false
 
     if (isAuthenticated) {
         return useRoutes([MainRoutes]);

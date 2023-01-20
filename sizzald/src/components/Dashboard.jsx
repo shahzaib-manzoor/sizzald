@@ -1,32 +1,51 @@
 import { Typography, Box, IconButton } from "@mui/material";
 import CustomCard from "../ui-components/CustomCard";
 import { useRef } from "react";
-// import cardImage from "../assets/Slider1.png";
 import CustomCarousal from "../ui-components/CustomCarousal";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import CustomCardTwo from "../ui-components/CustomCardTwo";
 export default function Dashboard() {
   const slider = React.useRef(null);
 
   return (
     <section   className="!bg-clBlueContainer " >
       <Box
-        sx={{ textAlign: "right", paddingRight: "25px", paddingTop: "30px" }}
+        sx={{
+          textAlign: "right",
+          paddingRight: "25px",
+          padding: "10px 20px",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
       >
-        <IconButton
-          className="!bg-clIconBackground"
-          sx={{ color: "white", marginRight: "8px" }}
-          onClick={() => slider?.current?.slickPrev()}
+        <Typography
+          sx={{
+            fontSize: "24px",
+            fontWeight: "700",
+            lineHeight: "40px",
+            letterSpacing: "1px",
+            textAlign: "left",
+            color: "white",
+          }}
         >
-          <KeyboardBackspaceIcon />
-        </IconButton>
-        <IconButton
-          className="!bg-clIconBackground"
-          sx={{ color: "white" }}
-          onClick={() => slider?.current?.slickNext()}
-        >
-          <ArrowRightAltIcon />
-        </IconButton>
+          PROMOTIONS
+        </Typography>
+        <Box>
+          <IconButton
+            hover={{ background: "#FFFFFF33" }}
+            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            onClick={() => slider?.current?.slickPrev()}
+          >
+            <KeyboardBackspaceIcon />
+          </IconButton>
+          <IconButton
+            sx={{ color: "white", background: "#FFFFFF33" }}
+            onClick={() => slider?.current?.slickNext()}
+          >
+            <ArrowRightAltIcon />
+          </IconButton>
+        </Box>
       </Box>
       <CustomCarousal carousalRef={slider}>
         <CustomCard />
@@ -36,6 +55,9 @@ export default function Dashboard() {
         <CustomCard />
         <CustomCard />
       </CustomCarousal>
+      <Box>
+        <CustomCardTwo />
+      </Box>
     </section>
   );
 }
