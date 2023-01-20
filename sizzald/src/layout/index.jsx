@@ -9,11 +9,11 @@ const Layout = () => {
       <Header />
 
       <Box sx={{ display: 'flex' }}>
-        <Box sx={{width:'20%'}}>
+        <Box sx={{width:'20%',mt:'30px'}}>
 
         <SideBar />
         </Box>
-        <Box sx={{ width: '80%' }}>
+        <Box sx={{ width: '80%' ,mt:'30px'}}>
           <Outlet />
         </Box>
       </Box>

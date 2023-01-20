@@ -107,6 +107,7 @@ export default function CustomizedTables() {
             fontWeight: 700,
             textTransform: 'uppercase',
             paddingBottom: '30px',
+            mt:'20px'
           }}
         >
           Lobby

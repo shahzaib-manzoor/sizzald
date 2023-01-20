@@ -1,11 +1,13 @@
 import { positions } from "@mui/system"
+import { auto } from "@popperjs/core"
 
 export const style={
-    width:'100%',
+    width:'20%',
     height:'100%',
-    // overflowX: "scroll",
-    // overflowY: "auto",
-    // position:'fixed',
+    // overflowX: "hidden",
+    // overflowY: "hidden",
+    position:'fixed',
+    // overflow: 'hidden auto'
 }
 export const firstChild={
    background:'rgba(95, 95, 111, 0.6)',

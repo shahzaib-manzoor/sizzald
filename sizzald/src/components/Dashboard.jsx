@@ -127,6 +127,7 @@ export default function Dashboard() {
           paddingTop: "20px",
           paddingBottom: "0px",
           paddingLeft: "20px",
+          paddingRight: "20px",
           display: "flex",
           justifyContent: "space-between",
         }}
