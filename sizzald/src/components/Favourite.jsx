@@ -1,5 +1,5 @@
 // import React from 'react'
-import frame from "../assets/frame.png";
+import frame from "../assets/Frame.png";
 import { Box } from "@mui/material";
 import DetailedCard from "../ui-components/DetailCard";
 import Network from "../ui-components/Network";

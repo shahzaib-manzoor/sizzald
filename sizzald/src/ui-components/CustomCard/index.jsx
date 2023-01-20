@@ -1,5 +1,5 @@
 import { Box, Typography, IconButton } from "@mui/material";
-import * as style from "./style";
+import * as style from "./Style";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 
 const CustomCard = ({ teamOne, vs, teamTwo, img, warIsOn }) => {

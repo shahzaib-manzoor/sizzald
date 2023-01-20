@@ -2,7 +2,7 @@ import CustomCardTwo from "../../ui-components/CustomCardTwo";
 
 import CustomCarousal from "../../ui-components/CustomCarousal";
 
-import customCardd1 from "../../assets/customCardd1.png";
+import customCardd1 from "../../assets/customcardd1.png";
 import customCardd2 from "../../assets/customCardd2.png";
 import customCardd3 from "../../assets/customCardd3.png";
 import customCardd4 from "../../assets/customCardd4.png";

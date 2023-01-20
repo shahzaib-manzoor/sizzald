@@ -15,7 +15,7 @@ import customCardFive from ".././assets/customCardFive.png";
 import customCard1 from ".././assets/customCard1.png";
 import customCard2 from ".././assets/customCard2.png";
 import customCard3 from ".././assets/customCard3.png";
-import customCardd1 from ".././assets/customCardd1.png";
+import customCardd1 from ".././assets/customcardd1.png";
 import customCardd2 from ".././assets/customCardd2.png";
 import customCardd3 from ".././assets/customCardd3.png";
 import customCardd4 from ".././assets/customCardd4.png";
