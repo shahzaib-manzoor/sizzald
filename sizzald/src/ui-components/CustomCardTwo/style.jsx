@@ -19,9 +19,10 @@ export const cardFlex = {
   alignaItems: "flex-center",
   justifyContent: "space-between",
   backgroundColor: " rgba(61, 61, 61, 0.49) ",
-  width: "96%",
+  width: "97%",
   margin: "0 auto",
   borderRadius: "4px",
+  padding: "10px 10px !important",
 };
 
 export const cardFlexTwo = {
