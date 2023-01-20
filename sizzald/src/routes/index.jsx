@@ -8,13 +8,8 @@ import Layout from "../layout";
 // ==============================|| ROUTING RENDER ||============================== //
 
 export default function ThemeRoutes() {
-<<<<<<< HEAD
     // const { isAuthenticated } = useSelector((state) => state.auth);
     const isAuthenticated= true
-=======
-  // const { isAuthenticated } = useSelector((state) => state.auth);
-  const isAuthenticated = true;
->>>>>>> 09170ba (cards carousal)
 
   if (isAuthenticated) {
     return useRoutes([MainRoutes]);
