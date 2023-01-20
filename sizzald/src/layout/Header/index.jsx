@@ -168,8 +168,8 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box className="!bg-clBlueContainer" sx={style.containerNav}>
-      <AppBar className="!bg-clBlue " position="fixed">
+    <Box sx={style.containerNav}>
+      <AppBar sx={{ backgroundColor: "#75788D" }} position="fixed">
         <Toolbar sx={style.Toolbar}>
           <IconButton size="large" color="inherit">
             <MenuIcon />
