@@ -9,6 +9,7 @@ import customCardTwo from ".././assets/customCardTwo.png";
 import customCardThree from ".././assets/customCardThree.png";
 import customCardFour from ".././assets/customCardFour.png";
 import customCardFive from ".././assets/customCardFive.png";
+ import Lobby from  "../ui-components/Lobby"
 export default function Dashboard() {
   const slider = React.useRef(null);
   const sliderTwo = React.useRef(null);
@@ -312,6 +313,7 @@ export default function Dashboard() {
         <CustomCardTwo img={customCardFour} />
         <CustomCardTwo img={customCardFive} />
       </CustomCarousal>
+      <Lobby/>
     </section>
   );
 }
