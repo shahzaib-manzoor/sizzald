@@ -27,7 +27,7 @@ export default function CustomCardTwo({ img }) {
         sx={{
           height: 260,
           background: `url(${img}) center/cover`,
-          borderRadius: "12px 12px 22px 22px",
+          borderRadius: "6px",
         }}
         title="green iguana"
       />

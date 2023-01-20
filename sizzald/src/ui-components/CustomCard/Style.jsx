@@ -1,20 +1,6 @@
-import PromCard1 from "../../assets/Prom-card1.png";
-
-export const cardMain = {
-  //   maxWidth: "420px",
-  borderRadius: "7px",
-  margin: "0 20px",
-  background: `linear-gradient(357.95deg, rgba(0, 0, 0, 0.4) 32.88%, rgba(0, 0, 0, 0) 98.27%, rgba(0, 0, 0, 0) 98.27%),url(${PromCard1}) center/cover`,
-  position: "relative",
-  padding: "0px 0px",
-  display: "flex",
-  justifyContent: "space-around",
-  alignContent: "space-between",
-  alignItems: "baseline",
-};
 export const cardContent = {
   display: "flex",
-  height: "250px",
+  height: "240px",
 
   alignItems: " flex-start",
   flexDirection: "column",
