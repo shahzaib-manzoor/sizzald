@@ -1,6 +1,5 @@
 import PromCard1 from "../../assets/Prom-card1.png";
 
-export const cardContainer = { padding: "40px 0px" };
 export const cardMain = {
   //   maxWidth: "420px",
   borderRadius: "7px",

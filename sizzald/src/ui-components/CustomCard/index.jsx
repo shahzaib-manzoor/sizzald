@@ -4,7 +4,7 @@ import * as style from "./Style";
 
 const CustomCard = () => {
   return (
-    <Box sx={style.cardContainer} className="bg-clBlueContainer">
+    <Box>
       <Box sx={style.cardMain}>
         <Box sx={style.cardContent}>
           <Typography sx={style.cardContentText} variant="h6" component="div">

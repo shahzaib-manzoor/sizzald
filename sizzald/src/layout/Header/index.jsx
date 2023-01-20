@@ -13,6 +13,8 @@ import {
   Avatar,
 } from "@mui/material";
 
+import * as style from "./style/style";
+
 import EmailIcon from "@mui/icons-material/Email";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -20,7 +22,6 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/More";
 import Message from "@mui/icons-material/Message";
 import logo from "../../assets/sizzld-logo.png";
-import menuIcon from "../../assets/Vector.png";
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
@@ -78,7 +79,7 @@ export default function PrimarySearchAppBar() {
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  // const button ={color:'red',height:'50',padding :'50px'} sx={{button}}
+
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
@@ -167,22 +168,17 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar className="bg-clBlue">
-          <IconButton className="alignment-flex" size="large" color="inherit">
+    <Box className="!bg-clBlueContainer" sx={style.containerNav}>
+      <AppBar className="!bg-clBlue " position="static">
+        <Toolbar sx={style.Toolbar}>
+          <IconButton size="large" color="inherit">
             <MenuIcon />
           </IconButton>
-          <Stack
-            sx={{ height: "45px", pl: 2, display: { xs: "none", sm: "block" } }}
-          >
-            <img className="navLogo" src={logo} alt="logo" />
+          <Stack sx={style.headerLogo}>
+            <img src={logo} alt="logo" />
           </Stack>
-
-          {/* <img src={logo} alt="" /> */}
           <Box sx={{ flexGrow: 1 }} />
-
-          <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+          <Box sx={style.headerRadioButton}>
             <div
               className="grid  grid-cols-2  rounded-xl !bg-clwhite p-1"
               x-data="app"
@@ -220,41 +216,24 @@ export default function PrimarySearchAppBar() {
             </div>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: "flex" }}>
-            <Search sx={{ borderRadius: "50px" }}>
+          <Box sx={style.headerFlex}>
+            <Search sx={style.headerBorderRadius}>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                className="inputNav"
                 placeholder="Search…"
-                sx={{
-                  height: "38px",
-                }}
+                sx={style.headerInputHeight}
                 inputProps={{ "aria-label": "search" }}
               />
             </Search>
           </Box>
           <Box sx={{ flexGrow: 3 }} />
-          <Box
-            className="flex-nav "
-            sx={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-            }}
-          >
-            <Stack
-              sx={{ display: { xs: "none", lg: "flex" }, flexDirection: "row" }}
-            >
+          <Box sx={style.headerFlexCenter}>
+            <Stack sx={style.headerFlexResponsive}>
               <IconButton
                 className="!bg-clwhite "
-                sx={{
-                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
-                  height: "40px",
-                  width: "40px",
-                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
-                }}
+                sx={style.headerIcons}
                 size="large"
                 aria-label="show 4 new mails"
                 color="inherit"
@@ -265,13 +244,7 @@ export default function PrimarySearchAppBar() {
               </IconButton>
               <IconButton
                 className="!bg-clwhite "
-                // sx={{ md: { mx: 2 }, lg: { mx: 1 }, p: 1 }}
-                sx={{
-                  marginLeft: { xs: "2px", md: "5px", lg: "10px" },
-                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
-                  height: "40px",
-                  width: "40px",
-                }}
+                sx={style.headerIcons}
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
@@ -282,12 +255,7 @@ export default function PrimarySearchAppBar() {
               </IconButton>
               <IconButton
                 className="!bg-clwhite"
-                sx={{
-                  marginLeft: { xs: "2px", md: "5px", lg: "10px" },
-                  padding: { xs: "7px", md: "10px", lg: "12px", xl: "15px" },
-                  height: "40px",
-                  width: "40px",
-                }}
+                sx={style.headerIcons}
                 size="large"
                 aria-label="show 17 new notifications"
                 color="inherit"
@@ -298,16 +266,18 @@ export default function PrimarySearchAppBar() {
               </IconButton>
               <Button
                 className="!bg-clwhite"
-                sx={{
-                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
+                sx={style.headerButton}
                 variant="contained"
-                startIcon={<img className="w-5" src={bitcoin} alt="bitcoin" />}
+                startIcon={
+                  <img
+                    sx={style.headerButtonIcon}
+                    src={bitcoin}
+                    alt="bitcoin"
+                  />
+                }
                 endIcon={
                   <img
-                    className="w-5 endIconNav"
+                    sx={style.headerButtonIcon}
                     src={arrowDown}
                     alt="dropdown"
                   />
@@ -317,34 +287,21 @@ export default function PrimarySearchAppBar() {
               </Button>
               <Button
                 className="!bg-clwhite"
-                sx={{
-                  marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
-                  borderRadius: "50px",
-                  height: "40px",
-                }}
+                sx={style.headerButton}
                 variant="contained"
-                startIcon={<img className="w-5" src={bitcoin} alt="bitcoin" />}
+                startIcon={
+                  <img src={wallet} sx={{ width: "20px" }} alt="bitcoin" />
+                }
               >
                 Wallet
               </Button>
             </Stack>
-            <Avatar
-              sx={{
-                height: "32px",
-                width: "32px",
-                marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
-              }}
-              alt="avator"
-              src={avator}
-            />
-            <IconButton
-              className="!text-white !mx-0.5"
-              aria-label="avator-arrow"
-            >
+            <Avatar sx={style.avator} alt="avator" src={avator} />
+            <IconButton className="!text-white " aria-label="avator-arrow">
               <img src={arrowDown} alt="" />
             </IconButton>
           </Box>
-          <Box sx={{ display: "none" }}>
+          <Box sx={style.headerDNone}>
             <IconButton
               size="large"
               aria-label="show more"
