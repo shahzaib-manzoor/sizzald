@@ -1,12 +1,11 @@
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *{
   margin: 0;
   padding: 0;
 }
 .css-qvzsud-MuiCardContent-root:last-child{
   padding-bottom: 0px !important;
+}
+.slick-slider{
+  padding: 0px 20px;
 }

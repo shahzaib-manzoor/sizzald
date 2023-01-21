@@ -63,8 +63,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
+
     [theme.breakpoints.up("md")]: {
-      width: "20ch",
+      width: "35ch",
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "28ch",
     },
   },
 }));
@@ -169,7 +173,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={style.containerNav}>
-      <AppBar sx={{ backgroundColor: "#75788D" }} position="fixed">
+      <AppBar sx={{ padding: "0px" }}>
         <Toolbar sx={style.Toolbar}>
           <IconButton size="large" color="inherit">
             <MenuIcon />
