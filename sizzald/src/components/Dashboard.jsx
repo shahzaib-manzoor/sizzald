@@ -1,15 +1,17 @@
 import { Typography, Box, IconButton } from "@mui/material";
 import CustomCard from "../ui-components/CustomCard";
+import Lobby from "../ui-components/Lobby";
+import CustomCardTwo from "../ui-components/CustomCardTwo";
+import SecondBar from "../ui-components/SecondBar/SecondBar";
 import { useRef } from "react";
 import CustomCarousal from "../ui-components/CustomCarousal";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import CustomCardTwo from "../ui-components/CustomCardTwo";
 import customCardTwo from ".././assets/customCardTwo.png";
 import customCardThree from ".././assets/customCardThree.png";
 import customCardFour from ".././assets/customCardFour.png";
 import customCardFive from ".././assets/customCardFive.png";
-import Lobby from "../ui-components/Lobby";
+
 import customCard1 from ".././assets/customCard1.png";
 import customCard2 from ".././assets/customCard2.png";
 import customCard3 from ".././assets/customCard3.png";
@@ -111,8 +113,7 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          paddingRight: "25px",
-          padding: "10px 20px",
+          padding: "30px 33px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -125,6 +126,7 @@ export default function Dashboard() {
             letterSpacing: "1px",
             textAlign: "left",
             color: "white",
+            textTransform: "uppercase",
           }}
         >
           PROMOTIONS
@@ -145,7 +147,11 @@ export default function Dashboard() {
           </IconButton>
         </Box>
       </Box>
-      <CustomCarousal carousalRef={slider} settingCard={settingCardOne}>
+      <CustomCarousal
+        sx={{ padding: "10px 35px" }}
+        carousalRef={slider}
+        settingCard={settingCardOne}
+      >
         <CustomCard img={customCard1} />
         <CustomCard img={customCard2} />
         <CustomCard img={customCard3} />
@@ -156,12 +162,7 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          // paddingRight: "25px",
-          // padding: "25px 0px 30px 30px",
-          paddingTop: "20px",
-          paddingBottom: "0px",
-          paddingLeft: "20px",
-          paddingRight: "20px",
+          padding: "30px 33px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -174,6 +175,7 @@ export default function Dashboard() {
             letterSpacing: "1px",
             textAlign: "left",
             color: "white",
+            textTransform: "uppercase",
           }}
         >
           RECENT BIG WINS
@@ -195,7 +197,7 @@ export default function Dashboard() {
         </Box>
       </Box>
       <CustomCarousal
-        sx={{ padding: "0px 40px" }}
+        sx={{ padding: "10px 35px" }}
         carousalRef={sliderTwo}
         settingCard={settingCardTwo}
       >
@@ -208,14 +210,27 @@ export default function Dashboard() {
         <CustomCardTwo img={customCardd1} />
         <CustomCardTwo img={customCardd2} />
       </CustomCarousal>
+      <Box>
+        <Typography
+          sx={{
+            fontSize: "24px",
+            fontWeight: "700",
+            lineHeight: "40px",
+            letterSpacing: "1px",
+            textAlign: "left",
+            color: "white",
+            textTransform: "uppercase",
+            padding: "30px 33px",
+          }}
+        >
+          Casino
+        </Typography>
+        <SecondBar />
+      </Box>
       <Box
         sx={{
           textAlign: "right",
-          paddingRight: "25px",
-          // padding: "60px 30px 20px 20px",
-          paddingTop: "20px",
-          paddingBottom: "0px",
-          paddingLeft: "20px",
+          padding: "30px 33px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -228,6 +243,7 @@ export default function Dashboard() {
             letterSpacing: "1px",
             textAlign: "left",
             color: "white",
+            textTransform: "uppercase",
           }}
         >
           BC Original
@@ -268,7 +284,19 @@ export default function Dashboard() {
           </IconButton>
         </Box>
       </Box>
-      <CustomCarousal carousalRef={sliderThree} settingCard={settingCardThree}>
+      <CustomCarousal
+        sx={{ padding: "10px 35px" }}
+        carousalRef={sliderThree}
+        settingCard={settingCardThree}
+      >
+        <CustomCardTwo img={customCardd5} />
+        <CustomCardTwo img={customCardd6} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo img={customCardd2} />
+        <CustomCardTwo img={customCardd3} />
+        <CustomCardTwo img={customCardd4} />
         <CustomCardTwo img={customCardd5} />
         <CustomCardTwo img={customCardd6} />
         <CustomCardTwo img={customCardd7} />
@@ -281,11 +309,7 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          paddingRight: "25px",
-          // padding: "60px 30px 20px 20px",
-          paddingTop: "20px",
-          paddingBottom: "0px",
-          paddingLeft: "20px",
+          padding: "30px 33px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -293,6 +317,7 @@ export default function Dashboard() {
         <Typography
           sx={{
             fontSize: "24px",
+            textTransform: "uppercase",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -338,7 +363,11 @@ export default function Dashboard() {
           </IconButton>
         </Box>
       </Box>
-      <CustomCarousal carousalRef={sliderFour} settingCard={settingCardFour}>
+      <CustomCarousal
+        sx={{ padding: "10px 35px" }}
+        carousalRef={sliderFour}
+        settingCard={settingCardFour}
+      >
         <CustomCardTwo img={customCardd1} />
         <CustomCardTwo img={customCardd2} />
         <CustomCardTwo img={customCardd3} />
@@ -347,6 +376,14 @@ export default function Dashboard() {
         <CustomCardTwo img={customCardd6} />
         <CustomCardTwo img={customCardd7} />
         <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd5} />
+        <CustomCardTwo img={customCardd6} />
+        <CustomCardTwo img={customCardd7} />
+        <CustomCardTwo img={customCardd8} />
+        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo img={customCardd2} />
+        <CustomCardTwo img={customCardd3} />
+        <CustomCardTwo img={customCardd4} />
       </CustomCarousal>
       <Lobby />
     </section>

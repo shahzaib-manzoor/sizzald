@@ -17,15 +17,15 @@ export default function CustomCardTwo({ img }) {
     <Card
       sx={{
         marginTop: "10px",
-        width: "90%",
+        width: "94%",
         background: "rgba(43, 45, 80, 1)",
-        marginLeft: "20px",
+        marginLeft: "8px",
         // paddingLeft:'20'
       }}
     >
       <CardMedia
         sx={{
-          height: 260,
+          height: 240,
           background: `url(${img}) center/cover`,
           borderRadius: "6px",
         }}
@@ -34,7 +34,7 @@ export default function CustomCardTwo({ img }) {
       <CardContent sx={style.cardFlex}>
         <Box sx={style.cardFlexTwo}>
           <Avatar sx={style.cardAvatar} alt="Cindy Baker" src={avator} />
-          <Box>
+          <Box sx={{ padding: "4px" }}>
             <Typography sx={style.cardTextName} component="div">
               MR SCHEMER
             </Typography>
@@ -44,7 +44,13 @@ export default function CustomCardTwo({ img }) {
           </Box>
         </Box>
         <Box>
-          <IconButton sx={{ background: "rgba(255, 255, 255, 0.3)" }}>
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
             <NorthEastIcon sx={style.cardContentIconSize} />
           </IconButton>
         </Box>
