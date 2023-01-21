@@ -1,5 +1,5 @@
 export const mainContainer = {
-  padding: "30px 33px",
+  padding: "5px 33px",
   display: "flex",
   justifyContent: "space-between",
 };
