@@ -15,16 +15,16 @@ import sponsership from '../../assets/sponsership.svg';
 const MiniSideBar = ({item}) => {
   
   return (
-    <Box sx={{ background: '#75788D', height: 'auto' }}>
+    <Box sx={{  height: 'auto',position:'relative' }}>
       <Box
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection:'column' }}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection:'column',position:'fixed',background: '#75788D' }}
       >
-        <Box sx={{mt:"20px",background:'#424563',width:'100%',}}>
-        <img src={spinImage} style={{marginLeft:"15px"}}></img>
+        <Box sx={{mt:"20px",background:'#424563',width:'100%',height:'50px',display:'flex'}}>
+        <img src={spinImage} style={{marginLeft:"15px",width:'53%'}}></img>
 
         </Box>
         <Box sx={{mt:"40px",background:'#424563',width:"100%"}}>
-        <img src={gold} style={{marginLeft:"10px"}}></img>
+        <img src={gold} style={{marginLeft:"10px",width:"50px",}}></img>
 
         </Box>
         <Box sx={{mt:"50px" }}>
