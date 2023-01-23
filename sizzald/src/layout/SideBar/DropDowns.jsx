@@ -10,7 +10,7 @@ const SubMenu = ({ item }) => {
   return (
     <Box sx={{ mt: '10px', height: 'auto'}}>
       <Link
-        style={{ color: 'white' }}
+        style={{ color: 'white' ,textDecoration:'none'}}
         to={item.path}
         onClick={item.subNav && showSubnav}
       >
@@ -46,7 +46,7 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <Link style={{ color: 'white',marginTop:"20px" }} to={item.path} key={index}>
+            <Link style={{ color: 'white',marginTop:"20px",textDecoration:'none' }} to={item.path} key={index}>
                
 
               <Box

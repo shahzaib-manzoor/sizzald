@@ -33,6 +33,7 @@ import gameProvider4 from "../assets/gameProvider4.png";
 import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
+import Footer from "../layout/Footer";
 
 export default function Dashboard() {
   const slider = React.useRef(null);
@@ -815,6 +816,7 @@ export default function Dashboard() {
         />
       </CustomCarousal>
       <Network />
+      
     </section>
   );
 }

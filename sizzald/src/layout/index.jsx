@@ -6,29 +6,29 @@ import { Box } from '@mui/material';
 import { useState } from 'react';
 import MiniSideBar from './SideBar/MiniSideBar';
 const Layout = () => {
-  const[openDrawer,setOpenDrawer] = useState(false);
-  const handleDrawer = () =>{
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const handleDrawer = () => {
     setOpenDrawer(!openDrawer);
-  }
+  };
   // console.log(window.innerWidth)
   return (
     <div>
-      <Header handleDrawer={handleDrawer}/>
+      <Header handleDrawer={handleDrawer} />
 
       <Box sx={{ display: 'flex' }}>
-        {
-          window.innerWidth > 600 &&  <Box sx={{width:openDrawer ? "7%":"20%",mt:'30px'}}>
+        {window.innerWidth > 600 && (
+          <Box sx={{ width: openDrawer ? '7%' : '20%', mt: '30px' }}>
+            {openDrawer ? <MiniSideBar /> : <SideBar />}
+          </Box>
+        )}
 
-          {openDrawer  ? <MiniSideBar/>:<SideBar />} 
-           </Box>
-        }
-       
-        <Box sx={{ width: openDrawer ? "93%":'80%' ,mt:'30px'}}>
+        <Box sx={{ width: openDrawer ? '93%' : '80%', mt: '30px',display:'flex',flexDirection:'column', }}>
+          
           <Outlet />
+      <Footer />
         </Box>
       </Box>
 
-      <Footer />
     </div>
   );
 };
