@@ -37,6 +37,7 @@ export const headerButton = {
   marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
   borderRadius: "50px",
   height: "40px",
+  backgroundColor: "rgba(255, 255, 255, 0.2)",
 };
 export const avator = {
   height: "32px",
