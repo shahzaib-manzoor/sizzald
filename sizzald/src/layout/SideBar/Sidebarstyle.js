@@ -35,7 +35,8 @@ export const thirdChildfirst={
 }
 export const vip ={
     color:'#FFA325',
-    lineHeight: '36px'
+    lineHeight: '36px',
+    fontFamily:'Poppins'
 }
 export const font={
     color:'#ffffff',textTransform:'uppercase',fontSize:'13px',marginRight:'10px'
@@ -63,7 +64,7 @@ export const unlock={
     fontWeight:600
 }
 export const secondflex={
-    display:'flex',alignItems:'center'
+    display:'flex',alignItems:'center',justifyContent:'center',
 }
 export const secondChild={
     background:'#202447',
