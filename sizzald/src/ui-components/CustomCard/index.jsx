@@ -8,8 +8,9 @@ const CustomCard = ({ img }) => {
       <Box
         sx={{
           // maxWidth: "420px",
+          width: "95%",
           borderRadius: "12px",
-          margin: "0 20px",
+          marginLeft: "10px",
           background: `linear-gradient(357.95deg, rgba(0, 0, 0, 0.4) 32.88%, rgba(0, 0, 0, 0) 98.27%, rgba(0, 0, 0, 0) 98.27%),url(${img}) center/cover`,
           position: "relative",
           padding: "0px 0px",

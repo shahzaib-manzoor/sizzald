@@ -2,6 +2,7 @@ export const cardTextName = {
   fontSize: "16px",
   fontWeight: "700",
   lineHeight: "14px",
+  color: "white",
 };
 export const cardTextPrice = {
   color: "rgba(3, 251, 117, 1)",
@@ -19,10 +20,11 @@ export const cardFlex = {
   alignaItems: "flex-center",
   justifyContent: "space-between",
   backgroundColor: " rgba(61, 61, 61, 0.49) ",
-  width: "97%",
-  margin: "0 auto",
+  width: "95%",
+  margin: "5px auto",
   borderRadius: "4px",
-  padding: "10px 10px !important",
+  padding: "5px 2px !important",
+  background: "rgba(61, 61, 61, 0.49)",
 };
 
 export const cardFlexTwo = {

@@ -30,5 +30,6 @@ export const cardContentTextWar = {
 export const cardContentIcon = {
   color: "white",
   boxShadow: "2px 2px 12px 0px #45D91E1F",
+  background: "rgba(0, 0, 0, 0.3)",
 };
 export const cardContentIconSize = { fontSize: "14px" };
