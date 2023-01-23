@@ -42,7 +42,6 @@ export default function Dashboard() {
   const sliderFour = React.useRef(null);
   const sliderFive = React.useRef(null);
   const sliderSix = React.useRef(null);
-
   const sliderSeven = React.useRef(null);
   var settingCardOne = {
     slidesToShow: 3,

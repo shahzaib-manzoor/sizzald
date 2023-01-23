@@ -13,8 +13,10 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
+    "@web3-react/core": "^6.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-moralis": "^1.4.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.2",
     "react-slick": "^0.29.0",
@@ -22,7 +24,8 @@
     "react-telegram-login": "^1.1.2",
     "reactjs-social-login": "^2.6.1",
     "slick-carousel": "^1.8.1",
-    "tailwind-colors": "^1.1.0"
+    "tailwind-colors": "^1.1.0",
+    "web3": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

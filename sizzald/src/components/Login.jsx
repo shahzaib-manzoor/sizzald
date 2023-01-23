@@ -3,9 +3,7 @@ import {
   Box,
   Button,
   Container,
-  FormControlLabel,
   OutlinedInput,
-  Radio,
   RadioGroup,
   Typography,
 } from "@mui/material";
@@ -18,16 +16,19 @@ import img5 from '../assets/Ellipse 175.png'
 import img6 from '../assets/fox 1.png'
 import SocialButton from "../ui-components/SocialButton";
 import { useNavigate } from 'react-router-dom';
-
+import { useState } from "react";
+import Web3 from "web3";
+import { Web3ReactProvider } from "@web3-react/core";
 
 import {
   LoginSocialGoogle,
   LoginSocialFacebook
 
 } from 'reactjs-social-login'
- 
+
 const Signin = () => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [address, setAddress] = useState('')
   const handleSocialLogin = (user, err) => {
     console.log(user);
     navigate('/')
@@ -39,14 +40,46 @@ const navigate = useNavigate();
     console.error(err);
   };
 
-  const handleLogin = () => { 
+  const handleLogin = () => {
 
     navigate('/')
-   }
-const handleSignup = () => { 
+  }
+  const handleSignup = () => {
+
     navigate('/signup')
- }
+  }
+
+  //Meta
+
+  const onPressConnect = async () => {
+    console.log("connect");
+    // setLoading(true);
+
+    try {
+      if (window?.ethereum?.isWalletConnect) {
+        // Desktop browser
+        const accounts = await window.ethereum.request({
+          method: "eth_requestAccounts",
+        });
+
+        const account = Web3.utils.toChecksumAddress(accounts[0]);
+        if (account) {
+          navigate('/')
+          localStorage.setItem('auth', true)
+        }
+        setAddress(account);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+    // setLoading(false);
+  };
+
+
+
   return (
+
     <Box
       sx={{
         backgroundImage: `url(${img})`,
@@ -150,7 +183,7 @@ const handleSignup = () => {
 
               </RadioGroup>
               {/* button group box */}
-              <Box  sx={{ mt: "30px", display: "flex", gap: 2 }}>
+              <Box sx={{ mt: "30px", display: "flex", gap: 2 }}>
                 <Button
                   sx={{
                     background: "#5842F4",
@@ -164,7 +197,7 @@ const handleSignup = () => {
                   onClick={() => {
                     handleLogin()
                   }
-                }
+                  }
                 >
                   <Box
                     sx={{
@@ -196,12 +229,12 @@ const handleSignup = () => {
                     borderRadius: "68px",
                     width: "50%",
                     height: "60px",
-                    color: "#ffffff", 
+                    color: "#ffffff",
                   }}
                   onClick={() => {
-                   handleSignup()
+                    handleSignup()
                   }
-                }
+                  }
                 >
                   <Box
                     sx={{
@@ -270,29 +303,34 @@ const handleSignup = () => {
                   <LoginSocialFacebook
                     appId={import.meta.env.VITE_APP_FB_APP_ID}
                     autoLoad={false}
-                    
+
                     onResolve={({ provider, data }) => {
                       handleSocialLogin(data)
                     }}
                     onReject={(err) => {
                       handleSocialLoginFailure(err)
                     }}>
-                  <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{height:'25px' }}><img  src={img3}></img></Box>
-                  </Avatar>
-             </LoginSocialFacebook>
+                    <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{ height: '25px' }}><img src={img3}></img></Box>
+                    </Avatar>
+                  </LoginSocialFacebook>
                 </Box>
                 <Box>
-                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
-                </Box>
-                <Box>
-                  <Avatar sx={{ bgcolor: '#ffffff' }}>
-                    <img
-                      src={img6}
-                      alt=""
-                    />
 
-                  </Avatar>
+
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
+
                 </Box>
+                <Button onClick={() => onPressConnect()}>
+                  <Box>
+                    <Avatar sx={{ bgcolor: '#ffffff' }}>
+                      <img
+                        src={img6}
+                        alt=""
+                      />
+
+                    </Avatar>
+                  </Box>
+                </Button>
                 <Box>
                   <Avatar sx={{ bgcolor: "#ffffff" }}> <img src={img5}></img></Avatar>
                 </Box>
@@ -302,6 +340,7 @@ const handleSignup = () => {
         </Box>
       </Box>
     </Box>
+
   );
 };
 
