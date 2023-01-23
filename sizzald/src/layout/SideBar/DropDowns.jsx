@@ -63,9 +63,9 @@ const SubMenu = ({ item }) => {
 
               <Box
                 sx={{
-                  paddingLeft:'20px',
-                  display: 'flex',
-                  alignItems: 'center',
+                  paddingLeft: "20px",
+                  display: "flex",
+                  alignItems: "center",
                   gap: 1,
                   // marginBottom:"20px",
                   
