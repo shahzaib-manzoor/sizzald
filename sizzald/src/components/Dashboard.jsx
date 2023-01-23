@@ -34,7 +34,7 @@ import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import Footer from "../layout/Footer";
-
+import DetailedCard from '../ui-components/DetailCard'
 export default function Dashboard() {
   const slider = React.useRef(null);
   const sliderTwo = React.useRef(null);

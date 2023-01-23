@@ -35,16 +35,13 @@ scrollbar-width: none;  /* Firefox */
 
 `
   return (
-<<<<<<< HEAD
+ 
     <div  style={{position:"relative"}}>
      
 
      
       <HiddenScroll sx={style} className="child">
-=======
-    <div style={{position:'relative',overflow:'hidden'}} >
-      <Box sx={style}>
->>>>>>> f19e606 (minisidebar)
+ 
         <Box sx={firstChild}>
           <Box>
             <Box sx={flex}>
