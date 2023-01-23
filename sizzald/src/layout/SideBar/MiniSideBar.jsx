@@ -57,8 +57,9 @@ scrollbar-width: none;  /* Firefox */
             style={{ marginLeft: '15px', width: '53%' }}
           ></img>
         </Box>
-        <Box sx={{ mt: '40px', background: '#424563', width: '100%' }}>
-          <img src={gold} style={{ marginLeft: '10px', width: '50px' }}></img>
+        <Box sx={{mt:"40px",background:'#424563',width:"100%"}}>
+        <img src={gold} style={{marginLeft:"10px",width:"50px",}}></img>
+
         </Box>
         <Box sx={{ mt: '50px' }}>
           <img src={casino}></img>
