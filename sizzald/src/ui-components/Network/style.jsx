@@ -17,7 +17,7 @@ export const networkBox = {
   justifyContent: "center",
   background: "rgba(43, 45, 80, 0.6)",
   padding: "15px  0px",
-  boderRadius: "10px !important",
+  borderRadius: "10px !important",
 };
 export const networkBoxImg = {
   width: "11%",

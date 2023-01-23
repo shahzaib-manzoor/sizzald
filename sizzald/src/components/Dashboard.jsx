@@ -605,7 +605,6 @@ export default function Dashboard() {
           img={customCardd4}
         />
       </CustomCarousal>
-
       <Box
         sx={{
           textAlign: "right",
@@ -729,9 +728,7 @@ export default function Dashboard() {
           img={gameProvider6}
         />
       </CustomCarousal>
-
       <Lobby />
-
       <Box
         sx={{
           textAlign: "right",
@@ -815,6 +812,7 @@ export default function Dashboard() {
           img={customCardd2}
         />
       </CustomCarousal>
+      <DetailedCard />
       <Network />
       
     </section>

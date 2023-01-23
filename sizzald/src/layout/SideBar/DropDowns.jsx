@@ -1,6 +1,6 @@
-import { Box, Typography } from '@mui/material';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Box, Typography } from "@mui/material";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
@@ -17,17 +17,24 @@ const SubMenu = ({ item }) => {
         <Box
           sx={{
             // background: 'rgba(95, 95, 111, 0.6)',
-            display: 'flex',
-            justifyContent: 'space-between',  
-            '&:hover': {
-              background: 'rgba(255, 255, 255, 0.1)',
-              borderRadius: '5px',
+            display: "flex",
+            justifyContent: "space-between",
+            "&:hover": {
+              background: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "5px",
             },
-            height: '46px',
-            
+            height: "46px",
           }}
         >
-          <Box sx={{ display: 'flex', gap: 1, alignItems: 'center',marginLeft:'15px',mt:'20px' }}>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 1,
+              alignItems: "center",
+              marginLeft: "15px",
+              mt: "20px",
+            }}
+          >
             {item.icon}
             <Typography noWrap sx={{ color: '#BDBDBD', textTransform: 'capitalize' ,fontSize:'16px',fontWeight:400,textDecoration:"none",}}>
               {item.title}
@@ -51,9 +58,9 @@ const SubMenu = ({ item }) => {
 
               <Box
                 sx={{
-                  paddingLeft:'20px',
-                  display: 'flex',
-                  alignItems: 'center',
+                  paddingLeft: "20px",
+                  display: "flex",
+                  alignItems: "center",
                   gap: 1,
                   // marginBottom:"20px",
                   
@@ -72,7 +79,6 @@ const SubMenu = ({ item }) => {
                 </Typography>
                 {item.iconOpened && <Box sx={{}}>{item.iconOpened}</Box>}
               </Box>
-                
             </Link>
           );
         })}
