@@ -1,8 +1,8 @@
 import { Box, Typography, IconButton } from "@mui/material";
+import * as style from "./style";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import * as style from "./Style";
 
-const CustomCard = ({ img }) => {
+const CustomCard = ({ teamOne, vs, teamTwo, img, warIsOn }) => {
   return (
     <Box>
       <Box
@@ -22,22 +22,22 @@ const CustomCard = ({ img }) => {
       >
         <Box sx={style.cardContent}>
           <Typography sx={style.cardContentText} variant="h6" component="div">
-            RED BULL
+            {teamOne}
             <Typography
               variant="h6"
               component="span"
               sx={style.cardContentTextVS}
             >
-              VS
+              {vs}
             </Typography>
-            GREEN BULL
+            {teamTwo}
           </Typography>
           <Typography
             sx={style.cardContentTextWar}
             variant="h6"
             component="div"
           >
-            WAR IS ON
+            {warIsOn}
           </Typography>
         </Box>
         <Box>

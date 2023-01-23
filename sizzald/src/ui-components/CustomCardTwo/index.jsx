@@ -11,8 +11,9 @@ import { Avatar } from "@mui/material";
 import avator from "../../assets/avator.png";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import IconButton from "@mui/material/IconButton";
+import { ClassNames } from "@emotion/react";
 
-export default function CustomCardTwo({ img }) {
+export default function CustomCardTwo({ img, name, balance }) {
   return (
     <Card
       sx={{
@@ -36,10 +37,10 @@ export default function CustomCardTwo({ img }) {
           <Avatar sx={style.cardAvatar} alt="Cindy Baker" src={avator} />
           <Box sx={{ padding: "4px" }}>
             <Typography sx={style.cardTextName} component="div">
-              MR SCHEMER
+              {name}
             </Typography>
             <Typography sx={style.cardTextPrice} component="div">
-              $ 64.34534
+              {balance}
             </Typography>
           </Box>
         </Box>
