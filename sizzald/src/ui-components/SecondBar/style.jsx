@@ -1,5 +1,5 @@
 export const mainContainer = {
-  padding: "5px 33px",
+  padding: "5px 20px 5px 33px",
   display: "flex",
   justifyContent: "space-between",
 };
@@ -16,6 +16,7 @@ export const buttonNotActive = {
   fontWeight: "400",
   fontSize: "13px",
   marginLeft: "8px",
+  marginRight: "0px",
 };
 export const containerLeft = { width: "35%" };
 export const containerRight = { width: "45%" };
