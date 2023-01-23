@@ -3,13 +3,15 @@ import { auto } from "@popperjs/core"
 
 export const style={
     width:'20%',
-    height:'100%',
-    // overflowX: "hidden",
+    height:'100vh',
+    overflowX: "hidden",
     // overflowY: "hidden",
     position:'fixed',
     // overflow: 'hidden auto'
-    // overflowY:"auto"
+    overflowY:"auto"
 }
+
+
 export const firstChild={
    background:'rgba(95, 95, 111, 0.6)',
    boxShadow: '0px 0px 6px #5F5F6F',

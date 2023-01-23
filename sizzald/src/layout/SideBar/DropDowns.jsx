@@ -8,7 +8,7 @@ const SubMenu = ({ item }) => {
   const showSubnav = () => setSubnav(!subnav);
 
   return (
-    <Box sx={{ mt: '10px', height: 'auto' }}>
+    <Box sx={{ mt: '10px', height: 'auto'}}>
       <Link
         style={{ color: 'white' }}
         to={item.path}
@@ -29,7 +29,7 @@ const SubMenu = ({ item }) => {
         >
           <Box sx={{ display: 'flex', gap: 1, alignItems: 'center',marginLeft:'15px',mt:'20px' }}>
             {item.icon}
-            <Typography sx={{ color: '#BDBDBD', textTransform: 'capitalize' ,fontSize:'16px',fontWeight:400}}>
+            <Typography noWrap sx={{ color: '#BDBDBD', textTransform: 'capitalize' ,fontSize:'16px',fontWeight:400,textDecoration:"none",}}>
               {item.title}
             </Typography>
           </Box>
@@ -46,7 +46,7 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <Link style={{ color: 'white', }} to={item.path} key={index}>
+            <Link style={{ color: 'white',marginTop:"20px" }} to={item.path} key={index}>
                
 
               <Box
@@ -55,17 +55,18 @@ const SubMenu = ({ item }) => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
+                  // marginBottom:"20px",
                   
                   '&:hover': {
                     background: 'rgba(255, 255, 255, 0.1)',
                     borderRadius: '5px',
                   },
-                  height:'50px'
+                  height:'60px'
                 }}
               >
                 {item.icon}
                 <Typography
-                  style={{ fontSize:'16px',fontWeight:400, textTransform: 'capitalize' }}
+                  sx={{ fontSize:'16px',fontWeight:400, textTransform: 'capitalize' }}
                 >
                   {item.title}
                 </Typography>

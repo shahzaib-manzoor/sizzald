@@ -10,16 +10,20 @@ const Layout = () => {
   const handleDrawer = () =>{
     setOpenDrawer(!openDrawer);
   }
+  // console.log(window.innerWidth)
   return (
     <div>
       <Header handleDrawer={handleDrawer}/>
 
       <Box sx={{ display: 'flex' }}>
-        <Box sx={{width:openDrawer ? "5%":"20%",mt:'30px'}}>
+        {
+          window.innerWidth > 600 &&  <Box sx={{width:openDrawer ? "7%":"20%",mt:'30px'}}>
 
-       {openDrawer ? <MiniSideBar/>:<SideBar />} 
-        </Box>
-        <Box sx={{ width: openDrawer ? "95%":'80%' ,mt:'30px'}}>
+          {openDrawer  ? <MiniSideBar/>:<SideBar />} 
+           </Box>
+        }
+       
+        <Box sx={{ width: openDrawer ? "93%":'80%' ,mt:'30px'}}>
           <Outlet />
         </Box>
       </Box>
