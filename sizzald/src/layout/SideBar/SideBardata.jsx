@@ -86,7 +86,7 @@ export const SidebarData = [
   {
     title: 'Sports ',
     // path: '/overview',
-    icon: <img src={sports} style={{ marginLeft: '-5px' }}></img>,
+    icon: <img src={sports}   ></img>,
   },
   {
     title: 'lottery ',

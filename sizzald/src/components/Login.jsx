@@ -17,22 +17,35 @@ import img4 from '../assets/VectorA.png'
 import img5 from '../assets/Ellipse 175.png'
 import img6 from '../assets/fox 1.png'
 import SocialButton from "../ui-components/SocialButton";
+import { useNavigate } from 'react-router-dom';
+
+
 import {
   LoginSocialGoogle,
   LoginSocialFacebook
 
 } from 'reactjs-social-login'
-
+ 
 const Signin = () => {
+const navigate = useNavigate();
   const handleSocialLogin = (user, err) => {
     console.log(user);
+    navigate('/')
     console.log(err);
+    localStorage.setItem('auth', true)
   };
 
   const handleSocialLoginFailure = (err) => {
     console.error(err);
   };
 
+  const handleLogin = () => { 
+
+    navigate('/')
+   }
+const handleSignup = () => { 
+    navigate('/signup')
+ }
   return (
     <Box
       sx={{
@@ -137,7 +150,7 @@ const Signin = () => {
 
               </RadioGroup>
               {/* button group box */}
-              <Box sx={{ mt: "30px", display: "flex", gap: 2 }}>
+              <Box  sx={{ mt: "30px", display: "flex", gap: 2 }}>
                 <Button
                   sx={{
                     background: "#5842F4",
@@ -148,6 +161,10 @@ const Signin = () => {
                     height: "60px",
                     color: "#ffffff",
                   }}
+                  onClick={() => {
+                    handleLogin()
+                  }
+                }
                 >
                   <Box
                     sx={{
@@ -156,6 +173,7 @@ const Signin = () => {
                       alignItems: "center",
                       width: "100%",
                     }}
+
                   >
                     <Typography
                       sx={{
@@ -178,8 +196,12 @@ const Signin = () => {
                     borderRadius: "68px",
                     width: "50%",
                     height: "60px",
-                    color: "#ffffff",
+                    color: "#ffffff", 
                   }}
+                  onClick={() => {
+                   handleSignup()
+                  }
+                }
                 >
                   <Box
                     sx={{
@@ -229,8 +251,9 @@ const Signin = () => {
                 <Box>
                   <Avatar sx={{ bgcolor: "#F44336" }}>
                     <LoginSocialGoogle
-                      client_id="946817544465-31rm30bug4pt6mommmqpc0ttnjmolpst.apps.googleusercontent.com"
+                      client_id={import.meta.env.VITE_APP_GOOGLE_CLIENT_ID}
                       buttonText="Login"
+                      scope="https://www.googleapis.com/auth/userinfo.email"
                       onResolve={({ provider, data }) => {
                         handleSocialLogin(data)
                       }}
@@ -245,9 +268,9 @@ const Signin = () => {
                 </Box>
                 <Box>
                   <LoginSocialFacebook
-                    appId="539547948236247"
+                    appId={import.meta.env.VITE_APP_FB_APP_ID}
                     autoLoad={false}
-                    fields="name,email,picture"
+                    
                     onResolve={({ provider, data }) => {
                       handleSocialLogin(data)
                     }}

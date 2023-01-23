@@ -16,8 +16,30 @@ import {
   import img4 from '../assets/VectorA.png'
   import img5 from '../assets/Ellipse 175.png'
   import img6 from '../assets/fox 1.png'
+  import { useNavigate } from "react-router-dom";
+  import {
+    LoginSocialGoogle,
+    LoginSocialFacebook
   
+  } from 'reactjs-social-login'
   const Signup = () => {
+    const navigate = useNavigate();
+
+    const handleLogin = () => { 
+    
+      navigate('/')
+     }
+  const handleSignup = () => {
+      navigate('/signup')
+
+    } 
+    const handleSocialLogin = (user, err) => {
+    localStorage.setItem('auth', true)
+     navigate('/')
+      console.log(user);
+      console.log(err);
+    };
+
     return (
       <Box
         sx={{
@@ -137,6 +159,7 @@ import {
                       height: "60px",
                       color: "#ffffff",
                     }}
+                    onClick={handleLogin}
                   >
                     <Box
                       sx={{
@@ -169,6 +192,7 @@ import {
                       height: "60px",
                       color: "#ffffff",
                     }}
+                    onClick={handleSignup}
                   >
                     <Box
                       sx={{
@@ -214,29 +238,56 @@ import {
                     Log in directly with:{" "}
                   </Typography>
                 </Box>
-                <Box sx={{display:'flex',gap:2}}>
-                  <Box>
-                    <Avatar sx={{bgcolor:"#F44336"}}>G+</Avatar>
-                  </Box>
-                  <Box>
-                    <Avatar sx={{bgcolor:"#039BE5"}}><img src={img3}></img></Avatar>
-                  </Box>
-                  <Box>
-                    <Avatar sx={{bgcolor:"#039BE5"}}><img src={img4}></img></Avatar>
-                  </Box>
-                  <Box>
-                    <Avatar sx={{bgcolor:'#ffffff'}}>
-                      <img
-                        src={img6}
-                        alt=""
-                      />
-                    
-                    </Avatar>
-                  </Box>
-                  <Box>
-                    <Avatar sx={{bgcolor:"#ffffff"}}> <img src={img5}></img></Avatar>
-                  </Box>
+                <Box sx={{ display: 'flex', gap: 2 }}>
+                <Box>
+                  <Avatar sx={{ bgcolor: "#F44336" }}>
+                    <LoginSocialGoogle
+                      client_id={import.meta.env.VITE_APP_GOOGLE_CLIENT_ID}
+                      buttonText="Login"
+                      scope="https://www.googleapis.com/auth/userinfo.email"
+                      onResolve={({ provider, data }) => {
+                        handleSocialLogin(data)
+                      }}
+                      onReject={(err) => {
+                        handleSocialLoginFailure(err)
+                      }}
+                      cookiePolicy={'single_host_origin'}
+
+                    >G+</LoginSocialGoogle>
+
+                  </Avatar>
                 </Box>
+                <Box>
+                  <LoginSocialFacebook
+                    appId={import.meta.env.VITE_APP_FB_APP_ID}
+                    autoLoad={false}
+                    
+                    onResolve={({ provider, data }) => {
+                      handleSocialLogin(data)
+                    }}
+                    onReject={(err) => {
+                      handleSocialLoginFailure(err)
+                    }}>
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{height:'25px' }}><img  src={img3}></img></Box>
+                  </Avatar>
+             </LoginSocialFacebook>
+                </Box>
+                <Box>
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
+                </Box>
+                <Box>
+                  <Avatar sx={{ bgcolor: '#ffffff' }}>
+                    <img
+                      src={img6}
+                      alt=""
+                    />
+
+                  </Avatar>
+                </Box>
+                <Box>
+                  <Avatar sx={{ bgcolor: "#ffffff" }}> <img src={img5}></img></Avatar>
+                </Box>
+              </Box>
               </Box>
             </Box>
           </Box>
