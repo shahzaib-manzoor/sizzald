@@ -95,6 +95,7 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
+    localStorage.removeItem("auth")
   };
 
   const menuId = "primary-search-account-menu";
@@ -341,7 +342,9 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
+
             >
+
               <MoreIcon />
             </IconButton>
           </Box>
