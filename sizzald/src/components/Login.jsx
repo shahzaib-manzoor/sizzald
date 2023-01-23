@@ -12,7 +12,7 @@ import {
 import img from "../assets/background.png";
 import img2 from "../assets/backgroundSign.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import img3 from '../assets/facebook.png'
+import img3 from '../assets/facebookicon.png'
 import img4 from '../assets/VectorA.png'
 import img5 from '../assets/Ellipse 175.png'
 import img6 from '../assets/fox 1.png'
@@ -254,8 +254,7 @@ const Signin = () => {
                     onReject={(err) => {
                       handleSocialLoginFailure(err)
                     }}>
-                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img3}></img>
-                
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{height:'25px' }}><img  src={img3}></img></Box>
                   </Avatar>
              </LoginSocialFacebook>
                 </Box>
