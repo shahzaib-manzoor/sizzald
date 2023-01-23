@@ -33,6 +33,7 @@ import gameProvider4 from "../assets/gameProvider4.png";
 import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
+import DetailedCard from "../ui-components/DetailCard/index";
 
 export default function Dashboard() {
   const slider = React.useRef(null);
@@ -604,7 +605,6 @@ export default function Dashboard() {
           img={customCardd4}
         />
       </CustomCarousal>
-
       <Box
         sx={{
           textAlign: "right",
@@ -728,9 +728,7 @@ export default function Dashboard() {
           img={gameProvider6}
         />
       </CustomCarousal>
-
       <Lobby />
-
       <Box
         sx={{
           textAlign: "right",
@@ -814,6 +812,7 @@ export default function Dashboard() {
           img={customCardd2}
         />
       </CustomCarousal>
+      <DetailedCard />
       <Network />
     </section>
   );
