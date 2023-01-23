@@ -146,7 +146,7 @@ export default function CustomizedTables() {
       <TableContainer component={Paper} sx={{ background: '#2B2D50', width:'100%'}}>
         <Table sx={{ minWidth: 700 }} aria-label='customized table'>
           <TableHead
-            sx={{ background: '#01022F', borderBottom: '1px solid #221F25' }}
+            sx={{ background: '#14163D', borderBottom: '1px solid #221F25' }}
           >
             <TableRow>
               <StyledTableCell>Game</StyledTableCell>

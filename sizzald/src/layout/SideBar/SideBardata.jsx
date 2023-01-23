@@ -126,7 +126,7 @@ export const SidebarData = [
   {
     title: 'languages',
     // path: '/overview',
-    icon: <img src={languages} style={{ marginLeft: '-5px' }}></img>,
+    icon: <img src={languages} style={{ marginLeft: '-5px',paddingBottom:'20px' }}></img>,
   },
   {
     title: 'Sponsorships',
