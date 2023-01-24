@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 // import SideBar from '../../layout/SideBar/SideBar'
 import Card from '../../layout/SideBar/Card';
 import DropDowns from '../../layout/SideBar/DropDowns';
@@ -14,9 +14,32 @@ import { height } from '@mui/system';
 
 
 export default function SideBar() {
+//   const styles = {
+//     sidebar: {
+//         overflow: 'auto',
+//         '&::-webkit-scrollbar': {
+//             width: '0.4em',
+//             backgroundColor: 'rgba(0, 0, 0, 0.5)',
+//         },
+//         '&::-webkit-scrollbar-thumb': {
+//           backgroundColor: '#000000',
+//         },
+//     },
+// };
+const HiddenScroll = styled(Box)`
+::-webkit-scrollbar {
+  display: none;
+}
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+
+`
   return (
-    <div style={{position:'relative'}} >
-      <Box sx={style}>
+    <div  style={{position:"relative"}}>
+     
+
+     
+      <HiddenScroll sx={style} className="child">
         <Box sx={firstChild}>
           <Box>
             <Box sx={flex}>
@@ -93,7 +116,7 @@ export default function SideBar() {
 
         </Box>
         {/* third child */}
-        <Box sx={{ background:'rgba(95, 95, 111, 0.6)' ,height:'auto',borderRadius: '0px 8px 0px 0px'}}>
+        <Box sx={{ background:'rgba(95, 95, 111, 0.6)' ,height:'1400px',borderRadius: '0px 8px 0px 0px'}}>
         {SidebarData.map((item, index) => {
               return (
                 <>
@@ -103,7 +126,10 @@ export default function SideBar() {
               );
             })}
        </Box>
-      </Box>
+       {/* button */}
+       
+      </HiddenScroll>
+      
     </div>
   );
 }

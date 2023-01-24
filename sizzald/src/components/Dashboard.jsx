@@ -34,6 +34,7 @@ import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
+import Footer from "../layout/Footer";
 
 export default function Dashboard() {
   const slider = React.useRef(null);
@@ -121,7 +122,7 @@ export default function Dashboard() {
     ],
   };
   var settingCardFive = {
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesPerRow: 1,
 
     responsive: [
@@ -671,6 +672,7 @@ export default function Dashboard() {
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider1}
+          marginRight="20px"
         />
         <CustomCardThree
           name="Mr SCHEMER"

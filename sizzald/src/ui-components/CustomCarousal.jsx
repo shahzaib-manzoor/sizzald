@@ -7,9 +7,9 @@ export default function SimpleSlider({ children, carousalRef, settingCard }) {
     speed: 1000,
     arrows: false,
   };
-  {
-    console.log(settingCard);
-  }
+  // {
+  //   console.log(settingCard);
+  // }
   return (
     <Slider ref={carousalRef} {...settings}>
       {children}

@@ -3,12 +3,15 @@ import { auto } from "@popperjs/core"
 
 export const style={
     width:'20%',
-    height:'100%',
-    // overflowX: "hidden",
+    height:'100vh',
+    overflowX: "hidden",
     // overflowY: "hidden",
     position:'fixed',
     // overflow: 'hidden auto'
+    overflowY:"auto"
 }
+
+
 export const firstChild={
    background:'rgba(95, 95, 111, 0.6)',
    boxShadow: '0px 0px 6px #5F5F6F',
@@ -32,7 +35,8 @@ export const thirdChildfirst={
 }
 export const vip ={
     color:'#FFA325',
-    lineHeight: '36px'
+    lineHeight: '36px',
+    fontFamily:'Poppins'
 }
 export const font={
     color:'#ffffff',textTransform:'uppercase',fontSize:'13px',marginRight:'10px'
@@ -60,7 +64,7 @@ export const unlock={
     fontWeight:600
 }
 export const secondflex={
-    display:'flex',alignItems:'center'
+    display:'flex',alignItems:'center',justifyContent:'center',
 }
 export const secondChild={
     background:'#202447',
