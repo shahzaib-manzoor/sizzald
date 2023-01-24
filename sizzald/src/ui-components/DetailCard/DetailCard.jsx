@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import detailCard from "../../assets/detailCard.png";
 import { Typography } from "@mui/material";
 import * as style from "./style";
+import ButtonDetailedCard from "./ButtonDetailedCard";
 function DetailCard() {
   return (
     <Box sx={style.mainContainer}>
@@ -14,6 +15,7 @@ function DetailCard() {
           letterSpacing: "1px",
           textAlign: "left",
           textTransform: "uppercase",
+          padding: "4px 0px",
         }}
       >
         Crypto Online Casino
@@ -38,7 +40,8 @@ function DetailCard() {
           themselves. Players are always looking for something new, which will
           help make the gaming experience so much better and more accessible.
           Allowing the player to focus on the absolute fun of a casino, that's
-          right, the games themselves.
+          right, the games themselves. <br />
+          <ButtonDetailedCard color="#8C57F5" margin="25px 0px" />
         </Box>
       </Box>
     </Box>

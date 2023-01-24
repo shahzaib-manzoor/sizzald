@@ -4,20 +4,22 @@ export const wrapper = {
   display: "flex",
 };
 export const box = {
-  fontSize: "20px",
+  fontSize: "16px",
 };
 export const float = {
   float: "right",
-  height: "100%",
+  height: "92%",
   display: "flex",
   alignItems: "flex-end",
-  shapeOutside: "inset(calc(86% - 100px) 0 0)",
+  shapeOutside: "inset(calc(74% - 100px) 0 0)",
   lineHeight: "30px",
 };
 
 export const mainContainer = {
-  background: "rgba(43, 45, 80, 1)",
+  background: "rgba(43, 45, 80, 1) ",
   padding: "10px 15px",
+  height: "90%",
+  borderRadius: "8px",
 };
 export const detailCardImg = {
   height: "200px",

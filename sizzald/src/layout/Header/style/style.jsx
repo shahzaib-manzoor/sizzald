@@ -4,9 +4,10 @@ export const containerNav = {
   padding: "0px !impotant",
 };
 export const Toolbar = {
-  background: "rgba(32, 36, 71, 0.6)",
+  // background: "rgba(32, 36, 71, 0.6)",
   boxShadow: "0px 0px 6px 0px #5F5F6F",
   padding: "0px 13px 0px 0px !important",
+  // background: "rgba(32, 36, 71, 1)",
 };
 export const headerLogo = {
   height: "45px",
