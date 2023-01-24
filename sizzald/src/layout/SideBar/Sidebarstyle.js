@@ -2,13 +2,16 @@ import { positions } from "@mui/system"
 import { auto } from "@popperjs/core"
 
 export const style={
-    width:'20%',
+    // width:'100%',
     height:'100vh',
     overflowX: "hidden",
     // overflowY: "hidden",
     position:'fixed',
+    zIndex:2000,
+    background:"#01022F",
     // overflow: 'hidden auto'
-    overflowY:"auto"
+    overflowY:"auto",
+    width:{xs:"100%",sm:"0%",md:"0%",lg:"20%"}
 }
 
 

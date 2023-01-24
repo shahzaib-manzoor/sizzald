@@ -14,7 +14,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const DetailedCard = () => {
   return (
-    <Grid sx={{ padding: "10px 28px" }} container spacing={2}>
+    <Grid sx={{ padding: "10px 28px" ,display:{xs:'none',sm:'none',lg:"none"}}} container spacing={2} >
       <Grid item xs={6}>
         <DetailCard />
       </Grid>

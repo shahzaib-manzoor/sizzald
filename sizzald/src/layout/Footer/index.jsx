@@ -60,16 +60,18 @@ export default function Footer() {
     fontFamily:"Poppins"
   };
   return (
-    <>
+    < Box sx={{display:{xs:"none",sm:"none",md:"none",lg:'block'}}}>
       <Box
         sx={{
           background: 'rgba(43, 45, 80, 1)',
           marginLeft: '20px',
           // marginRight:'30px',
           display: 'flex',
+          flexDirection:"row",
           paddingLeft: '20px',
           justifyContent: 'space-between',
           paddingBottom: '20px',
+          // display:{xs:'none',sm:"none",md:"none",lg:"block"}
         }}
       >
         <Box>
@@ -129,6 +131,6 @@ export default function Footer() {
       >
         ©2021 Sizzld. All rights reserved
       </Typography>
-    </>
+    </Box>
   );
 }

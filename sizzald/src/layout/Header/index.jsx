@@ -74,7 +74,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({ handleDrawer }) {
+export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -328,7 +328,7 @@ export default function PrimarySearchAppBar({ handleDrawer }) {
               </Button>
             </Stack>
             <Avatar sx={style.avator} alt='avator' src={avator} />
-            <IconButton className='!text-white ' aria-label='avator-arrow'>
+            <IconButton className='!text-white ' aria-label='avator-arrow' onClick={()=>handlemObileDrawer()}>
               <img src={arrowDown} alt='' />
             </IconButton>
           </Box>
