@@ -16,21 +16,28 @@ const Layout = () => {
       <Header handleDrawer={handleDrawer} />
 
       <Box sx={{ display: 'flex' }}>
-        {window.innerWidth > 600 && (
-          <Box sx={{ width: openDrawer ? '7%' : '20%', mt: '30px' }}>
+        
+          <Box sx={{ width: openDrawer ? '7%' : '20%', mt: '30px' ,display:{xs:"none",lg:"block"}}}>
             {openDrawer ? <MiniSideBar /> : <SideBar />}
           </Box>
-        )}
+       
 
-        <Box sx={{ width: openDrawer ? '93%' : '80%', mt: '30px',display:'flex',flexDirection:'column', }}>
-          
+        <Box
+          sx={{
+            // width:
+            width:{xs:'100%',lg:openDrawer?'93%':'80%'},
+            mt: '30px',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           <Outlet />
-      <Footer />
+          <Footer />
         </Box>
       </Box>
-
     </div>
   );
 };
 
 export default Layout;
+// openDrawer ? '93%' : '80%'

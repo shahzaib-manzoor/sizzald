@@ -1,4 +1,4 @@
-import { styled, alpha } from "@mui/material/styles";
+import { styled, alpha } from '@mui/material/styles';
 import {
   AppBar,
   Box,
@@ -11,69 +11,70 @@ import {
   Button,
   Stack,
   Avatar,
-} from "@mui/material";
+  ButtonGroup,
+} from '@mui/material';
 
-import * as style from "./style/style";
+import * as style from './style/style';
 
-import EmailIcon from "@mui/icons-material/Email";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/More";
-import Message from "@mui/icons-material/Message";
-import logo from "../../assets/sizzld-logo.png";
-import avator from "../../assets/avator.png";
-import bitcoin from "../../assets/bitcoin.png";
-import wallet from "../../assets/wallet.png";
-import arrowDown from "../../assets/arrow-down.png";
-import MenuIcon from "@mui/icons-material/Menu";
+import EmailIcon from '@mui/icons-material/Email';
+import SearchIcon from '@mui/icons-material/Search';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import MoreIcon from '@mui/icons-material/More';
+import Message from '@mui/icons-material/Message';
+import logo from '../../assets/sizzld-logo.png';
+import avator from '../../assets/avator.png';
+import bitcoin from '../../assets/bitcoin.png';
+import wallet from '../../assets/wallet.png';
+import arrowDown from '../../assets/arrow-down.png';
+import MenuIcon from '@mui/icons-material/Menu';
 
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
+  '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
-    width: "auto",
+    width: 'auto',
   },
 }));
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
+const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
   right: 0,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
+  color: 'inherit',
+  '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
+    transition: theme.transitions.create('width'),
+    width: '100%',
 
-    [theme.breakpoints.up("md")]: {
-      width: "35ch",
+    [theme.breakpoints.up('md')]: {
+      width: '35ch',
     },
-    [theme.breakpoints.up("sm")]: {
-      width: "28ch",
+    [theme.breakpoints.up('sm')]: {
+      width: '28ch',
     },
   },
 }));
 
-export default function PrimarySearchAppBar({handleDrawer}) {
+export default function PrimarySearchAppBar({ handleDrawer }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -97,19 +98,19 @@ export default function PrimarySearchAppBar({handleDrawer}) {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = "primary-search-account-menu";
+  const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
+        vertical: 'top',
+        horizontal: 'right',
       }}
       id={menuId}
       keepMounted
       transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
+        vertical: 'top',
+        horizontal: 'right',
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
@@ -119,26 +120,26 @@ export default function PrimarySearchAppBar({handleDrawer}) {
     </Menu>
   );
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
+  const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
+        vertical: 'top',
+        horizontal: 'right',
       }}
       id={mobileMenuId}
       keepMounted
       transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
+        vertical: 'top',
+        horizontal: 'right',
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+        <IconButton size='large' aria-label='show 4 new mails' color='inherit'>
+          <Badge badgeContent={4} color='error'>
             <EmailIcon />
           </Badge>
         </IconButton>
@@ -146,11 +147,11 @@ export default function PrimarySearchAppBar({handleDrawer}) {
       </MenuItem>
       <MenuItem>
         <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
+          size='large'
+          aria-label='show 17 new notifications'
+          color='inherit'
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={17} color='error'>
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -158,11 +159,11 @@ export default function PrimarySearchAppBar({handleDrawer}) {
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
+          size='large'
+          aria-label='account of current user'
+          aria-controls='primary-search-account-menu'
+          aria-haspopup='true'
+          color='inherit'
         >
           <AccountCircle />
         </IconButton>
@@ -173,17 +174,43 @@ export default function PrimarySearchAppBar({handleDrawer}) {
 
   return (
     <Box sx={style.containerNav}>
-      <AppBar sx={{ padding: "0px" }}>
+      <AppBar sx={{ padding: '0px' }}>
         <Toolbar sx={style.Toolbar}>
-          <IconButton size="large" color="inherit" onClick={handleDrawer}>
+          <IconButton size='large' color='inherit' onClick={handleDrawer}>
             <MenuIcon />
           </IconButton>
           <Stack sx={style.headerLogo}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt='logo' />
           </Stack>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerRadioButton}>
-            <div
+            <ButtonGroup sx={{ borderRadius: '8px', border:'1px solid #2B2D50'}}>
+              <Button
+                sx={{
+                  background: '#5842F4',
+                  borderRadius: '8px',
+                  width: '129px',
+                  height: '47px',
+                  color: '#ffffff',
+                }}
+              >
+                Casino
+              </Button>
+              <Button
+                sx={{
+                  background: '#2B2D50',
+                  borderRadius: '8px',
+                  width: '129px',
+                  height: '47px',
+                  color: '#ffffff',
+                  border:'1px solid #2B2D50'
+                }}
+              >
+                {' '}
+                sports
+              </Button>
+            </ButtonGroup>
+            {/* <div
               className="grid  grid-cols-2  rounded-xl !bg-clwhite p-1"
               x-data="app"
             >
@@ -217,7 +244,7 @@ export default function PrimarySearchAppBar({handleDrawer}) {
                   Sport
                 </label>
               </div>
-            </div>
+            </div> */}
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerFlex}>
@@ -226,9 +253,9 @@ export default function PrimarySearchAppBar({handleDrawer}) {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Search…"
+                placeholder='Search…'
                 sx={style.headerInputHeight}
-                inputProps={{ "aria-label": "search" }}
+                inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
           </Box>
@@ -236,83 +263,83 @@ export default function PrimarySearchAppBar({handleDrawer}) {
           <Box sx={style.headerFlexCenter}>
             <Stack sx={style.headerFlexResponsive}>
               <IconButton
-                className="!bg-clwhite "
+                className='!bg-clwhite '
                 sx={style.headerIcons}
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
+                size='large'
+                aria-label='show 4 new mails'
+                color='inherit'
               >
-                <Badge badgeContent={4} color="error">
+                <Badge badgeContent={4} color='error'>
                   <EmailIcon />
                 </Badge>
               </IconButton>
               <IconButton
-                className="!bg-clwhite "
+                className='!bg-clwhite '
                 sx={style.headerIcons}
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
+                size='large'
+                aria-label='show 17 new notifications'
+                color='inherit'
               >
-                <Badge badgeContent={17} color="error">
+                <Badge badgeContent={17} color='error'>
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
               <IconButton
-                className="!bg-clwhite"
+                className='!bg-clwhite'
                 sx={style.headerIcons}
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
+                size='large'
+                aria-label='show 17 new notifications'
+                color='inherit'
               >
-                <Badge badgeContent={17} color="error">
+                <Badge badgeContent={17} color='error'>
                   <Message />
                 </Badge>
               </IconButton>
               <Button
-                className="!bg-clwhite"
+                className='!bg-clwhite'
                 sx={style.headerButton}
-                variant="contained"
+                variant='contained'
                 startIcon={
                   <img
                     sx={style.headerButtonIcon}
                     src={bitcoin}
-                    alt="bitcoin"
+                    alt='bitcoin'
                   />
                 }
                 endIcon={
                   <img
                     sx={style.headerButtonIcon}
                     src={arrowDown}
-                    alt="dropdown"
+                    alt='dropdown'
                   />
                 }
               >
                 BTC
               </Button>
               <Button
-                className="!bg-clwhite"
+                className='!bg-clwhite'
                 sx={style.headerButton}
-                variant="contained"
+                variant='contained'
                 startIcon={
-                  <img src={wallet} sx={{ width: "20px" }} alt="bitcoin" />
+                  <img src={wallet} sx={{ width: '20px' }} alt='bitcoin' />
                 }
               >
                 Wallet
               </Button>
             </Stack>
-            <Avatar sx={style.avator} alt="avator" src={avator} />
-            <IconButton className="!text-white " aria-label="avator-arrow">
-              <img src={arrowDown} alt="" />
+            <Avatar sx={style.avator} alt='avator' src={avator} />
+            <IconButton className='!text-white ' aria-label='avator-arrow'>
+              <img src={arrowDown} alt='' />
             </IconButton>
           </Box>
           <Box sx={style.headerDNone}>
             <IconButton
-              size="large"
-              aria-label="show more"
+              size='large'
+              aria-label='show more'
               aria-controls={mobileMenuId}
-              aria-haspopup="true"
+              aria-haspopup='true'
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              color='inherit'
             >
               <MoreIcon />
             </IconButton>

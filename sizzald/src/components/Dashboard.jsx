@@ -121,7 +121,7 @@ export default function Dashboard() {
     ],
   };
   var settingCardFive = {
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesPerRow: 1,
 
     responsive: [
@@ -672,6 +672,7 @@ export default function Dashboard() {
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider1}
+          marginRight='20px'
         />
         <CustomCardThree
           name="Mr SCHEMER"
@@ -702,6 +703,7 @@ export default function Dashboard() {
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider1}
+
         />
         <CustomCardThree
           name="Mr SCHEMER"
@@ -723,11 +725,11 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={gameProvider5}
         />
-        <CustomCardThree
+         <CustomCardThree
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider6}
-        />
+         /> 
       </CustomCarousal>
 
       <Lobby />
