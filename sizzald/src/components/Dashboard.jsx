@@ -35,6 +35,7 @@ import gameProvider4 from "../assets/gameProvider4.png";
 import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
+import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
 
 export default function Dashboard() {
@@ -607,7 +608,6 @@ export default function Dashboard() {
           img={customCardd4}
         />
       </CustomCarousal>
-
       <Box
         sx={{
           textAlign: "right",
@@ -674,7 +674,7 @@ export default function Dashboard() {
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider1}
-          marginRight='20px'
+          marginRight="20px"
         />
         <CustomCardThree
           name="Mr SCHEMER"
@@ -705,7 +705,6 @@ export default function Dashboard() {
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider1}
-
         />
         <CustomCardThree
           name="Mr SCHEMER"
@@ -727,15 +726,13 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={gameProvider5}
         />
-         <CustomCardThree
+        <CustomCardThree
           name="Mr SCHEMER"
           balance="$ 5346362"
           img={gameProvider6}
-         /> 
+        />
       </CustomCarousal>
-
       <Lobby />
-
       <Box
         sx={{
           textAlign: "right",
@@ -819,8 +816,8 @@ export default function Dashboard() {
           img={customCardd2}
         />
       </CustomCarousal>
+      <DetailedCard />
       <Network />
-      
     </section>
   );
 }
