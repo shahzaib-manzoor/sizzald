@@ -23,7 +23,7 @@ scrollbar-width: none;  /* Firefox */
 
 `
   return (
-    <Box sx={{  position: 'relative',height:'auto' }}>
+    <Box sx={{position:'relative'}}>
       <HiddenScroll
         sx={{
           display: 'flex',
@@ -35,13 +35,15 @@ scrollbar-width: none;  /* Firefox */
           // height: '800px',
           overflowY: 'auto',
           overflowX: 'hidden',
+          paddingBottom:'20px',
           height: '700px',
           // marginBottom:'50px'
         }}
       >
         <Box
           sx={{
-            mt: '20px',
+            // mt: 'px',
+            // paddingTop:"120px",
             background: '#424563',
             width: '100%',
             height: '50px',

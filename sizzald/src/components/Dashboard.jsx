@@ -24,6 +24,8 @@ import customCardd6 from ".././assets/customCardd6.png";
 import customCardd7 from ".././assets/customCardd7.png";
 import customCardd8 from ".././assets/customCardd8.png";
 import customCardd9 from ".././assets/customCardd9.png";
+import customCardd from ".././assets/customCardd.png";
+import ultimate from ".././assets/ultimate.png";
 import CustomCardThree from "../ui-components/CustomCardThree";
 
 import gameProvider1 from "../assets/gameProvider1.png";
@@ -531,12 +533,12 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"
-          img={customCardd1}
+          img={ultimate}
         />
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"
-          img={customCardd2}
+          img={customCardd}
         />
         <CustomCardTwo
           name="Mr SCHEMER"
@@ -809,7 +811,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"
-          img={customCardd1}
+          img={customCardd}
         />
         <CustomCardTwo
           name="Mr SCHEMER"

@@ -47,8 +47,9 @@ export const flex={
 export const mainBox={
     width:'50%',
     marginLeft:'15px',
-    minHeight:'60px',
-    borderRadius: '3.28868px'
+    height:'60px',
+    borderRadius: '3.28868px',
+    justifyContent:"center"
     // marginRight:'10px'
 }
 export const typography={
@@ -65,6 +66,7 @@ export const unlock={
 }
 export const secondflex={
     display:'flex',alignItems:'center',justifyContent:'center',
+
 }
 export const secondChild={
     background:'#202447',

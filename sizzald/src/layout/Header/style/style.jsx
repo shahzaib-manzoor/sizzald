@@ -1,5 +1,5 @@
 export const containerNav = {
-  height: "30px",
+  height: "62px",
   flexGrow: 1,
   padding: "0px !impotant",
 };

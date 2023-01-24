@@ -30,8 +30,8 @@ export const SidebarData = [
     title: 'casino',
     // path: '/overview',
     icon: <img src={casino}></img>,
-    iconClosed: <ExpandMoreIcon sx={{mt:'20px'}} />,
-    iconOpened: <ExpandMoreIcon  sx={{mt:'20px'}}/>,
+    iconClosed: <ExpandMoreIcon  />,
+    iconOpened: <ExpandMoreIcon  />,
 
     subNav: [
       {
