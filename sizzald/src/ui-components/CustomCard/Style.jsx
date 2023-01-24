@@ -1,7 +1,6 @@
 export const cardContent = {
+  height: { xs: "160px", md: "240px" },
   display: "flex",
-  height: "240px",
-
   alignItems: " flex-start",
   flexDirection: "column",
   justifyContent: "flex-end",

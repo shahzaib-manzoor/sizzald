@@ -70,7 +70,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -90,7 +90,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -110,7 +110,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -129,7 +129,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 2,
         },
       },
       {
@@ -146,14 +146,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -167,16 +167,29 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => slider?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => slider?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>
@@ -231,14 +244,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -252,16 +265,29 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderTwo?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderTwo?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>
@@ -314,14 +340,14 @@ export default function Dashboard() {
       <Box>
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "left",
             color: "white",
             textTransform: "uppercase",
-            padding: "30px 33px",
+            padding: { xs: "10px 25px", md: "30px 33px" },
           }}
         >
           Casino
@@ -331,14 +357,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -352,20 +378,29 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderThree?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
           <Typography
             sx={{
+              fontSize: { xs: "10px", md: "16px" },
               color: "rgba(240, 75, 43, 1)",
               textDecoration: "underline",
               paddingRight: "6px",
             }}
             variant="span"
           >
-            Show all 24{" "}
+            Show all 24
             <Typography
               sx={{
                 color: "white",
@@ -378,10 +413,15 @@ export default function Dashboard() {
             </Typography>
           </Typography>
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderThree?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>
@@ -470,14 +510,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             textTransform: "uppercase",
             fontWeight: "700",
             lineHeight: "40px",
@@ -491,20 +531,29 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderFour?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
           <Typography
             sx={{
+              fontSize: { xs: "10px", md: "16px" },
               color: "rgba(240, 75, 43, 1)",
               textDecoration: "underline",
               paddingRight: "6px",
             }}
             variant="span"
           >
-            Show all 24{" "}
+            Show all 24
             <Typography
               sx={{
                 color: "white",
@@ -517,10 +566,15 @@ export default function Dashboard() {
             </Typography>
           </Typography>
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderFour?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>
@@ -609,14 +663,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             textTransform: "uppercase",
             fontWeight: "700",
             lineHeight: "40px",
@@ -630,36 +684,30 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderSix?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
-          <Typography
-            sx={{
-              color: "rgba(240, 75, 43, 1)",
-              textDecoration: "underline",
-              paddingRight: "6px",
-            }}
-            variant="span"
-          >
-            Show all 24{" "}
-            <Typography
-              sx={{
-                color: "white",
-                textDecoration: "underline",
-                textTransform: "uppercase",
-              }}
-              variant="span"
-            >
-              Games
-            </Typography>
-          </Typography>
+
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderSix?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>
@@ -734,14 +782,14 @@ export default function Dashboard() {
       <Box
         sx={{
           textAlign: "right",
-          padding: "30px 33px",
+          padding: { xs: "10px 25px", md: "30px 33px" },
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { xs: "16px", md: "24px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -755,16 +803,29 @@ export default function Dashboard() {
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
-            sx={{ color: "white", marginRight: "8px", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              marginRight: "8px",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderSeven?.current?.slickPrev()}
           >
-            <KeyboardBackspaceIcon />
+            <KeyboardBackspaceIcon
+              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+            />
           </IconButton>
           <IconButton
-            sx={{ color: "white", background: "#FFFFFF33" }}
+            sx={{
+              color: "white",
+              background: "#FFFFFF33",
+              height: { sx: "35px", md: "45px" },
+              width: { sx: "35px", md: "45px" },
+            }}
             onClick={() => sliderSeven?.current?.slickNext()}
           >
-            <ArrowRightAltIcon />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
           </IconButton>
         </Box>
       </Box>

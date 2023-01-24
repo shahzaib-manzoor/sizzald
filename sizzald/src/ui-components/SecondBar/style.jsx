@@ -1,5 +1,5 @@
 export const mainContainer = {
-  padding: "5px 20px 5px 33px",
+  padding: { xs: "10px 25px", md: "30px 33px" },
   display: "flex",
   justifyContent: "space-between",
 };
@@ -18,5 +18,5 @@ export const buttonNotActive = {
   marginLeft: "8px",
   marginRight: "0px",
 };
-export const containerLeft = { width: "35%" };
-export const containerRight = { width: "45%" };
+export const containerLeft = { width: { sx: "100%", md: "35%" } };
+export const containerRight = { width: { sx: "0", md: "45%" } };

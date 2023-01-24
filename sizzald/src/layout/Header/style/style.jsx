@@ -16,7 +16,7 @@ export const headerLogo = {
   display: { xs: "none", sm: "block" },
 };
 export const headerRadioButton = { display: { xs: "none", lg: "flex" } };
-export const headerFlex = { display: "flex" };
+export const headerFlex = { display: { xs: "none", md: "flex" } };
 export const headerBorderRadius = { borderRadius: "50px" };
 export const headerInputHeight = { height: "38px" };
 export const headerFlexCenter = {

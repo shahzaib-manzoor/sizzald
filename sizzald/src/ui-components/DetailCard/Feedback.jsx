@@ -5,9 +5,9 @@ function Feedback() {
   return (
     <Box
       sx={{
-        padding: "10px 20px",
+        padding: "10px 10px",
         background: "rgba(43, 45, 80, 1)",
-        height: "90%",
+        height: "94%",
         borderRadius: "8px",
       }}
     >
@@ -28,8 +28,8 @@ function Feedback() {
       </Typography>
       <input
         style={{
-          height: "170px",
-          width: "95%",
+          height: "220px",
+          width: "100%",
           outline: "none",
           border: "none",
           background: " rgba(1, 2, 47, 1)",
@@ -48,7 +48,7 @@ function Feedback() {
               letterSpacing: "0.01em",
               textAlign: "left",
               color: "white",
-              padding: "20px 0px",
+              padding: "30px 0px",
             }}
           >
             Now get rewarded for your valuable feedback.
@@ -59,7 +59,7 @@ function Feedback() {
               color: "white ",
               fontWeight: "600",
               fontSize: "16px",
-              padding: "15px 0px",
+              paddingTop: "20px",
             }}
             variant="h6"
           >
