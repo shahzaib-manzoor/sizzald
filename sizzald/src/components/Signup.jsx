@@ -17,6 +17,7 @@ import {
   import img5 from '../assets/Ellipse 175.png'
   import img6 from '../assets/fox 1.png'
   import { useNavigate } from "react-router-dom";
+  import WalletConnect from "../ui-components/WalletConnect";
   import {
     LoginSocialGoogle,
     LoginSocialFacebook
@@ -215,30 +216,30 @@ import {
               </Container>
               {/* last section */}
               <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexDirection:'column',
-                  mt:'40px'
-              
-                }}
-              >
-                <Box>
-                  <Typography
-                    sx={{
-                      fontSize: "24px",
-                      fontWeight: 400,
-                      lineHeight: "60px",
-                      textTransform: "uppercase",
-                      color:'#ffffff',
-                     
-                    }}
-                  >
-                    Log in directly with:{" "}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', gap: 2 }}>
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: 'column',
+                mt: '40px'
+
+              }}
+            >
+              <Box>
+                <Typography
+                  sx={{
+                    fontSize: "24px",
+                    fontWeight: 400,
+                    lineHeight: "60px",
+                    textTransform: "uppercase",
+                    color: '#ffffff',
+
+                  }}
+                >
+                  Log in directly with:{" "}
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', gap: 2 }}>
                 <Box>
                   <Avatar sx={{ bgcolor: "#F44336" }}>
                     <LoginSocialGoogle
@@ -261,34 +262,41 @@ import {
                   <LoginSocialFacebook
                     appId={import.meta.env.VITE_APP_FB_APP_ID}
                     autoLoad={false}
-                    
+
                     onResolve={({ provider, data }) => {
                       handleSocialLogin(data)
                     }}
                     onReject={(err) => {
                       handleSocialLoginFailure(err)
                     }}>
-                  <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{height:'25px' }}><img  src={img3}></img></Box>
-                  </Avatar>
-             </LoginSocialFacebook>
+                    <Avatar sx={{ bgcolor: "#039BE5" }}><Box sx={{ height: '25px' }}><img src={img3}></img></Box>
+                    </Avatar>
+                  </LoginSocialFacebook>
                 </Box>
                 <Box>
-                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
-                </Box>
-                <Box>
-                  <Avatar sx={{ bgcolor: '#ffffff' }}>
-                    <img
-                      src={img6}
-                      alt=""
-                    />
 
-                  </Avatar>
+
+                  <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
+
                 </Box>
+                 
+                  <Box onClick={() => onPressConnect()}>
+                    <Avatar sx={{ bgcolor: '#ffffff' }}>
+                      <img
+                        src={img6}
+                        alt=""
+                      />
+
+                    </Avatar>
+              
+                </Box>
+                <WalletConnect>
                 <Box>
                   <Avatar sx={{ bgcolor: "#ffffff" }}> <img src={img5}></img></Avatar>
                 </Box>
+                </WalletConnect>
               </Box>
-              </Box>
+            </Box>
             </Box>
           </Box>
         </Box>

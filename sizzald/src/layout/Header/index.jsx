@@ -28,6 +28,7 @@ import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -94,10 +95,16 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
   };
 
   const handleMobileMenuOpen = (event) => {
+    console.log("handleMobileMenuOpen");
     setMobileMoreAnchorEl(event.currentTarget);
-    localStorage.removeItem("auth")
+    
   };
+const handleLogout = () => { 
+  localStorage.removeItem("auth")
+  
+  navigate("/")
 
+ }
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu

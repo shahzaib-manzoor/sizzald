@@ -18,7 +18,8 @@ import SocialButton from "../ui-components/SocialButton";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import Web3 from "web3";
-import { Web3ReactProvider } from "@web3-react/core";
+import WalletConnect from "../ui-components/WalletConnect";
+ 
 
 import {
   LoginSocialGoogle,
@@ -56,17 +57,13 @@ const Signin = () => {
     // setLoading(true);
 
     try {
-      if (window?.ethereum?.isWalletConnect) {
+      if (window?.ethereum?.isMetaMask) {
         // Desktop browser
         const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
-        });
+        });<WalletConnect />
 
         const account = Web3.utils.toChecksumAddress(accounts[0]);
-        if (account) {
-          navigate('/')
-          localStorage.setItem('auth', true)
-        }
         setAddress(account);
       }
     } catch (error) {
@@ -75,6 +72,7 @@ const Signin = () => {
 
     // setLoading(false);
   };
+
 
 
 
@@ -92,6 +90,7 @@ const Signin = () => {
         alignItems: "center",
       }}
     >
+       
       <Box
         sx={{
           backgroundImage: `url(${img2})`,
@@ -320,8 +319,8 @@ const Signin = () => {
                   <Avatar sx={{ bgcolor: "#039BE5" }}><img src={img4}></img></Avatar>
 
                 </Box>
-                <Button onClick={() => onPressConnect()}>
-                  <Box>
+                 
+                  <Box onClick={() => onPressConnect()}>
                     <Avatar sx={{ bgcolor: '#ffffff' }}>
                       <img
                         src={img6}
@@ -329,11 +328,13 @@ const Signin = () => {
                       />
 
                     </Avatar>
-                  </Box>
-                </Button>
+              
+                </Box>
+                <WalletConnect>
                 <Box>
                   <Avatar sx={{ bgcolor: "#ffffff" }}> <img src={img5}></img></Avatar>
                 </Box>
+                </WalletConnect>
               </Box>
             </Box>
           </Box>
