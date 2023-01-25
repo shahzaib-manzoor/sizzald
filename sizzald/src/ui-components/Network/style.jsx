@@ -1,8 +1,8 @@
 export const networkContainer = {
-  padding: "30px 33px",
+  padding: { xs: "10px 25px", md: "30px 33px" },
 };
 export const networkText = {
-  fontSize: "24px",
+  fontSize: { xs: "16px", md: "24px" },
   fontWeight: "700",
   lineHeight: "40px",
   letterSpacing: "1px",
@@ -20,7 +20,7 @@ export const networkBox = {
   borderRadius: "10px !important",
 };
 export const networkBoxImg = {
-  width: "11%",
+  width: { xs: "25%", md: "11%" },
   textAlign: "center",
   padding: "15px 0px",
 };

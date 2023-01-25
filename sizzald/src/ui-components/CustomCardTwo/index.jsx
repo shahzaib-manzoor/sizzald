@@ -18,19 +18,21 @@ export default function CustomCardTwo({ img, name, balance }) {
     <Card
       sx={{
         marginTop: "10px",
-        width: "94%",
+        width: { xs: "95%", md: "94%" },
         background: "rgba(43, 45, 80, 1)",
         marginLeft: "8px",
+
+        margin: "8px auto",
         // paddingLeft:'20'
       }}
     >
       <CardMedia
         sx={{
-          height: 240,
+          height: { xs: "150px", md: "240px" },
           background: `url(${img}) `,
-          backgroundPosition:'center',
-          backgroundSize:'cover',
-          backgroundRepeat:'no-repeat',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           borderRadius: "6px",
         }}
         title="green iguana"
@@ -47,7 +49,7 @@ export default function CustomCardTwo({ img, name, balance }) {
             </Typography>
           </Box>
         </Box>
-        <Box>
+        <Box sx={{ width: "18%" }}>
           <IconButton
             sx={{
               background: "rgba(255, 255, 255, 0.3)",

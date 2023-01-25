@@ -36,7 +36,7 @@ export const SidebarData = [
     subNav: [
       {
         title: 'picks for you',
-        path: '/overview/users',
+        path: '/picksforyou',
         icon: <img src={picksforyou} />,
       },
       {

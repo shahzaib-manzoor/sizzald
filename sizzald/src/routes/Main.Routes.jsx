@@ -2,6 +2,7 @@ import { lazy } from 'react';
 
  
 import Dashboard from '../components/Dashboard';
+import Picks from '../components/Picks';
 import Signup from '../components/Signup';
 import Layout from '../layout';
 // ==============================|| MAIN ROUTING ||============================== //
@@ -16,8 +17,8 @@ const MainRoutes = {
             element: <Dashboard />,
         },
         {
-            path: '/D',
-            element: <Dashboard />,
+            path: '/picksforyou',
+            element: <Picks/>,
         },
         {
             path: '/',

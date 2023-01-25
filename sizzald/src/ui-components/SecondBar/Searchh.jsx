@@ -50,7 +50,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Searchh = () => {
   return (
     <Box>
-      <Search sx={{ borderRadius: "50px", color: "white" }}>
+      <Search
+        sx={{
+          borderRadius: "50px",
+          color: "white",
+          display: { xs: "none", md: "block" },
+        }}
+      >
         <SearchIconWrapper sx={{ color: "white" }}>
           <SearchIcon />
         </SearchIconWrapper>

@@ -4,21 +4,21 @@ export const wrapper = {
   display: "flex",
 };
 export const box = {
-  fontSize: "16px",
+  fontSize: "14px",
 };
 export const float = {
   float: "right",
-  height: "92%",
+  height: "94%",
   display: "flex",
   alignItems: "flex-end",
-  shapeOutside: "inset(calc(74% - 100px) 0 0)",
+  shapeOutside: "inset(calc(75% - 100px) 0 0)",
   lineHeight: "30px",
 };
 
 export const mainContainer = {
   background: "rgba(43, 45, 80, 1) ",
   padding: "10px 15px",
-  height: "90%",
+  height: "94%",
   borderRadius: "8px",
 };
 export const detailCardImg = {
