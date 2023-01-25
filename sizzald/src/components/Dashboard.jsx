@@ -37,6 +37,7 @@ import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
+import RecentBig from "./Picks/RecentBig";
 // import RecentBigWin from "./Dashboard/RecentBigWin";
 
 export default function Dashboard() {
@@ -244,104 +245,7 @@ export default function Dashboard() {
           warIsOn="WAR IS ON"
         />
       </CustomCarousal>
-      <Box
-        sx={{
-          textAlign: "right",
-          padding: { xs: "10px 25px", md: "30px 33px" },
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
-        {/* <RecentBigWin/> */}
-        {/* </Box> */}
-        <Typography
-          sx={{
-            fontSize: { xs: "16px", md: "24px" },
-            fontWeight: "700",
-            lineHeight: "40px",
-            letterSpacing: "1px",
-            textAlign: "left",
-            color: "white",
-            textTransform: "uppercase",
-          }}
-        >
-          RECENT BIG WINS
-        </Typography>
-        <Box>
-          <IconButton
-            hover={{ background: "#FFFFFF33" }}
-            sx={{
-              color: "white",
-              marginRight: "8px",
-              background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
-            }}
-            onClick={() => sliderTwo?.current?.slickPrev()}
-          >
-            <KeyboardBackspaceIcon
-              sx={{ fontSize: { xs: "16px", md: "23px" } }}
-            />
-          </IconButton>
-          <IconButton
-            sx={{
-              color: "white",
-              background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
-            }}
-            onClick={() => sliderTwo?.current?.slickNext()}
-          >
-            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
-          </IconButton>
-        </Box>
-      </Box>
-      <CustomCarousal
-        sx={{ padding: "10px 35px" }}
-        carousalRef={sliderTwo}
-        settingCard={settingCardTwo}
-      >
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd7}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd8}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd9}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd6}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd7}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd8}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd1}
-        />
-        <CustomCardTwo
-          name="MR SCHEMER"
-          balance="$ 5346362"
-          img={customCardd2}
-        />
-      </CustomCarousal>
+      <RecentBig settingCardTwo={settingCardTwo} />
       <Box>
         <Typography
           sx={{

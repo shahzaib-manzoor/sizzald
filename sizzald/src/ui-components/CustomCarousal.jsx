@@ -4,8 +4,10 @@ export default function SimpleSlider({ children, carousalRef, settingCard }) {
   var settings = {
     ...settingCard,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     arrows: false,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
   };
   // {
   //   console.log(settingCard);
