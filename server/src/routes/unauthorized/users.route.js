@@ -7,10 +7,7 @@ const router = express.Router();
 const { forgotJwtAuth } = require("../../helpers/jwt.helper");
 const controller = require("../../controllers").user;
 
-router.get("/as", controller.AS);
-//@route    POST auth/login
-//@desc     login user
-//@access   Public
+ 
 router.post("/login", controller.login);
 //@route    POST auth/signup
 //@desc     Sign up user (create user account)

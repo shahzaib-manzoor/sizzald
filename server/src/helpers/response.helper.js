@@ -75,8 +75,8 @@ let badRequest = (response, message) => {
 };
 
 module.exports = {
-  success ,
-  badRequest ,
-  systemfailure ,
-  requestfailure ,
+  success,
+  badRequest,
+  systemfailure,
+  requestfailure,
 };

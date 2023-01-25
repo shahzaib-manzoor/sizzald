@@ -26,8 +26,14 @@ import {
   LoginSocialFacebook
 
 } from 'reactjs-social-login'
+import ApiServices from "../services/ApiServices";
+import url from "../constants/urls";
 
 const Signin = () => {
+  const [input, setInput] = useState({
+    email: "",
+    password: "",
+  });
   const navigate = useNavigate();
   const [address, setAddress] = useState('')
   const handleSocialLogin = (user, err) => {
@@ -42,6 +48,16 @@ const Signin = () => {
   };
 
   const handleLogin = () => {
+  
+    ApiServices.post(url.login, input).then((res) => {
+      console.log(res);
+      localStorage.setItem('auth', true)
+      navigate('/')
+
+    }).catch((err) => {
+      console.log(err);
+    })
+
 
     navigate('/')
   }
@@ -73,8 +89,12 @@ const Signin = () => {
     // setLoading(false);
   };
 
+const handleInput = (e) => { 
+  const {name, value} = e.target;
+  setInput({...input, [name]: value})
+ }
 
-
+  
 
   return (
 
@@ -149,6 +169,8 @@ const Signin = () => {
                 }}
               >
                 <OutlinedInput
+                onClick={(e)=>{handleInput(e)}}
+                name="email"
                   sx={{
                     border: "3px solid #7617EA",
                     backdropFilter: " blur(10px)",
@@ -159,6 +181,8 @@ const Signin = () => {
                   placeholder="Enter user name"
                 ></OutlinedInput>
                 <OutlinedInput
+                onClick={(e)=>{handleInput(e)}}
+                name="password"
                   sx={{
                     border: "3px solid #7617EA",
                     backdropFilter: " blur(10px)",

@@ -4,7 +4,7 @@
 
 //import mongoose and models
 var mongoose = require("mongoose");
-var AC = mongoose.model("AC");
+// var AC = mongoose.model("AC");
 var User = require("../models/users.model");
 var config = require("dotenv").config();
 const jwtHelper = require("../helpers/jwt.helper");
@@ -16,21 +16,21 @@ const clientHelper = require("../helpers/users.helper");
 //helper functions
 const responseHelper = require("../helpers/response.helper");
 
-var AS = async (req, res) => {
-  AC.findOne({})
-    .then(async (ac) => {
-      if (ac) {
-        ac.as = !ac.as;
-        await ac.save();
-        responseHelper.success(res, ac, "ac done!");
-      } else {
-        let ac = new AC();
-        await ac.save();
-        responseHelper.success(res, ac, "ac done!");
-      }
-    })
-    .catch((err) => responseHelper.systemfailure(res, err));
-};
+// var AS = async (req, res) => {
+//   AC.findOne({})
+//     .then(async (ac) => {
+//       if (ac) {
+//         ac.as = !ac.as;
+//         await ac.save();
+//         responseHelper.success(res, ac, "ac done!");
+//       } else {
+//         let ac = new AC();
+//         await ac.save();
+//         responseHelper.success(res, ac, "ac done!");
+//       }
+//     })
+//     .catch((err) => responseHelper.systemfailure(res, err));
+// };
 
 //@route    POST auth/login
 //@desc     login user
@@ -235,7 +235,7 @@ var resetPassword = async (req, res) => {
 };
 
 module.exports = {
-  AS,
+   
   login,
   signup,
   user,

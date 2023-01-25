@@ -23,14 +23,27 @@ import {
     LoginSocialFacebook
   
   } from 'reactjs-social-login'
+import ApiServices from "../services/ApiServices";
+import url from "../constants/urls";
   const Signup = () => {
+    const [input, setInput] = React.useState({
+      email:'',
+      password:''
+    })
     const navigate = useNavigate();
 
     const handleLogin = () => { 
-    
+
       navigate('/')
      }
   const handleSignup = () => {
+     ApiServices.post(url.signup, input).then((res) => {
+      navigate('/')
+      localStorage.setItem('auth', true)
+
+      
+    })
+    
       navigate('/signup')
 
     } 
@@ -40,6 +53,13 @@ import {
       console.log(user);
       console.log(err);
     };
+
+    const handleInput = (e) => { 
+      setInput({
+        ...input,
+        [e.target.name]:e.target.value
+      })
+     }
 
     return (
       <Box
@@ -112,6 +132,8 @@ import {
                   }}
                 >
                   <OutlinedInput
+                  onChange={(e)=>handleInput(e)}
+                  name="email"
                     sx={{
                       border: "3px solid #7617EA",
                       backdropFilter: " blur(10px)",
@@ -122,6 +144,8 @@ import {
                     placeholder="Enter user name"
                   ></OutlinedInput>
                   <OutlinedInput
+                  onChange={(e)=>handleInput(e)}
+                  name="password"
                     sx={{
                       border: "3px solid #7617EA",
                       backdropFilter: " blur(10px)",
