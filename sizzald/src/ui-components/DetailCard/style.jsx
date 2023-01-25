@@ -4,7 +4,7 @@ export const wrapper = {
   display: "flex",
 };
 export const box = {
-  fontSize: "14px",
+  fontSize: { xs: "13px", md: "14px" },
 };
 export const float = {
   float: "right",
@@ -18,10 +18,11 @@ export const float = {
 export const mainContainer = {
   background: "rgba(43, 45, 80, 1) ",
   padding: "10px 15px",
-  height: "94%",
+  height: { xs: "100%", md: "94%" },
   borderRadius: "8px",
 };
 export const detailCardImg = {
   height: "200px",
   width: "260px",
+  display: { xs: "none", md: "block" },
 };

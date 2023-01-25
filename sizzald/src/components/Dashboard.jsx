@@ -37,7 +37,7 @@ import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
-import RecentBigWin from "./Dashboard/RecentBigWin";
+// import RecentBigWin from "./Dashboard/RecentBigWin";
 
 export default function Dashboard() {
   const slider = React.useRef(null);
@@ -341,7 +341,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={customCardd2}
         />
-      </CustomCarousal> 
+      </CustomCarousal>
       <Box>
         <Typography
           sx={{
@@ -588,11 +588,7 @@ export default function Dashboard() {
         carousalRef={sliderFour}
         settingCard={settingCardFour}
       >
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={ultimate}
-        />
+        <CustomCardTwo name="Mr SCHEMER" balance="$ 5346362" img={ultimate} />
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"

@@ -9,6 +9,7 @@ function Feedback() {
         background: "rgba(43, 45, 80, 1)",
         height: "94%",
         borderRadius: "8px",
+        marginTop: { xs: "15px", md: "0px" },
       }}
     >
       <Typography
@@ -48,7 +49,7 @@ function Feedback() {
               letterSpacing: "0.01em",
               textAlign: "left",
               color: "white",
-              padding: "30px 0px",
+              padding: { xs: "5px 0px", md: "30px 0px" },
             }}
           >
             Now get rewarded for your valuable feedback.
@@ -59,7 +60,8 @@ function Feedback() {
               color: "white ",
               fontWeight: "600",
               fontSize: "16px",
-              paddingTop: "20px",
+              paddingTop: { xs: "5px", md: "20px" },
+              paddingBottom: { xs: "10px", md: "0px" },
             }}
             variant="h6"
           >
@@ -76,7 +78,7 @@ function Feedback() {
             </Typography>
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
           <img style={{ height: "100px" }} src={feedback} alt="" />
         </Box>
       </Box>

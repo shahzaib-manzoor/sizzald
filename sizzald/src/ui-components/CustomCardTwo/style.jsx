@@ -26,7 +26,7 @@ export const cardFlex = {
   justifyContent: "space-between",
   // alignaItems: "flex-center",
   // justifyContent: "space-between",
-  justifyContent: "space-between",
+
   backgroundColor: " rgba(61, 61, 61, 0.49) ",
   width: "95%",
   margin: "5px auto",

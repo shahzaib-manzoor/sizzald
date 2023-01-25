@@ -9,7 +9,7 @@ function DetailCard() {
       <Typography
         sx={{
           color: "white",
-          fontSize: "24px",
+          fontSize: { xs: "18px", md: "24px" },
           fontWeight: "700",
           lineHeight: "40px",
           letterSpacing: "1px",
