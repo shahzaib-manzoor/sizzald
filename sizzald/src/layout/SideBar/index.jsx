@@ -148,6 +148,7 @@ export default function SideBar() {
             background: 'rgba(95, 95, 111, 0.6)',
             height: 'auto',
             borderRadius: '0px 8px 0px 0px',
+            height:'1500px'
           }}
         >
           {SidebarData.map((item, index) => {
