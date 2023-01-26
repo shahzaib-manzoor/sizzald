@@ -90,7 +90,7 @@ const SubMenu = ({ item }) => {
                 >
                   {item.title}
                 </Typography>
-                {item.iconOpened && <Box sx={{}}>{item.iconOpened}</Box>}
+                {item.iconOpened && <Box>{item.iconOpened}</Box>}
               </Box>
               
             </Link>
