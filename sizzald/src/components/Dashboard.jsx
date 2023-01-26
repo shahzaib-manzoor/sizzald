@@ -79,7 +79,7 @@ export default function Dashboard() {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],
@@ -145,8 +145,7 @@ export default function Dashboard() {
   };
 
   return (
-    <section className="!bg-clBlueContainer " >
-      
+    <section className="!bg-clBlueContainer ">
       <Box
         sx={{
           textAlign: "right",
@@ -158,7 +157,7 @@ export default function Dashboard() {
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -246,12 +245,12 @@ export default function Dashboard() {
           warIsOn="WAR IS ON"
         />
       </CustomCarousal>
-      <RecentBig settingCardTwo={settingCardTwo} />
+      <RecentBig sliderTwo={sliderTwo} settingCardTwo={settingCardTwo} />
       <Box>
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -276,7 +275,7 @@ export default function Dashboard() {
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -432,7 +431,7 @@ export default function Dashboard() {
             fontSize: { xs: "16px", lg: "24px" },
             textTransform: "uppercase",
             fontWeight: "700",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "left",
@@ -581,7 +580,7 @@ export default function Dashboard() {
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
             textTransform: "uppercase",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -706,7 +705,7 @@ export default function Dashboard() {
             textAlign: "left",
             color: "#ffffff",
             textTransform: "uppercase",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
           }}
         >
           Top Rated Games

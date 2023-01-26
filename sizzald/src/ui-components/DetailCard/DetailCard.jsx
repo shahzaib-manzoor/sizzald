@@ -10,11 +10,11 @@ function DetailCard() {
         sx={{
           fontSize: "24px",
           fontWeight: "700",
-lineHeight: "40px",
-letterSpacing: "1px",
-textAlign: "left",
-fontFamily: "Poppins",
-color:"#ffffff",
+          lineHeight: "40px",
+          letterSpacing: "1px",
+          textAlign: "left",
+          fontFamily: "Poppins",
+          color: "#ffffff",
           padding: "4px 0px",
         }}
       >
@@ -23,27 +23,31 @@ color:"#ffffff",
       <Box sx={style.wrapper}>
         <Box sx={style.box}>
           <Box sx={style.float}>
-            <img
-              style={{height: {xs:"200px",xl:"267px"},
-              width: {xs:"260px",xl:"305px"},}}
-              src={detailCard}
-              alt="Detail Card"
-            />
+            <img className="detailImg" src={detailCard} alt="Detail Card" />
           </Box>
-          <Typography sx={{fontSize:{xs:'16px',sm:'16px',md:"16x",lg:"18px",xl:"18px"}}}>
-          Casinos online have not always been around, but we can safely say that
-          online casinos have been used a lot since they came on the market. And
-          it's not in short demand nor options, and now in 2022, we have 1000s
-          and 1000s to pick from – it's just a matter of what you like and what
-          payment options you would like to see at the casino. Players are
-          always looking for something new, which will help make the gaming
-          experience so much better and more accessible. Allowing the player to
-          focus on the absolute fun of a casino, that's right, the games
-          themselves. Players are always looking for something new, which will
-          help make the gaming experience so much better and more accessible.
-          Allowing the player to focus on the absolute fun of a casino, that's
-          right, the games themselves. <br />
-
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "16px",
+                sm: "16px",
+                md: "16x",
+                lg: "18px",
+                xl: "19px",
+              },
+            }}
+          >
+            Casinos online have not always been around, but we can safely say
+            that online casinos have been used a lot since they came on the
+            market. And it's not in short demand nor options, and now in 2022,
+            we have 1000s and 1000s to pick from – it's just a matter of what
+            you like and what payment options you would like to see at the
+            casino. Players are always looking for something new, which will
+            help make the gaming experience so much better and more accessible.
+            Allowing the player to focus on the absolute fun of a casino, that's
+            right, the games themselves. Players are always looking for
+            something new, which will help make the gaming experience so much
+            better and more accessible. Allowing the player to focus on the
+            absolute fun of a casino, that's right, the games themselves. <br />
           </Typography>
           <ButtonDetailedCard color="#8C57F5" margin="25px 0px" />
         </Box>

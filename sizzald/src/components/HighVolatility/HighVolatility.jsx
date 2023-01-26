@@ -18,7 +18,7 @@ function HighVolatility() {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],

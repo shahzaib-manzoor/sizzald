@@ -4,23 +4,19 @@ export const cardTextName = {
   fontWeight: "700",
   lineHeight: "18px",
   color: "#ffffff",
-  fontFamily: 'Poppins',
+  fontFamily: "Poppins",
 };
 export const cardTextPrice = {
   color: "rgba(3, 251, 117, 1)",
   fontWeight: "700",
-  fontSize: "18px",
+  fontSize: { xs: "14px", md: "14px", lg: "14px", xl: "18px" },
   lineHeight: "14px",
-  fontFamily: 'Poppins',
+  fontFamily: "Poppins",
 };
 export const cardAvatar = {
-  // height: "36px",
-  // width: "36px",
-  height: {xs:"26px",lg:"36px"},
-  width: {xs:"26px",lg:"36px"},
+  height: { xs: "26px", lg: "36px" },
+  width: { xs: "26px", lg: "36px" },
   marginRight: "4px",
-
-  // marginRight: "10px",
 };
 export const cardFlex = {
   display: "flex",

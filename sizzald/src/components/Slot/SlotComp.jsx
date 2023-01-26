@@ -69,7 +69,10 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
         >
           <Box
             sx={{
-              display: "flex",
+              display: {
+                xs: "block",
+                lg: "flex",
+              },
               alignItem: "center",
               gap: "10px",
               width: "50%",
@@ -110,7 +113,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
               Blocked
             </Button>
           </Box>
-          <Box sx={{ width: "50%" }}>
+          <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
             <Button
               sx={{
                 width: "45%",

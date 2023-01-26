@@ -11,14 +11,14 @@ const Favourite = () => {
         <Box
           sx={{
             borderRadius: "8px",
-            height: { xs: "300px", md: "500px" ,lg:"650px"},
+            height: { xs: "300px", md: "500px", lg: "650px" },
             background: "rgba(43, 45, 80, 1)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <img style={{xs: {width: "45%" },lg:{width:"30%"}}} src={frame} alt="" />
+          <img className="favouriteImg" src={frame} alt="" />
         </Box>
       </Box>
       <DetailedCard />
