@@ -63,3 +63,5 @@ function RecentBig({ sliderTwo, settingCardTwo }) {
 }
 
 export default RecentBig;
+
+ 

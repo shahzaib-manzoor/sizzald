@@ -40,6 +40,8 @@ scrollbar-width: none;  /* Firefox */
           height: '700px',
           // width:'5%'
           // marginBottom:'50px'
+          height:"800px",
+          marginBottom:'40px'
         }}
       >
         <Box
@@ -50,6 +52,8 @@ scrollbar-width: none;  /* Firefox */
             width: '100%',
             height: '50px',
             display: 'flex',
+            mt:"80px",
+            padding:"6px"
           }}
         >
           <img

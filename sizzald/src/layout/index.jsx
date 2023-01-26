@@ -6,6 +6,7 @@ import MobileFoter from "../layout/Footer/MobileFoter";
 import { Box } from "@mui/material";
 import { useState } from "react";
 import MiniSideBar from "./SideBar/MiniSideBar";
+// import { outLet, sideBar } from "./SideBar/Sidebarstyle";
 const Layout = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [mobileDrawer, setmobileDrawer] = useState(false);
@@ -18,6 +19,24 @@ const Layout = () => {
   const handlemObileDrawer = () => {
     setmobileDrawer(!true);
   };
+
+  //  ui
+  const sideBar={
+    width: openDrawer
+    ? "7%"
+    : mobileDrawer
+    ? "100%"
+    : { xs: "100%", sm: "0%", md: "0%", lg: "20%" },
+  // mt: "30px",
+  display: { xs: mobileDrawer ? "block" : "none", lg: "block",sm:'block' },
+}
+const outLet={
+  width: { xs: "100%",sm:openDrawer?'93%':"100%", lg: openDrawer ? "93%" : "80%" },
+  // mt: "30px",
+  display: "flex",
+  flexDirection: "column",
+  
+}
   // console.log(window.innerWidth)
   return (
     <div>
@@ -25,42 +44,20 @@ const Layout = () => {
         handleDrawer={handleDrawer}
         handlemObileDrawer={handlemObileDrawer}
       />
-
       <Box sx={{ display: "flex" }}>
-        <Box
-          sx={{
-            width: openDrawer
-              ? "7%"
-              : mobileDrawer
-              ? "100%"
-              : { xs: "100%", sm: "0%", md: "0%", lg: "20%" },
-            mt: "30px",
-            display: { xs: mobileDrawer ? "block" : "none", lg: "block" },
-          }}
-        >
+        <Box sx={sideBar} >
           {openDrawer ? (
             <MiniSideBar width={openDrawer ? "5%" : "0%"} />
           ) : (
             <SideBar width={openDrawer ? "20%" : "0%"} />
           )}
         </Box>
-
-        <Box
-          sx={{
-            // width:
-            width: { xs: "100%", lg: openDrawer ? "93%" : "80%" },
-            mt: "30px",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+        <Box sx={outLet} >
+          <Box sx={{display:{xs:mobileDrawer?"none":'block'}}}>
           <Outlet />
+          </Box>
           <Footer />
-          <Box
-            sx={{
-              display: { xs: "block", sm: "none", md: "none", lg: "none" },
-            }}
-          >
+          <Box sx={{display:{xs:'block',sm:"none",md:"none",lg:'none'}}}>
             <MobileFoter handleMObileDrawer={handleMObileDrawer} />
           </Box>
         </Box>
@@ -68,6 +65,15 @@ const Layout = () => {
     </div>
   );
 };
-
 export default Layout;
-// openDrawer ? '93%' : '80%'
+
+
+
+
+
+
+
+
+
+
+

@@ -34,7 +34,7 @@ export default function Footer() {
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: "28px",
+    fontSize: {xs:"18px",sm:'18px',md:'20px',lg:"28px"},
     fontWeight: 700,
     lineHeight: "150%",
     marginBottom: "20px",
@@ -42,7 +42,7 @@ export default function Footer() {
     fontFamily: "Poppins",
   };
   const subnav = {
-    fontSize: "16px",
+    fontSize: {xs:'12px',sm:"12px",md:'12px',lg:"16px"},
     fontWeight: 400,
     lineHeight: "28px",
     color: "#F2F2F2",
@@ -51,7 +51,7 @@ export default function Footer() {
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: "28px",
+    fontSize:{xs:"18px",sm:'18px',md:'20px',lg:"28px"} ,
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",

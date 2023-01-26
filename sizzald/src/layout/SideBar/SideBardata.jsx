@@ -53,8 +53,8 @@ export const SidebarData = [
         title: "Sizzld Games",
         path: "/",
         icon: <img src={Rocket} />,
-        iconClosed: <ExpandMoreIcon />,
-        iconOpened: <ExpandMoreIcon />,
+        iconClosed: <ExpandMoreIcon  className='hover'/>,
+        iconOpened: <ExpandMoreIcon  className='hover'/>,
       },
       {
         title: "Slot ",
