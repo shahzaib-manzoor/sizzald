@@ -3,6 +3,7 @@ export const networkContainer = {
 };
 export const networkText = {
   fontSize: { xs: "16px", md: "24px" },
+  fontFamily:"Poppins",
   fontWeight: "700",
   lineHeight: "40px",
   letterSpacing: "1px",
@@ -24,4 +25,4 @@ export const networkBoxImg = {
   textAlign: "center",
   padding: "15px 0px",
 };
-export const networkImg = { height: "50px", width: "50px" };
+export const networkImg = { height: {xs:"50px",lg:"87px"}, width: {xs:"50px",lg:"87px"} };

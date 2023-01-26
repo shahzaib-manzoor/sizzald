@@ -37,7 +37,7 @@ scrollbar-width: none;  /* Firefox */
           overflowY: 'auto',
           overflowX: 'hidden',
           paddingBottom:'20px',
-          height: '700px',
+         
           // width:'5%'
           // marginBottom:'50px'
           height:"800px",

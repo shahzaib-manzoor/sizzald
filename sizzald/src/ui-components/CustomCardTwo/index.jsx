@@ -28,7 +28,7 @@ export default function CustomCardTwo({ img, name, balance }) {
     >
       <CardMedia
         sx={{
-          height: { xs: "150px", md: "240px" },
+          height: { xs: "150px", md: "240px",lg:"326px"},
           background: `url(${img}) `,
           backgroundPosition: "center",
           backgroundSize: "cover",

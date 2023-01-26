@@ -8,13 +8,13 @@ function DetailCard() {
     <Box sx={style.mainContainer}>
       <Typography
         sx={{
-          color: "white",
-          fontSize: { xs: "18px", md: "24px" },
+          fontSize: "24px",
           fontWeight: "700",
-          lineHeight: "40px",
-          letterSpacing: "1px",
-          textAlign: "left",
-          textTransform: "uppercase",
+lineHeight: "40px",
+letterSpacing: "1px",
+textAlign: "left",
+fontFamily: "Poppins",
+color:"#ffffff",
           padding: "4px 0px",
         }}
       >
@@ -24,7 +24,8 @@ function DetailCard() {
         <Box sx={style.box}>
           <Box sx={style.float}>
             <img
-              style={style.detailCardImg}
+              style={{height: {xs:"200px",xl:"267px"},
+              width: {xs:"260px",xl:"305px"},}}
               src={detailCard}
               alt="Detail Card"
             />

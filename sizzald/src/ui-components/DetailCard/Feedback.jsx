@@ -5,7 +5,7 @@ function Feedback() {
   return (
     <Box
       sx={{
-        padding: "10px 10px",
+        padding: {xs:"10px 15px",lg:"20px 15px"},
         background: "rgba(43, 45, 80, 1)",
         height: "94%",
         borderRadius: "8px",
@@ -39,7 +39,7 @@ function Feedback() {
           boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
         }}
       />
-      <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+      <Box sx={{position:"relative"}}>
         <Box>
           <Typography
             sx={{
@@ -78,7 +78,7 @@ function Feedback() {
             </Typography>
           </Typography>
         </Box>
-        <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <Box sx={{position:"absolute",right:"0",bottom:0}}>
           <img style={{ height: "100px" }} src={feedback} alt="" />
         </Box>
       </Box>
