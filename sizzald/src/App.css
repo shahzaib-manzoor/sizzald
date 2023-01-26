@@ -14,3 +14,11 @@
 .slick-slider{
   padding: 0px 20px;
 }
+.hide{
+display: none;
+}
+.block:hover + .hide {
+
+background-color: red;
+display: block;
+}

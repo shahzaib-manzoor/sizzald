@@ -11,7 +11,8 @@ export const style={
     background:"#01022F",
     // overflow: 'hidden auto'
     overflowY:"auto",
-    width:{xs:"100%",sm:"0%",md:"0%",lg:"20%"}
+    // width:'20%'
+    width:{xs:"100%",sm:"40%",md:"30%",lg:"20%"}
 }
 
 
@@ -82,3 +83,4 @@ export const secondChild={
     gap:2
     
 }
+

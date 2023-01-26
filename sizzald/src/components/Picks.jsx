@@ -1,7 +1,9 @@
 
 const Picks = () => {
   return (
-    <div></div>
+    <div>
+        
+    </div>
   )
 }
 

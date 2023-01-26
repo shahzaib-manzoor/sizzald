@@ -23,9 +23,10 @@ scrollbar-width: none;  /* Firefox */
 
 `
   return (
-    <Box sx={{position:'relative'}}>
+    <Box >
       <HiddenScroll
         sx={{
+          
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -36,8 +37,11 @@ scrollbar-width: none;  /* Firefox */
           overflowY: 'auto',
           overflowX: 'hidden',
           paddingBottom:'20px',
-          height: '700px',
+          // height: '700px',
+          // width:'5%'
           // marginBottom:'50px'
+          height:"800px",
+          marginBottom:'40px'
         }}
       >
         <Box
@@ -48,6 +52,8 @@ scrollbar-width: none;  /* Firefox */
             width: '100%',
             height: '50px',
             display: 'flex',
+            mt:"80px",
+            padding:"6px"
           }}
         >
           <img

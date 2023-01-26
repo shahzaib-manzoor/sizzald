@@ -37,7 +37,7 @@ import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
-import RecentBigWin from "./Dashboard/RecentBigWin";
+// import RecentBigWin from "./Dashboard/RecentBigWin";
 
 export default function Dashboard() {
   const slider = React.useRef(null);
@@ -145,7 +145,8 @@ export default function Dashboard() {
   };
 
   return (
-    <section className="!bg-clBlueContainer ">
+    <section className="!bg-clBlueContainer " >
+      
       <Box
         sx={{
           textAlign: "right",

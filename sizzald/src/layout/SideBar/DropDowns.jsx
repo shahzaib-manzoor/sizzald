@@ -10,13 +10,14 @@ const SubMenu = ({ item }) => {
   return (
     <>
     
-    <Box sx={{ mt: '10px', height: 'auto'}}>
+    <Box sx={{ mt: '10px', height: 'auto',}}>
+      
       <Link
         style={{ color: 'white' ,textDecoration:'none'}}
         to={item.path}
         onClick={item.subNav && showSubnav}
       >
-        <Box
+        <Box 
           sx={{
             // background: 'rgba(95, 95, 111, 0.6)',
             display: 'flex',
@@ -58,15 +59,19 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <Link style={{ color: 'white',marginTop:"20px",textDecoration:'none' }} to={item.path} key={index}>
+            
+            <Link style={{ color: 'white',marginTop:"20px",textDecoration:'none' }} to={item.path} key={index} >
                
 
               <Box
+              
                 sx={{
                   paddingLeft:'20px',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1,
+                  
+                  // position:'relative',
                   // marginBottom:"20px",
                   
                   '&:hover': {
@@ -76,6 +81,9 @@ const SubMenu = ({ item }) => {
                   height:'60px'
                 }}
               >
+                {/* <Box sx={{position:'absolute',right:"40px"}}>
+                  <Typography>thhdhhf</Typography>
+                </Box> */}
                 {item.icon}
                 <Typography
                   sx={{ fontSize:'16px',fontWeight:400, textTransform: 'capitalize' }}
