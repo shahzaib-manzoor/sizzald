@@ -24,6 +24,6 @@ export const float = {
 export const mainContainer = {
   background: "rgba(43, 45, 80, 1) ",
   padding: { xs: "10px 15px", lg: "20px 10px 10px 15px " },
-  height: { xs: "100%", md: "94%", lg: "94%", xl: "94%" },
+  height: { xs: "100%", md: "94%", lg: "94%", xl: "100%" },
   borderRadius: "8px",
 };

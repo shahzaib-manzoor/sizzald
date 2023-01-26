@@ -154,7 +154,7 @@ export default function SideBar() {
           {SidebarData.map((item, index) => {
             return (
               <>
-                <DropDowns item={item} key={index}></DropDowns>
+                <DropDowns item={item} key={`index${index}`}></DropDowns>
               </>
             );
           })}

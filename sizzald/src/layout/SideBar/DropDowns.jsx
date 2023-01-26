@@ -1,17 +1,30 @@
 import { Box, Button, ButtonGroup, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const SubMenu = ({ item }) => {
+  const refe = useRef()
+  const [gameNav, setGameNav] = useState(false);
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
-
+console.log(refe)
+const gameHandler = (title) => { 
+  console.log('sjsj')
+  if(title === 'Sizzld Games'){
+    console.log('sizzld')
+    setGameNav(true)
+  }
+  else{
+    console.log('not sizzld')
+    refe.current.style.background = 'white'
+  }
+ }
   return (
     <>
+     
+    <Box  sx={{ mt: '10px', height: 'auto',}}>
     
-    <Box sx={{ mt: '10px', height: 'auto',}}>
-      
       <Link
         style={{ color: 'white' ,textDecoration:'none'}}
         to={item.path}
@@ -59,12 +72,15 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            
-            <Link style={{ color: 'white',marginTop:"20px",textDecoration:'none' }} to={item.path} key={index} >
+          <div  onMouseEnter={()=>gameHandler(item.title)}
+          onMouseOut={()=>setGameNav(false)}
+          >
+            <Link  style={{ color: 'white',marginTop:"20px",textDecoration:'none' }} to={item.path} key={`key${index}`} >
                
-
+               {console.log(item)}
               <Box
-              
+              ref={refe}
+               
                 sx={{
                   paddingLeft: "20px",
                   display: "flex",
@@ -74,10 +90,10 @@ const SubMenu = ({ item }) => {
                   // position:'relative',
                   // marginBottom:"20px",
                   
-                  '&:hover': {
+                  '&:hover':{
                     background: 'rgba(255, 255, 255, 0.1)',
                     borderRadius: '5px',
-                  },
+                  }  ,
                   height:'60px'
                 }}
               >
@@ -90,17 +106,20 @@ const SubMenu = ({ item }) => {
                 >
                   {item.title}
                 </Typography>
-                {item.iconOpened && <Box>{item.iconOpened}</Box>}
+                {item.iconOpened && <Box sx={{}}>{item.iconOpened}</Box>}
               </Box>
               
             </Link>
+            </div>
           );
+
         })}
-      
+        
     </Box>
   
    
     </>
+
   );
 };
 

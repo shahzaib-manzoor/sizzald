@@ -5,8 +5,8 @@ const cors = require("cors"),
   config = require("dotenv").config(),
   path = require("path"),
   bodyParser = require("body-parser");
-require("../config/connect-mongoose");
-require("../models");
+require("./src/config/connect-mongoose.js");
+require("./src/models");
 
 app.use(express.static(path.join(__dirname, "../../public")));
 app.use(function (err, req, res, next) {
@@ -23,7 +23,7 @@ app.use(
   })
 );
 
-var route = require("../routes");
+var route = require("./src/routes");
 app.use(route);
 
 app.get("*", (req, res) => {

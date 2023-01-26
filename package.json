@@ -1,0 +1,20 @@
+{
+  "name": "sizzald",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start .js --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahzi113awan/sizzald.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahzi113awan/sizzald/issues"
+  },
+  "homepage": "https://github.com/shahzi113awan/sizzald#readme"
+}

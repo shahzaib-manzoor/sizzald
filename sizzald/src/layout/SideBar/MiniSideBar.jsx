@@ -40,7 +40,7 @@ scrollbar-width: none;  /* Firefox */
          
           // width:'5%'
           // marginBottom:'50px'
-          height:"800px",
+          height:"850px",
           marginBottom:'40px'
         }}
       >
