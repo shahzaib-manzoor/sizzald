@@ -30,6 +30,7 @@ color:"#ffffff",
               alt="Detail Card"
             />
           </Box>
+          <Typography sx={{fontSize:{xs:'16px',sm:'16px',md:"16x",lg:"18px",xl:"18px"}}}>
           Casinos online have not always been around, but we can safely say that
           online casinos have been used a lot since they came on the market. And
           it's not in short demand nor options, and now in 2022, we have 1000s
@@ -42,6 +43,8 @@ color:"#ffffff",
           help make the gaming experience so much better and more accessible.
           Allowing the player to focus on the absolute fun of a casino, that's
           right, the games themselves. <br />
+
+          </Typography>
           <ButtonDetailedCard color="#8C57F5" margin="25px 0px" />
         </Box>
       </Box>

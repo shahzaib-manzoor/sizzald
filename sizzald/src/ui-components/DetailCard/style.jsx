@@ -10,17 +10,17 @@ export const box = {
 };
 export const float = {
   float: "right",
-  height: "94%",
+  height: "100%",
   display: "flex",
   alignItems: "flex-end",
-  shapeOutside: {xs:"inset(calc(75% - 100px) 0 0)",xl:"inset(calc(60% - 100px) 0 0)"},
+  shapeOutside: {xs:"inset(calc(75% - 100px) 0 0)",xl:"inset(calc(53% - 100px) 0 0)"},
   lineHeight: "30px",
 };
 
 export const mainContainer = {
   background: "rgba(43, 45, 80, 1) ",
-  padding: {xs:"10px 15px",lg:"20px 15px"},
-  height: { xs: "100%", md: "94%" },
+  padding: {xs:"10px 15px",lg:"20px 10px 20px 15px "},
+  height: { xs: "100%", md: "94%",lg:"92%" ,xl:"92%"},
   borderRadius: "8px",
 };
 

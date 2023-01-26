@@ -9,7 +9,7 @@ function ButtonDetailedCard({ color, margin }) {
         background: color,
         borderRadius: "50px",
         boxShadow: "0px 4px 4px 0px rgba(5, 5, 5, 0.25)",
-        marginTop: {sx:"10px",lg:"20px"},
+        marginTop: {sx:"10px",lg:"30px"},
       }}
       variant="contained"
     >

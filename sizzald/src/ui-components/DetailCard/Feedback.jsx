@@ -5,11 +5,12 @@ function Feedback() {
   return (
     <Box
       sx={{
-        padding: {xs:"10px 15px",lg:"20px 15px"},
+        padding: {xs:"10px 15px",lg:"15px 15px"},
         background: "rgba(43, 45, 80, 1)",
         height: "94%",
         borderRadius: "8px",
         marginTop: { xs: "15px", md: "0px" },
+        position:'relative',
       }}
     >
       <Typography
@@ -29,7 +30,7 @@ function Feedback() {
       </Typography>
       <input
         style={{
-          height: "220px",
+          height: "265px",
           width: "100%",
           outline: "none",
           border: "none",
@@ -39,7 +40,7 @@ function Feedback() {
           boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
         }}
       />
-      <Box sx={{position:"relative"}}>
+      <Box >
         <Box>
           <Typography
             sx={{
