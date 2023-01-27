@@ -29,6 +29,7 @@ const gameHandler = (title) => {
         style={{ color: 'white' ,textDecoration:'none',}}
         to={item.path}
         onClick={item.subNav && showSubnav}
+        
       >
         <Box 
           sx={{

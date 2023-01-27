@@ -77,6 +77,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const navigate=useNavigate('/')
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -89,9 +90,13 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
     setMobileMoreAnchorEl(null);
   };
 
+
   const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
+    localStorage.removeItem("auth")
+  
+  navigate("/")
+
+    
   };
 
   const handleMobileMenuOpen = (event) => {
@@ -99,12 +104,12 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
     setMobileMoreAnchorEl(event.currentTarget);
     
   };
-const handleLogout = () => { 
-  localStorage.removeItem("auth")
+// const handleLogout = () => { 
+//   localStorage.removeItem("auth")
   
-  navigate("/")
+//   navigate("/")
 
- }
+//  }
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -123,7 +128,7 @@ const handleLogout = () => {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
   );
 
@@ -337,7 +342,13 @@ const handleLogout = () => {
               </Button>
             </Stack>
             <Avatar sx={style.avator} alt='avator' src={avator} />
-            <IconButton className='!text-white ' aria-label='avator-arrow' onClick={()=>handlemObileDrawer()}>
+            <IconButton className='!text-white ' aria-label='avator-arrow'  size="large"
+              edge="end"
+              // aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit">
               <img src={arrowDown} alt='' />
             </IconButton>
           </Box>
