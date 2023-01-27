@@ -10,7 +10,9 @@ import GameId from './Loatry/GameId';
 import Card from './Loatry/Card';
 import CocoLotary from './Loatry/CocoLotary';
 import Instruction from './Loatry/Instruction';
-import { Balance } from './Loatry/Balance';
+import  Balance  from './Loatry/Balance';
+import DetailedCard from '../ui-components/DetailCard';
+import Network from "../ui-components/Network";
 
 const Loatry = () => {
   return (
@@ -244,6 +246,13 @@ const Loatry = () => {
         <CocoLotary/>
         <Instruction/>
         <Balance/>
+        <Box sx={{paddingBottom:'60px'}}>
+
+        <DetailedCard />
+        </Box>
+        <Network/>
+
+        {/* <AcceptedNetwork/> */}
       </Box>
     </Box>
   );
