@@ -170,7 +170,7 @@ const handleInput = (e) => {
                 }}
               >
                 <OutlinedInput
-                onClick={(e)=>{handleInput(e)}}
+                onChange={(e)=>{handleInput(e)}}
                 name="email"
                   sx={{
                     border: "3px solid #7617EA",
@@ -182,7 +182,7 @@ const handleInput = (e) => {
                   placeholder="Enter user name"
                 ></OutlinedInput>
                 <OutlinedInput
-                onClick={(e)=>{handleInput(e)}}
+                onChange={(e)=>{handleInput(e)}}
                 name="password"
                   sx={{
                     border: "3px solid #7617EA",
