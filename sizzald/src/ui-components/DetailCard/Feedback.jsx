@@ -7,7 +7,7 @@ function Feedback() {
       sx={{
         padding: { xs: "10px 15px", lg: "15px 15px" },
         background: "rgba(43, 45, 80, 1)",
-        height: {xs:"95%",sm:"98%",md:"98%",lg:"100%"},
+        height: { xs: "95%", sm: "98%", md: "98%", lg: "94%", xl: "100%" },
         borderRadius: "8px",
         marginTop: { xs: "15px", md: "0px" },
         position: "relative",
@@ -79,7 +79,14 @@ function Feedback() {
             </Typography>
           </Typography>
         </Box>
-        <Box sx={{ position: "absolute", right: "0", bottom: 0,display:{xs:"none",sm:"none",md:"none",lg:"block"}}}>
+        <Box
+          sx={{
+            position: "absolute",
+            right: "0",
+            bottom: 0,
+            display: { xs: "none", sm: "none", md: "none", lg: "block" },
+          }}
+        >
           <img style={{ height: "100px" }} src={feedback} alt="" />
         </Box>
       </Box>
