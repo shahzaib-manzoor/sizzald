@@ -145,10 +145,12 @@ export default function SideBar() {
         {/* third child */}
         <Box
           sx={{
-            background: 'rgba(95, 95, 111, 0.6)',
-            height: 'auto',
+            
+            // height: 'auto',
             borderRadius: '0px 8px 0px 0px',
-            height:'1500px'
+            // height:'1500px'
+            background: 'rgba(95, 95, 111, 0.6)',
+            paddingBottom:'80px'
           }}
         >
           {SidebarData.map((item, index) => {

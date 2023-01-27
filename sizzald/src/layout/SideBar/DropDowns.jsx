@@ -26,7 +26,7 @@ const gameHandler = (title) => {
     <Box  sx={{ mt: '10px', height: 'auto',}}>
     
       <Link
-        style={{ color: 'white' ,textDecoration:'none'}}
+        style={{ color: 'white' ,textDecoration:'none',}}
         to={item.path}
         onClick={item.subNav && showSubnav}
       >
@@ -87,6 +87,7 @@ const gameHandler = (title) => {
                   alignItems: "center",
                   gap: 1,
                   
+                  
                   // position:'relative',
                   // marginBottom:"20px",
                   
@@ -97,16 +98,19 @@ const gameHandler = (title) => {
                   height:'60px'
                 }}
               >
+         
+
+                {item.icon}
+               
                 {/* <Box sx={{position:'absolute',right:"40px"}}>
                   <Typography>thhdhhf</Typography>
                 </Box> */}
-                {item.icon}
                 <Typography
                   sx={{ fontSize:'16px',fontWeight:400, textTransform: 'capitalize' }}
                 >
                   {item.title}
                 </Typography>
-                {item.iconOpened && <Box sx={{}}>{item.iconOpened}</Box>}
+                {item.iconOpened && <Box sx={{marginLeft:'112px'}}>{item.iconOpened}</Box>}
               </Box>
               
             </Link>
