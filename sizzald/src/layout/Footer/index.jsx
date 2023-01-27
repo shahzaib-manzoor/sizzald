@@ -21,6 +21,8 @@ export default function Footer() {
     { support: "Gamble" },
     { support: "AwareFairness" },
     { support: "FAQ" },
+    { support: "FAQ" },
+    { support: "FAQ" },
     { support: "Privacy Policy" },
     { support: "Terms Of Service" },
     { support: "AML" },
@@ -34,15 +36,15 @@ export default function Footer() {
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: {xs:"18px",sm:'18px',md:'20px',lg:"28px"},
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "28px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginBottom: "20px",
-    marginTop: "20px",
+    marginTop: "40px",
     fontFamily: "Poppins",
   };
   const subnav = {
-    fontSize: {xs:'12px',sm:"12px",md:'12px',lg:"16px"},
+    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "16px" },
     fontWeight: 400,
     lineHeight: "28px",
     color: "#F2F2F2",
@@ -51,11 +53,11 @@ export default function Footer() {
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize:{xs:"18px",sm:'18px',md:'20px',lg:"28px"} ,
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "28px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",
-    marginTop: "20px",
+    marginTop: "40px",
     marginBottom: "20px",
     fontFamily: "Poppins",
   };
@@ -68,9 +70,9 @@ export default function Footer() {
           // marginRight:'30px',
           display: "flex",
           flexDirection: "row",
-          paddingLeft: "20px",
+          paddingLeft: "40px",
           justifyContent: "space-between",
-          paddingBottom: "20px",
+          paddingBottom: "40px",
           // display:{xs:'none',sm:"none",md:"none",lg:"block"}
         }}
       >
