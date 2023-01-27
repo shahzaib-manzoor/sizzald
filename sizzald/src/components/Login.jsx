@@ -55,6 +55,7 @@ const Signin = () => {
       navigate('/')
 
     }).catch((err) => {
+      alert('Invalid username or password')
       console.log(err);
     })
 
