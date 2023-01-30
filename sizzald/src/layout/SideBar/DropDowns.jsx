@@ -244,7 +244,7 @@ const SubMenu = ({ item }) => {
       <Box sx={{ mt: "10px", height: "auto" }}>
         <Link
           style={{ color: "white", textDecoration: "none" }}
-          to={item.path}
+          to={item.path?item.path:""}
           onClick={item.subNav && showSubnav}
         >
           <Box
