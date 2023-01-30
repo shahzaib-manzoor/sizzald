@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm start .js --prefix server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd sizzald  && npm run build"
+    "heroku-postbuild": "cd sizzald  && npm run build && cd  server npm i"
 
     
 
