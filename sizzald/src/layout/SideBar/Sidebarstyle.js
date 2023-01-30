@@ -69,7 +69,7 @@ export const unlock={
     fontWeight:600
 }
 export const secondflex={
-    display:'flex',alignItems:'center',justifyContent:'center',
+    display:'flex',alignItems:'center'
 
 }
 export const secondChild={
