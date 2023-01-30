@@ -28,7 +28,7 @@ import sponsership from "../../assets/sponsership.svg";
 export const SidebarData = [
   {
     title: "casino",
-    // path: '/overview',
+    path: '/',
     icon: <img src={casino}></img>,
     iconClosed: <ExpandMoreIcon />,
     iconOpened: <ExpandMoreIcon />,
@@ -90,7 +90,7 @@ export const SidebarData = [
   },
   {
     title: "Sports ",
-    // path: '/overview',
+    path: '/Sports',
     icon: <img src={sports} style={{ marginLeft: "-5px" }}></img>,
   },
   {
@@ -100,37 +100,37 @@ export const SidebarData = [
   },
   {
     title: "Affiliate",
-    // path: '/overview',
+    path: '/Affiliate',
     icon: <img src={affilate} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "probably fair ",
-    // path: '/overview',
+    path: '/probably fair',
     icon: <img src={fair} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "vip Club",
-    // path: '/overview',
+    path: '/vip club',
     icon: <img src={vipClub} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "forum ",
-    // path: '/overview',
+    path: '/forum',
     icon: <img src={fourm} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "blog ",
-    // path: '/overview',
+    path: '/blog ',
     icon: <img src={blog} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "head phones",
-    // path: '/overview',
+    path: '/head phones',
     icon: <img src={headphones} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "languages",
-    // path: '/overview',
+    path: '/languages',
     icon: (
       <img
         src={languages}
@@ -140,7 +140,7 @@ export const SidebarData = [
   },
   {
     title: "Sponsorships",
-    // path: '/overview',
+    path: '/Sponsorships',
     icon: <img src={sponsership} style={{ marginLeft: "-5px" }}></img>,
   },
 ];

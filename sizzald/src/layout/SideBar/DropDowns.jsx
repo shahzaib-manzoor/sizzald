@@ -256,7 +256,7 @@ const SubMenu = ({ item }) => {
             }}
           >
             {sideData?.map((item) => (
-              <NavLink>
+              <NavLink to={item.path}>
                 <Box
                   sx={{
                     display: "flex",
