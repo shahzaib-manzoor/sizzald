@@ -249,7 +249,7 @@ const SubMenu = ({ item }) => {
               left: "20%",
               width: "15%",
               height: "1000px",
-              background: "#202447",
+              background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
               overflowY: "auto",

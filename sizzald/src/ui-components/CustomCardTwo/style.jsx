@@ -21,6 +21,7 @@ export const cardAvatar = {
 export const cardFlex = {
   display: "flex",
   justifyContent: "space-between",
+  
   // alignaItems: "flex-center",
   // justifyContent: "space-between",
 
@@ -30,11 +31,12 @@ export const cardFlex = {
   borderRadius: "4px",
   padding: "5px 2px !important",
   background: "rgba(61, 61, 61, 0.49)",
+ alignItems: "center",
 };
 
 export const cardFlexTwo = {
   display: "flex",
-  alignaItems: "flex-center",
+  // alignaItems: "center",
   justifyContent: "space-between",
 };
 export const cardContentIconSize = {

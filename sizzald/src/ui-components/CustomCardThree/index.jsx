@@ -10,7 +10,7 @@ const CustomCardThree = ({ img }) => {
     <Card
       sx={{
         width: "95%",
-        background: "rgba(43, 45, 80, 1)",
+        background: "rgba(43, 45, 80, 0.6)",
         height: { xs: "80px", md: "105px" },
         display: "flex",
         justifyContent: "center",

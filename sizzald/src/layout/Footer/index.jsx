@@ -36,7 +36,7 @@ export default function Footer() {
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "28px" },
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginBottom: "20px",
@@ -53,7 +53,7 @@ export default function Footer() {
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "28px" },
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",
@@ -65,7 +65,7 @@ export default function Footer() {
     <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
       <Box
         sx={{
-          background: "rgba(43, 45, 80, 1)",
+          background: "rgba(43, 45, 80, 0.6)",
           marginLeft: "20px",
           // marginRight:'30px',
           display: "flex",
