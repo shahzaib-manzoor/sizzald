@@ -13,7 +13,7 @@ import HighVolatility from "../components/HighVolatility/HighVolatility.jsx";
 import FeatureBuyIn from "../components/FeatureBuyIn/FeatureBuyIn";
 import TableGame from "../components/TableGame/TableGame";
 import Loatry from "../components/Loatry";
-import Limbo from "../components/SizzldGames/Limbo/Limbo";
+import Limbo from "../components/SizzldGames/Limbo";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
