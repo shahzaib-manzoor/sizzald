@@ -18,6 +18,11 @@
   height: 267px;
   width: 305px;
 }
+@media(max-width:1800px) {
+  .detailImg{
+    height: 210px;
+    width: 200px
+  } }
 @media(max-width:1400px) {
 .detailImg{
   height: 209px;
