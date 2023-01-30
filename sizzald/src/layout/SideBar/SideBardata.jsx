@@ -105,12 +105,20 @@ export const SidebarData = [
   },
   {
     title: "probably fair ",
+<<<<<<< HEAD
     path: '/probablyfair',
+=======
+    path: '/probably fair',
+>>>>>>> 8fcda13 (sizeld games folder)
     icon: <img src={fair} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "vip Club",
+<<<<<<< HEAD
     path: '/vipclub',
+=======
+    path: '/vip club',
+>>>>>>> 8fcda13 (sizeld games folder)
     icon: <img src={vipClub} style={{ marginLeft: "-5px" }}></img>,
   },
   {
@@ -125,7 +133,11 @@ export const SidebarData = [
   },
   {
     title: "head phones",
+<<<<<<< HEAD
     path: '/headphones',
+=======
+    path: '/head phones',
+>>>>>>> 8fcda13 (sizeld games folder)
     icon: <img src={headphones} style={{ marginLeft: "-5px" }}></img>,
   },
   {
