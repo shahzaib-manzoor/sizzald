@@ -42,3 +42,6 @@
   .favouriteImg{
     width: 50%;
   }
+  .css-xjfvls-MuiPaper-root-MuiAppBar-root{
+    background:none !important;
+  }

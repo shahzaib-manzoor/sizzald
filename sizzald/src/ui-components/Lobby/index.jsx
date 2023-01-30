@@ -154,7 +154,7 @@ export default function CustomizedTables() {
 
       <TableContainer
         component={Paper}
-        sx={{ background: "#2B2D50", width: "100%" }}
+        sx={{ background: "rgba(43, 45, 80, 0.6)", width: "100%" }}
       >
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead

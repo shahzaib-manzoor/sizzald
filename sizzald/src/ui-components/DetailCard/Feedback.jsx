@@ -6,7 +6,7 @@ function Feedback() {
     <Box
       sx={{
         padding: { xs: "10px 15px", lg: "15px 15px" },
-        background: "rgba(43, 45, 80, 1)",
+        background: "rgba(43, 45, 80, 0.6)",
         height: { xs: "95%", sm: "98%", md: "98%", lg: "94%", xl: "100%" },
         borderRadius: "8px",
         marginTop: { xs: "15px", md: "0px" },

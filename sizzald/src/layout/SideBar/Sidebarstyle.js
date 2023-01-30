@@ -8,7 +8,7 @@ export const style={
     // overflowY: "hidden",
     position:'fixed',
     zIndex:2000,
-    background:"#01022F",
+    // background:"rgba(43, 45, 80, 0.6)",
     // overflow: 'hidden auto'
     overflowY:"auto",
     // width:'20%'
@@ -17,7 +17,7 @@ export const style={
 
 
 export const firstChild={
-   background:'rgba(95, 95, 111, 0.6)',
+   background:'rgba(43, 45, 80, 0.6)',
    boxShadow: '0px 0px 6px #5F5F6F',
    bordeRadius: '0px 8px 0px 0px',
    paddingBottom:"10px",
@@ -25,7 +25,7 @@ export const firstChild={
 
 }
 export const thirdChild={
-   background:'rgba(95, 95, 111, 0.6)',
+//    background:'rgba(43, 45, 80, 0.6)',
    boxShadow: '0px 0px 6px #5F5F6F',
    bordeRadius: '0px 8px 0px 0px',
    paddingBottom:"10px",
@@ -33,7 +33,7 @@ export const thirdChild={
 
 }
 export const thirdChildfirst={
-    background: 'rgba(255, 255, 255, 0.1)',
+    background: 'rgba(43, 45, 80, 0.6)',
     borderRadius: '5px'
 
 }
