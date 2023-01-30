@@ -105,12 +105,12 @@ export const SidebarData = [
   },
   {
     title: "probably fair ",
-    path: '/probably fair',
+    path: '/probablyfair',
     icon: <img src={fair} style={{ marginLeft: "-5px" }}></img>,
   },
   {
     title: "vip Club",
-    path: '/vip club',
+    path: '/vipclub',
     icon: <img src={vipClub} style={{ marginLeft: "-5px" }}></img>,
   },
   {
@@ -125,7 +125,7 @@ export const SidebarData = [
   },
   {
     title: "head phones",
-    path: '/head phones',
+    path: '/headphones',
     icon: <img src={headphones} style={{ marginLeft: "-5px" }}></img>,
   },
   {

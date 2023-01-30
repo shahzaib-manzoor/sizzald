@@ -289,7 +289,7 @@ const SubMenu = ({ item }) => {
       <Box sx={{ mt: "10px", height: "auto" }}>
         <NavLink
           style={({ isActive }) => (isActive ? activeMenuStyle : menuStyle)}
-          to={item.path}
+          to={item.path?item.path:""}
           onClick={item.subNav && showSubnav}
         >
           {/* <Box

@@ -77,8 +77,10 @@ import url from "../constants/urls";
         <Box
           sx={{
             backgroundImage: `url(${img2})`,
-            width: "40%",
-            height: "700px",
+            width: { xs: "100%", sm: "100%", md: "70%", lg: "40%" },
+            height:'auto',
+            margin:'auto',
+            padding:'20px',
             borderRadius: "7px",
             //   background:'linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))',
             mixBlendMode: "normal",
@@ -97,7 +99,8 @@ import url from "../constants/urls";
               <Typography
                 sx={{
                   fontWeight: 700,
-                  fontSize: "30px",
+                  fontSize: { xs: "16px", sm: "18px", md: "30px", lg: "30px" },
+
                   color: "#ffffff",
                   textShadow: "1px 2px 4px rgba(175, 175, 175, 0.18)",
                   textAlign: "center",
@@ -108,7 +111,8 @@ import url from "../constants/urls";
               <Typography
                 sx={{
                   fontWeight: 700,
-                  fontSize: "30px",
+                  fontSize: { xs: "16px", sm: "18px", md: "30px", lg: "30px" },
+
                   color: "#ffffff",
                   textShadow: "1px 2px 4px rgba(175, 175, 175, 0.18)",
                   textAlign: "center",
@@ -146,6 +150,7 @@ import url from "../constants/urls";
                   <OutlinedInput
                   onChange={(e)=>handleInput(e)}
                   name="password"
+                  type="password"
                     sx={{
                       border: "3px solid #7617EA",
                       backdropFilter: " blur(10px)",
@@ -180,7 +185,7 @@ import url from "../constants/urls";
                       boxShadow: "0px 0px 6px #5F5F6F",
                       backdropFilter: "blur(10px)",
                       borderRadius: "68px",
-                      width: "50%",
+                      width: "100%",
                       height: "60px",
                       color: "#ffffff",
                     }}
@@ -196,7 +201,7 @@ import url from "../constants/urls";
                     >
                       <Typography
                       sx={{
-                      marginLeft:'10px'
+                    marginLeft:'12px'
                       }}
                       >Login</Typography>
   
@@ -213,7 +218,7 @@ import url from "../constants/urls";
                       boxShadow: "0px 0px 6px #5F5F6F",
                       backdropFilter: "blur(10px)",
                       borderRadius: "68px",
-                      width: "50%",
+                      width: "100%",
                       height: "60px",
                       color: "#ffffff",
                     }}
@@ -227,7 +232,7 @@ import url from "../constants/urls";
                         width: "100%",
                       }}
                     >
-                      <Typography>Sign up</Typography>
+                      <Typography sx={{marginLeft:'10px'}} >Sign up</Typography>
   
                       <Avatar sx={{ background: "rgba(255, 255, 255, 0.2)" }}>
                         <ArrowForwardIcon
