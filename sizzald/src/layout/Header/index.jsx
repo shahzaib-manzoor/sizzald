@@ -195,6 +195,8 @@ export default function PrimarySearchAppBar({
           // width: "99%",
           // borderRadius: "8px",
           // boxShadow: "0px 0px 6px #5F5F6F",
+          backgroundColor:'rgba(43, 45, 80, 0.6) !important'
+         
         }}
       >
         <Toolbar sx={style.Toolbar}>

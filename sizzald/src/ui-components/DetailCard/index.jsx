@@ -19,7 +19,7 @@ const DetailedCard = () => {
     >
       <Box
         sx={{
-          width: { xs: "100%", sm: "100%", md: "100%", lg: "50%", xl: "50%" ,height:'581px'},
+          width: { xs: "100%", sm: "100%", md: "100%", lg: "50%", xl: "50%" },height:{xs:'581PX',sm:'581px',lg:'695px',xl:"581px"},
           margin: "10px 0px",
         }}
       >

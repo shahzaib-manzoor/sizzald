@@ -3,11 +3,12 @@ export const containerNav = {
   width: "100%",
   flexGrow: 1,
   padding: "0px !impotant",
+  backgroundColor:'none'
 };
 
 export const Toolbar = {
   // background: "rgba(32, 36, 71, 0.6)",
-  background: "rgba(43, 45, 80, 0.6) !important",
+  backgroundColor: "rgba(43, 45, 80, 0.6) !important",
   // boxShadow: "0px 0px 6px 0px #5F5F6F",
   padding: "0px 13px 0px 0px !important",
   // background: "rgba(32, 36, 71, 1)",
@@ -52,3 +53,4 @@ export const headerButtonIcon = {
   width: "14px",
 };
 export const headerDNone = { display: "none" };
+ 
