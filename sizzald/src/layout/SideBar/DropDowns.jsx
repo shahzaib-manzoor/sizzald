@@ -12,7 +12,7 @@ import coinFlip from "../../assets/coinflip_rounded.png";
 import { NavLink } from "react-router-dom";
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
-    paddingLeft: "20px",
+    paddingLeft: "35px",
     display: "flex",
     alignItems: "center",
     // gap: 1,
@@ -35,7 +35,7 @@ const SubMenu = ({ item }) => {
     color: "white",
     background: "rgba(255, 255, 255, 0.1)",
     borderRadius: "5px",
-    paddingLeft: "20px",
+    paddingLeft: "35px",
     display: "flex",
     alignItems: "center",
     gap: 1,
@@ -61,7 +61,7 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 5px" : "7px 13px",
+    padding: item.subNav ? "7px 10px" : "7px 30px",
     textDecoration: "none",
     color: "white",
     width: "inherit",
@@ -75,7 +75,7 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 5px" : "7px 13px",
+    padding: item.subNav ? "7px 25px" : "7px 13px",
     background: "rgba(255, 255, 255, 0.1)",
     textDecoration: "none",
     color: "white",
@@ -275,7 +275,7 @@ const SubMenu = ({ item }) => {
                       letterSpacing: "0em",
                       textAlign: "left",
                       color: "#ffffff",
-                      paddingLeft: "20px",
+                      paddingLeft: "40px",
                     }}
                   >
                     {item.title}

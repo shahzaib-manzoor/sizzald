@@ -3,12 +3,12 @@ import { Box, Typography, Stack } from '@mui/material';
 // import { mainBox, } from "./Cardstyle"
 import { secondflex, typography, flex, unlock, mainBox } from './Sidebarstyle';
 
-const Card = ({ text, img, background, vip14, unlocked, marginRight }) => {
+const Card = ({ text, img, background, vip14, unlocked, marginRight,marginLeft ,backgroundImage}) => {
   return (
-    <Stack sx={{ ...mainBox, background, marginRight }}>
-      <Box sx={secondflex}>
+    <Stack sx={{ ...mainBox,  marginRight }}>
+      <Box sx={{...secondflex,backgroundImage}}>
         <img src={img}></img>
-        <Box>
+        <Box sx={{marginLeft:marginLeft,width:'100%'}}>
           <Typography sx={typography}> {text}</Typography>
           <Typography sx={{ ...unlock, vip14 }}> {unlocked}</Typography>
         </Box>
