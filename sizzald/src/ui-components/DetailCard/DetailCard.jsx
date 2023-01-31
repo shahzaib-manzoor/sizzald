@@ -15,7 +15,8 @@ function DetailCard() {
           textAlign: "left",
           fontFamily: "Poppins",
           color: "#ffffff",
-          padding: "4px 0px",
+          paddingTop:"4px",
+          paddingBottom:"8px"
         }}
       >
         Crypto Online Casino
@@ -23,7 +24,7 @@ function DetailCard() {
       <Box sx={style.wrapper}>
         <Box sx={style.box}>
           <Box sx={style.float}>
-            <img className="detailImg" src={detailCard} alt="Detail Card" />
+            <img  src={detailCard} alt="Detail Card" />
           </Box>
           <Typography
             sx={{
@@ -32,7 +33,7 @@ function DetailCard() {
                 sm: "16px",
                 md: "16x",
                 lg: "18px",
-                xl: "19px",
+                xl: "20px",
               },
             }}
           >
@@ -48,8 +49,12 @@ function DetailCard() {
             something new, which will help make the gaming experience so much
             better and more accessible. Allowing the player to focus on the
             absolute fun of a casino, that's right, the games themselves. <br />
-            <ButtonDetailedCard color="#8C57F5" margin="0px 0px" />
           </Typography>
+      <Box >
+
+      <ButtonDetailedCard color="#8C57F5"  />
+      </Box>
+           
         </Box>
       </Box>
     </Box>

@@ -128,13 +128,13 @@ export default function SideBar() {
             <Box sx={{ display: "flex", mt: "10px" }}>
               <Card
                 text={"bONUSCODE"}
-                img={group}
+                img={fiveCardImage}
                 // background={
                 //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
                 // }
                 unlocked={"vip 22"}
                 backgroundImage={`url(${cardFive})`}
-                marginLeft={'15px'}
+                // marginLeft={'15px'}
               />
               <Card
                 text={"bONUS"}
@@ -144,7 +144,7 @@ export default function SideBar() {
                 // }
                 unlocked={"vip 22"}
                 marginRight={"10px"}
-                backgroundImage={`url(${cardSix})`}
+                backgroundImage={`url(${cardSix })`}
                 // marginLeft={'13px'}
               />
             </Box>

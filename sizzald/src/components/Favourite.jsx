@@ -18,7 +18,7 @@ const Favourite = () => {
             alignItems: "center",
           }}
         >
-          <img className="favouriteImg" src={frame} alt="" />
+          <img style={{height:"60%"}} src={frame} alt="" />
         </Box>
       </Box>
       <DetailedCard />

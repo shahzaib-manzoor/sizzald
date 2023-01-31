@@ -5,9 +5,9 @@ function Feedback() {
   return (
     <Box
       sx={{
-        padding: { xs: "10px 15px", lg: "15px 15px" },
+        padding: { xs: "10px 15px", lg: "15px 15px",xl:"20px 25px" },
         background: "rgba(43, 45, 80, 0.6)",
-        height: { xs: "100%", sm: "100%", md: "100%", lg: "100%", xl: "100%" },
+        height: { xs: "100%", sm: "100%", md: "100%", lg: "527px", xl: "571px" },
         borderRadius: "8px",
         marginTop: { xs: "15px", md: "0px" },
         position: "relative",
@@ -22,7 +22,9 @@ function Feedback() {
           letterSpacing: "1px",
           textAlign: "left",
           color: "white",
-          paddingBottom: "10px",
+          paddingBottom: "20px",
+          textTransform: "uppercase",
+
         }}
         variant="h6"
       >
@@ -61,8 +63,9 @@ function Feedback() {
               color: "white ",
               fontWeight: "600",
               fontSize: "16px",
-              paddingTop: { xs: "5px", md: "20px" },
-              paddingBottom: { xs: "10px", md: "0px" },
+              paddingTop: { xs: "5px", md: "20px",lg:"20px",xl:"62px" },
+              paddingBottom: { xs: "10px", md: "0px" ,},
+
             }}
             variant="h6"
           >
@@ -87,7 +90,7 @@ function Feedback() {
             display: { xs: "none", sm: "none", md: "none", lg: "block" },
           }}
         >
-          <img style={{ height: "100px" }} src={feedback} alt="" />
+          <img  src={feedback} alt="" />
         </Box>
       </Box>
     </Box>
