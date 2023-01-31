@@ -13,7 +13,7 @@ import {
   Avatar,
   ButtonGroup,
 } from "@mui/material";
-
+import { useState, useEffect } from "react";
 import * as style from "./style/style";
 
 import EmailIcon from "@mui/icons-material/Email";
@@ -74,10 +74,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer}) {
+export default function PrimarySearchAppBar({
+  handleDrawer,
+  handlemObileDrawer,
+}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const navigate=useNavigate('/')
+  const navigate = useNavigate("/");
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -90,26 +93,22 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
     setMobileMoreAnchorEl(null);
   };
 
-
   const handleMenuClose = () => {
-    localStorage.removeItem("auth")
-  
-  navigate("/")
+    localStorage.removeItem("auth");
 
-    
+    navigate("/");
   };
 
   const handleMobileMenuOpen = (event) => {
     console.log("handleMobileMenuOpen");
     setMobileMoreAnchorEl(event.currentTarget);
-    
   };
-// const handleLogout = () => { 
-//   localStorage.removeItem("auth")
-  
-//   navigate("/")
+  // const handleLogout = () => {
+  //   localStorage.removeItem("auth")
 
-//  }
+  //   navigate("/")
+
+  //  }
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -179,14 +178,25 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>prof</p>
       </MenuItem>
     </Menu>
   );
 
   return (
     <Box sx={style.containerNav}>
-      <AppBar sx={{ padding: "0px" }}>
+      <AppBar
+        sx={{
+          // margin: "20px 10px",
+          padding: "0px",
+          // top: "20px",
+          // left: "50%",
+          // transform: "translateX(-50%)",
+          // width: "99%",
+          // borderRadius: "8px",
+          // boxShadow: "0px 0px 6px #5F5F6F",
+        }}
+      >
         <Toolbar sx={style.Toolbar}>
           <IconButton size="large" color="inherit" onClick={handleDrawer}>
             <MenuIcon />
@@ -341,15 +351,19 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
                 Wallet
               </Button>
             </Stack>
-            <Avatar sx={style.avator} alt='avator' src={avator} />
-            <IconButton className='!text-white ' aria-label='avator-arrow'  size="large"
+            <Avatar sx={style.avator} alt="avator" src={avator} />
+            <IconButton
+              className="!text-white "
+              aria-label="avator-arrow"
+              size="large"
               edge="end"
               // aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit">
-              <img src={arrowDown} alt='' />
+              color="inherit"
+            >
+              <img src={arrowDown} alt="" />
             </IconButton>
           </Box>
           <Box sx={style.headerDNone}>
@@ -360,9 +374,7 @@ export default function PrimarySearchAppBar({ handleDrawer ,handlemObileDrawer})
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
-
             >
-
               <MoreIcon />
             </IconButton>
           </Box>

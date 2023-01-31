@@ -226,6 +226,41 @@ const SubMenu = ({ item }) => {
       ),
       path: "/roulette",
     },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
   ];
   const HiddenScroll = styled(Box)`
     ::-webkit-scrollbar {
@@ -246,16 +281,29 @@ const SubMenu = ({ item }) => {
               position: "fixed",
               top: "8.5%",
               right: "0",
-              left: "20%",
+              left: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "20%",
+                xl: "17%",
+              },
               width: "15%",
               height: "1000px",
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
               overflowY: "auto",
+              // paddingTop: "20px",
+              // paddingBottom: "80px",
+              // marginBottom: "40px",
+              "&:lastChild": {
+                marginBottom: "30px",
+                color: "red",
+              },
             }}
           >
-            {sideData?.map((item) => (
+            {sideData?.map((item, index) => (
               <NavLink to={item.path}>
                 <Box
                   sx={{

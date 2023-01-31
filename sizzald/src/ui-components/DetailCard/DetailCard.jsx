@@ -48,8 +48,8 @@ function DetailCard() {
             something new, which will help make the gaming experience so much
             better and more accessible. Allowing the player to focus on the
             absolute fun of a casino, that's right, the games themselves. <br />
+            <ButtonDetailedCard color="#8C57F5" margin="0px 0px" />
           </Typography>
-          <ButtonDetailedCard color="#8C57F5" margin="25px 0px" />
         </Box>
       </Box>
     </Box>
