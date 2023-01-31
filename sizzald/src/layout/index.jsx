@@ -37,7 +37,8 @@ const Layout = () => {
     width: {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
-      lg: openDrawer ? "93%" : "83%",
+      lg: openDrawer ? "93%" : "80%",
+      xl: openDrawer ? "93%" : "83%",
     },
     // mt: "30px",
     display: "flex",
