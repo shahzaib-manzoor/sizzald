@@ -15,9 +15,9 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import * as style from "./style/style";
-
+import searchIcon from "../../assets/searchIcon.png";
 import EmailIcon from "@mui/icons-material/Email";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/More";
@@ -29,6 +29,7 @@ import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import navIcon from "../../assets/navIcon.png";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -201,7 +202,7 @@ export default function PrimarySearchAppBar({
       >
         <Toolbar sx={style.Toolbar}>
           <IconButton size="large" color="inherit" onClick={handleDrawer}>
-            <MenuIcon />
+            <img src={navIcon} />
           </IconButton>
           <Stack sx={style.headerLogo}>
             <img src={logo} alt="logo" />
@@ -276,7 +277,7 @@ export default function PrimarySearchAppBar({
           <Box sx={style.headerFlex}>
             <Search sx={style.headerBorderRadius}>
               <SearchIconWrapper>
-                <SearchIcon />
+                <img style={{ height: "18px" }} src={searchIcon} />
               </SearchIconWrapper>
               <StyledInputBase
                 placeholder="Search…"

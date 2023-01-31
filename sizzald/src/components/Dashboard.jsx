@@ -257,7 +257,7 @@ export default function Dashboard() {
             textAlign: "left",
             color: "#ffffff",
             textTransform: "uppercase",
-            padding: { xs: "10px 25px", lg: "30px 33px" },
+            padding: { xs: "10px 25px", lg: "30px 33px 0px 33px" },
           }}
         >
           Casino
@@ -284,7 +284,7 @@ export default function Dashboard() {
             textTransform: "uppercase",
           }}
         >
-          BC Original
+          Sizzald Original
         </Typography>
         <Box>
           <IconButton
@@ -416,7 +416,11 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={customCardd3}
         />
-        <CustomCardTwo img={customCardd4} />
+        <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={customCardd1}
+        />
       </CustomCarousal>
       <Box
         sx={{
@@ -461,7 +465,7 @@ export default function Dashboard() {
               fontSize: { xs: "10px", lg: "16px" },
               color: "rgba(240, 75, 43, 1)",
               textDecoration: "underline",
-              paddingRight: "6px",
+              paddingRight: "10px",
             }}
             variant="span"
           >
@@ -551,7 +555,11 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={customCardd8}
         />
-        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo
+          name="Mr SCHEMER"
+          balance="$ 5346362"
+          img={customCardd1}
+        />
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"

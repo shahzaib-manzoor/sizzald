@@ -50,7 +50,7 @@ export default function Footer() {
     lineHeight: "28px",
     color: "#F2F2F2",
     textTransform: "uppercase",
-    marginRight:'25px'
+    marginRight: "25px",
   };
   const About = {
     color: "#ffffff",
@@ -81,8 +81,12 @@ export default function Footer() {
         <Box>
           <Typography sx={typography}>Casino</Typography>
           <Box>
-            {casino.map((text) => {
-              return <Typography sx={subnav}>{text.text}</Typography>;
+            {casino.map((text, index) => {
+              return (
+                <Typography key={`key${index}`} sx={subnav}>
+                  {text.text}
+                </Typography>
+              );
             })}
           </Box>
         </Box>

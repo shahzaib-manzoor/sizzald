@@ -134,7 +134,7 @@ export default function SideBar() {
                 // }
                 unlocked={"vip 22"}
                 backgroundImage={`url(${cardFive})`}
-                // marginLeft={'15px'}
+                marginLeft={"15px"}
               />
               <Card
                 text={"bONUS"}
@@ -144,7 +144,7 @@ export default function SideBar() {
                 // }
                 unlocked={"vip 22"}
                 marginRight={"10px"}
-                backgroundImage={`url(${cardSix })`}
+                backgroundImage={`url(${cardSix})`}
                 // marginLeft={'13px'}
               />
             </Box>
@@ -180,7 +180,7 @@ export default function SideBar() {
           {SidebarData.map((item, index) => {
             return (
               <>
-                <DropDowns item={item} key={`index${index}`}></DropDowns>
+                <DropDowns key={`key${index}`} item={item}></DropDowns>
               </>
             );
           })}

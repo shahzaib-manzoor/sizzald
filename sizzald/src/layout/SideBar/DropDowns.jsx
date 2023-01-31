@@ -304,7 +304,7 @@ const SubMenu = ({ item }) => {
             }}
           >
             {sideData?.map((item, index) => (
-              <NavLink style={{textDecoration:"none"}} to={item.path}>
+              <NavLink style={{ textDecoration: "none" }} to={item.path}>
                 <Box
                   sx={{
                     display: "flex",
@@ -400,6 +400,7 @@ const SubMenu = ({ item }) => {
           item.subNav.map((item, index) => {
             return (
               <div
+                key={`key${index}`}
                 onMouseOver={() => gameHandler(item.title)}
                 onMouseOut={() => setGameNav(false)}
               >

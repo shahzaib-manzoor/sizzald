@@ -95,8 +95,18 @@ const rows = [
     bitcoinText: "0.66667598645",
   },
 ];
-const typo = { fontSize: "16px", fontWeight: 400, color: "#ffffff" ,minWidth:'142px'};
-const typoId = { fontSize: "16px", fontWeight: 400, color: "#ffffff" ,minWidth:'215px'};
+const typo = {
+  fontSize: "16px",
+  fontWeight: 400,
+  color: "#ffffff",
+  minWidth: "142px",
+};
+const typoId = {
+  fontSize: "16px",
+  fontWeight: 400,
+  color: "#ffffff",
+  minWidth: "215px",
+};
 export default function CustomizedTables() {
   return (
     <Box sx={{ paddingLeft: "20px", paddingRight: "20px" }}>
@@ -162,7 +172,11 @@ export default function CustomizedTables() {
             sx={{ background: "#14163D", borderBottom: "1px solid #221F25" }}
           >
             <TableRow>
-              <StyledTableCell sx={{padding:'0',height:'73px',paddingLeft:'30px'}}>Game</StyledTableCell>
+              <StyledTableCell
+                sx={{ padding: "0", height: "73px", paddingLeft: "30px" }}
+              >
+                Game
+              </StyledTableCell>
               <StyledTableCell align="left">Player</StyledTableCell>
               <StyledTableCell align="left">Bet ID</StyledTableCell>
               <StyledTableCell align="left">Payout</StyledTableCell>
@@ -170,27 +184,27 @@ export default function CustomizedTables() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow>
-                <StyledTableCell component="th" scope="row" align="left" sx={{minWidth:"170px",padding:'0',height:'80px',paddingLeft:'30px'}}>
-                  <Box sx={{ display: "flex", gap: 1,alignItems:'center'}}>
+            {rows.map((row, index) => (
+              <StyledTableRow key={`key${index}`}>
+                <StyledTableCell component="th" scope="row" align="left">
+                  <Box sx={{ display: "flex", gap: 1 }}>
                     {row.image1}
                     <Typography sx={typo}>{row.text}</Typography>
                   </Box>
                 </StyledTableCell>
-                <StyledTableCell sx={typo} align="left" >
+                <StyledTableCell sx={typo} align="left">
                   {row.player}
                 </StyledTableCell>
-                <StyledTableCell sx={typoId} align="left" >
+                <StyledTableCell sx={typoId} align="left">
                   {row.betid}
                 </StyledTableCell>
-                <StyledTableCell align="left" sx={{minWidth:'180px'}}>
+                <StyledTableCell align="left" sx={{ minWidth: "180px" }}>
                   <Button
                     sx={{
                       background: "#45D91E",
                       borderRadius: "16px",
                       height: "26px",
-                      color:'#ffffff'
+                      color: "#ffffff",
                     }}
                   >
                     {row.button}
