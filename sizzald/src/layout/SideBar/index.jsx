@@ -8,12 +8,27 @@ import {
 } from "@mui/material";
 // import SideBar from '../../layout/SideBar/SideBar'
 import Card from "../../layout/SideBar/Card";
+// import Card from "../../layout/SideBar/Card";
+
 import DropDowns from "../../layout/SideBar/DropDowns";
 import spinImage from "../../assets/Frame.svg";
 import piggy from "../../assets/piggy.svg";
+import firstCard from "../../assets/firstCard.png";
+import fourCardImage from "../../assets/fourCardImage.png";
+import secondCard from "../../assets/secondCard.png";
+import cardThird from "../../assets/cardThird.png";
+import firstCardImage from "../../assets/firstCardImage.png";
+import secondCardImage from "../../assets/secondCardImage.png";
+import thirdCardImage from "../../assets/thirdCardImage.png";
+import fiveCardImage from "../../assets/fiveCardImage.png";
+import sixCardImage from "../../assets/sixCardImage.png";
+import cardFour from "../../assets/cardFour.png";
+import cardFive from "../../assets/cardFive.png";
+import cardSix from "../../assets/cardSix.png";
 import arrowplane from "../../assets/arrowplane.svg";
 import group from "../../assets/group.svg";
 import gold from "../../assets/gold.svg";
+import spinner from "../../assets/spiner.svg";
 import icon from "../../assets/coins.svg";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -75,14 +90,17 @@ export default function SideBar() {
             <Box sx={{ display: "flex" }}>
               <Card
                 text={"task"}
-                img={spinImage}
-                background={"#4DF3E2"}
+                img={firstCardImage}
+                // background={"#4DF3E2"}
+                backgroundImage={`url(${firstCard})`}
                 unlocked={"unlocked"}
+                // marginLeft={"8px"}
               />
               <Card
                 text={"spin"}
-                img={spinImage}
-                background={"#AD63F5"}
+                img={secondCardImage}
+                // background={"#AD63F5"}
+                backgroundImage={`url(${secondCard})`}
                 unlocked={"unlocked"}
                 marginRight={"10px"}
               />
@@ -90,37 +108,44 @@ export default function SideBar() {
             <Box sx={{ display: "flex", mt: "10px" }}>
               <Card
                 text={"RAKEBACK"}
-                img={piggy}
-                background={
-                  "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
-                }
+                img={thirdCardImage}
+                // background={
+                //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
+                // }
                 unlocked={"vip 14"}
+                backgroundImage={`url(${cardThird})`}
               />
               <Card
                 text={"rECHARGE"}
-                img={arrowplane}
-                background={"#03FB75"}
+                img={fourCardImage}
+                // background={"#03FB75"}
                 unlocked={"vip 22"}
                 marginRight={"10px"}
+                backgroundImage={`url(${cardFour})`}
+                // marginLeft={'10px'}
               />
             </Box>
             <Box sx={{ display: "flex", mt: "10px" }}>
               <Card
                 text={"bONUSCODE"}
                 img={group}
-                background={
-                  "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
-                }
+                // background={
+                //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
+                // }
                 unlocked={"vip 22"}
+                backgroundImage={`url(${cardFive})`}
+                marginLeft={'15px'}
               />
               <Card
                 text={"bONUS"}
-                img={gold}
-                background={
-                  "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
-                }
+                img={sixCardImage}
+                // background={
+                //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
+                // }
                 unlocked={"vip 22"}
                 marginRight={"10px"}
+                backgroundImage={`url(${cardSix})`}
+                // marginLeft={'13px'}
               />
             </Box>
           </Box>

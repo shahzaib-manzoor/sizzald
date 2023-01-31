@@ -12,7 +12,7 @@ export const style={
     // overflow: 'hidden auto'
     overflowY:"auto",
     // width:'20%'
-    width:{xs:"100%",sm:"40%",md:"30%",lg:"20%"}
+    width:{xs:"100%",sm:"40%",md:"30%",lg:"17%"}
 }
 
 
@@ -69,7 +69,12 @@ export const unlock={
     fontWeight:600
 }
 export const secondflex={
-    display:'flex',alignItems:'center',justifyContent:'center',
+    display:'flex',alignItems:'center',
+    backgroundPosition: 'right',
+    backgroudSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width:'100%',
+    height:'60px',
 
 }
 export const secondChild={

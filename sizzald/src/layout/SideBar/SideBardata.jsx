@@ -25,6 +25,7 @@ import headphones from "../../assets/headphones.svg";
 import languages from "../../assets/languages.svg";
 import sponsership from "../../assets/sponsership.svg";
 
+
 export const SidebarData = [
   {
     title: "casino",
