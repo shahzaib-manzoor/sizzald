@@ -21,49 +21,49 @@ const Network = () => {
       <Typography sx={style.networkText}>Accepted Networks</Typography>
       <Box sx={style.networkBox}>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network1} alt="" />
+          <img className="networkImg" src={network1} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network2} alt="" />
+          <img className="networkImg" src={network2} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network3} alt="" />
+          <img className="networkImg" src={network3} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network4} alt="" />
+          <img className="networkImg" src={network4} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network5} alt="" />
+          <img className="networkImg" src={network5} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network6} alt="" />
+          <img className="networkImg" src={network6} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network7} alt="" />
+          <img className="networkImg" src={network7} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network8} alt="" />
+          <img className="networkImg" src={network8} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network9} alt="" />
+          <img className="networkImg" src={network9} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network10} alt="" />
+          <img className="networkImg" src={network10} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network11} alt="" />
+          <img className="networkImg" src={network11} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network12} alt="" />
+          <img className="networkImg" src={network12} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network13} alt="" />
+          <img className="networkImg" src={network13} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network14} alt="" />
+          <img className="networkImg" src={network14} alt="" />
         </Box>
         <Box sx={style.networkBoxImg}>
-          <img style={style.networkImg} src={network15} alt="" />
+          <img className="networkImg" src={network15} alt="" />
         </Box>
       </Box>
     </Box>

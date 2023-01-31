@@ -15,8 +15,9 @@ const CustomCard = ({ teamOne, vs, teamTwo, img, warIsOn }) => {
           position: "relative",
           padding: "0px 0px",
           display: "flex",
-          justifyContent: "space-around",
-          alignContent: "space-between",
+          margin: "0 10px ",
+          justifyContent: "space-between",
+          // alignContent: "space-between",
           alignItems: "baseline",
         }}
       >

@@ -5,11 +5,12 @@ function Feedback() {
   return (
     <Box
       sx={{
-        padding: {xs:"10px 15px",lg:"20px 15px"},
-        background: "rgba(43, 45, 80, 1)",
-        height: "94%",
+        padding: { xs: "10px 15px", lg: "15px 15px",xl:"20px 25px" },
+        background: "rgba(43, 45, 80, 0.6)",
+        height: { xs: "100%", sm: "100%", md: "100%", lg: "527px", xl: "571px" },
         borderRadius: "8px",
         marginTop: { xs: "15px", md: "0px" },
+        position: "relative",
       }}
     >
       <Typography
@@ -21,7 +22,9 @@ function Feedback() {
           letterSpacing: "1px",
           textAlign: "left",
           color: "white",
-          paddingBottom: "10px",
+          paddingBottom: "20px",
+          textTransform: "uppercase",
+
         }}
         variant="h6"
       >
@@ -29,7 +32,7 @@ function Feedback() {
       </Typography>
       <input
         style={{
-          height: "220px",
+          height: "273px",
           width: "100%",
           outline: "none",
           border: "none",
@@ -39,7 +42,7 @@ function Feedback() {
           boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
         }}
       />
-      <Box sx={{position:"relative"}}>
+      <Box>
         <Box>
           <Typography
             sx={{
@@ -60,8 +63,9 @@ function Feedback() {
               color: "white ",
               fontWeight: "600",
               fontSize: "16px",
-              paddingTop: { xs: "5px", md: "20px" },
-              paddingBottom: { xs: "10px", md: "0px" },
+              paddingTop: { xs: "5px", md: "20px",lg:"20px",xl:"62px" },
+              paddingBottom: { xs: "10px", md: "0px" ,},
+
             }}
             variant="h6"
           >
@@ -78,8 +82,15 @@ function Feedback() {
             </Typography>
           </Typography>
         </Box>
-        <Box sx={{position:"absolute",right:"0",bottom:0}}>
-          <img style={{ height: "100px" }} src={feedback} alt="" />
+        <Box
+          sx={{
+            position: "absolute",
+            right: "0",
+            bottom: 0,
+            display: { xs: "none", sm: "none", md: "none", lg: "block" },
+          }}
+        >
+          <img  src={feedback} alt="" />
         </Box>
       </Box>
     </Box>

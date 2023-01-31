@@ -11,6 +11,8 @@ import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+// import LotteryInfo from "./LotteryInfo";
+// import BalanceSlot from "./BalanceSlot";
 const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 28,
   height: 16,
@@ -69,7 +71,10 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
         >
           <Box
             sx={{
-              display: "flex",
+              display: {
+                xs: "block",
+                lg: "flex",
+              },
               alignItem: "center",
               gap: "10px",
               width: "50%",
@@ -110,7 +115,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
               Blocked
             </Button>
           </Box>
-          <Box sx={{ width: "50%" }}>
+          <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
             <Button
               sx={{
                 width: "45%",
@@ -164,7 +169,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
           <Box sx={{ padding: "0px 10px" }}>
             <Typography
               sx={{ color: "rgba(52, 53, 89, 1)", paddingLeft: "17px" }}
-              variant="div"
+              variant="h6"
             >
               <Typography sx={{ color: "rgba(3, 251, 117, 1)" }} variant="span">
                 {" "}
@@ -212,6 +217,8 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
         <DetailedCard />
       </Box>
       <Network />
+      {/* <BalanceSlot /> */}
+      {/* <LotteryInfo /> */}
     </Box>
   );
 }

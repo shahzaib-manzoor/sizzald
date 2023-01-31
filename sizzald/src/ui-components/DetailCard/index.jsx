@@ -1,27 +1,39 @@
 import Box from "@mui/material/Box";
 import DetailCard from "./DetailCard";
-import { styled } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Feedback from "./Feedback";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  color: theme.palette.text.secondary,
-}));
 
 const DetailedCard = () => {
   return (
-    <Grid sx={{ padding: "10px 28px" }} container spacing={2}>
-      <Grid item xs={12} md={6}>
+    <Box
+      sx={{
+        display: {
+          xs: "block",
+          sm: "block",
+          md: "block",
+          lg: "flex",
+          xl: "flex",
+        },
+        gap: "20px",
+        padding: "30px 28px",
+      }}
+    >
+      <Box
+        sx={{
+          width: { xs: "100%", sm: "100%", md: "100%", lg: "50%", xl: "50%" },height:{xs:'581PX',sm:'581px',lg:'695px',xl:"581px"},
+          margin: "10px 0px",
+        }}
+      >
         <DetailCard />
-      </Grid>
-      <Grid item xs={12} md={6}>
+      </Box>
+      <Box
+        sx={{
+          width: { xs: "100%", sm: "100%", md: "100%", lg: "50%", xl: "50%" },
+          margin: "10px 0px",
+        }}
+      >
         <Feedback />
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   );
 };
 

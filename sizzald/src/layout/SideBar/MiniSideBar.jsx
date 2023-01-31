@@ -12,6 +12,7 @@ import blog from '../../assets/blog.svg';
 import headphones from '../../assets/headphones.svg';
 import languages from '../../assets/languages.svg';
 import sponsership from '../../assets/sponsership.svg';
+import { BorderRight } from '@mui/icons-material';
 // import styled from '@emotion/styled';
 const MiniSideBar = ({ item }) => {
   const HiddenScroll = styled(Box)`
@@ -32,7 +33,7 @@ scrollbar-width: none;  /* Firefox */
           alignItems: 'center',
           flexDirection: 'column',
           position: 'fixed',
-          background: '#75788D',
+          background: "rgba(43, 45, 80, 0.6)",
           // height: '800px',
           overflowY: 'auto',
           overflowX: 'hidden',
@@ -40,8 +41,11 @@ scrollbar-width: none;  /* Firefox */
          
           // width:'5%'
           // marginBottom:'50px'
-          height:"800px",
-          marginBottom:'40px'
+          height:"878px",
+          marginBottom:'40px',
+          borderRadius:'8px',
+          width:'6%'
+          
         }}
       >
         <Box
@@ -58,11 +62,11 @@ scrollbar-width: none;  /* Firefox */
         >
           <img
             src={spinImage}
-            style={{ marginLeft: '15px', width: '53%' }}
+            style={{ marginLeft: '27px', width: '53%' }}
           ></img>
         </Box>
         <Box sx={{mt:"40px",background:'#424563',width:"100%"}}>
-        <img src={gold} style={{marginLeft:"10px",width:"50px",}}></img>
+        <img src={gold} style={{marginLeft:"29px",width:"50px",}}></img>
 
         </Box>
         <Box sx={{ mt: '50px' }}>

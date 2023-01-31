@@ -14,3 +14,36 @@
 .slick-slider{
   padding: 0px 20px;
 }
+.detailImg{
+  height: 267px;
+  width: 305px;
+}
+@media(max-width:1800px) {
+  .detailImg{
+    height: 210px;
+    width: 200px
+  } }
+@media(max-width:1400px) {
+.detailImg{
+  height: 209px;
+  width: 258px
+} 
+
+}
+@media(max-width:600px) {
+  .detailImg{
+    height: 146px;
+    width: 143px;
+  } 
+  }
+  .networkImg{
+    height:50px;
+    width:50px;
+  }
+  .favouriteImg{
+    width: 50%;
+  }
+  .css-xjfvls-MuiPaper-root-MuiAppBar-root{
+    background:none !important;
+  }
+  

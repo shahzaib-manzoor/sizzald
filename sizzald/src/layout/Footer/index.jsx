@@ -18,11 +18,13 @@ export default function Footer() {
     { promo: "Promotions" },
     { promo: "Lottery" },
     { promo: "Refer a friend" },
+    { support: "Help center" },
     { support: "Gamble" },
     { support: "AwareFairness" },
     { support: "FAQ" },
     { support: "Privacy Policy" },
     { support: "Terms Of Service" },
+    { support: "Self-exclusion" },
     { support: "AML" },
     { support: "Design Resources" },
     { support: "APP" },
@@ -31,31 +33,33 @@ export default function Footer() {
     { about: "Help Desk" },
     { about: "Verify Representative" },
   ];
+
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: {xs:"18px",sm:'18px',md:'20px',lg:"28px"},
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginBottom: "20px",
-    marginTop: "20px",
+    marginTop: "40px",
     fontFamily: "Poppins",
   };
   const subnav = {
-    fontSize: {xs:'12px',sm:"12px",md:'12px',lg:"16px"},
+    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "16px" },
     fontWeight: 400,
     lineHeight: "28px",
     color: "#F2F2F2",
     textTransform: "uppercase",
+    marginRight: "25px",
   };
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize:{xs:"18px",sm:'18px',md:'20px',lg:"28px"} ,
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",
-    marginTop: "20px",
+    marginTop: "40px",
     marginBottom: "20px",
     fontFamily: "Poppins",
   };
@@ -63,22 +67,26 @@ export default function Footer() {
     <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
       <Box
         sx={{
-          background: "rgba(43, 45, 80, 1)",
+          background: "rgba(43, 45, 80, 0.6)",
           marginLeft: "20px",
           // marginRight:'30px',
           display: "flex",
           flexDirection: "row",
-          paddingLeft: "20px",
+          paddingLeft: "40px",
           justifyContent: "space-between",
-          paddingBottom: "20px",
+          paddingBottom: "40px",
           // display:{xs:'none',sm:"none",md:"none",lg:"block"}
         }}
       >
         <Box>
           <Typography sx={typography}>Casino</Typography>
           <Box>
-            {casino.map((text) => {
-              return <Typography sx={subnav}>{text.text}</Typography>;
+            {casino.map((text, index) => {
+              return (
+                <Typography key={`key${index}`} sx={subnav}>
+                  {text.text}
+                </Typography>
+              );
             })}
           </Box>
         </Box>

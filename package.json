@@ -1,0 +1,22 @@
+{
+  "name": "sizzald",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start --prefix server",
+    "install-client": "cd sizzald && npm install && npm run build && cd ..",
+    "install-server": "cd server && npm install && cd .. ",
+    "heroku-postbuild": "npm run install-client && npm run install-server"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahzi113awan/sizzald.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahzi113awan/sizzald/issues"
+  },
+  "homepage": "https://github.com/shahzi113awan/sizzald#readme"
+}

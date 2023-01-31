@@ -79,7 +79,7 @@ export default function Dashboard() {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
     ],
@@ -145,8 +145,7 @@ export default function Dashboard() {
   };
 
   return (
-    <section className="!bg-clBlueContainer " >
-      
+    <section className="!bg-clBlueContainer ">
       <Box
         sx={{
           textAlign: "right",
@@ -158,7 +157,7 @@ export default function Dashboard() {
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -246,19 +245,19 @@ export default function Dashboard() {
           warIsOn="WAR IS ON"
         />
       </CustomCarousal>
-      <RecentBig settingCardTwo={settingCardTwo} />
+      <RecentBig sliderTwo={sliderTwo} settingCardTwo={settingCardTwo} />
       <Box>
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "left",
             color: "#ffffff",
             textTransform: "uppercase",
-            padding: { xs: "10px 25px", lg: "30px 33px" },
+            padding: { xs: "10px 25px", lg: "30px 33px 0px 33px" },
           }}
         >
           Casino
@@ -276,7 +275,7 @@ export default function Dashboard() {
         <Typography
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -285,7 +284,7 @@ export default function Dashboard() {
             textTransform: "uppercase",
           }}
         >
-          BC Original
+          Sizzald Original
         </Typography>
         <Box>
           <IconButton
@@ -417,7 +416,11 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={customCardd3}
         />
-        <CustomCardTwo img={customCardd4} />
+        <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={customCardd1}
+        />
       </CustomCarousal>
       <Box
         sx={{
@@ -432,7 +435,7 @@ export default function Dashboard() {
             fontSize: { xs: "16px", lg: "24px" },
             textTransform: "uppercase",
             fontWeight: "700",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "left",
@@ -462,7 +465,7 @@ export default function Dashboard() {
               fontSize: { xs: "10px", lg: "16px" },
               color: "rgba(240, 75, 43, 1)",
               textDecoration: "underline",
-              paddingRight: "6px",
+              paddingRight: "10px",
             }}
             variant="span"
           >
@@ -552,7 +555,11 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={customCardd8}
         />
-        <CustomCardTwo img={customCardd1} />
+        <CustomCardTwo
+          name="Mr SCHEMER"
+          balance="$ 5346362"
+          img={customCardd1}
+        />
         <CustomCardTwo
           name="Mr SCHEMER"
           balance="$ 5346362"
@@ -581,7 +588,7 @@ export default function Dashboard() {
           sx={{
             fontSize: { xs: "16px", lg: "24px" },
             textTransform: "uppercase",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -706,7 +713,7 @@ export default function Dashboard() {
             textAlign: "left",
             color: "#ffffff",
             textTransform: "uppercase",
-            fontFamily:"Poppins",
+            fontFamily: "Poppins",
           }}
         >
           Top Rated Games

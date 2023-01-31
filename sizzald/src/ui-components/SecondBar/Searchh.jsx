@@ -1,6 +1,7 @@
 import { styled, alpha } from "@mui/material/styles";
 import { InputBase } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import searchIcon from "../../assets/searchIcon.png";
+// import SearchIcon from "@mui/icons-material/Search";
 import Box from "@mui/material/Box";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -58,7 +59,7 @@ const Searchh = () => {
         }}
       >
         <SearchIconWrapper sx={{ color: "white" }}>
-          <SearchIcon />
+          <img style={{ height: "18px" }} src={searchIcon} />
         </SearchIconWrapper>
         <StyledInputBase
           placeholder="Search…"
