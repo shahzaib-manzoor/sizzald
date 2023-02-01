@@ -53,7 +53,7 @@ export default function CustomCardTwo({ img, name, balance }) {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ marginRight:'6px' }}>
+        <Box sx={{ marginRight: "6px" }}>
           <IconButton
             sx={{
               background: "rgba(255, 255, 255, 0.3)",
