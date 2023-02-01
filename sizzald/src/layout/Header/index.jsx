@@ -95,21 +95,19 @@ export default function PrimarySearchAppBar({
   };
 
   const handleMenuClose = () => {
-    localStorage.removeItem("auth");
-
-    navigate("/");
+   
   };
 
   const handleMobileMenuOpen = (event) => {
     console.log("handleMobileMenuOpen");
     setMobileMoreAnchorEl(event.currentTarget);
   };
-  // const handleLogout = () => {
-  //   localStorage.removeItem("auth")
+  const handleLogout = () => {
+    localStorage.removeItem("auth")
 
-  //   navigate("/")
+    navigate("/")
 
-  //  }
+   }
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -127,8 +125,8 @@ export default function PrimarySearchAppBar({
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+      <MenuItem >Profile</MenuItem>
+      <MenuItem onClick={()=>handleLogout()}>Logout</MenuItem>
     </Menu>
   );
 
