@@ -1,5 +1,5 @@
 export const networkContainer = {
-  padding: { xs: "10px 25px", md: "30px 33px" },
+  padding: { xs: "10px 25px", md: "15px 28px" },
 };
 export const networkText = {
   fontSize: { xs: "16px", md: "24px" },
@@ -10,6 +10,7 @@ export const networkText = {
   textAlign: "left",
   color: "white",
   textTransform: "uppercase",
+  paddingBottom:"15px"
 };
 export const networkBox = {
   margin: "20px 0px",

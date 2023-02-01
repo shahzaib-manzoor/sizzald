@@ -29,7 +29,7 @@ const Layout = () => {
       ? "7%"
       : mobileDrawer
       ? "100%"
-      : { xs: "100%", sm: "12%", md: "0%", lg: "20%" },
+      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "17%" },
     // mt: "30px",
     display: { xs: mobileDrawer ? "block" : "none", lg: "block", sm: "block" },
   };
@@ -37,7 +37,8 @@ const Layout = () => {
     width: {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
-      lg: openDrawer ? "93%" : "80%",
+      lg: openDrawer ? "93%" : "75%",
+      xl: openDrawer ? "93%" : "83%",
     },
     // mt: "30px",
     display: "flex",
@@ -56,21 +57,17 @@ const Layout = () => {
           {iSLargeScreen && (
             <>
               {openDrawer ? (
-                <MiniSideBar width={openDrawer ? "5%" : "0%"} />
+                <MiniSideBar />
               ) : (
-                <SideBar width={openDrawer ? "20%" : "0%"} />
+                // <SideBar
+                //   sx={{ transition: "widt 5s" }}
+                //   width={openDrawer ? "20%" : "0%"}
+                // />
+                <SideBar openDrawer={openDrawer} />
               )}
             </>
           )}
-          {isMediumScreen && (
-            <>
-              {openDrawer ? (
-                <SideBar width={openDrawer ? "20%" : "0%"} />
-              ) : (
-                <MiniSideBar width={openDrawer ? "7%" : "0%"} />
-              )}
-            </>
-          )}
+          {isMediumScreen && <>{openDrawer ? <SideBar /> : <MiniSideBar />}</>}
           {isSmallScreen && (
             <>
               {

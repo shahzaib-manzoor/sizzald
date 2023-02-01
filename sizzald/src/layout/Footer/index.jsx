@@ -18,13 +18,13 @@ export default function Footer() {
     { promo: "Promotions" },
     { promo: "Lottery" },
     { promo: "Refer a friend" },
+    { support: "Help center" },
     { support: "Gamble" },
     { support: "AwareFairness" },
     { support: "FAQ" },
-    { support: "FAQ" },
-    { support: "FAQ" },
     { support: "Privacy Policy" },
     { support: "Terms Of Service" },
+    { support: "Self-exclusion" },
     { support: "AML" },
     { support: "Design Resources" },
     { support: "APP" },
@@ -33,6 +33,7 @@ export default function Footer() {
     { about: "Help Desk" },
     { about: "Verify Representative" },
   ];
+
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
@@ -49,6 +50,7 @@ export default function Footer() {
     lineHeight: "28px",
     color: "#F2F2F2",
     textTransform: "uppercase",
+    marginRight: "25px",
   };
   const About = {
     color: "#ffffff",
@@ -79,8 +81,12 @@ export default function Footer() {
         <Box>
           <Typography sx={typography}>Casino</Typography>
           <Box>
-            {casino.map((text) => {
-              return <Typography sx={subnav}>{text.text}</Typography>;
+            {casino.map((text, index) => {
+              return (
+                <Typography key={`key${index}`} sx={subnav}>
+                  {text.text}
+                </Typography>
+              );
             })}
           </Box>
         </Box>

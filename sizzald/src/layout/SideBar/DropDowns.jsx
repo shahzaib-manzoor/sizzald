@@ -12,7 +12,7 @@ import coinFlip from "../../assets/coinflip_rounded.png";
 import { NavLink } from "react-router-dom";
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
-    paddingLeft: "20px",
+    paddingLeft: "35px",
     display: "flex",
     alignItems: "center",
     // gap: 1,
@@ -35,7 +35,7 @@ const SubMenu = ({ item }) => {
     color: "white",
     background: "rgba(255, 255, 255, 0.1)",
     borderRadius: "5px",
-    paddingLeft: "20px",
+    paddingLeft: "35px",
     display: "flex",
     alignItems: "center",
     gap: 1,
@@ -61,7 +61,7 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 5px" : "7px 13px",
+    padding: item.subNav ? "7px 10px" : "7px 30px",
     textDecoration: "none",
     color: "white",
     width: "inherit",
@@ -75,7 +75,7 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 5px" : "7px 13px",
+    padding: item.subNav ? "7px 25px" : "7px 13px",
     background: "rgba(255, 255, 255, 0.1)",
     textDecoration: "none",
     color: "white",
@@ -226,6 +226,41 @@ const SubMenu = ({ item }) => {
       ),
       path: "/roulette",
     },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
+    {
+      title: "Roulette",
+      icon: (
+        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+      ),
+      path: "/roulette",
+    },
   ];
   const HiddenScroll = styled(Box)`
     ::-webkit-scrollbar {
@@ -246,17 +281,30 @@ const SubMenu = ({ item }) => {
               position: "fixed",
               top: "8.5%",
               right: "0",
-              left: "20%",
+              left: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "20%",
+                xl: "17%",
+              },
               width: "15%",
               height: "1000px",
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
               overflowY: "auto",
+              // paddingTop: "20px",
+              // paddingBottom: "80px",
+              // marginBottom: "40px",
+              "&:lastChild": {
+                marginBottom: "30px",
+                color: "red",
+              },
             }}
           >
-            {sideData?.map((item) => (
-              <NavLink to={item.path}>
+            {sideData?.map((item, index) => (
+              <NavLink style={{ textDecoration: "none" }} to={item.path}>
                 <Box
                   sx={{
                     display: "flex",
@@ -275,7 +323,7 @@ const SubMenu = ({ item }) => {
                       letterSpacing: "0em",
                       textAlign: "left",
                       color: "#ffffff",
-                      paddingLeft: "20px",
+                      paddingLeft: "40px",
                     }}
                   >
                     {item.title}
@@ -289,7 +337,7 @@ const SubMenu = ({ item }) => {
       <Box sx={{ mt: "10px", height: "auto" }}>
         <NavLink
           style={({ isActive }) => (isActive ? activeMenuStyle : menuStyle)}
-          to={item.path?item.path:""}
+          to={item.path ? item.path : ""}
           onClick={item.subNav && showSubnav}
         >
           {/* <Box
@@ -352,6 +400,7 @@ const SubMenu = ({ item }) => {
           item.subNav.map((item, index) => {
             return (
               <div
+                key={`key${index}`}
                 onMouseOver={() => gameHandler(item.title)}
                 onMouseOut={() => setGameNav(false)}
               >

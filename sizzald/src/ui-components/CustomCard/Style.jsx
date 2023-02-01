@@ -14,6 +14,7 @@ export const cardContentText = {
   fontFamily: "Poppins",
   letterSpacing: "0.30000001192092896px",
   textTransform: "uppercase",
+  paddingLeft: "10px",
 };
 export const cardContentTextVS = {
   color: "#03FB75",
@@ -33,6 +34,7 @@ export const cardContentTextWar = {
   fontFamily: "Poppins",
   letterSpacing: "0.30000001192092896px",
   textTransform: "uppercase",
+  paddingLeft: "10px",
 };
 export const cardContentIcon = {
   color: "white",
@@ -40,5 +42,6 @@ export const cardContentIcon = {
   background: "rgba(0, 0, 0, 0.3)",
   height: { lg: "37px" },
   width: { lg: "37px" },
+  marginRight: "10px",
 };
 export const cardContentIconSize = { fontSize: "14px" };

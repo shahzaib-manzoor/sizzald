@@ -5,6 +5,7 @@ export const cardTextName = {
   lineHeight: "18px",
   color: "#ffffff",
   fontFamily: "Poppins",
+  marginBottom: "8px",
 };
 export const cardTextPrice = {
   color: "rgba(3, 251, 117, 1)",
@@ -17,6 +18,7 @@ export const cardAvatar = {
   height: { xs: "26px", lg: "36px" },
   width: { xs: "26px", lg: "36px" },
   marginRight: "4px",
+  marginLeft: "7px",
 };
 export const cardFlex = {
   display: "flex",
@@ -38,6 +40,7 @@ export const cardFlexTwo = {
   display: "flex",
   // alignaItems: "center",
   justifyContent: "space-between",
+  alignItems:'center',
 };
 export const cardContentIconSize = {
   //  fontSize: "14px"
