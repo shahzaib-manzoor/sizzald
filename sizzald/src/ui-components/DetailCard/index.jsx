@@ -6,19 +6,23 @@ import feedback from "../../assets/feedback.png";
 
 const DetailedCard = () => {
   return (
-    <Box sx={{ display: "flex", gap: "10px", padding: "20px 33px" }}>
+    <Box sx={{ display: "flex", gap: "10px", padding: "20px 28px" }}>
       <Box
         sx={{
           width: "50%",
           position: "relative",
           background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "8px",
-          padding: "10px 20px",
+          padding: {
+            xs: "10px 15px 10px 15px",
+            lg: "15px 20px 10px 20px",
+            xl: "20px 25px 10px 25px ",
+          },
         }}
       >
         <Typography
           sx={{
-            fontSize: "24px",
+            fontSize: { lg: "20px", xl: "22px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -39,17 +43,17 @@ const DetailedCard = () => {
               xs: "16px",
               sm: "16px",
               md: "16x",
-              lg: "15px",
+              lg: "14px",
               xl: "20px",
             },
-            color: "white",
+            color: "#E0E0E0",
           }}
         >
           Casinos online have not always been around, but we can safely say that
           online casinos have been used a lot since they came on the market. And
-          it's not in short demand nor options, and now in 2022, we have 1000s
-          and 1000s to pick from – it's just a matter of what you like and what
-          payment options you would like to see at the casino.
+          it's not in short demand nor options, in 2022, we have 1000s and 1000s
+          to pick from – it's just a matter of what you like and what payment
+          options you would like to see at the casino.
         </Typography>
         <Box>
           <Box>
@@ -60,10 +64,10 @@ const DetailedCard = () => {
                   xs: "16px",
                   sm: "16px",
                   md: "16x",
-                  lg: "15px",
+                  lg: "14px",
                   xl: "20px",
                 },
-                color: "white",
+                color: "#E0E0E0",
                 whiteSpace: "pre-line",
               }}
             >
@@ -74,14 +78,17 @@ const DetailedCard = () => {
              on the absolute fun of a casino, that's
              right,the games themselves.`}
             </Typography>
-            <ButtonDetailedCard color="#8C57F5" />
+            <Box sx={{ paddingTop: "40px", paddingBottom: "7px" }}>
+              <ButtonDetailedCard color="#8C57F5" />
+            </Box>
           </Box>
           <Box
             sx={{
               position: "absolute",
-              right: { lg: "0%", xl: "2.5%" },
-              bottom: { lg: "1%", xl: "0.5%" },
-              width: { lg: "40%", xl: "43%" },
+              right: { lg: "0.5%", xl: "2.5%" },
+              bottom: { lg: "8%", xl: "0.5%" },
+              width: { lg: "41%", xl: "45%" },
+              height: { xl: "58%" },
             }}
           >
             <img
@@ -95,7 +102,11 @@ const DetailedCard = () => {
       <Box
         sx={{
           width: "50%",
-          padding: { xs: "10px 15px", lg: "15px 15px", xl: "20px 25px" },
+          padding: {
+            xs: "10px 15px 10px 15px",
+            lg: "15px 20px 10px 20px",
+            xl: "20px 25px 10px 25px ",
+          },
           background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "8px",
           marginTop: { xs: "15px", md: "0px" },
@@ -105,7 +116,7 @@ const DetailedCard = () => {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: "24px",
+            fontSize: { lg: "20px", xl: "22px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -121,7 +132,7 @@ const DetailedCard = () => {
         <input
           className="InputMedia"
           style={{
-            height: "29%",
+            height: "47%",
             width: "100%",
             outline: "none",
             border: "none",
@@ -132,28 +143,35 @@ const DetailedCard = () => {
           }}
         />
         <Box>
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <Typography
               sx={{
-                fontSize: "16px",
+                fontSize: { lg: "13px", xl: "16px" },
                 fontWeight: "400",
                 lineHeight: "28px",
                 letterSpacing: "0.01em",
                 textAlign: "left",
-                color: "white",
-                padding: { xs: "5px 0px", md: "30px 0px" },
+                color: "#E0E0E0",
+                paddingTop: { xs: "5px", md: "10px", lg: "15px" },
               }}
             >
               Now get rewarded for your valuable feedback.
             </Typography>
-            <ButtonDetailedCard color="rgba(49, 167, 57, 1)" />
+            <Box sx={{ padding: { lg: "22px 0px", xl: "40px 0px" } }}>
+              <ButtonDetailedCard color="rgba(49, 167, 57, 1)" />
+            </Box>
             <Typography
               sx={{
                 color: "white ",
                 fontWeight: "600",
-                fontSize: "16px",
-                paddingTop: { xs: "5px", md: "20px", lg: "20px", xl: "62px" },
-                paddingBottom: { xs: "10px", md: "0px" },
+                fontSize: { lg: "13px", xl: "16px" },
+                // paddingTop: { xs: "5px", md: "20px", lg: "15px", xl: "62px" },
+                // paddingBottom: { xs: "10px", md: "0px" },
               }}
               variant="h6"
             >
