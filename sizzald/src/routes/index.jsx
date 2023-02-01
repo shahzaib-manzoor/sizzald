@@ -5,6 +5,7 @@ import MainRoutes from "./Main.Routes";
 import AuthenticationRoutes from "./Authenticated.Routes";
 import Layout from "../layout";
 import { useEffect } from "react";
+import { NotFound } from "../components/404";
 
 // ==============================|| ROUTING RENDER ||============================== //
 
@@ -20,7 +21,19 @@ export default function ThemeRoutes() {
   }, [location]);
 
   if (isAuthenticated) {
-    return useRoutes([MainRoutes]);
+    return useRoutes([
+      MainRoutes,
+      {
+        path: "*",
+        element: <Layout />,
+        children:[
+          {
+            path:'*',
+            element:<NotFound/>
+          }
+        ]
+      }
+    ]);
   } else {
     return useRoutes([AuthenticationRoutes]);
   }
