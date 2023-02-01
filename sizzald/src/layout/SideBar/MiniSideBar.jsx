@@ -39,7 +39,7 @@ scrollbar-width: none;  /* Firefox */
           paddingBottom: '50px',
           height: "100vh",
           borderRadius: '8px',
-          width: '6%',
+          // width: '6%',
           // paddingTop: '90px'
         }}
       >
@@ -105,7 +105,7 @@ scrollbar-width: none;  /* Firefox */
                 sx={{
                   background: "#ffffff",
                   marginRight: "5px",
-                  width: "35%",
+                  width: "52%",
                   height: "70%",
                   borderRadius:'50%',
                   objectFit:'contain'
