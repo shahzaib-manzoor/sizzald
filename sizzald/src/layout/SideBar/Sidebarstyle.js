@@ -85,3 +85,14 @@ export const secondChild = {
   alignItems: "center",
   gap: 2,
 };
+export const miniSidebarPicBox = {
+  background: '#424563',
+  width: '100%',
+  height: '50px',
+  display: 'flex',
+  justifyContent:'center',
+  alignItems:'center',
+  mt:"40px",
+  padding:"6px",
+  cursor:'pointer'
+};

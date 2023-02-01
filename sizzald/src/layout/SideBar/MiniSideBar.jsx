@@ -1,4 +1,4 @@
-import { Box, Paper ,styled} from '@mui/material';
+import { Avatar, Box, Paper, styled } from '@mui/material';
 import spinImage from '../../assets/Frame.svg';
 import gold from '../../assets/gold.svg';
 import casino from '../../assets/casino.svg';
@@ -13,6 +13,11 @@ import headphones from '../../assets/headphones.svg';
 import languages from '../../assets/languages.svg';
 import sponsership from '../../assets/sponsership.svg';
 import { BorderRight } from '@mui/icons-material';
+import zIndex from '@mui/material/styles/zIndex';
+import { miniSidebarPicBox } from './Sidebarstyle';
+
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 // import styled from '@emotion/styled';
 const MiniSideBar = ({ item }) => {
   const HiddenScroll = styled(Box)`
@@ -24,86 +29,94 @@ scrollbar-width: none;  /* Firefox */
 
 `
   return (
-    <Box >
+    <div style={{ position: "relative" }}>
       <HiddenScroll
         sx={{
-          
+          position: 'fixed',
+          background: "rgba(43, 45, 80, 0.6)",
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          paddingBottom: '50px',
+          height: "100vh",
+          borderRadius: '8px',
+          width: '6%',
+          // paddingTop: '90px'
+        }}
+      >
+        <Box sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          position: 'fixed',
-          background: "rgba(43, 45, 80, 0.6)",
-          // height: '800px',
-          overflowY: 'auto',
-          overflowX: 'hidden',
-          paddingBottom:'20px',
-         
-          // width:'5%'
-          // marginBottom:'50px'
-          height:"878px",
-          marginBottom:'40px',
-          borderRadius:'8px',
-          width:'6%'
-          
-        }}
-      >
-        <Box
-          sx={{
-            // mt: 'px',
-            // paddingTop:"120px",
-            background: '#424563',
-            width: '100%',
-            height: '50px',
-            display: 'flex',
-            mt:"80px",
-            padding:"6px"
-          }}
-        >
-          <img
-            src={spinImage}
-            style={{ marginLeft: '27px', width: '53%' }}
-          ></img>
-        </Box>
-        <Box sx={{mt:"40px",background:'#424563',width:"100%"}}>
-        <img src={gold} style={{marginLeft:"29px",width:"50px",}}></img>
+          paddingBottom:"100px",
+          cursor:'pointer'
+          // height: "100%"
+        }}>
 
-        </Box>
-        <Box sx={{ mt: '50px' }}>
-          <img src={casino}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={sports} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={lotery} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={affilate} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={fair} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={vipClub} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={fourm} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={blog} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={headphones} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px' }}>
-          <img src={languages} style={{ mt: '20px' }}></img>
-        </Box>
-        <Box sx={{ mt: '30px', mb: '40px' }}>
-          <img src={sponsership} style={{ mt: '20px' }}></img>
+
+          <Box
+            sx={miniSidebarPicBox}
+          >
+            <img
+              src={spinImage}
+              style={{ width: '50%', height: '100%', objectFit: 'contain' }}
+            ></img>
+          </Box>
+          <Box sx={miniSidebarPicBox}>
+            <img src={gold} style={{ width: '50%', height: '100%', objectFit: 'contain' }}></img>
+          </Box>
+          <Box sx={{ mt: '50px' }}>
+            <img src={casino}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={sports} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={lotery} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={affilate} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={fair} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={vipClub} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={fourm} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={blog} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={headphones} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px' }}>
+            <img src={languages} style={{ mt: '20px' }}></img>
+          </Box>
+          <Box sx={{ mt: '30px', mb: '40px' }}>
+            <img src={sponsership} style={{ mt: '20px' }}></img>
+          </Box>
+          {/* <Box sx={{ mt: '30px', mb: '40px' }}/> */}
+       
+          <Box sx={miniSidebarPicBox}>
+          <Avatar
+                sx={{
+                  background: "#ffffff",
+                  marginRight: "5px",
+                  width: "35%",
+                  height: "70%",
+                  borderRadius:'50%',
+                  objectFit:'contain'
+                }}
+              >
+                <DarkModeOutlinedIcon sx={{ color: "black" }} />
+              </Avatar>
+          </Box>
         </Box>
       </HiddenScroll>
-    </Box>
+    </div>
   );
 };
 
