@@ -57,7 +57,7 @@ export const mainBox = {
 export const typography = {
   color: "#ffffff",
   textTransform: "uppercase",
-  fontSize: " 10px",
+  fontSize: " 8px",
   fontWeight: 600,
 };
 export const unlock = {
