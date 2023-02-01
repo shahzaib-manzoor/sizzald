@@ -63,7 +63,7 @@ export const typography = {
 export const unlock = {
   color: "#B3B3B3",
   textTransform: "uppercase",
-  fontSize: " 10px",
+  fontSize: " 8px",
   fontWeight: 600,
 };
 export const secondflex = {
