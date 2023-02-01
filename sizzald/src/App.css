@@ -46,4 +46,10 @@
   .css-xjfvls-MuiPaper-root-MuiAppBar-root{
     background:none !important;
   }
+
+  @media (min-width:1200px){
+    .imgRight{
+      height:110px
+    }
+  }
   
