@@ -19,7 +19,12 @@ function Carousal({ sliderTwo, settingCardTwo }) {
       carousalRef={sliderTwo}
       settingCard={settingCardTwo}
     >
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd7} />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd7}
+        icon={<NorthEastIcon />}
+      />
       <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd8} />
       <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd9} />
       <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd6} />
