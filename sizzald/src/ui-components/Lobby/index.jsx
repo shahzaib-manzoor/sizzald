@@ -1,38 +1,38 @@
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import image1 from "../../assets/image1.svg";
-import bitcoin from "../../assets/bitcoin.svg";
-import image2 from "../../assets/image2.svg";
-import image3 from "../../assets/image3.svg";
-import image4 from "../../assets/image4.svg";
-import { Box, Button, Typography } from "@mui/material";
-import { width } from "@mui/system";
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import image1 from '../../assets/image1.svg';
+import bitcoin from '../../assets/bitcoin.svg';
+import image2 from '../../assets/image2.svg';
+import image3 from '../../assets/image3.svg';
+import image4 from '../../assets/image4.svg';
+import { Box, Button, Typography } from '@mui/material';
+import { width } from '@mui/system';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    color: "#FFFFFF",
+    color: '#FFFFFF',
     // borderRadius: '8px',
-    borderBottom: "1px solid #221F25",
+    borderBottom: '1px solid #221F25',
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-    borderBottom: "1px solid #221F25",
+    borderBottom: '1px solid #221F25',
   },
 }));
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    color: "#FFFFFF",
-    borderBottom: "1px solid red",
+  '&:nth-of-type(odd)': {
+    color: '#FFFFFF',
+    borderBottom: '1px solid red',
   },
   // hide last border
-  "&:last-child td, &:last-child th": {},
+  '&:last-child td, &:last-child th': {},
 }));
 
 // function createData(Game,text, Player, BetID, Payout, Profile,bitcoin) {
@@ -42,120 +42,120 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const rows = [
   {
     image1: <img src={image1}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
   {
     image1: <img src={image2}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
   {
     image1: <img src={image3}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
   {
     image1: <img src={image4}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
   {
     image1: <img src={image2}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
   {
     image1: <img src={image3}></img>,
-    text: "0x8a184ec8412f5..",
-    player: "name 1 ",
-    betid: "789654789543315892",
-    button: "1.9x",
+    text: '0x8a184ec8412f5..',
+    player: 'name 1 ',
+    betid: '789654789543315892',
+    button: '1.9x',
     bitcoin: <img src={bitcoin}></img>,
-    bitcoinText: "0.66667598645",
+    bitcoinText: '0.66667598645',
   },
 ];
 const typo = {
-  fontSize: "16px",
+  fontSize: '16px',
   fontWeight: 400,
-  color: "#ffffff",
-  minWidth: "142px",
+  color: '#ffffff',
+  minWidth: {xs:'0',sm:'0',md:'0',lg:'106px',xl:"142px"},
 };
 const typoId = {
-  fontSize: "16px",
+  fontSize: '16px',
   fontWeight: 400,
-  color: "#ffffff",
-  minWidth: "215px",
+  color: '#ffffff',
+  minWidth: {lg:'188px',xl:'215px'},
 };
 export default function CustomizedTables() {
   return (
-    <Box sx={{ paddingLeft: "20px", paddingRight: "20px" }}>
+    <Box sx={{ paddingLeft: '20px', paddingRight: '20px' }}>
       <Box>
         <Typography
           sx={{
-            color: "#ffffff",
-            fontSize: { xs: "16px", md: "24px" },
+            color: '#ffffff',
+            fontSize: { xs: '16px', md: '24px' },
             fontWeight: 700,
-            textTransform: "uppercase",
-            paddingBottom: "30px",
-            mt: "20px",
+            textTransform: 'uppercase',
+            paddingBottom: '30px',
+            mt: '20px',
           }}
         >
           Lobby
         </Typography>
-        <Box sx={{ display: "flex", gap: 2, mb: "20px" }}>
+        <Box sx={{ display: 'flex', gap: 2, mb: '20px' }}>
           <Button
             sx={{
-              background: "#45D91E",
-              borderRadius: "62px",
-              color: "#ffffff",
-              fontSize: "10px",
-              height: "39px",
-              width: "110px",
+              background: '#45D91E',
+              borderRadius: '62px',
+              color: '#ffffff',
+              fontSize: '10px',
+              height: '39px',
+              width: '110px',
             }}
           >
             latest bets
           </Button>
           <Button
             sx={{
-              borderRadius: "62px",
-              color: "#ffffff",
-              border: "1px solid rgba(3, 251, 117, 0.22)",
-              fontSize: "10px",
-              height: "39px",
-              width: "110px",
+              borderRadius: '62px',
+              color: '#ffffff',
+              border: '1px solid rgba(3, 251, 117, 0.22)',
+              fontSize: '10px',
+              height: '39px',
+              width: '110px',
             }}
           >
             High Rollers
           </Button>
           <Button
             sx={{
-              borderRadius: "62px",
-              color: "#ffffff",
-              border: "1px solid rgba(3, 251, 117, 0.22)",
-              fontSize: "10px",
-              height: "39px",
-              width: "110px",
+              borderRadius: '62px',
+              color: '#ffffff',
+              border: '1px solid rgba(3, 251, 117, 0.22)',
+              fontSize: '10px',
+              height: '39px',
+              width: '110px',
             }}
           >
             Wager Contest
@@ -165,53 +165,68 @@ export default function CustomizedTables() {
 
       <TableContainer
         component={Paper}
-        sx={{ background: "rgba(43, 45, 80, 0.6)", width: "100%" }}
+        sx={{ background: 'rgba(43, 45, 80, 0.6)', width: '100%' }}
       >
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+        <Table sx={{ minWidth: 700 }} aria-label='customized table'>
           <TableHead
-            sx={{ background: "#14163D", borderBottom: "1px solid #221F25" }}
+            sx={{ background: '#14163D', borderBottom: '1px solid #221F25' }}
           >
             <TableRow>
               <StyledTableCell
-                sx={{ padding: "0", height: "73px", paddingLeft: "30px" }}
+                sx={{ padding: '0', height: '73px', paddingLeft: '30px' }}
               >
                 Game
               </StyledTableCell>
-              <StyledTableCell align="left">Player</StyledTableCell>
-              <StyledTableCell align="left">Bet ID</StyledTableCell>
-              <StyledTableCell align="left">Payout</StyledTableCell>
-              <StyledTableCell align="left">Profile</StyledTableCell>
+              <StyledTableCell align='left'>Player</StyledTableCell>
+              <StyledTableCell align='left'>Bet ID</StyledTableCell>
+              <StyledTableCell align='left'>Payout</StyledTableCell>
+              <StyledTableCell align='left'>Profile</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row, index) => (
               <StyledTableRow key={`key${index}`}>
-                <StyledTableCell component="th" scope="row" align="left">
-                  <Box sx={{ display: "flex", gap: 1 }}>
+                <StyledTableCell
+                  component='th'
+                  scope='row'
+                  align='left'
+                  sx={{
+                    padding: '0',
+                    paddingLeft: {
+                      xs: '0',
+                      sm: '0',
+                      md: '0',
+                      lg: '30px',
+                      xl: '30px',
+                    },
+                    minWidth:{xs:'0',sm:'0',md:'0',lg:"237px",xl:'237px'}
+                  }}
+                >
+                  <Box sx={{ display: 'flex', gap: 1 }}>
                     {row.image1}
                     <Typography sx={typo}>{row.text}</Typography>
                   </Box>
                 </StyledTableCell>
-                <StyledTableCell sx={typo} align="left">
+                <StyledTableCell sx={typo} align='left'>
                   {row.player}
                 </StyledTableCell>
-                <StyledTableCell sx={typoId} align="left">
+                <StyledTableCell sx={typoId} align='left'>
                   {row.betid}
                 </StyledTableCell>
-                <StyledTableCell align="left" sx={{ minWidth: "180px" }}>
+                <StyledTableCell align='left' sx={{ minWidth:{lg:"109px",xl:'180px'} }}>
                   <Button
                     sx={{
-                      background: "#45D91E",
-                      borderRadius: "16px",
-                      height: "26px",
-                      color: "#ffffff",
+                      background: '#45D91E',
+                      borderRadius: '16px',
+                      height: '26px',
+                      color: '#ffffff',
                     }}
                   >
                     {row.button}
                   </Button>
                 </StyledTableCell>
-                <StyledTableCell align="left">
-                  <Box sx={{ display: "flex", gap: 1 }}>
+                <StyledTableCell align='left'>
+                  <Box sx={{ display: 'flex', gap: 1 }}>
                     {row.bitcoin}
                     <Typography sx={typo}>{row.bitcoinText}</Typography>
                   </Box>

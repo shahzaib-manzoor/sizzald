@@ -52,6 +52,15 @@ export default function Footer() {
     textTransform: "uppercase",
     marginRight: "25px",
   };
+  const aboutSubnev={
+    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "16px" },
+    fontWeight: 400,
+    lineHeight: "28px",
+    color: "#F2F2F2",
+    textTransform: "uppercase",
+    marginRight: "25px",
+    paddingLeft:'30px'
+  }
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
@@ -62,6 +71,7 @@ export default function Footer() {
     marginTop: "40px",
     marginBottom: "20px",
     fontFamily: "Poppins",
+    paddingLeft:'30px'
   };
   return (
     <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
@@ -135,7 +145,7 @@ export default function Footer() {
           <Box>
             {casino.map((about, i) => {
               return (
-                <Typography key={`${i}`} sx={subnav}>
+                <Typography key={`${i}`} sx={aboutSubnev}>
                   {about.about}
                 </Typography>
               );
