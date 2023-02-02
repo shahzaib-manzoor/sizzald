@@ -6,6 +6,7 @@ import {
   OutlinedInput,
   RadioGroup,
   Typography,
+  Snackbar
 } from "@mui/material";
 import img from "../assets/background.png";
 import img2 from "../assets/backgroundSign.png";
@@ -34,13 +35,24 @@ const Signin = () => {
     email: "",
     password: "",
   });
+  const [open, setOpen] = useState(false)
   const navigate = useNavigate();
   const [address, setAddress] = useState('')
   const handleSocialLogin = (user, err) => {
-    console.log(user);
-    navigate('/')
-    console.log(err);
-    localStorage.setItem('auth', true)
+
+    try{
+      localStorage.setItem('auth', true)
+      navigate('/')
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+    // console.log(user);
+
+    // navigate('/')
+    // console.log(err);
+    // localStorage.setItem('auth', true)
   };
 
   const handleSocialLoginFailure = (err) => {
@@ -111,6 +123,13 @@ const handleInput = (e) => {
         alignItems: "center",
       }}
     >
+        <Snackbar
+        anchorOrigin={{ vertical:"top" , horizontal:"right" }}
+        open={open}
+        
+        message="I love snacks"
+        key={"top" + "right"}
+      />
        
       <Box
         sx={{
