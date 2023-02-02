@@ -10,6 +10,7 @@ import ultimateDice from "../../assets/ultimate_dice.png";
 import caveRounded from "../../assets/cave_rounded.png";
 import coinFlip from "../../assets/coinflip_rounded.png";
 import { NavLink } from "react-router-dom";
+
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
     paddingLeft: "35px",
@@ -269,6 +270,9 @@ const SubMenu = ({ item }) => {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   `;
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       {gameNav && (
@@ -338,6 +342,7 @@ const SubMenu = ({ item }) => {
           </HiddenScroll>
         </div>
       )}
+
       <Box sx={{ mt: "10px", height: "auto" }}>
         <NavLink
           style={({ isActive }) => (isActive ? activeMenuStyle : menuStyle)}

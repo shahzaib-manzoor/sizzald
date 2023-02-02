@@ -10,7 +10,6 @@ export const style = {
   overflowY: "auto",
   // width:'20%'
   width: { xs: "100%", sm: "40%", md: "30%", lg: "25%", xl: "20%" },
- 
 };
 
 export const firstChild = {
@@ -85,15 +84,16 @@ export const secondChild = {
   display: "flex",
   alignItems: "center",
   gap: 2,
+  cursor: "pointer",
 };
 export const miniSidebarPicBox = {
-  background: '#424563',
-  width: '100%',
-  height: '50px',
-  display: 'flex',
-  justifyContent:'center',
-  alignItems:'center',
-  mt:"40px",
-  padding:"6px",
-  cursor:'pointer'
+  background: "#424563",
+  width: "100%",
+  height: "50px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  mt: "40px",
+  padding: "6px",
+  cursor: "pointer",
 };
