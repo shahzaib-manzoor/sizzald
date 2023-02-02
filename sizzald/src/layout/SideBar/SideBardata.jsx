@@ -52,7 +52,7 @@ export const SidebarData = [
       },
       {
         title: "Sizzld Games",
-        path: "/",
+        path: "/sizzldGames",
         icon: <img src={Rocket} />,
         iconClosed: <ExpandMoreIcon />,
         iconOpened: <ExpandMoreIcon />,

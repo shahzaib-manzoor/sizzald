@@ -29,7 +29,7 @@ const Card = () => {
         <Box
           sx={{
             backgroundImage: `url(${ticket})`,
-            width: {xs:'100%',sm:'30%',md:'30%',lg:"30%",xl:'33%'},
+            width: {xs:'100%',sm:'30%',md:'30%',lg:"33%",xl:'33%'},
             height: '221px',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -84,7 +84,7 @@ const Card = () => {
         <Box
           sx={{
             backgroundImage: `url(${second})`,
-            width: {xs:'100%',sm:'30%',md:'30%',lg:"30%",xl:'33%'},
+            width: {xs:'100%',sm:'30%',md:'30%',lg:"33%",xl:'33%'},
             height: '221px',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -139,7 +139,7 @@ const Card = () => {
         <Box
           sx={{
             backgroundImage: `url(${third})`,
-            width: {xs:'100%',sm:'30%',md:'30%',lg:"30%",xl:'33%'},
+            width: {xs:'100%',sm:'30%',md:'30%',lg:"33%",xl:'33%'},
             height: '221px',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
