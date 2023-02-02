@@ -6,8 +6,12 @@ import MobileFoter from "../layout/Footer/MobileFoter";
 import { Box, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import MiniSideBar from "./SideBar/MiniSideBar";
+import {useDispatch} from 'react-redux';
+import { setDrawer } from "../store/slices/layoutSlice";
+
 // import { outLet, sideBar } from "./SideBar/Sidebarstyle";
 const Layout = () => {
+  const dispatch = useDispatch();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [mobileDrawer, setmobileDrawer] = useState(false);
   const isMediumScreen = useMediaQuery("(max-width: 960px)");
@@ -15,6 +19,7 @@ const Layout = () => {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
   const handleDrawer = () => {
     setOpenDrawer(!openDrawer);
+    dispatch(setDrawer(!openDrawer));
   };
   const handleMObileDrawer = () => {
     setmobileDrawer(true);
