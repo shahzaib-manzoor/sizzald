@@ -37,6 +37,9 @@ const Layout = () => {
       : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "20%" },
     // mt: "30px",
     display: { xs: mobileDrawer ? "block" : "none", lg: "block", sm: "block" },
+    transition : "all 0.3s ease",
+    animation: "fadeInAnimation 0.3s",
+
   };
   const outLet = {
     width: {
@@ -48,16 +51,16 @@ const Layout = () => {
     // mt: "30px",
     display: "flex",
     flexDirection: "column",
+    transition: "width 0.2s"
   };
-  console.log(openDrawer, iSLargeScreen);
-  console.log(window.innerWidth);
+
   return (
     <div>
       <Header
         handleDrawer={handleDrawer}
         handlemObileDrawer={handlemObileDrawer}
       />
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex" , }}>
         <Box sx={sideBar}>
           {iSLargeScreen && (
             <>
