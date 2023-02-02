@@ -9,7 +9,7 @@ export const style = {
   // overflow: 'hidden auto'
   overflowY: "auto",
   // width:'20%'
-  width: { xs: "100%", sm: "40%", md: "30%", lg: "25%", xl: "17%" },
+  width: { xs: "100%", sm: "40%", md: "30%", lg: "25%", xl: "20%" },
 };
 
 export const firstChild = {
@@ -57,13 +57,13 @@ export const mainBox = {
 export const typography = {
   color: "#ffffff",
   textTransform: "uppercase",
-  fontSize: " 10px",
+  fontSize: " 8px",
   fontWeight: 600,
 };
 export const unlock = {
   color: "#B3B3B3",
   textTransform: "uppercase",
-  fontSize: " 10px",
+  fontSize: " 8px",
   fontWeight: 600,
 };
 export const secondflex = {

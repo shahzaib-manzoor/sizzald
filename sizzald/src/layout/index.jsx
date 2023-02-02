@@ -34,7 +34,7 @@ const Layout = () => {
       ? "4%"
       : mobileDrawer
       ? "100%"
-      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "17%" },
+      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "20%" },
     // mt: "30px",
     display: { xs: mobileDrawer ? "block" : "none", lg: "block", sm: "block" },
   };
@@ -43,7 +43,7 @@ const Layout = () => {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
       lg: openDrawer ? "96%" : "75%",
-      xl: openDrawer ? "96%" : "83%",
+      xl: openDrawer ? "96%" : "80%",
     },
     // mt: "30px",
     display: "flex",
