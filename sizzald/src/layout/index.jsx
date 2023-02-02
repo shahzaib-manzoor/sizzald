@@ -26,7 +26,7 @@ const Layout = () => {
   //  ui
   const sideBar = {
     width: openDrawer
-      ? "7%"
+      ? "4%"
       : mobileDrawer
       ? "100%"
       : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "17%" },
@@ -37,8 +37,8 @@ const Layout = () => {
     width: {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
-      lg: openDrawer ? "93%" : "75%",
-      xl: openDrawer ? "93%" : "83%",
+      lg: openDrawer ? "96%" : "75%",
+      xl: openDrawer ? "96%" : "83%",
     },
     // mt: "30px",
     display: "flex",
