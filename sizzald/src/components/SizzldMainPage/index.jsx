@@ -11,6 +11,7 @@ import sizzldGameSeven from '../../assets/sizzldGameSeven.svg';
 import Image from 'mui-image';
 
 const Index = () => {
+  // const [open,setOpen]=useState()
   const sizzldData = [
     {
       image: lodu,

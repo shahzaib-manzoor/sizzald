@@ -101,7 +101,7 @@ export const SidebarData = [
   },
   {
     title: "Affiliate",
-    path: '/Affiliate',
+    path: '/affilate',
     icon: <img src={affilate} style={{ marginLeft: "-5px" }}></img>,
   },
   {
