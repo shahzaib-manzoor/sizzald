@@ -39,6 +39,8 @@ scrollbar-width: none;  /* Firefox */
           paddingBottom: '50px',
           height: "100vh",
           borderRadius: '8px',
+          animation: "fadeInAnimation 1s",
+          
           // width: '6%',
           // paddingTop: '90px'
         }}
@@ -49,7 +51,8 @@ scrollbar-width: none;  /* Firefox */
           alignItems: 'center',
           flexDirection: 'column',
           paddingBottom:"100px",
-          cursor:'pointer'
+          cursor:'pointer',
+          
           // height: "100%"
         }}>
 

@@ -10,6 +10,7 @@ export const style = {
   overflowY: "auto",
   // width:'20%'
   width: { xs: "100%", sm: "40%", md: "30%", lg: "25%", xl: "20%" },
+ 
 };
 
 export const firstChild = {

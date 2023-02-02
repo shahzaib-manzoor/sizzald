@@ -42,6 +42,9 @@ import {
 } from "./Sidebarstyle";
 import { SidebarData } from "./SideBardata";
 import { height } from "@mui/system";
+import { useSelector } from "react-redux";
+
+
 
 export default function SideBar() {
   //   const styles = {
@@ -56,6 +59,7 @@ export default function SideBar() {
   //         },
   //     },
   // };
+  const {drawer}=useSelector((state)=>state?.layout);
   const HiddenScroll = styled(Box)`
     ::-webkit-scrollbar {
       display: none;
@@ -64,8 +68,8 @@ export default function SideBar() {
     scrollbar-width: none; /* Firefox */
   `;
   return (
-    <div style={{ position: "relative" }}>
-      <HiddenScroll sx={style} className="child">
+    <div style={{position: "relative", }}>
+      <HiddenScroll sx={{...style,}} className="child">
         <Box sx={firstChild}>
           <Box>
             <Box sx={flex}>
