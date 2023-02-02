@@ -8,6 +8,7 @@ import sizzldGameFour from '../../assets/sizzldGameFour.svg';
 import sizzldGameFive from '../../assets/sizzldGameFive.svg';
 import sizzldGameSix from '../../assets/sizzldGameSix.svg';
 import sizzldGameSeven from '../../assets/sizzldGameSeven.svg';
+import Image from 'mui-image';
 
 const Index = () => {
   const sizzldData = [
@@ -15,7 +16,7 @@ const Index = () => {
       image: lodu,
     },
     {
-      image:sizzldGameSecond,
+      image: sizzldGameSecond,
     },
     {
       image: sizzledGameThree,
@@ -27,7 +28,7 @@ const Index = () => {
       image: sizzldGameFive,
     },
     {
-      image:sizzldGameSix,
+      image: sizzldGameSix,
     },
     {
       image: sizzldGameSeven,
@@ -53,22 +54,32 @@ const Index = () => {
     mt: '-30px',
     // marginLeft: '20px',
   };
+  const flex = {
+    display: 'flex',
+    justifyContent: 'space-around',
+    gap: { xs: 0, sm: 2, md: 2, lg: 3, xl: 0 },
+  };
+  const flex2 = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
   return (
-    <Box>
+    <Box sx={{ width: '99%' }}>
       <Typography sx={typography}> Sizzld Top Games </Typography>
-      <Box sx={{mb:'20px'}}>
-        <Box sx={{ display: 'flex', justifyContent:'space-around' }}>
+      <Box
+        sx={{
+          mb: '20px',
+          paddingLeft: { xs: '0px', sm: '0px', lg: '20px', xl: '0px' },
+        }}
+      >
+        <Box sx={flex}>
           {sizzldData.map((data) => {
             console.log('data', data);
             return (
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                }}
-              >
-                <img src={data.image}></img>,<Button sx={button}>Play</Button>
+              <Box sx={flex2}>
+                <Image src={data.image}></Image>,
+                <Button sx={button}>Play</Button>
               </Box>
             );
           })}
