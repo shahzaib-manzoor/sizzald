@@ -1,7 +1,7 @@
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit';
 import ApiServices from '../../services/ApiServices';
 const initialState = {
-  count: 0,
+  count: 12,
 };
 export const fetchData = createAsyncThunk('data/fetch', async () => {
     try {

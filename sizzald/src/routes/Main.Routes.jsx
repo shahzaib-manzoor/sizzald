@@ -16,6 +16,7 @@ import TableGame from "../components/TableGame/TableGame";
 import Loatry from "../components/Loatry";
 import Limbo from "../components/SizzldGames/Limbo";
 import SizzldMainPage from "../components/SizzldMainPage";
+import Affilate from "../components/Affilate";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -73,6 +74,10 @@ const MainRoutes = {
     {
       path: "/sizzldGames",
       element: <SizzldMainPage />,
+    },
+    {
+      path: "/affilate",
+      element: <Affilate />,
     },
   ],
 };
