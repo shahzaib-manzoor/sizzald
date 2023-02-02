@@ -12,6 +12,10 @@ import customCardd7 from "../../assets/customCardd7.png";
 import customCardd8 from "../../assets/customCardd8.png";
 import customCardd9 from "../../assets/customCardd9.png";
 import customCardd from "../../assets/customCardd.png";
+
+import NorthEastIcon from "@mui/icons-material/NorthEast";
+import { IconButton } from "@mui/material";
+
 function Carousal({ sliderTwo, settingCardTwo }) {
   return (
     <CustomCarousal
@@ -23,19 +27,194 @@ function Carousal({ sliderTwo, settingCardTwo }) {
         name="MR SCHEMER"
         balance="$ 5346362"
         img={customCardd7}
-        icon={<NorthEastIcon />}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
       />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd8} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd9} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd6} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd7} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd8} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd1} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd2} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd7} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd8} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd1} />
-      <CustomCardTwo name="MR SCHEMER" balance="$ 5346362" img={customCardd2} />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd8}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd9}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd6}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd7}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd8}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd1}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd2}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd7}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd8}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd1}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
+      <CustomCardTwo
+        name="MR SCHEMER"
+        balance="$ 5346362"
+        img={customCardd2}
+        icon={
+          <IconButton
+            sx={{
+              background: "rgba(255, 255, 255, 0.3)",
+              marginRight: "8px",
+              color: "white",
+            }}
+          >
+            <NorthEastIcon sx={{ fontSize: "14px" }} />
+          </IconButton>
+        }
+      />
     </CustomCarousal>
   );
 }

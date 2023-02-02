@@ -6,8 +6,12 @@ import MobileFoter from "../layout/Footer/MobileFoter";
 import { Box, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import MiniSideBar from "./SideBar/MiniSideBar";
+import {useDispatch} from 'react-redux';
+import { setDrawer } from "../store/slices/layoutSlice";
+
 // import { outLet, sideBar } from "./SideBar/Sidebarstyle";
 const Layout = () => {
+  const dispatch = useDispatch();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [mobileDrawer, setmobileDrawer] = useState(false);
   const isMediumScreen = useMediaQuery("(max-width: 960px)");
@@ -15,6 +19,7 @@ const Layout = () => {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
   const handleDrawer = () => {
     setOpenDrawer(!openDrawer);
+    dispatch(setDrawer(!openDrawer));
   };
   const handleMObileDrawer = () => {
     setmobileDrawer(true);
@@ -29,7 +34,7 @@ const Layout = () => {
       ? "4%"
       : mobileDrawer
       ? "100%"
-      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "17%" },
+      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "20%" },
     // mt: "30px",
     display: { xs: mobileDrawer ? "block" : "none", lg: "block", sm: "block" },
   };
@@ -38,7 +43,7 @@ const Layout = () => {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
       lg: openDrawer ? "96%" : "75%",
-      xl: openDrawer ? "96%" : "83%",
+      xl: openDrawer ? "96%" : "80%",
     },
     // mt: "30px",
     display: "flex",

@@ -53,3 +53,35 @@
     }
   }
   
+
+/* @media(max-width:1850px) { 
+  .detailImg{
+  right: 2.5%;
+  bottom: 0.5%;
+  width: 45%;
+  height: 58%;
+}
+} */
+@media(max-width:1300px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 35% !important;
+  height: 58% !important;
+} }
+@media(min-width:1500px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 35% !important;
+  height: 58% !important;
+} 
+}
+@media(min-width:1850px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 45% !important;
+  height: 58% !important;
+} 
+}
