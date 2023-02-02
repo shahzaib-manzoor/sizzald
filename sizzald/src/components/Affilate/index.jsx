@@ -1,18 +1,16 @@
 // import React from 'react'
-import { Container } from "@mui/material";
-import Advertisment from "./Advertisment";
-import AffiliateReward from "./AffiliateReward";
-import EarningCard from "./EarningCard";
-import SectionFour from "./SectionFour";
+import { Container } from '@mui/material';
+import SectionFiveCard from './SectionFiveCard';
+import SectionFour from './SectionFour';
+import SectionTabel from './SectionTabel';
 // import affilateRocket from '../../../../../../../assets/affilateRocket'
 
 const index = () => {
   return (
-    <Container maxWidth="xl">
-      <Advertisment />
-      <EarningCard />
-      <AffiliateReward />
-      <SectionFour />
+    <Container maxWidth='xl'>
+     <SectionFour/>
+     <SectionFiveCard/>
+     <SectionTabel/>
     </Container>
   );
 };

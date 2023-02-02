@@ -11,7 +11,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 530,
   //   bgcolor: "background.paper",
-  boxShadow: "24",
+ 
   background: "rgba(14, 6, 61, 0.3)",
   boxShadow: "1px 1px 10px rgba(255, 1, 62, 0.18)",
   backdropFilter: "blur(50px)",
