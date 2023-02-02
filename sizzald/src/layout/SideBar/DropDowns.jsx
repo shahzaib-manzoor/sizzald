@@ -323,7 +323,11 @@ const SubMenu = ({ item }) => {
                       letterSpacing: "0em",
                       textAlign: "left",
                       color: "#ffffff",
-                      paddingLeft: "40px",
+                      paddingLeft: "10px",
+                      transition: "all .3s",
+                      "&:hover": {
+                        fontSize: "20px",
+                      },
                     }}
                   >
                     {item.title}
