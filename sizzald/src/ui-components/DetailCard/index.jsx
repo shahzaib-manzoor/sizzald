@@ -54,13 +54,14 @@ const DetailedCard = () => {
 
         <Typography
           variant="h6"
+          className="detailCardText"
           sx={{
             fontSize: {
               xs: "16px",
               sm: "16px",
               md: "16x",
               lg: "14px",
-              xl: "20px",
+              xl: "15px",
             },
             color: "#E0E0E0",
           }}
@@ -75,13 +76,14 @@ const DetailedCard = () => {
           <Box>
             <Typography
               variant="h6"
+              className="detailCardText"
               sx={{
                 fontSize: {
                   xs: "16px",
                   sm: "16px",
                   md: "16x",
                   lg: "14px",
-                  xl: "20px",
+                  xl: "15px",
                 },
                 color: "#E0E0E0",
                 whiteSpace: "pre-line",
