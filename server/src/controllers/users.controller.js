@@ -18,8 +18,6 @@ const responseHelper = require("../helpers/response.helper");
 const referralController = require("./referral.controller");
 const referralModel = require("../models/referral.model");
 
- 
-
 //@route    POST auth/login
 //@desc     login user
 //@access   Public
@@ -27,9 +25,9 @@ const referralModel = require("../models/referral.model");
 var login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    
-
-    const exists = await User.findOne({ email: email }).populate("referralCode");
+    const exists = await User.findOne({ email: email }).populate(
+      "referralCode"
+    );
     if (exists) {
       const isMatch = await clientHelper.comparePassword(
         password,
@@ -58,60 +56,59 @@ var login = async (req, res) => {
 //@access   Public
 //@params   {email, first_name, password}
 var signup = async (req, res) => {
-  const { first_name, username, phone_number, email, password,referralCode } = req.body;
+  const { first_name, username, phone_number, email, password, referralCode } =
+    req.body;
   let bodyData = req.body;
 
   try {
-    
- 
     const checkemail = await User.findOne({ email: email });
     if (checkemail) {
       let err = "Email already exists";
       return responseHelper.requestfailure(res, err);
     }
-    if(referralCode){
-
-    var checkreferral =   await referralModel.findOne({referralCode:referralCode});
-    console.log(checkreferral)
-    if(!checkreferral){
-      let err = "Invalid Referal Code";
-      return responseHelper.requestfailure(res, err);
+    if (referralCode) {
+      var checkreferral = await referralModel.findOne({
+        referralCode: referralCode,
+      });
+      console.log(checkreferral);
+      if (!checkreferral) {
+        let err = "Invalid Referal Code";
+        return responseHelper.requestfailure(res, err);
+      }
     }
-  }
-   
- 
+
     const hashpassword = await getHashValue(password);
     bodyData["password"] = hashpassword;
-    if(checkreferral){
-      
-    //increase referral count
+    if (checkreferral) {
+      //increase referral count
 
       bodyData["referredByCode"] = checkreferral.userId;
       bodyData["referralCode"] = checkreferral._id;
     }
-console.log(bodyData)
+    console.log(bodyData);
+  const data =  await referralController.addOne( );
+  bodyData["referralCode"] = data._id;
     const newuser = await User.create(bodyData);
-
-    await referralController.addOne( newuser._id);
 
 
     var message = "Account Signup successful";
 
-    if(newuser && checkreferral){
+    if (newuser && checkreferral) {
       const adds = await referralModel.aggregate([
         {
-            $group: {
-                _id: "$checkreferral._id",
-                // id: { $first: "$_id" },
-                referralCount: { $sum: 1 },
-            },
+          $group: {
+            _id: "$checkreferral._id",
+            // id: { $first: "$_id" },
+            referralCount: { $sum: 1 },
+          },
         },
-
-        
       ]);
- 
-     await referralModel.updateOne({_id:checkreferral._id},{$set:{referralCount:adds[0].referralCount-1}})
-  }
+
+      await referralModel.updateOne(
+        { _id: checkreferral._id },
+        { $set: { referralCount: adds[0].referralCount - 1 } }
+      );
+    }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };
     return responseHelper.success(res, responseData, message);
@@ -124,7 +121,6 @@ console.log(bodyData)
 //@desc     get current login user
 //@access   Public
 var user = async (req, res) => {
-  
   try {
     const { id } = req.token_decoded;
     const user = await User.findById(id);
@@ -136,7 +132,7 @@ var user = async (req, res) => {
     }
     let err = "Sorry Your Profile Not Exist";
     return responseHelper.requestfailure(res, err);
-    console.log(res)
+    console.log(res);
   } catch (err) {
     return responseHelper.requestfailure(res, err);
   }
@@ -251,7 +247,6 @@ var resetPassword = async (req, res) => {
 };
 
 module.exports = {
-   
   login,
   signup,
   user,
