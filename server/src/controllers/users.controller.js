@@ -81,8 +81,11 @@ var signup = async (req, res) => {
 
     const hashpassword = await getHashValue(password);
     bodyData["password"] = hashpassword;
-     
-   bodyData["referralCode"] = checkreferral._id;
+     if(checkreferral)
+     {
+       bodyData["referralCode"] = checkreferral._id;
+
+     }
     const newuser = await User.create(bodyData);
     const data =  await referralController.addOne( newuser._id );
 
