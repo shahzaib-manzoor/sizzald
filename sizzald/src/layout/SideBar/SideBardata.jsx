@@ -43,7 +43,7 @@ export const SidebarData = [
       {
         title: "Favorites",
         path: "/favourite",
-        icon: <img src={Vector} />,
+        icon: <img src={star} />,
       },
       {
         title: "recent",

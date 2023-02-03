@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import close from "../../assets/close.svg";
 import Modal from "@mui/material/Modal";
+import { useState } from "react";
+
 
 const style = {
   position: "absolute",
@@ -26,6 +28,11 @@ const style = {
 };
 
 export default function BasicModal({ handleOpen, handleClose, open }) {
+  const [copy,setCopy]=useState("please copy ")
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(copy);
+  };
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -169,11 +176,12 @@ export default function BasicModal({ handleOpen, handleClose, open }) {
             }}
           >
             <Typography sx={{ color: "white", paddingLeft: "10px" }}>
-              https://bc.co/i-9pp869wk-n/
+             {copy}
             </Typography>
             <Button
               sx={{ background: " rgba(14, 6, 61, 1)" }}
               variant="contained"
+              onClick={handleCopyToClipboard}
             >
               Copy Link
             </Button>

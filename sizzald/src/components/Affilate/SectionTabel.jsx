@@ -48,7 +48,7 @@ const SectionTabel = () => {
                 </Button>
       </Box>
       {/* main box flex */}
-      <Box sx={{ display: 'flex', gap: 1 }}>
+      <Box sx={{ display: 'flex', gap: 2 }}>
         {/* tabel */}
 
         <Box sx={{ width: '50%' }}>
