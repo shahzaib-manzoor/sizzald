@@ -133,3 +133,33 @@
           height: 130px;
         }
         }
+        @media(min-width:600px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 2%;
+          }
+        }
+        @media(min-width:1300px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 6%;
+          }
+        }
+        @media(min-width:1800px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 13%;
+          }
+        }
+        @media(min-width:600px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 2%;
+          }
+        }
+        @media(min-width:1300px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 6%;
+          }
+        }
+        @media(min-width:1800px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 13%;
+          }
+        }

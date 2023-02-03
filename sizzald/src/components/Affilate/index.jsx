@@ -7,6 +7,10 @@ import SectionFour from './SectionFour';
 import SectionFiveCard from './SectionFiveCard';
 import SectionTabel from './SectionTabel';
 // import affilateRocket from '../../../../../../../assets/affilateRocket'
+// import EarningCard from "./EarningCard";
+// import AffiliateReward from "./AffiliateReward";
+import DetailedCard from "../../ui-components/DetailCard/index";
+import Network from "../../ui-components/Network";
 
 const index = () => {
   return (
@@ -17,6 +21,8 @@ const index = () => {
       <SectionFour />
       <SectionFiveCard />
       <SectionTabel />
+      <DetailedCard />
+      <Network />
     </Box>
   );
 };
