@@ -27,9 +27,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
     color: '#FFFFFF',
-    
   },
- 
+
   '&:last-child td, &:last-child th': {},
 }));
 
@@ -71,14 +70,30 @@ export default function CustomizedTables() {
     <Box sx={{ paddingRight: '20px' }}>
       <TableContainer
         component={Paper}
-        sx={{ background: 'rgba(43, 45, 80, 0.6)', width: '100%' }}
+        sx={{
+          background: 'rgba(43, 45, 80, 0.6)',
+          width: '100%',
+          borderRadius: '10px',
+        }}
       >
-        <Table sx={{ minWidth:{xs:400,sm:400,md:400,lg:450,xl:700} }} aria-label='customized table'>
+        <Table
+          sx={{ minWidth: { xs: 400, sm: 400, md: 400, lg: 450, xl: 500 } }}
+          aria-label='customized table'
+        >
           <TableHead
             sx={{ background: '#14163D', borderBottom: '1px solid #221F25' }}
           >
             <TableRow>
-              <StyledTableCell sx={{ minWidth: '124px' }}>
+              <StyledTableCell
+                sx={{
+                  minWidth: '124px',
+                  fontSize: '18px',
+                  fontWeight: 400,
+                  fontFamily: 'Poppins',
+                  padding: '0px',
+                  paddingLeft: '25px',
+                }}
+              >
                 Player
               </StyledTableCell>
               <StyledTableCell align='right'>
@@ -89,13 +104,18 @@ export default function CustomizedTables() {
           <TableBody>
             {rows.map((row, index) => (
               <StyledTableRow key={index}>
-                <StyledTableCell component='th' scope='row' align='left'>
+                <StyledTableCell
+                  component='th'
+                  scope='row'
+                  align='left'
+                  sx={{ padding: '0px', paddingLeft: '25px' }}
+                >
                   <Typography
                     sx={{
-                      color:  '#ffffff',
+                      color: '#ffffff',
                       fontSize: '16px',
-                      fontWeight: 600,
-                      fontFamily: 'poppins',
+                      fontWeight: 700,
+                      fontFamily: 'Poppins',
                     }}
                   >
                     {row.text}
@@ -108,13 +128,13 @@ export default function CustomizedTables() {
                       display: 'flex',
                       gap: 1,
                       justifyContent: 'flex-end',
-                    //   marginRight: '13px',
+                      //   marginRight: '13px',
                     }}
                   >
-                   <img src={row.image1}></img>
+                    <img src={row.image1}></img>
                     <Typography
                       sx={{
-                        color:  '#ffffff',
+                        color: '#ffffff',
                         fontSize: '16px',
                         fontWeight: 600,
                         fontFamily: 'poppins',
