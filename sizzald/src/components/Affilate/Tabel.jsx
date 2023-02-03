@@ -6,7 +6,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-// import image1 from "../../assets/image1.svg";
 import star from '../../assets/starLotary.svg';
 import bitcoinAffilate from '../../assets/bitcoinAffilate.svg';
 
@@ -15,12 +14,12 @@ import { Avatar, Box, Button, Typography } from '@mui/material';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     color: '#FFFFFF',
-    // borderRadius: '8px',
-    borderBottom: '1px solid #221F25',
+    borderBottom:'none'
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
-    // borderBottom: '1px solid #221F25',
+    borderBottom: "1px solid rgba(74, 75, 90, 1)",
+   
   },
 }));
 
@@ -64,16 +63,25 @@ const rows = [
     betid: '500.00',
   },
 ];
-const typo = { fontSize: '16px', fontWeight: 400, color: '#ffffff',padding:"0px",height:"40px",paddingRight:'30px' };
+const typo = {
+  fontSize: '16px',
+  fontWeight: 400,
+  color: '#ffffff',
+  padding: '0px',
+  height: '40px',
+  paddingRight: '30px',
+};
 export default function CustomizedTables() {
   return (
-    <Box sx={{ paddingRight: '20px' }}>
+    <Box>
       <TableContainer
         component={Paper}
         sx={{
           background: 'rgba(43, 45, 80, 0.6)',
           width: '100%',
           borderRadius: '10px',
+          // paddingLeft:'30px',s
+          // paddingRight:"30px"
         }}
       >
         <Table
@@ -81,7 +89,7 @@ export default function CustomizedTables() {
           aria-label='customized table'
         >
           <TableHead
-            sx={{ background: '#14163D', borderBottom: '1px solid #221F25' }}
+            sx={{ background: '#14163D', }}
           >
             <TableRow>
               <StyledTableCell
@@ -96,7 +104,10 @@ export default function CustomizedTables() {
               >
                 Player
               </StyledTableCell>
-              <StyledTableCell align='right' sx={{padding:'0px',height:'50px',paddingRight:"30px"}}>
+              <StyledTableCell
+                align='right'
+                sx={{ padding: '0px', height: '50px', paddingRight: '30px' }}
+              >
                 Commission/Rewards
               </StyledTableCell>
             </TableRow>
@@ -114,7 +125,7 @@ export default function CustomizedTables() {
                     sx={{
                       color: '#ffffff',
                       fontSize: '16px',
-                      fontWeight: 700,
+                      fontWeight: 400,
                       fontFamily: 'Poppins',
                     }}
                   >
