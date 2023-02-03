@@ -43,7 +43,7 @@ const addOne = async ( id) => {
     //generate random referral code using id hash salted with random number
     const salt = await bcrypt.genSalt(4);
      const referralCode =  await bcrypt.hash(id.toString(), salt);
-    const referralLink = `${process.env.BASE_URL}/signup/${referralCode}`;
+    const referralLink = `https://szld.hrokuapp.com/signup/${referralCode}`;
      
     const payload = {
         referralCode: referralCode?referralCode:null,
@@ -61,6 +61,7 @@ const addOne = async ( id) => {
         return error
     }
 };
+ 
  
 
 
@@ -103,8 +104,9 @@ const updateOne = async (req, res) => {
 //         });
 
 const getOne = async (req, res) => {
+    console.log(req.params.id)
     try {
-        await Referal.findById(req.params.id).then((referral) => {
+        await Referal.findOne({userId:req.params.id}).then((referral) => {
             if (referral) {
                 responseHelper.success(res, referral, "referral fetched");
             } else {
