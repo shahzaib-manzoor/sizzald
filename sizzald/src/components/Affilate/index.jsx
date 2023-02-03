@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import SectionFiveCard from './SectionFiveCard';
 import SectionFour from './SectionFour';
 import SectionTabel from './SectionTabel';
@@ -7,11 +7,11 @@ import SectionTabel from './SectionTabel';
 
 const index = () => {
   return (
-    <Container maxWidth='xl'>
+    <Box sx={{marginLeft:"20px",marginRight:'20px'}}>
      <SectionFour/>
      <SectionFiveCard/>
      <SectionTabel/>
-    </Container>
+    </Box>
   );
 };
 
