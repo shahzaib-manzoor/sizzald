@@ -17,6 +17,23 @@ userSchema = new Schema(
       type: String,
       required: true,
     },
+    referralCode: {
+      type: String,
+      default: "",
+    },
+    referralCodeUsed: {
+      type: String,
+      default: "",
+    },
+    referralLink: {
+      type: String,
+      default: "",
+    },
+    referralCodeUsedBy: {
+      type: String,
+      default: "",
+    },
+
   //   first_name: {
   //     type: String,
   //     required: true,

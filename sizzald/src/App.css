@@ -92,3 +92,44 @@
   font-size: 20px !important;
 }
 }
+
+@media(min-width:1200px) { 
+ 
+  .imgAdvertisment{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    object-fit: cover;
+    height: 131px;
+  }
+  }
+  @media(min-width:1200px) { 
+ 
+    .imgAdvertisment2{
+      position: absolute;
+      top: 2%;
+      right: 4%;
+      object-fit: cover;
+      height: 100px;
+    }
+    }
+    @media(min-width:1536px) { 
+ 
+      .imgAdvertisment{
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        object-fit: cover;
+        height: 161px;
+      }
+      }
+      @media(min-width:1536px) { 
+     
+        .imgAdvertisment2{
+          position: absolute;
+          top: 2%;
+          right: 4%;
+          object-fit: cover;
+          height: 130px;
+        }
+        }

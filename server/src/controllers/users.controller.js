@@ -79,20 +79,27 @@ var login = async (req, res) => {
 var signup = async (req, res) => {
   const { first_name, username, phone_number, email, password } = req.body;
   try {
-    if (email == "" || email == undefined) {
-      let err = "email is required";
-      return responseHelper.requestfailure(res, err);
-    }
-    if (password == "" || password == undefined) {
-      let err = "Password is required";
-      return responseHelper.requestfailure(res, err);
-    }
+    
  
     const checkemail = await User.findOne({ email: email });
     if (checkemail) {
       let err = "Email already exists";
       return responseHelper.requestfailure(res, err);
     }
+    //generate referal code
+    const rng = seedrandom(crypto.randomBytes(64).toString("base64"), {
+      entropy: true,
+    });
+    const code = rng().toString().substring(3, 9);
+    console.log(code);
+    req.body["referralCode"] = code;
+    
+    //referal link
+    const referalLink = `${process.env.BASE_URL}/signup/${code}`;
+    req.body["referralLink"] = referalLink;
+
+    
+
     let bodyData = req.body;
     const hashpassword = await getHashValue(password);
     bodyData["password"] = hashpassword;

@@ -3,24 +3,22 @@ import detailCard from "../../assets/detailCard.png";
 import { Typography } from "@mui/material";
 import ButtonDetailedCard from "./ButtonDetailedCard";
 import feedback from "../../assets/feedback.png";
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux'
 const DetailedCard = () => {
   const { drawer } = useSelector((state) => state.layout);
-  const detailCardImgStyle = !drawer
-    ? {
-        position: "absolute",
-        right: { lg: "0.5%", xl: "2.5%" },
-        bottom: { lg: "8%", xl: "0.5%" },
-        width: { lg: "41%", xl: "45%" },
-        height: { xl: "58%" },
-      }
-    : {
-        position: "absolute",
-        right: { lg: "7.5%", xl: "2.5%" },
-        bottom: { lg: "0.5%", xl: "0.5%" },
-        width: { lg: "41%", xl: "45%" },
-        height: { xl: "58%" },
-      };
+  const detailCardImgStyle = !drawer ? {
+    position: "absolute",
+    right: { lg: "0.5%", xl: "2.5%" },
+    bottom: { lg: "8%", xl: "0.5%" },
+    width: { lg: "41%", xl: "45%" },
+    height: { xl: "58%" },
+  } : {
+    position: "absolute",
+    right: { lg: "7.5%", xl: "2.5%" },
+    bottom: { lg: "0.5%", xl: "0.5%" },
+    width: { lg: "41%", xl: "45%" },
+    height: { xl: "58%" }
+  }
   return (
     <Box sx={{ display: "flex", gap: "10px", padding: "20px 28px" }}>
       <Box
@@ -100,7 +98,9 @@ const DetailedCard = () => {
               <ButtonDetailedCard color="#8C57F5" />
             </Box>
           </Box>
-          <Box className="detailImg" sx={detailCardImgStyle}>
+          <Box
+            sx={detailCardImgStyle}
+          >
             <img
               style={{ height: "100%", width: "100%", objectFit: "contain" }}
               src={detailCard}
@@ -180,7 +180,7 @@ const DetailedCard = () => {
                 color: "white ",
                 fontWeight: "600",
                 fontSize: { lg: "13px", xl: "16px" },
-                paddingBottom: "10px",
+                paddingBottom:'10px'
                 // paddingTop: { xs: "5px", md: "20px", lg: "15px", xl: "62px" },
                 // paddingBottom: { xs: "10px", md: "0px" },
               }}
@@ -192,6 +192,7 @@ const DetailedCard = () => {
                   color: "rgba(3, 251, 117, 1)",
                   fontWeight: "400",
                   paddingLeft: "5px",
+                 
                 }}
                 variant="span"
               >
