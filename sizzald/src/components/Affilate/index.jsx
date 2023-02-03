@@ -10,16 +10,13 @@ import SectionTabel from './SectionTabel';
 
 const index = () => {
   return (
-    <Box maxWidth="xl">
+    <Box sx={{marginLeft:'20px',marginRight:'20px'}}>
       <Advertisment />
       <EarningCard />
       <AffiliateReward />
       <SectionFour />
-    <Container maxWidth='xl'>
-     <SectionFour/>
-     <SectionFiveCard/>
-     <SectionTabel/>
-    </Container>
+      <SectionFiveCard />
+      <SectionTabel />
     </Box>
   );
 };

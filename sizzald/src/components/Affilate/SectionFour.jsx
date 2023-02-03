@@ -39,6 +39,7 @@ const SectionFour = () => {
     backgroundPosition: 'right',
     backgroundSize: 'cover',
     backgroundRepeat: 'repeat',
+    mt:"30px"
   };
   return (
     <div>
