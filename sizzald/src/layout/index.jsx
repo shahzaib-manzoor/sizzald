@@ -6,8 +6,12 @@ import MobileFoter from "../layout/Footer/MobileFoter";
 import { Box, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import MiniSideBar from "./SideBar/MiniSideBar";
+import {useDispatch} from 'react-redux';
+import { setDrawer } from "../store/slices/layoutSlice";
+
 // import { outLet, sideBar } from "./SideBar/Sidebarstyle";
 const Layout = () => {
+  const dispatch = useDispatch();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [mobileDrawer, setmobileDrawer] = useState(false);
   const isMediumScreen = useMediaQuery("(max-width: 960px)");
@@ -15,6 +19,7 @@ const Layout = () => {
   const isSmallScreen = useMediaQuery("(max-width: 600px)");
   const handleDrawer = () => {
     setOpenDrawer(!openDrawer);
+    dispatch(setDrawer(!openDrawer));
   };
   const handleMObileDrawer = () => {
     setmobileDrawer(true);
@@ -26,33 +31,36 @@ const Layout = () => {
   //  ui
   const sideBar = {
     width: openDrawer
-      ? "7%"
+      ? "4%"
       : mobileDrawer
       ? "100%"
-      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "17%" },
+      : { xs: "100%", sm: "12%", md: "0%", lg: "25%", xl: "20%" },
     // mt: "30px",
     display: { xs: mobileDrawer ? "block" : "none", lg: "block", sm: "block" },
+    transition : "all 0.3s ease",
+    animation: "fadeInAnimation 0.3s",
+
   };
   const outLet = {
     width: {
       xs: "100%",
       sm: openDrawer ? "93%" : "88%",
-      lg: openDrawer ? "93%" : "75%",
-      xl: openDrawer ? "93%" : "83%",
+      lg: openDrawer ? "96%" : "75%",
+      xl: openDrawer ? "96%" : "80%",
     },
     // mt: "30px",
     display: "flex",
     flexDirection: "column",
+    transition: "width 0.2s"
   };
-  console.log(openDrawer, iSLargeScreen);
-  console.log(window.innerWidth);
+
   return (
     <div>
       <Header
         handleDrawer={handleDrawer}
         handlemObileDrawer={handlemObileDrawer}
       />
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex" , }}>
         <Box sx={sideBar}>
           {iSLargeScreen && (
             <>

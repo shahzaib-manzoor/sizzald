@@ -9,11 +9,8 @@ import Typography from "@mui/material/Typography";
 import CustomCardTwoImg from "../../assets/customCardTwo.png";
 import { Avatar } from "@mui/material";
 import avator from "../../assets/avator.png";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
 import IconButton from "@mui/material/IconButton";
-import { ClassNames } from "@emotion/react";
-
-export default function CustomCardTwo({ img, name, balance }) {
+export default function CustomCardTwo({ img, name, balance, icon }) {
   return (
     <Card
       sx={{
@@ -53,17 +50,7 @@ export default function CustomCardTwo({ img, name, balance }) {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ marginRight:'6px' }}>
-          <IconButton
-            sx={{
-              background: "rgba(255, 255, 255, 0.3)",
-              marginRight: "8px",
-              color: "white",
-            }}
-          >
-            <NorthEastIcon sx={style.cardContentIconSize} />
-          </IconButton>
-        </Box>
+        <Box sx={{ marginRight: "6px" }}>{icon}</Box>
       </CardContent>
     </Card>
   );

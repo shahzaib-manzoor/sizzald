@@ -52,7 +52,7 @@ export const SidebarData = [
       },
       {
         title: "Sizzld Games",
-        path: "/",
+        path: "/sizzldGames",
         icon: <img src={Rocket} />,
         iconClosed: <ExpandMoreIcon />,
         iconOpened: <ExpandMoreIcon />,
@@ -101,7 +101,7 @@ export const SidebarData = [
   },
   {
     title: "Affiliate",
-    path: '/Affiliate',
+    path: '/affilate',
     icon: <img src={affilate} style={{ marginLeft: "-5px" }}></img>,
   },
   {

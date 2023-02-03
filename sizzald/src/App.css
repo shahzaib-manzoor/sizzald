@@ -46,4 +46,90 @@
   .css-xjfvls-MuiPaper-root-MuiAppBar-root{
     background:none !important;
   }
+
+  @media (min-width:1200px){
+    .imgRight{
+      height:110px
+    }
+  }
   
+
+/* @media(max-width:1850px) { 
+  .detailImg{
+  right: 2.5%;
+  bottom: 0.5%;
+  width: 45%;
+  height: 58%;
+}
+} */
+@media(max-width:1300px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 35% !important;
+  height: 58% !important;
+} }
+@media(min-width:1500px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 46% !important;
+  height: 58% !important;
+} 
+}
+@media(min-width:1850px) { 
+  .detailImg{
+  right: 1.5% !important;
+  bottom: 0.5% !important;
+  width: 48% !important;
+  height: 58% !important;
+} 
+
+}
+@media(min-width:1750px) { 
+ 
+.detailCardText{
+  font-size: 20px !important;
+}
+}
+
+@media(min-width:1200px) { 
+ 
+  .imgAdvertisment{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    object-fit: cover;
+    height: 131px;
+  }
+  }
+  @media(min-width:1200px) { 
+ 
+    .imgAdvertisment2{
+      position: absolute;
+      top: 2%;
+      right: 4%;
+      object-fit: cover;
+      height: 100px;
+    }
+    }
+    @media(min-width:1536px) { 
+ 
+      .imgAdvertisment{
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        object-fit: cover;
+        height: 161px;
+      }
+      }
+      @media(min-width:1536px) { 
+     
+        .imgAdvertisment2{
+          position: absolute;
+          top: 2%;
+          right: 4%;
+          object-fit: cover;
+          height: 130px;
+        }
+        }

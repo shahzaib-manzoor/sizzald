@@ -42,8 +42,12 @@ import {
 } from "./Sidebarstyle";
 import { SidebarData } from "./SideBardata";
 import { height } from "@mui/system";
+import { useSelector } from "react-redux";
+import ReferPopup from "./ReferPopup";
+import { useState } from "react";
 
 export default function SideBar() {
+  const [open, setOpen] = useState(false);
   //   const styles = {
   //     sidebar: {
   //         overflow: 'auto',
@@ -56,6 +60,7 @@ export default function SideBar() {
   //         },
   //     },
   // };
+  const { drawer } = useSelector((state) => state?.layout);
   const HiddenScroll = styled(Box)`
     ::-webkit-scrollbar {
       display: none;
@@ -63,9 +68,17 @@ export default function SideBar() {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   `;
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <div style={{ position: "relative" }}>
-      <HiddenScroll sx={style} className="child">
+      <ReferPopup
+        handleOpen={handleOpen}
+        handleClose={handleClose}
+        open={open}
+      />
+      <HiddenScroll sx={{ ...style }} className="child">
         <Box sx={firstChild}>
           <Box>
             <Box sx={flex}>
@@ -134,7 +147,13 @@ export default function SideBar() {
                 // }
                 unlocked={"vip 22"}
                 backgroundImage={`url(${cardFive})`}
-                marginLeft={"15px"}
+                marginLeft={{
+                  xs: "2px",
+                  sm: "2px",
+                  md: "2px",
+                  lg: "2px",
+                  xl: "2px",
+                }}
               />
               <Card
                 text={"bONUS"}
@@ -151,7 +170,7 @@ export default function SideBar() {
           </Box>
         </Box>
         {/* second div */}
-        <Box sx={secondChild}>
+        <Box sx={secondChild} onClick={handleOpen}>
           <img
             src={icon}
             alt=""
