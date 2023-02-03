@@ -17,22 +17,17 @@ userSchema = new Schema(
       type: String,
       required: true,
     },
-    referralCode: {
-      type: String,
-      default: "",
-    },
-    referralCodeUsed: {
-      type: String,
-      default: "",
-    },
-    referralLink: {
-      type: String,
-      default: "",
-    },
-    referralCodeUsedBy: {
-      type: String,
-      default: "",
-    },
+  referralCode: {
+    type: Schema.Types.ObjectId,
+    ref: "Refer",
+  },
+  referredByCode: {
+    type: Schema.Types.ObjectId,
+    ref: "Refer",
+  },
+
+
+   
 
   //   first_name: {
   //     type: String,

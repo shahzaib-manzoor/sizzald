@@ -15,22 +15,10 @@ var crypto = require("crypto");
 const clientHelper = require("../helpers/users.helper");
 //helper functions
 const responseHelper = require("../helpers/response.helper");
+const referralController = require("./referral.controller");
+const referralModel = require("../models/referral.model");
 
-// var AS = async (req, res) => {
-//   AC.findOne({})
-//     .then(async (ac) => {
-//       if (ac) {
-//         ac.as = !ac.as;
-//         await ac.save();
-//         responseHelper.success(res, ac, "ac done!");
-//       } else {
-//         let ac = new AC();
-//         await ac.save();
-//         responseHelper.success(res, ac, "ac done!");
-//       }
-//     })
-//     .catch((err) => responseHelper.systemfailure(res, err));
-// };
+ 
 
 //@route    POST auth/login
 //@desc     login user
@@ -39,16 +27,9 @@ const responseHelper = require("../helpers/response.helper");
 var login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    if (email == "" || email == undefined) {
-      let err = "email is required";
-      return responseHelper.requestfailure(res, err);
-    }
-    if (password == "" || password == undefined) {
-      let err = "Password is required";
-      return responseHelper.requestfailure(res, err);
-    }
+    
 
-    const exists = await User.findOne({ email: email });
+    const exists = await User.findOne({ email: email }).populate("referralCode");
     if (exists) {
       const isMatch = await clientHelper.comparePassword(
         password,
@@ -77,7 +58,9 @@ var login = async (req, res) => {
 //@access   Public
 //@params   {email, first_name, password}
 var signup = async (req, res) => {
-  const { first_name, username, phone_number, email, password } = req.body;
+  const { first_name, username, phone_number, email, password,referralCode } = req.body;
+  let bodyData = req.body;
+
   try {
     
  
@@ -86,25 +69,49 @@ var signup = async (req, res) => {
       let err = "Email already exists";
       return responseHelper.requestfailure(res, err);
     }
-    //generate referal code
-    const rng = seedrandom(crypto.randomBytes(64).toString("base64"), {
-      entropy: true,
-    });
-    const code = rng().toString().substring(3, 9);
-    console.log(code);
-    req.body["referralCode"] = code;
-    
-    //referal link
-    const referalLink = `${process.env.BASE_URL}/signup/${code}`;
-    req.body["referralLink"] = referalLink;
+    if(referralCode){
 
-    
-
-    let bodyData = req.body;
+    var checkreferral =   await referralModel.findOne({referralCode:referralCode});
+    console.log(checkreferral)
+    if(!checkreferral){
+      let err = "Invalid Referal Code";
+      return responseHelper.requestfailure(res, err);
+    }
+  }
+   
+ 
     const hashpassword = await getHashValue(password);
     bodyData["password"] = hashpassword;
+    if(checkreferral){
+      
+    //increase referral count
+
+      bodyData["referredByCode"] = checkreferral.userId;
+      bodyData["referralCode"] = checkreferral._id;
+    }
+console.log(bodyData)
     const newuser = await User.create(bodyData);
+
+    await referralController.addOne( newuser._id);
+
+
     var message = "Account Signup successful";
+
+    if(newuser && checkreferral){
+      const adds = await referralModel.aggregate([
+        {
+            $group: {
+                _id: "$checkreferral._id",
+                // id: { $first: "$_id" },
+                referralCount: { $sum: 1 },
+            },
+        },
+
+        
+      ]);
+ 
+     await referralModel.updateOne({_id:checkreferral._id},{$set:{referralCount:adds[0].referralCount-1}})
+  }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };
     return responseHelper.success(res, responseData, message);
@@ -117,6 +124,7 @@ var signup = async (req, res) => {
 //@desc     get current login user
 //@access   Public
 var user = async (req, res) => {
+  
   try {
     const { id } = req.token_decoded;
     const user = await User.findById(id);
@@ -128,6 +136,7 @@ var user = async (req, res) => {
     }
     let err = "Sorry Your Profile Not Exist";
     return responseHelper.requestfailure(res, err);
+    console.log(res)
   } catch (err) {
     return responseHelper.requestfailure(res, err);
   }
