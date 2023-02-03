@@ -64,7 +64,7 @@ const rows = [
     betid: '500.00',
   },
 ];
-const typo = { fontSize: '16px', fontWeight: 400, color: '#ffffff' };
+const typo = { fontSize: '16px', fontWeight: 400, color: '#ffffff',padding:"0px",height:"40px",paddingRight:'30px' };
 export default function CustomizedTables() {
   return (
     <Box sx={{ paddingRight: '20px' }}>
@@ -96,7 +96,7 @@ export default function CustomizedTables() {
               >
                 Player
               </StyledTableCell>
-              <StyledTableCell align='right'>
+              <StyledTableCell align='right' sx={{padding:'0px',height:'50px',paddingRight:"30px"}}>
                 Commission/Rewards
               </StyledTableCell>
             </TableRow>
