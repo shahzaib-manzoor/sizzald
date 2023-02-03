@@ -6,6 +6,7 @@ import arrowRewardLeft from "../../assets/arrowRewardLeft.svg";
 import cash from "../../assets/cash.svg";
 import cash2 from "../../assets/cash2.png";
 import RightImg from "../../assets/RightImg.svg";
+import Table from "./TableAffiliate";
 
 import CallMadeIcon from "@mui/icons-material/CallMade";
 
@@ -61,7 +62,8 @@ function AffiliateReward() {
         <img style={{ margin: "0 auto" }} src={arrowGreenDown} alt="" />
         <Box sx={{ display: "flex", position: "relative" }}>
           <img
-            style={{ position: "absolute", top: "50%", left: "10%" }}
+            className="arrowPosition"
+            // style={{ position: "absolute", top: "50%", left: "13%" }}
             src={arrowRewardLeft}
             alt=""
           />
@@ -92,19 +94,26 @@ function AffiliateReward() {
             </Typography>
           </Box>
           <img
-            style={{ position: "absolute", top: "50%", right: "10%" }}
+            // style={{ position: "absolute", top: "50%", right: "13%" }}
+            className="arrowPositionRight"
             src={arrowRewardRight}
             alt=""
           />
         </Box>
-        <Box sx={{ display: "flex", gap: "10px", paddingTop: "112px" }}>
+      </Box>
+      <Box sx={{ display: "flex", gap: "15px", paddingTop: "112px" }}>
+        <Box
+          sx={{
+            width: "50%",
+            borderRadius: "8px",
+            background: "rgba(43, 45, 80, 0.6) ",
+          }}
+        >
           <Box
             sx={{
-              width: "50%",
-              borderRadius: "8px",
-              background: "rgba(43, 45, 80, 0.6) ",
-              padding: "30px 20px",
+              padding: "25px 20px",
               display: "flex",
+              justifyContent: "space-between",
             }}
           >
             <Box>
@@ -159,17 +168,18 @@ function AffiliateReward() {
                     // marginTop: { sx: "10px", lg: "10px", xl: "30px" },
                     padding: "5px 10px",
                     height: "44px",
-                    marginLeft: "7px",
+                    // marginLeft: "7px",
                     fontFamily: "Poppins",
                     fontSize: { lg: "12px", xl: "18px" },
                     fontWeight: "700",
                     letterSpacing: "0.01em",
                     textAlign: "left",
+                    marginLeft: "20px",
                   }}
                   variant="contained"
                 >
                   USD REWARD RULES
-                  <IconButton sx={{ background: "white", marginLeft: "18px" }}>
+                  <IconButton sx={{ background: "white", marginLeft: "20px" }}>
                     <CallMadeIcon sx={{ fontSize: "10px" }} />
                   </IconButton>
                 </Button>
@@ -179,58 +189,74 @@ function AffiliateReward() {
               <img src={cash} alt="" />
             </Box>
           </Box>
+          <Box sx={{ padding: "0px 30px" }}>
+            <Table />
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "50%",
+            borderRadius: "8px",
+            background: "rgba(43, 45, 80, 0.6) ",
+          }}
+        >
           <Box
             sx={{
-              width: "50%",
-              borderRadius: "8px",
-              background: "rgba(43, 45, 80, 0.6) ",
+              padding: "30px 20px",
+              display: "flex",
             }}
           >
-            <Box
-              sx={{
-                padding: "30px 20px",
-                display: "flex",
-              }}
-            >
-              <Box sx={{ width: "70%" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Poppins",
-                    fontSize: { lg: "26px", xl: "30px" },
-                    fontStyle: "italic",
-                    fontWeight: 400,
-                    lineHeight: "40px",
-                    letterSpacing: "1px",
-                    textAlign: "left",
-                    color: "rgba(3, 251, 117, 1)",
-                    paddingBottom: "10px",
-                  }}
-                  variant="h6"
-                >
-                  COMMISSION REWARDS
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Poppins",
-                    fontSize: { lg: "16px", xl: "18px" },
-                    fontWeight: 700,
-                    lineHeight: "26px",
-                    letterSpacing: "0.01em",
-                    textAlign: "left",
-                    color: "white",
-                  }}
-                  variant="h6"
-                >
-                  Every friend you invite will rebate you a percentage of their
-                  wagers as your commission and will be credited directly to
-                  your balance.
-                </Typography>
-              </Box>
-              <img style={{ width: "30%", height: "60%" }} src={cash2} alt="" />
+            <Box sx={{ width: "70%" }}>
+              <Typography
+                sx={{
+                  fontFamily: "Poppins",
+                  fontSize: { lg: "26px", xl: "30px" },
+                  fontStyle: "italic",
+                  fontWeight: 400,
+                  lineHeight: "40px",
+                  letterSpacing: "1px",
+                  textAlign: "left",
+                  color: "rgba(3, 251, 117, 1)",
+                  paddingBottom: "10px",
+                }}
+                variant="h6"
+              >
+                COMMISSION REWARDS
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Poppins",
+                  fontSize: { lg: "16px", xl: "18px" },
+                  fontWeight: 700,
+                  lineHeight: "26px",
+                  letterSpacing: "0.01em",
+                  textAlign: "left",
+                  color: "white",
+                }}
+                variant="h6"
+              >
+                Every friend you invite will rebate you a percentage of their
+                wagers as your commission and will be credited directly to your
+                balance.
+              </Typography>
             </Box>
-            <Box sx={{ height: "75%", width: "95%", background: "#01022F" }}>
-              <img style={{ width: "100%" }} src={RightImg} alt="" />
-            </Box>
+            <img style={{ width: "30%", height: "60%" }} src={cash2} alt="" />
+          </Box>
+          <Box
+            sx={{
+              // width: "97%",
+              background: "#01022F",
+              width: "90%",
+              height: "500px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "0 auto",
+              borderRadius: "8px",
+              marginBottom: "20px",
+            }}
+          >
+            <img style={{ width: "75%" }} src={RightImg} alt="" />
           </Box>
         </Box>
       </Box>
