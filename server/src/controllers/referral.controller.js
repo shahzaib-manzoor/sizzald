@@ -40,9 +40,11 @@ const deleteAll = async (req, res) => {
  
 const addOne = async ( id) => {
  
-    //generate random referral code using id hash salted with random number
-    const salt = await bcrypt.genSalt(4);
-     const referralCode =  await bcrypt.hash(id.toString(), salt);
+   
+    const referralCode =  Math.floor(Math.random() * 100000000) + 10000000
+
+
+   
     const referralLink = `https://szld.hrokuapp.com/signup/${referralCode}`;
      
     const payload = {
