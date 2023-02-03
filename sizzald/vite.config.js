@@ -13,6 +13,7 @@ export default defineConfig({
     
     
   },
+  root:'../server/dist',
 
   define: {global: 'window'}
 });
