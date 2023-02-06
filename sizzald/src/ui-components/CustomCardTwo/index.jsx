@@ -15,9 +15,10 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
     <Card
       sx={{
         marginTop: "10px",
-        width: { xs: "95%", sm: "94%", md: "94%", lg: "94%", xl: "94%" },
+        // width: { xs: "95%", sm: "94%", md: "94%", lg: "94%", xl: "100%" },
+        // width:"240px",
         background: "rgba(43, 45, 80, 1)",
-        margin: "8px auto",
+        margin: "4px",
         // paddingLeft:'20'
       }}
     >
@@ -27,8 +28,8 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
             xs: "150px",
             sm: "200px",
             md: "240px",
-            lg: "270px",
-            xl: "326px",
+            lg: "220px",
+            xl: "200px",
           },
           background: `url(${img}) `,
           backgroundPosition: "center",

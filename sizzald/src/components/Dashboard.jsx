@@ -51,7 +51,7 @@ export default function Dashboard() {
   const sliderSix = React.useRef(null);
   const sliderSeven = React.useRef(null);
   var settingCardOne = {
-    slidesToShow: 3,
+    slidesToShow: 5,
 
     responsive: [
       {
@@ -66,36 +66,56 @@ export default function Dashboard() {
           slidesToShow: 2,
         },
       },
-    ],
-  };
-  var settingCardTwo = {
-    slidesToShow: 4,
-
-    responsive: [
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 1000,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 3,
         },
+      },{
+        breakpoint: 2000,
+        settings: {
+          slidesToShow: 4,
+        },
       },
+      
+     
+    ],
+  };
+  var settingCardTwo = {
+    slidesToShow: 6,
+
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
     ],
   };
   var settingCardThree = {
-    slidesToShow: 4,
+    slidesToShow: 6,
     rows: 2,
     slidesPerRow: 1,
-
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -104,10 +124,19 @@ export default function Dashboard() {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
     ],
+   
   };
   var settingCardFour = {
-    slidesToShow: 4,
+    slidesToShow: 6,
     rows: 2,
     slidesPerRow: 1,
 
@@ -115,7 +144,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -124,17 +153,25 @@ export default function Dashboard() {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
     ],
   };
   var settingCardFive = {
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesPerRow: 1,
 
     responsive: [
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -143,7 +180,16 @@ export default function Dashboard() {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
     ],
+   
   };
 
   return (
