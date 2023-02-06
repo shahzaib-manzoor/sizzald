@@ -172,7 +172,7 @@ const DetailedCard = () => {
             >
               Now get rewarded for your valuable feedback.
             </Typography>
-            <Box sx={{ padding: { lg: "17px 0px", xl: "40px 0px" } }}>
+            <Box sx={{ padding: { lg: "17px 0px", xl: "25px 0px" } }}>
               <ButtonDetailedCard color="rgba(49, 167, 57, 1)" />
             </Box>
             <Typography

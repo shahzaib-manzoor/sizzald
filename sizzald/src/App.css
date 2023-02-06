@@ -130,7 +130,7 @@
         .imgAdvertisment2{
           position: absolute;
           top: 2%;
-          right: 4%;
+          right: 0%;
           object-fit: cover;
           height: 130px;
         }

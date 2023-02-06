@@ -170,7 +170,7 @@ function AffiliateReward() {
                     height: "44px",
                     // marginLeft: "7px",
                     fontFamily: "Poppins",
-                    fontSize: { lg: "12px", xl: "18px" },
+                    fontSize: { lg: "12px", xl: "13px" },
                     fontWeight: "700",
                     letterSpacing: "0.01em",
                     textAlign: "left",
