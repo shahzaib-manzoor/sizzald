@@ -18,6 +18,8 @@ const responseHelper = require("../helpers/response.helper");
 const referralController = require("./referral.controller");
 const referralModel = require("../models/referral.model");
 
+ 
+
 //@route    POST auth/login
 //@desc     login user
 //@access   Public
@@ -25,9 +27,9 @@ const referralModel = require("../models/referral.model");
 var login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const exists = await User.findOne({ email: email }).populate(
-      "referralCode"
-    );
+    
+
+    const exists = await User.findOne({ email: email }).populate("referralCode");
     if (exists) {
       const isMatch = await clientHelper.comparePassword(
         password,
@@ -79,16 +81,13 @@ var signup = async (req, res) => {
 
     const hashpassword = await getHashValue(password);
     bodyData["password"] = hashpassword;
-    if (checkreferral) {
-      //increase referral count
+     if(checkreferral)
+     {
+       bodyData["referralCode"] = checkreferral._id;
 
-      bodyData["referredByCode"] = checkreferral.userId;
-      bodyData["referralCode"] = checkreferral._id;
-    }
-    console.log(bodyData);
-  const data =  await referralController.addOne( );
-  bodyData["referralCode"] = data._id;
+     }
     const newuser = await User.create(bodyData);
+    const data =  await referralController.addOne( newuser._id );
 
 
     var message = "Account Signup successful";
@@ -117,10 +116,12 @@ var signup = async (req, res) => {
   }
 };
 
+
 //@route    GET users
 //@desc     get current login user
 //@access   Public
 var user = async (req, res) => {
+  
   try {
     const { id } = req.token_decoded;
     const user = await User.findById(id);
@@ -132,7 +133,7 @@ var user = async (req, res) => {
     }
     let err = "Sorry Your Profile Not Exist";
     return responseHelper.requestfailure(res, err);
-    console.log(res);
+    console.log(res)
   } catch (err) {
     return responseHelper.requestfailure(res, err);
   }
@@ -247,6 +248,7 @@ var resetPassword = async (req, res) => {
 };
 
 module.exports = {
+   
   login,
   signup,
   user,
