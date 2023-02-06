@@ -24,8 +24,7 @@ import blog from "../../assets/blog.svg";
 import headphones from "../../assets/headphones.svg";
 import languages from "../../assets/languages.svg";
 import sponsership from "../../assets/sponsership.svg";
-
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 export const SidebarData = [
   {
     title: "casino",
@@ -54,8 +53,8 @@ export const SidebarData = [
         title: "Sizzld Games",
         path: "/sizzldGames",
         icon: <img src={Rocket} />,
-        iconClosed: <ExpandMoreIcon />,
-        iconOpened: <ExpandMoreIcon />,
+        iconClosed: <ArrowForwardIosIcon fontSize="small" />,
+        iconOpened: <ArrowForwardIosIcon  fontSize="small" />,
       },
       {
         title: "Slot ",

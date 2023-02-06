@@ -6,7 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
+/* .MuiBox-root .css-16j6ze0-MuiTypography-root  {
+  font-weight: 600 !important
+} */
 
 .css-qvzsud-MuiCardContent-root:last-child{
   padding-bottom: 0px !important;
