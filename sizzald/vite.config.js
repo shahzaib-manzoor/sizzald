@@ -10,6 +10,9 @@ export default defineConfig({
  
   build: {
     outDir: "../server/dist",
+    
+    
   },
+
   define: {global: 'window'}
 });

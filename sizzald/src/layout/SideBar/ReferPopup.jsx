@@ -3,6 +3,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import close from "../../assets/close.svg";
 import Modal from "@mui/material/Modal";
+import { useEffect, useState } from "react";
+import ApiServices from "../../services/ApiServices";
+import url from "../../constants/urls";
+
 
 const style = {
   position: "absolute",
@@ -11,7 +15,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 530,
   //   bgcolor: "background.paper",
- 
+
   background: "rgba(14, 6, 61, 0.3)",
   boxShadow: "1px 1px 10px rgba(255, 1, 62, 0.18)",
   backdropFilter: "blur(50px)",
@@ -26,6 +30,22 @@ const style = {
 };
 
 export default function BasicModal({ handleOpen, handleClose, open }) {
+  const uid = localStorage.getItem('uid');
+  const [copy, setCopy] = useState('');
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText(copy);
+  };
+  useEffect(() => {
+    if (uid) {
+      ApiServices.get(url.getCode + uid).then((res) => {
+        setCopy(res?.data?.data?.referralLink)
+      })
+    }
+  }, [
+    uid
+  ]);
+
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -169,11 +189,12 @@ export default function BasicModal({ handleOpen, handleClose, open }) {
             }}
           >
             <Typography sx={{ color: "white", paddingLeft: "10px" }}>
-              https://bc.co/i-9pp869wk-n/
+              {copy}
             </Typography>
             <Button
               sx={{ background: " rgba(14, 6, 61, 1)" }}
               variant="contained"
+              onClick={handleCopyToClipboard}
             >
               Copy Link
             </Button>

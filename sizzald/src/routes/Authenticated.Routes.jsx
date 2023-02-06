@@ -20,6 +20,10 @@ const AuthenticationRoutes = {
       path: "/signup",
       element: <Signup />,
     },
+    {
+      path: "/signup/:code",
+      element: <Signup />,
+    },
   ],
 };
 
