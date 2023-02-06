@@ -6,7 +6,9 @@
   margin: 0;
   padding: 0;
 }
-
+/* .MuiBox-root .css-16j6ze0-MuiTypography-root  {
+  font-weight: 600 !important
+} */
 
 .css-qvzsud-MuiCardContent-root:last-child{
   padding-bottom: 0px !important;
@@ -128,8 +130,38 @@
         .imgAdvertisment2{
           position: absolute;
           top: 2%;
-          right: 4%;
+          right: 0%;
           object-fit: cover;
           height: 130px;
         }
+        }
+        @media(min-width:600px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 2%;
+          }
+        }
+        @media(min-width:1300px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 6%;
+          }
+        }
+        @media(min-width:1800px){
+          .arrowPosition{
+            position: absolute; top: 50%; left: 13%;
+          }
+        }
+        @media(min-width:600px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 2%;
+          }
+        }
+        @media(min-width:1300px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 6%;
+          }
+        }
+        @media(min-width:1800px){
+          .arrowPositionRight{
+            position: absolute; top: 50%; right: 13%;
+          }
         }

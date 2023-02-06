@@ -6,6 +6,7 @@ const express = require("express");
 const router = express.Router();
 const { forgotJwtAuth } = require("../../helpers/jwt.helper");
 const controller = require("../../controllers").user;
+const referralController = require("../../controllers").referral;
 
  
 router.post("/login", controller.login);
@@ -28,5 +29,6 @@ router.post("/verifyforgotpin", forgotJwtAuth, controller.verifyForgotPinCode);
 //@desc     reset password
 //@access   private
 router.post("/resetpassword", forgotJwtAuth, controller.resetPassword);
+router.get("/getCode/:id", referralController.getOne);
 
 module.exports = router;

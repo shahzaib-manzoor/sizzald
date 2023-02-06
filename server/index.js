@@ -30,6 +30,8 @@ app.get("*", (req, res) => {
   app.use(express.static(path.join(__dirname, "/dist/index.html")));
 
 });
+ 
+ 
 
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {

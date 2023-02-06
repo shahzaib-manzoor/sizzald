@@ -62,8 +62,9 @@ const Signin = () => {
   const handleLogin = () => {
   
     ApiServices.post(url.login, input).then((res) => {
-      console.log(res);
-      localStorage.setItem('auth', true)
+      console.log(res)
+      localStorage.setItem('auth', true);
+      localStorage.setItem('uid',res?.data?.data?.user?._id);
       navigate('/')
 
     }).catch((err) => {
@@ -114,7 +115,7 @@ const handleInput = (e) => {
     <Box
       sx={{
         backgroundImage: `url(${img})`,
-        height: "100vh",
+        minHeight: "100vh",
         width: "100%",
         backgroundPosition: "center",
         backgroundSize: "cover",

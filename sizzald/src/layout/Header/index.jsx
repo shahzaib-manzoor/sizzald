@@ -104,9 +104,7 @@ export default function PrimarySearchAppBar({
   };
   const handleLogout = () => {
     localStorage.removeItem("auth")
-
     navigate("/")
-
    }
   const menuId = "primary-search-account-menu";
   const renderMenu = (

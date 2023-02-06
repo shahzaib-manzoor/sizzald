@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
-    paddingLeft: "35px",
+    // paddingLeft: "45px",
     display: "flex",
     alignItems: "center",
     // gap: 1,
@@ -27,7 +27,7 @@ const SubMenu = ({ item }) => {
       background: "rgba(255, 255, 255, 0.1)",
       borderRadius: "5px",
     },
-    height: "60px",
+    height: "46px",
     width: "inherit",
     paddingRight: "10px",
   };
@@ -36,7 +36,7 @@ const SubMenu = ({ item }) => {
     color: "white",
     background: "rgba(255, 255, 255, 0.1)",
     borderRadius: "5px",
-    paddingLeft: "35px",
+    // paddingLeft: "45px",
     display: "flex",
     alignItems: "center",
     gap: 1,
@@ -51,7 +51,7 @@ const SubMenu = ({ item }) => {
       background: "rgba(255, 255, 255, 0.1)",
       borderRadius: "5px",
     },
-    height: "60px",
+    height: "46px",
   };
   let menuStyle = {
     display: "flex",
@@ -62,10 +62,12 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 10px" : "7px 30px",
+    padding: item.subNav ? "0px 17px" : "0px 25px",
     textDecoration: "none",
     color: "white",
     width: "inherit",
+
+
   };
   let activeMenuStyle = {
     display: "flex",
@@ -76,18 +78,39 @@ const SubMenu = ({ item }) => {
       borderRadius: "5px",
     },
     height: "46px",
-    padding: item.subNav ? "7px 25px" : "7px 13px",
+    padding: item.subNav ? "0px 17px" : "0px 25px",
     background: "rgba(255, 255, 255, 0.1)",
     textDecoration: "none",
     color: "white",
     width: "inherit",
+    // "& .MuiBox-root .css-16j6ze0-MuiTypography-root ": {
+    //   fontWeight: '600 !important'
+    // }
+
   };
+  const activeTypography = {
+    color: '#FFFFFF',
+    fontSize: "18px",
+    fontWeight: 600,
+    textTransform: "capitalize",
+    flexGrow: 1,
+    marginLeft: "10px",
+  };
+  const notActiveTypography = {
+    color: '#FFFFFF',
+    fontSize: "18px",
+    fontWeight: 400,
+    textTransform: "capitalize",
+    flexGrow: 1,
+    marginLeft: "10px",
+  };
+
+
   const [gameNav, setGameNav] = useState(false);
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
   const gameHandler = (title) => {
-    console.log("sjsj");
     if (title === "Sizzld Games") {
       setGameNav(true);
     } else {
@@ -285,11 +308,12 @@ const SubMenu = ({ item }) => {
               position: "fixed",
               top: "8.5%",
               right: "0",
+              
               left: {
                 xs: "none",
                 sm: "none",
                 md: "none",
-                lg: "20%",
+                lg: "22%",
                 xl: "17%",
               },
               width: "15%",
@@ -302,7 +326,7 @@ const SubMenu = ({ item }) => {
               // paddingBottom: "80px",
               // marginBottom: "40px",
               "&:lastChild": {
-                marginBottom: "30px",
+                marginBottom: "50px",
                 color: "red",
               },
             }}
@@ -383,11 +407,14 @@ const SubMenu = ({ item }) => {
             {item.icon}
             <Typography
               noWrap
+              // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
               sx={{
-                color: "#BDBDBD",
+                // color: "#BDBDBD",
+                fontFamily: 'Poppins',
+                color: '#FFFFFF',
                 textTransform: "capitalize",
                 fontSize: "16px",
-                fontWeight: 400,
+                fontWeight: item.path === window.location.pathname ? 600 : 400,
                 textDecoration: "none",
               }}
             >
@@ -400,8 +427,8 @@ const SubMenu = ({ item }) => {
             {item.subNav && subnav
               ? item.iconOpened
               : item.subNav
-              ? item.iconClosed
-              : null}
+                ? item.iconClosed
+                : null}
           </div>
           {/* </Box> */}
         </NavLink>
@@ -415,7 +442,7 @@ const SubMenu = ({ item }) => {
               >
                 <NavLink
                   style={({ isActive }) =>
-                    isActive ? subMenuActiveStyle : subMenuStyle
+                    isActive ? { ...subMenuActiveStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "45px" } : { ...subMenuStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "45px" }
                   }
                   to={item.path}
                   key={`key${index}`}
@@ -442,9 +469,11 @@ const SubMenu = ({ item }) => {
                 </Box> */}
                   {item.icon}
                   <Typography
+
                     sx={{
+                      fontFamily: 'Poppins',
                       fontSize: "16px",
-                      fontWeight: 400,
+                      fontWeight:item.path === window.location.pathname ? 600 : 400,
                       textTransform: "capitalize",
                       flexGrow: 1,
                       marginLeft: "10px",

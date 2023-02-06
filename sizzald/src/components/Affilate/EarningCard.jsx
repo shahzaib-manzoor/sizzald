@@ -19,7 +19,7 @@ function EarningCard() {
       >
         START EARNING TODAY
       </Typography>
-      <Box sx={{ display: "flex", gap: 3 }}>
+      <Box sx={{ display: "flex", gap: "15px" }}>
         <Box
           sx={{
             width: "50%",

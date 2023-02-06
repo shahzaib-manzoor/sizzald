@@ -74,7 +74,10 @@ export default function Footer() {
     paddingLeft:'30px'
   };
   return (
-    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
+    <footer>
+
+   
+    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" }}}>
       <Box
         sx={{
           background: "rgba(43, 45, 80, 0.6)",
@@ -166,5 +169,6 @@ export default function Footer() {
         ©2021 Sizzld. All rights reserved
       </Typography>
     </Box>
+    </footer>
   );
 }
