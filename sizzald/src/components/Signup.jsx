@@ -43,8 +43,12 @@ const Signup = () => {
   const handleSignup = () => {
     
     ApiServices.post(url.signup, input).then((res) => {
-      navigate('/')
+      console.log(res?.data?.data?.user?._id);
+
+      localStorage.setItem('uid',res?.data?.data?.user?._id);
       localStorage.setItem('auth', true)
+
+      navigate('/')
     })
 
     navigate('/signup')
