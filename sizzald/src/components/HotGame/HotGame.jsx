@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 function HotGame() {
   const sliderTwo5 = React.useRef(null);
   var settingCardTwo = {
-    slidesToShow: 4,
+    slidesToShow: 6,
     rows: 2,
     slidesPerRow: 1,
 
@@ -12,15 +12,23 @@ function HotGame() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
     ],
   };
   return (
