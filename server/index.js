@@ -27,7 +27,7 @@ var route = require("./src/routes");
 app.use(route);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/dist/index.html"));
+  app.use(express.static(path.join(__dirname, "/dist/index.html")));
 
 });
  
