@@ -105,7 +105,6 @@ const SubMenu = ({ item }) => {
     marginLeft: "10px",
   };
 
-
   const [gameNav, setGameNav] = useState(false);
   const [subnav, setSubnav] = useState(false);
 
@@ -114,7 +113,7 @@ const SubMenu = ({ item }) => {
     if (title === "Sizzld Games") {
       setGameNav(true);
     } else {
-      console.log("not sizzld");
+      // console.log("not sizzld");
     }
   };
   const sideData = [
@@ -314,10 +313,11 @@ const SubMenu = ({ item }) => {
                 sm: "none",
                 md: "none",
                 lg: "22%",
-                xl: "17%",
+                xl: "18%",
               },
               width: "15%",
-              height: "1000px",
+              height: "100vh",
+              minHeight:'100vh',
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
@@ -345,8 +345,8 @@ const SubMenu = ({ item }) => {
                     variant="h6"
                     sx={{
                       fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: 600,
+                      fontSize: "15px",
+                      fontWeight: 400,
                       lineHeight: "27px",
                       letterSpacing: "0em",
                       textAlign: "left",
@@ -471,6 +471,7 @@ const SubMenu = ({ item }) => {
                   <Typography
 
                     sx={{
+                      color:'#BDBDBD',
                       fontFamily: 'Poppins',
                       fontSize: "16px",
                       fontWeight:item.path === window.location.pathname ? 600 : 400,
