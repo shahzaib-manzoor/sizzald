@@ -25,11 +25,14 @@ app.use(
 
 var route = require("./src/routes");
 app.use(route);
+
 app.get("*", (req, res) => {
-  app.use(express.static(path.join(__dirname, "/dist/index.html")));
+  res.sendFile(path.join(__dirname, "/dist/index.html"));
 
 });
  
+ 
+
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
   res.status(err.status || 500);
