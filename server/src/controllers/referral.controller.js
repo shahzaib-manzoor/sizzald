@@ -39,22 +39,13 @@ const deleteAll = async (req, res) => {
 
  
 const addOne = async ( id) => {
- 
-   
     const referralCode =  Math.floor(Math.random() * 100000000) + 10000000
-
-
-   
     const referralLink = `https://szld.hrokuapp.com/signup/${referralCode}`;
-     
     const payload = {
         referralCode: referralCode?referralCode:null,
         referralLink: referralLink,
         userId: id,
-
-
     }
-
     try {
         const referral = await Referal.create(payload);
         const message = "referral created";
