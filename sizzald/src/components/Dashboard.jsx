@@ -3,30 +3,30 @@ import CustomCard from "../ui-components/CustomCard";
 import Lobby from "../ui-components/Lobby";
 import CustomCardTwo from "../ui-components/CustomCardTwo";
 import SecondBar from "../ui-components/SecondBar/SecondBar";
-import { useRef } from "react";
 import CustomCarousal from "../ui-components/CustomCarousal";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import questionMark from "../assets/question-mark-circle.png";
-import customCardTwo from ".././assets/customCardTwo.png";
-import customCardThree from ".././assets/customCardThree.png";
-import customCardFour from ".././assets/customCardFour.png";
-import customCardFive from ".././assets/customCardFive.png";
+import Keno from ".././assets/keno.svg" 
+import videoPoker from ".././assets/videoPoker.svg"
+import Baccarat from ".././assets/baccarat.svg"
+import hillo from "../assets/hillo.svg"
+import blackJack from ".././assets/blackJack.svg"
+import crash from ".././assets/crash.svg"
+import limbo from ".././assets/limbo.svg"
+import wheel from ".././assets/wheel.svg"
+import ultimateDice from ".././assets/ultimateDice.svg";
+import ringOfFortune from "../assets/ringOfFortune.svg"
+import kenoMultiplayer from ".././assets/kenoMultiplayer.svg"
+import caveOfPlunder from "./../assets/caveOfPlunder.svg"
+import coinFlip from "./../assets/coinFlip.svg"
+import plinko from "./../assets/plinko.svg"  
+import mine from "./../assets/mine.svg"
+import towerOfLegend from "./../assets/towerOfLegend.svg"
 
 import customCard1 from ".././assets/customCard1.png";
 import customCard2 from ".././assets/customCard2.png";
 import customCard3 from ".././assets/customCard3.png";
-import customCardd1 from ".././assets/customcardd1.png";
-import customCardd2 from ".././assets/customCardd2.png";
-import customCardd3 from ".././assets/customCardd3.png";
-import customCardd4 from ".././assets/customCardd4.png";
-import customCardd5 from ".././assets/customCardd5.png";
-import customCardd6 from ".././assets/customCardd6.png";
-import customCardd7 from ".././assets/customCardd7.png";
-import customCardd8 from ".././assets/customCardd8.png";
-import customCardd9 from ".././assets/customCardd9.png";
-import customCardd from ".././assets/customCardd.png";
-import ultimate from ".././assets/ultimate.png";
 import CustomCardThree from "../ui-components/CustomCardThree";
 
 import gameProvider1 from "../assets/gameProvider1.png";
@@ -39,7 +39,6 @@ import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
 import RecentBig from "./Picks/RecentBig";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
 // import RecentBigWin from "./Dashboard/RecentBigWin";
 
 export default function Dashboard() {
@@ -392,7 +391,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd5}
+          img={Keno}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -400,7 +399,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd6}
+          img={videoPoker}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -408,7 +407,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd7}
+          img={Baccarat}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -416,7 +415,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd8}
+          img={hillo}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -424,7 +423,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd1}
+          img={blackJack}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -432,7 +431,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd2}
+          img={crash}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -440,7 +439,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd3}
+          img={limbo}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -448,7 +447,14 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd4}
+          img={wheel}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        /> <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={ultimateDice}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -456,7 +462,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd5}
+          img={ringOfFortune}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -464,7 +470,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd6}
+          img={kenoMultiplayer}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -472,7 +478,20 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd7}
+          img={caveOfPlunder}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+
+
+
+
+
+        <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={coinFlip}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -480,7 +499,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd8}
+          img={plinko}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -488,7 +507,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd1}
+          img={mine}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -496,7 +515,15 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd2}
+          img={towerOfLegend}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+         <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={blackJack}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -504,7 +531,7 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd3}
+          img={crash}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
@@ -512,11 +539,20 @@ export default function Dashboard() {
         <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd1}
+          img={limbo}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
+        <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={wheel}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+
       </CustomCarousal>
       <Box
         sx={{
@@ -595,134 +631,107 @@ export default function Dashboard() {
         carousalRef={sliderFour}
         settingCard={settingCardFour}
       >
-        <CustomCardTwo
-          name="Mr SCHEMER"
+              <CustomCardTwo
+          name="Classic Dice"
           balance="$ 5346362"
-          img={ultimate}
+          img={coinFlip}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd}
+          img={plinko}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd3}
+          img={mine}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd4}
+          img={towerOfLegend}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+              <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={ultimateDice}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd5}
+          img={ringOfFortune}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd6}
+          img={kenoMultiplayer}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd7}
+          img={caveOfPlunder}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+    <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={Keno}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd8}
+          img={videoPoker}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd5}
+          img={Baccarat}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd6}
+          img={hillo}
           icon={
             <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd7}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd8}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd1}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd2}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd3}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd4}
-          icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
-          }
-        />
+
+
+
+
+       
       </CustomCarousal>
       <Box
         sx={{
@@ -900,132 +909,68 @@ export default function Dashboard() {
         carousalRef={sliderSeven}
         settingCard={settingCardTwo}
       >
-        <CustomCardTwo
-          name="Mr SCHEMER"
+         <CustomCardTwo
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd7}
+          img={coinFlip}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd8}
+          img={plinko}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd9}
+          img={mine}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd6}
+          img={towerOfLegend}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+          }
+        />
+         <CustomCardTwo
+          name="Classic Dice"
+          balance="$ 5346362"
+          img={blackJack}
+          icon={
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd7}
+          img={crash}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd8}
+          img={limbo}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
-          name="Mr SCHEMER"
+          name="Classic Dice"
           balance="$ 5346362"
-          img={customCardd}
+          img={wheel}
           icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
-          }
-        />
-        <CustomCardTwo
-          name="Mr SCHEMER"
-          balance="$ 5346362"
-          img={customCardd2}
-          icon={
-            <IconButton
-              sx={{
-                background: "rgba(255, 255, 255, 0.3)",
-                marginRight: "8px",
-                color: "white",
-              }}
-            >
-              <NorthEastIcon sx={{ fontSize: "14px" }} />
-            </IconButton>
+            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
           }
         />
       </CustomCarousal>

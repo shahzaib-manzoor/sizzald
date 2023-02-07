@@ -15,10 +15,9 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
     <Card
       sx={{
         marginTop: "10px",
-        // width: { xs: "95%", sm: "94%", md: "94%", lg: "94%", xl: "100%" },
-        // width:"240px",
+        
         background: "rgba(43, 45, 80, 1)",
-        margin: "4px",
+        margin: "8px 4px",
         // paddingLeft:'20'
       }}
     >
@@ -28,7 +27,7 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
             xs: "150px",
             sm: "200px",
             md: "240px",
-            lg: "220px",
+            lg: "190px",
             xl: "200px",
           },
           background: `url(${img}) `,
@@ -51,7 +50,7 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
             </Typography>
           </Box>
         </Box>
-        <Box sx={{ marginRight: "6px" }}>{icon}</Box>
+        <Box sx={{ marginRight: "6px",}}>{icon}</Box>
       </CardContent>
     </Card>
   );

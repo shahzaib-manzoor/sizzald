@@ -42,6 +42,6 @@ export const cardContentIcon = {
   background: "rgba(0, 0, 0, 0.3)",
   height: { lg: "37px" },
   width: { lg: "37px" },
-  marginRight: "10px",
+  marginRight: "12px",
 };
 export const cardContentIconSize = { fontSize: "14px" };

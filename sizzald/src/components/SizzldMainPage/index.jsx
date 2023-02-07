@@ -9,6 +9,7 @@ import sizzldGameFive from '../../assets/sizzldGameFive.svg';
 import sizzldGameSix from '../../assets/sizzldGameSix.svg';
 import sizzldGameSeven from '../../assets/sizzldGameSeven.svg';
 import Image from 'mui-image';
+import SizzaldComp from "./SizzaldComp"
 
 const Index = () => {
   // const [open,setOpen]=useState()
@@ -65,6 +66,34 @@ const Index = () => {
     flexDirection: 'column',
     alignItems: 'center',
   };
+  const sliderTwo8 = React.useRef(null);
+  var settingCardTwo = {
+    slidesToShow: 6,
+    rows: 3,
+    slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      
+     
+    ],
+  };
   return (
     <Box sx={{ width: '99%' }}>
       <Typography sx={typography}> Sizzld Top Games </Typography>
@@ -85,8 +114,10 @@ const Index = () => {
             );
           })}
         </Box>
-      </Box>
+      </Box >
+      <SizzaldComp sliderTwo={sliderTwo8} settingCardTwo={settingCardTwo}/>
     </Box>
+    
   );
 };
 
