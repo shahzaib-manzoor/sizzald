@@ -65,12 +65,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
-
+    
+  
+    [theme.breakpoints.up("sm")]: {
+      width: "30ch",
+    },
     [theme.breakpoints.up("md")]: {
       width: "35ch",
     },
-    [theme.breakpoints.up("sm")]: {
-      width: "30ch",
+    [theme.breakpoints.up("lg")]: {
+      width: "35ch",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "40ch",
     },
   },
 }));
@@ -200,6 +207,7 @@ export default function PrimarySearchAppBar({
           <IconButton size="large" color="inherit" onClick={handleDrawer}>
             <img src={navIcon} />
           </IconButton>
+          <Box sx={{ flexGrow: 0.1 }} />
           <Stack sx={style.headerLogo}>
             <img src={logo} alt="logo" />
           </Stack>
@@ -212,7 +220,7 @@ export default function PrimarySearchAppBar({
                 sx={{
                   background: "#5842F4",
                   borderRadius: "8px",
-                  width: "129px",
+                  width: {lg:"90px",xl:"129px"},
                   height: "47px",
                   color: "#ffffff",
                 }}
@@ -223,7 +231,7 @@ export default function PrimarySearchAppBar({
                 sx={{
                   background: "#2B2D50",
                   borderRadius: "8px",
-                  width: "129px",
+                  width: {lg:"90px",xl:"129px"},
                   height: "47px",
                   color: "#ffffff",
                   border: "1px solid #2B2D50",
@@ -282,7 +290,7 @@ export default function PrimarySearchAppBar({
               />
             </Search>
           </Box>
-          <Box sx={{ flexGrow: 3 }} />
+          <Box sx={{ flexGrow: 2 }} />
           <Box sx={style.headerFlexCenter}>
             <Stack sx={style.headerFlexResponsive}>
               <IconButton

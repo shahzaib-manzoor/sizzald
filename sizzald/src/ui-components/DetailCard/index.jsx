@@ -20,10 +20,10 @@ const DetailedCard = () => {
     height: { xl: "58%" }
   }
   return (
-    <Box sx={{ display: "flex", gap: "10px", padding: "20px 28px" }}>
+    <Box sx={{ display:{sx:"block",lg :"flex"}, gap: "10px", padding: "20px 28px" }}>
       <Box
         sx={{
-          width: "50%",
+          width: {xs:"100%",lg:"50%"},
           position: "relative",
           background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "8px",
@@ -111,7 +111,7 @@ const DetailedCard = () => {
       </Box>
       <Box
         sx={{
-          width: "50%",
+          width: {xs:"100%",lg:"50%"},
           padding: {
             xs: "10px 15px 10px 15px",
             lg: "15px 20px 10px 20px",
