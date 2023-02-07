@@ -25,7 +25,6 @@ app.use(
 
 var route = require("./src/routes");
 app.use(route);
-
 app.get("*", (req, res) => {
   app.use(express.static(path.join(__dirname, "/dist/index.html")));
 
