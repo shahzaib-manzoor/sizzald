@@ -13,15 +13,8 @@ export default defineConfig({
     
     
   },
-  hosting:{
-    
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  },
+  
+ 
 
   define: {global: 'window'}
 });
