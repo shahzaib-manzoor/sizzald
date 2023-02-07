@@ -53,8 +53,8 @@ export const SidebarData = [
         title: "Sizzld Games",
         path: "/sizzldGames",
         icon: <img src={Rocket} />,
-        iconClosed: <ArrowForwardIosIcon fontSize="small" />,
-        iconOpened: <ArrowForwardIosIcon  fontSize="small" />,
+        iconClosed: <ArrowForwardIosIcon sx={{fontSize:"small"}} />,
+        iconOpened: <ArrowForwardIosIcon  sx={{fontSize:"small"}} />,
       },
       {
         title: "Slot ",

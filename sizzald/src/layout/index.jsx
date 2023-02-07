@@ -51,7 +51,8 @@ const Layout = () => {
     // mt: "30px",
     display: "flex",
     flexDirection: "column",
-    transition: "width 0.2s"
+    transition: "width 0.2s",
+    minHeight:'100vh'
   };
 
   return (
