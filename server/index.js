@@ -31,10 +31,7 @@ app.use(route);
 
 // });
  
-app.get('/get-ip', (req, res) => {
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  res.send({ ip });
-});
+
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/dist/index.html"));
 });
