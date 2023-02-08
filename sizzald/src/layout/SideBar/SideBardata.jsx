@@ -29,7 +29,7 @@ export const SidebarData = [
   {
     title: "casino",
     path: '/',
-    icon: <img src={casino}></img>,
+    icon: casino,
     iconClosed: <ExpandMoreIcon />,
     iconOpened: <ExpandMoreIcon />,
 
@@ -37,110 +37,110 @@ export const SidebarData = [
       {
         title: "picks for you",
         path: "/picksforyou",
-        icon: <img src={picksforyou} />,
+        icon:picksforyou,
       },
       {
         title: "Favorites",
         path: "/favourite",
-        icon: <img src={star} />,
+        icon: star,
       },
       {
         title: "recent",
         path: "/recent",
-        icon: <img src={recent} />,
+        icon: recent,
       },
       {
         title: "Sizzld Games",
         path: "/sizzldGames",
-        icon: <img src={Rocket} />,
-        iconClosed: <ArrowForwardIosIcon sx={{fontSize:"small"}} />,
-        iconOpened: <ArrowForwardIosIcon  sx={{fontSize:"small"}} />,
+        icon: Rocket,
+        iconClosed: <ArrowForwardIosIcon sx={{fontSize:"15px"}}/>,
+        iconOpened: <ArrowForwardIosIcon  sx={{fontSize:"15px"}}/>
       },
       {
         title: "Slot ",
         path: "/slot",
-        icon: <img src={Hotgames} />,
+        icon: Hotgames,
       },
       {
         title: "Hotgames ",
         path: "/hotgame",
-        icon: <img src={Hotgames} />,
+        icon: Hotgames,
       },
       {
         title: "new Releases",
         path: "/newrelease",
-        icon: <img src={newRelessees} />,
+        icon: newRelessees,
       },
       {
         title: "High Volatility",
         path: "highvolatility",
-        icon: <img src={highvolatility} />,
+        icon: highvolatility,
       },
       {
         title: "Feature Buy-in",
         path: "/featurebuyin",
-        icon: <img src={star} />,
+        icon: star,
       },
       {
         title: "Table Games",
         path: "/TableGame",
-        icon: <img src={tablegames} />,
+        icon: tablegames,
       },
     ],
   },
   {
     title: "Sports ",
     path: '/Sports',
-    icon: <img src={sports} style={{ marginLeft: "-5px" }}></img>,
+    icon: sports,
   },
   {
     title: "lottery ",
     path: "/loatry",
-    icon: <img src={lotery} style={{ marginLeft: "-5px" }}></img>,
+    icon: lotery,
   },
   {
     title: "Affiliate",
     path: '/affilate',
-    icon: <img src={affilate} style={{ marginLeft: "-5px" }}></img>,
+    icon: affilate,
   },
   {
     title: "probably fair ",
     path: '/probablyfair',
-    icon: <img src={fair} style={{ marginLeft: "-5px" }}></img>,
+    icon: fair,
   },
   {
     title: "vip Club",
     path: '/vipclub',
-    icon: <img src={vipClub} style={{ marginLeft: "-5px" }}></img>,
+    icon: vipClub,
   },
   {
     title: "forum ",
     path: '/forum',
-    icon: <img src={fourm} style={{ marginLeft: "-5px" }}></img>,
+    icon: fourm,
   },
   {
     title: "blog ",
     path: '/blog ',
-    icon: <img src={blog} style={{ marginLeft: "-5px" }}></img>,
+    icon: blog,
   },
   {
     title: "head phones",
     path: '/headphones',
-    icon: <img src={headphones} style={{ marginLeft: "-5px" }}></img>,
+    icon: headphones,
   },
   {
     title: "languages",
     path: '/languages',
     icon: (
-      <img
-        src={languages}
-        style={{ marginLeft: "-5px", paddingBottom: "20px" }}
-      ></img>
+     
+       languages
+      
+      
     ),
   },
   {
     title: "Sponsorships",
     path: '/Sponsorships',
-    icon: <img src={sponsership} style={{ marginLeft: "-5px" }}></img>,
+    icon: sponsership,
   },
 ];
