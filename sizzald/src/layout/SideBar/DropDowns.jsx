@@ -373,29 +373,6 @@ const SubMenu = ({ item }) => {
           to={item.path ? item.path : ""}
           onClick={item.subNav && showSubnav}
         >
-          {/* <Box
-            sx={{
-              // background: 'rgba(95, 95, 111, 0.6)',
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              "&:hover": {
-                background: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "5px",
-              },
-              height: "46px",
-              paddingTop: "7px",
-              paddingBottom: "7px",
-            }}
-          > */}
-          {/* <Box
-              sx={{
-                display: "flex",
-                gap: 1,
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            > */}
           <Box
             sx={{
               display: "flex",
@@ -404,7 +381,7 @@ const SubMenu = ({ item }) => {
               gap: 2,
             }}
           >
-            {item.icon}
+           <img src={item.icon}></img>
             <Typography
               noWrap
               // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
@@ -447,27 +424,7 @@ const SubMenu = ({ item }) => {
                   to={item.path}
                   key={`key${index}`}
                 >
-                  {/* <Box
-                    sx={{
-                      paddingLeft: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-
-                      // position:'relative',
-                      // marginBottom:"20px",
-
-                      "&:hover": {
-                        background: "rgba(255, 255, 255, 0.1)",
-                        borderRadius: "5px",
-                      },
-                      height: "60px",
-                    }}
-                  > */}
-                  {/* <Box sx={{position:'absolute',right:"40px"}}>
-                  <Typography>thhdhhf</Typography>
-                </Box> */}
-                  {item.icon}
+                 <img src={item.icon}></img>
                   <Typography
 
                     sx={{

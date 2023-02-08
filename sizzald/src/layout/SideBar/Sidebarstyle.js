@@ -74,6 +74,7 @@ export const secondflex = {
   backgroundRepeat: "no-repeat",
   width: "100%",
   height: "60px",
+  cursor:"pointer"
 };
 export const secondChild = {
   background: "#202447",
