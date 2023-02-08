@@ -20,10 +20,10 @@ const DetailedCard = () => {
     height: { xl: "58%" }
   }
   return (
-    <Box sx={{ display:{sx:"block",lg :"flex"}, gap: "10px", padding: "20px 28px" }}>
+    <Box sx={{ display: "flex", gap: "10px", padding: "20px 0px",margin:"0px 8px" }}>
       <Box
         sx={{
-          width: {xs:"100%",lg:"50%"},
+          width: "50%",
           position: "relative",
           background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "8px",
@@ -36,7 +36,7 @@ const DetailedCard = () => {
       >
         <Typography
           sx={{
-            fontSize: { lg: "20px", xl: "22px" },
+            fontSize: { lg: "14px", xl: "17px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -111,7 +111,7 @@ const DetailedCard = () => {
       </Box>
       <Box
         sx={{
-          width: {xs:"100%",lg:"50%"},
+          width: "50%",
           padding: {
             xs: "10px 15px 10px 15px",
             lg: "15px 20px 10px 20px",
@@ -126,7 +126,7 @@ const DetailedCard = () => {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: { lg: "20px", xl: "22px" },
+            fontSize: { lg: "14px", xl: "17px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",

@@ -11,7 +11,7 @@ function SizzaldComp({ sliderTwo, settingCardTwo }) {
   <Box
         sx={{
           textAlign: "right",
-          padding: { xs: "10px 25px", md: "30px 33px" },
+          padding: { xs: "10px 25px", md: "30px 28px" },
           display: "flex",
           justifyContent: "space-between",
         }}

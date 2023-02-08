@@ -7,14 +7,15 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function TableGameComp({ sliderTwo, settingCardTwo }) {
   return (
-    <Box>
+    <Box sx={{  padding: { xs: "0px 20px", md: "0px 20px" },}}>
       <Box>
         <Box
           sx={{
             textAlign: "right",
-            padding: { xs: "10px 25px", md: "30px 33px" },
+            // padding: { xs: "10px 25px", md: "30px 28px" },
             display: "flex",
             justifyContent: "space-between",
+           
           }}
         >
           <Box
@@ -23,11 +24,13 @@ function TableGameComp({ sliderTwo, settingCardTwo }) {
               alignItem: "center",
               gap: "10px",
               width: "50%",
+              padding:"10px 8px"
             }}
           >
             <Typography
               sx={{
-                fontSize: { xs: "16px", md: "24px" },
+               
+                fontSize: { xs: "16px", md: "17px" },
                 fontWeight: "700",
                 lineHeight: "40px",
                 letterSpacing: "1px",
@@ -35,7 +38,7 @@ function TableGameComp({ sliderTwo, settingCardTwo }) {
                 color: "white",
                 textTransform: "uppercase",
               }}
-              component="div"
+              component="h6"
             >
               NEW RELEASES
             </Typography>
@@ -56,13 +59,13 @@ function TableGameComp({ sliderTwo, settingCardTwo }) {
               color: "white",
               marginRight: "8px",
               background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
+              height: { sx: "35px", md: "35px" },
+              width: { sx: "35px", md: "35px" },
             }}
             onClick={() => sliderTwo?.current?.slickPrev()}
           >
             <KeyboardBackspaceIcon
-              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+              sx={{ fontSize: { xs: "16px", md: "19px" } }}
             />
           </IconButton>
 
@@ -70,19 +73,17 @@ function TableGameComp({ sliderTwo, settingCardTwo }) {
             sx={{
               color: "white",
               background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
+              height: { sx: "35px", md: "35px" },
+              width: { sx: "35px", md: "35px" },
               marginLeft: "8px",
             }}
             onClick={() => sliderTwo?.current?.slickNext()}
           >
-            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "23px" } }} />
+            <ArrowRightAltIcon sx={{ fontSize: { xs: "16px", md: "19px" } }} />
           </IconButton>
         </Box>
       </Box>
-      <Box sx={{ marginTop: "30px" }}>
-        <DetailedCard />
-      </Box>
+      <DetailedCard />
       <Network />
     </Box>
   );
