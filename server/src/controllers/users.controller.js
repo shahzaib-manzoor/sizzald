@@ -72,7 +72,7 @@ var signup = async (req, res) => {
       var checkreferral = await referralModel.findOne({
         referralCode: referralCode,
       });
-      console.log(checkreferral);
+   
       if (!checkreferral) {
         let err = "Invalid Referal Code";
         return responseHelper.requestfailure(res, err);
@@ -83,7 +83,7 @@ var signup = async (req, res) => {
     bodyData["password"] = hashpassword;
      if(checkreferral)
      {
-       bodyData["referralCode"] = checkreferral._id;
+       bodyData["referredByCode"] = checkreferral.userId;
 
      }
     const newuser = await User.create(bodyData);
@@ -92,21 +92,8 @@ var signup = async (req, res) => {
 
     var message = "Account Signup successful";
 
-    if (newuser && checkreferral) {
-      const adds = await referralModel.aggregate([
-        {
-          $group: {
-            _id: "$checkreferral._id",
-            // id: { $first: "$_id" },
-            referralCount: { $sum: 1 },
-          },
-        },
-      ]);
-
-      await referralModel.updateOne(
-        { _id: checkreferral._id },
-        { $set: { referralCount: adds[0].referralCount - 1 } }
-      );
+    if (!!checkreferral) {
+    await referralModel.updateOne({_id:checkreferral._id},{$inc:{referralCount:1}})
     }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };

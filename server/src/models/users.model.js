@@ -17,15 +17,20 @@ userSchema = new Schema(
       type: String,
       required: true,
     },
-  referralCode: {
-    type: Schema.Types.ObjectId,
-    ref: "Refer",
-  },
+  
   referredByCode: {
     type: Schema.Types.ObjectId,
     ref: "Refer",
   },
-
+  balance: {
+    type: Number,
+    default: 0,
+  },
+  countryRegion: {
+    type: String,
+    default: "",
+  },
+  
 
    
 

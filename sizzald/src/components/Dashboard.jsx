@@ -38,7 +38,8 @@ import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
 import Footer from "../layout/Footer";
-import Recent from "./Recent/Recent";
+import RecentBig from "./Picks/RecentBig";
+// import { getLocalIPs } from "../utils/getIp";
 // import RecentBigWin from "./Dashboard/RecentBigWin";
 
 export default function Dashboard() {
@@ -49,6 +50,8 @@ export default function Dashboard() {
   const sliderFive = React.useRef(null);
   const sliderSix = React.useRef(null);
   const sliderSeven = React.useRef(null);
+
+   
   var settingCardOne = {
     slidesToShow: 5,
 
