@@ -28,12 +28,12 @@ function Carousal({ sliderTwo, settingCardTwo }) {
     >
      
     
-              <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
           img={coinFlip}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -41,7 +41,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={plinko}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -49,7 +49,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={mine}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -57,7 +57,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={towerOfLegend}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
               <CustomCardTwo
@@ -65,7 +65,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={ultimateDice}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -73,7 +73,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={ringOfFortune}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -81,7 +81,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={kenoMultiplayer}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -89,7 +89,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={caveOfPlunder}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
     <CustomCardTwo
@@ -97,7 +97,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={Keno}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -105,7 +105,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={videoPoker}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -113,7 +113,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={Baccarat}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -121,7 +121,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={hillo}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
          <CustomCardTwo
@@ -129,7 +129,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={Keno}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -137,7 +137,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={videoPoker}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -145,7 +145,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={Baccarat}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -153,7 +153,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={hillo}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -161,7 +161,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={blackJack}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -169,7 +169,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={crash}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -177,7 +177,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={limbo}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -185,14 +185,14 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={wheel}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         /> <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
           img={ultimateDice}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -200,7 +200,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={ringOfFortune}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -208,7 +208,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={kenoMultiplayer}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -216,7 +216,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={caveOfPlunder}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
 
@@ -229,7 +229,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={coinFlip}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -237,7 +237,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={plinko}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -245,7 +245,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={mine}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -253,7 +253,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={towerOfLegend}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
          <CustomCardTwo
@@ -261,7 +261,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={blackJack}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -269,7 +269,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={crash}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -277,7 +277,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={limbo}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
         <CustomCardTwo
@@ -285,7 +285,7 @@ function Carousal({ sliderTwo, settingCardTwo }) {
           balance="$ 5346362"
           img={wheel}
           icon={
-            <img style={{ height: "32px", width: "32px" }} src={questionMark} />
+            <img style={{ height: "28px", width: "28px" }} src={questionMark} />
           }
         />
 

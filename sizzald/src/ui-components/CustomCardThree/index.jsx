@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 import { Box, CardActionArea } from "@mui/material";
 // import { Box } from "@mui/system";
 const CustomCardThree = ({ img }) => {
-  return (
+  return ( <Box sx={{margin:"0px 8px"}}>
     <Card
       sx={{
-        width: "95%",
+        width: "100%",
         background: "rgba(43, 45, 80, 0.6)",
         height: { xs: "80px", md: "105px" },
         display: "flex",
@@ -19,6 +19,7 @@ const CustomCardThree = ({ img }) => {
     >
       <img src={img}></img>
     </Card>
+    </Box>
   );
 };
 

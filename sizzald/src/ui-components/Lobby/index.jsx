@@ -96,29 +96,32 @@ const rows = [
   },
 ];
 const typo = {
-  fontSize: '16px',
+  fontSize: '13px',
   fontWeight: 400,
   color: '#ffffff',
   minWidth: {xs:'0',sm:'0',md:'0',lg:'106px',xl:"142px"},
 };
 const typoId = {
-  fontSize: '16px',
+  fontSize: '13px',
   fontWeight: 400,
   color: '#ffffff',
   minWidth: {lg:'188px',xl:'215px'},
 };
 export default function CustomizedTables() {
   return (
-    <Box sx={{ paddingLeft: '20px', paddingRight: '20px' }}>
-      <Box>
+    <Box >
+      <Box sx={{ margin:"40px 8px"}}>
         <Typography
           sx={{
-            color: '#ffffff',
-            fontSize: { xs: '16px', md: '24px' },
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            paddingBottom: '30px',
-            mt: '20px',
+            fontSize: { xs: "14px", md: "17px" },
+            fontFamily: "Poppins",
+            fontWeight: "700",
+            lineHeight: "40px",
+            letterSpacing: "1px",
+            textAlign: "left",
+            color: "white",
+            textTransform: "uppercase",
+            margin:"20px 0px"
           }}
         >
           Lobby
@@ -130,7 +133,8 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               fontSize: '10px',
-              height: '39px',
+              fontWeight:"700",
+              height: '38px',
               width: '110px',
             }}
           >
@@ -142,8 +146,8 @@ export default function CustomizedTables() {
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
               fontSize: '10px',
-              height: '39px',
-              width: '110px',
+              height: '38px',
+              width: "110px",
             }}
           >
             High Rollers
@@ -154,7 +158,7 @@ export default function CustomizedTables() {
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
               fontSize: '10px',
-              height: '39px',
+              height: '38px',
               width: '110px',
             }}
           >
@@ -169,11 +173,11 @@ export default function CustomizedTables() {
       >
         <Table sx={{ minWidth: 700 }} aria-label='customized table'>
           <TableHead
-            sx={{ background: '#14163D', borderBottom: '1px solid #221F25' }}
+            sx={{ background: '#14163D', borderBottom: '1px solid #221F25',borderRadius:"8px" }}
           >
-            <TableRow>
+            <TableRow sx={{height:"30px"}}>
               <StyledTableCell
-                sx={{ padding: '0', height: '73px', paddingLeft: '30px' }}
+                sx={{ padding: '0', paddingLeft: '30px' }}
               >
                 Game
               </StyledTableCell>
@@ -216,10 +220,11 @@ export default function CustomizedTables() {
                 <StyledTableCell align='left' sx={{ minWidth:{lg:"109px",xl:'180px'} }}>
                   <Button
                     sx={{
-                      background: '#45D91E',
+                      background: 'rgba(69, 217, 30, 0.6)',
                       borderRadius: '16px',
                       height: '26px',
                       color: '#ffffff',
+                      boxShadow: "0px 0px 4px #AD63F5",
                     }}
                   >
                     {row.button}

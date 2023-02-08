@@ -6,18 +6,19 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Carousal from "./Carousal";
 function RecentBig({ sliderTwo, settingCardTwo }) {
   return (
-    <Box>
+    <Box  >
       <Box
         sx={{
           textAlign: "right",
-          padding: { xs: "10px 25px", md: "30px 33px" },
+          // padding: { xs: "10px 8px", md: "10px 8px" },
           display: "flex",
           justifyContent: "space-between",
+          padding:"10px 8px",
         }}
       >
         <Typography
           sx={{
-            fontSize: { xs: "16px", md: "24px" },
+            fontSize: { xs: "14px", md: "17px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
@@ -26,30 +27,30 @@ function RecentBig({ sliderTwo, settingCardTwo }) {
             textTransform: "uppercase",
           }}
         >
-          RECENT BIG WINS
+          Picks For You
         </Typography>
         <Box>
           <IconButton
             hover={{ background: "#FFFFFF33" }}
             sx={{
               color: "white",
-              marginRight: "8px",
+              marginRight: "15px",
               background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
+              height: { sx: "30px", md: "35px" },
+              width: { sx: "30px", md: "35px" },
             }}
             onClick={() => sliderTwo?.current?.slickPrev()}
           >
             <KeyboardBackspaceIcon
-              sx={{ fontSize: { xs: "16px", md: "23px" } }}
+              sx={{ fontSize: { xs: "16px", md: "18px" } }}
             />
           </IconButton>
           <IconButton
             sx={{
               color: "white",
               background: "#FFFFFF33",
-              height: { sx: "35px", md: "45px" },
-              width: { sx: "35px", md: "45px" },
+              height: { sx: "30px", md: "35px" },
+              width: { sx: "30px", md: "35px" },
             }}
             onClick={() => sliderTwo?.current?.slickNext()}
           >
