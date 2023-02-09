@@ -216,9 +216,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
           </IconButton>
         </Box>
       </Box>
-      <Box >
-        <DetailedCard />
-      </Box>
+      <DetailedCard />
       <Network />
       {/* <BalanceSlot /> */}
       {/* <LotteryInfo /> */}

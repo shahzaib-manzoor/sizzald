@@ -7,28 +7,29 @@ function BalanceSlot() {
       sx={{
         // margin: "0px 33px",
         color: "#FFFFFF",
-        background: "#2B2D50",
+        background: "rgba(43, 45, 80, 0.6)",
         // padding: "30px 30px",
         borderRadius: "4px",
         display: "flex",
         justifyContent: "space-between",
         width:'98.5%',mt:'40px',
-        marginBottom:'40px'
+        marginBottom:'20px'
       }}
     >
       <Box sx={{ width: "45%" ,paddingLeft:'20px',paddingTop:'20px'}}>
         <Box sx={{ display: "flex", alignItems: "flex-start" }}>
-          <ArrowForwardIcon sx={{ fontSize: "35px", paddingRight: "15px", }} />
+          <ArrowForwardIcon sx={{ fontSize: "25px", paddingRight: "15px",paddingTop:"7px" }} />
           <Box>
             <Typography
               sx={{
                 fontFamily: "Poppins",
                 color: "#FFFFFF",
-                fontSize: "30px",
+                fontSize: "23px",
                 fontWeight: "700",
                 lineHeight: "40px",
                 letterSpacing: "1px",
                 textAlign: "left",
+                textTransform:"uppercase"
               }}
             >
               What Is sCL?
@@ -36,12 +37,13 @@ function BalanceSlot() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "16px",
+                fontSize: "13px",
                 fontWeight: "400",
                 lineHeight: "23px",
                 letterSpacing: "0.01em",
                 textAlign: "left",
                 paddingTop: "10px",
+               
               }}
             >
               SCL (BC Lottery) is a token created by sIzzld.GAME for players who
@@ -57,17 +59,18 @@ function BalanceSlot() {
             padding: "30px 0px",
           }}
         >
-          <ArrowForwardIcon sx={{ fontSize: "35px", paddingRight: "15px" }} />
+          <ArrowForwardIcon sx={{fontSize: "25px", paddingRight: "15px",paddingTop:"7px" }} />
           <Box>
             <Typography
               sx={{
                 fontFamily: "Poppins",
                 color: "#FFFFFF",
-                fontSize: "30px",
+                fontSize: "23px",
                 fontWeight: "700",
                 lineHeight: "40px",
                 letterSpacing: "1px",
                 textAlign: "left",
+                textTransform:"uppercase"
               }}
             >
               How to get SCL?
@@ -75,7 +78,7 @@ function BalanceSlot() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "16px",
+                fontSize: "13px",
                 fontWeight: "400",
                 lineHeight: "23px",
                 letterSpacing: "0.01em",
@@ -96,17 +99,18 @@ function BalanceSlot() {
             padding: "30px 0px",
           }}
         >
-          <ArrowForwardIcon sx={{ fontSize: "35px", paddingRight: "15px" }} />
+          <ArrowForwardIcon sx={{ fontSize: "25px", paddingRight: "15px",paddingTop:"7px" }} />
           <Box>
             <Typography
               sx={{
                 fontFamily: "Poppins",
                 color: "#FFFFFF",
-                fontSize: "30px",
+                fontSize: "23px",
                 fontWeight: "700",
                 lineHeight: "40px",
                 letterSpacing: "1px",
                 textAlign: "left",
+                textTransform:"uppercase"
               }}
             >
               Can I gift SCL to others?
@@ -114,7 +118,7 @@ function BalanceSlot() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: "16px",
+                fontSize: "13px",
                 fontWeight: "400",
                 lineHeight: "23px",
                 letterSpacing: "0.01em",
@@ -133,11 +137,12 @@ function BalanceSlot() {
           sx={{
             fontFamily: "Poppins",
             color: "#FFFFFF",
-            fontSize: "30px",
+            fontSize: "23px",
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "left",
+            textTransform:"uppercase"
           }}
         >
           Your BCL Balance:
@@ -165,9 +170,11 @@ function BalanceSlot() {
               outline: "none",
               border: "none",
               boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
-              color: "white",
+              color: "rgba(188, 188, 188, 1)",
+              padding:"0px 15px"
             }}
             type="text"
+            value="00.000"
           />
           <Box
             sx={{

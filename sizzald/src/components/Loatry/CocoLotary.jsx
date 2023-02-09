@@ -34,44 +34,202 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const rows = [
   {
-    image1: star,
-    text: '5 NUMBERS JACKPOT BALL',
-    betid: '$100,000.00',
-    button: '1.9x',
+    image1: <img src={star}></img>,
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.32deg, rgba(3, 251, 117, 0.4) -24.69%, rgba(3, 251, 117, 0.16) 26.75%, rgba(20, 22, 61, 0) 78.18%)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex",alignItems:'center', gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
     // bitcoin: <img src={bitcoin}></img>,
     bitcoinText: '0.66667598645',
   },
   {
     // image1: <img src={image2}></img>,
-    text: '5 NUMBERS JACKPOT BALL',
-    
-    betid: '$100,000.00',
-    button: '1.9x',
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.54deg, rgba(3, 251, 117, 0.4) -10.18%, rgba(3, 251, 117, 0.16) 49.49%, rgba(20, 22, 61, 0) 109.16%)rgba(1, 2, 47, 1)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px"}}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
+    // bitcoin: <img src={bitcoin}></img>,
+    // bitcoinText: '0.66667598645',
   },
   {
-    text: '5 NUMBERS JACKPOT BALL',
-    
-    betid: '$100,000.00',
-    button: '1.9x',
+    // image1: <img src={image3}></img>,
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.54deg, rgba(3, 251, 117, 0.4) -10.18%, rgba(3, 251, 117, 0.16) 49.49%, rgba(20, 22, 61, 0) 109.16%)rgba(1, 2, 47, 1)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
+    // bitcoin: <img src={bitcoin}></img>,
+    // bitcoinText: '0.66667598645',
   },
   {
-    text: '5 NUMBERS JACKPOT BALL',
-    
-    betid: '$100,000.00',
-    button: '1.9x',
+    // image1: <img src={image4}></img>,
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.54deg, rgba(3, 251, 117, 0.4) -10.18%, rgba(3, 251, 117, 0.16) 49.49%, rgba(20, 22, 61, 0) 109.16%)rgba(1, 2, 47, 1)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
+    // bitcoin: <img src={bitcoin}></img>,
+    // bitcoinText: '0.66667598645',
   },
   {
-    text: '5 NUMBERS JACKPOT BALL',
-    
-    betid: '$100,000.00',
-    button: '1.9x',
+    // image1: <img src={image2}></img>,
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.54deg, rgba(3, 251, 117, 0.4) -10.18%, rgba(3, 251, 117, 0.16) 49.49%, rgba(20, 22, 61, 0) 109.16%)rgba(1, 2, 47, 1)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
+    // bitcoin: <img src={bitcoin}></img>,
+    // bitcoinText: '0.66667598645',
   },
   {
-
-    text: '5 NUMBERS JACKPOT BALL',
-    
-    betid: '$100,000.00',
-    button: '1.9x',
+    // image1: <img src={image3}></img>,
+    text: "5 NUMBERS JACKPOT BALL",
+    player: (
+      <Box
+        sx={{
+          width: "240px",
+          height: "54px",
+          background:
+            " linear-gradient(260.54deg, rgba(3, 251, 117, 0.4) -10.18%, rgba(3, 251, 117, 0.16) 49.49%, rgba(20, 22, 61, 0) 109.16%)rgba(1, 2, 47, 1)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          borderRadius: "8px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+        }}
+      >
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+          <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+        </Box>
+        <Avatar sx={{ background: "#ffffff",height:"32px",width:"32px" }}></Avatar>
+      </Box>
+    ),
+    betid: "$100,000.00",
+    button: "1.9x",
+    // bitcoin: <img src={bitcoin}></img>,
+    // bitcoinText: '0.66667598645',
   },
 ];
 const typo = { fontSize: '16px', fontWeight: 400, color: '#ffffff' };
@@ -80,7 +238,7 @@ export default function CustomizedTables() {
     <Box sx={{ paddingRight: '20px' }}>
       <Typography
         sx={{
-          fontSize: '30px',
+          fontSize: "23px",
           fontWeight: 700,
           fontFamily: 'Poppins',
           lineHeight: '40px',
@@ -93,7 +251,7 @@ export default function CustomizedTables() {
 
       <TableContainer
         component={Paper}
-        sx={{ background: '#2B2D50', width: '100%' }}
+        sx={{ background: "rgba(43, 45, 80, 0.6)", width: "100%" }}
       >
         <Table sx={{ minWidth: 700 }} aria-label='customized table'>
           <TableHead
@@ -110,13 +268,13 @@ export default function CustomizedTables() {
           <TableBody>
             {rows.map((row, index) => (
               <StyledTableRow key={index}>
-                <StyledTableCell component='th' scope='row' align='left'>
-                  <Box sx={{ display: 'flex', gap: 1 }}>
-                    <img src={row.image1}></img>
+                <StyledTableCell component="th" scope="row" align="left">
+                  <Box sx={{ display: "flex",alignItems:"center", gap: 1 }}>
+                    {row.image1}
                     <Typography
                       sx={{
-                        color: index === 0 ? '#03FB75' : '#ffffff',
-                        fontSize: '16px',
+                        color: index === 0 ? "#03FB75" : "#ffffff",
+                        fontSize: "14px",
                         fontWeight: 600,
                         fontFamily: 'poppins',
                       }}
@@ -150,13 +308,13 @@ export default function CustomizedTables() {
                     <Avatar sx={{ background: '#ffffff' }}></Avatar>
                   </Box>
                 </StyledTableCell>
-                <StyledTableCell sx={typo} align='left'>
-                  <Box sx={{ display: 'flex', gap: 1 }}>
-                    <img src={row.image1}></img>
+                <StyledTableCell sx={typo} align="left">
+                  <Box sx={{ display: "flex",alignItems:"center", gap: 1 }}>
+                    {row.image1}
                     <Typography
                       sx={{
-                        color: index === 0 ? '#03FB75' : '#ffffff',
-                        fontSize: '16px',
+                        color: index === 0 ? "#03FB75" : "#ffffff",
+                        fontSize: "14px",
                         fontWeight: 600,
                         fontFamily: 'poppins',
                       }}

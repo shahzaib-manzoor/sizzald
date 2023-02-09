@@ -38,12 +38,13 @@ const Index = () => {
   ];
 
   const typography = {
-    fontSize: '30px',
+    fontSize: '21px',
+    padding:"0px 0px",
     fontWeight: 700,
     color: '#ffffff',
     textTransform: 'uppercase',
     fontFamily: 'Poppins',
-    marginLeft: '20px',
+ 
     marginTop: '20px',
     marginBottom: '20px',
   };
@@ -95,7 +96,7 @@ const Index = () => {
     ],
   };
   return (
-    <Box sx={{ width: '99%' }}>
+    <Box sx={{ width: '100%', }}>
       <Typography sx={typography}> Sizzld Top Games </Typography>
       <Box
         sx={{

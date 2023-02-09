@@ -129,10 +129,10 @@
      
         .imgAdvertisment2{
           position: absolute;
-          top: 2%;
-          right: 0%;
+          top: 4%;
+          right: 6%;
           object-fit: cover;
-          height: 130px;
+          height: 100px;
         }
         }
         @media(min-width:600px){
@@ -142,12 +142,12 @@
         }
         @media(min-width:1300px){
           .arrowPosition{
-            position: absolute; top: 50%; left: 6%;
+            position: absolute; top: 57%; left: 13%;
           }
         }
         @media(min-width:1800px){
           .arrowPosition{
-            position: absolute; top: 50%; left: 13%;
+            position: absolute; top: 57%; left: 13%;
           }
         }
         @media(min-width:600px){
@@ -157,11 +157,11 @@
         }
         @media(min-width:1300px){
           .arrowPositionRight{
-            position: absolute; top: 50%; right: 6%;
+            position: absolute; top: 57%; right: 13%;
           }
         }
         @media(min-width:1800px){
           .arrowPositionRight{
-            position: absolute; top: 50%; right: 13%;
+            position: absolute; top: 57%; right: 13%;
           }
         }
