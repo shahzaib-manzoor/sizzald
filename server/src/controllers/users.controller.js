@@ -29,7 +29,7 @@ var login = async (req, res) => {
   try {
     
 
-    const exists = await User.findOne({ email: email }).populate("referralCode");
+    const exists = await User.findOne({ email: email });
     if (exists) {
       const isMatch = await clientHelper.comparePassword(
         password,
