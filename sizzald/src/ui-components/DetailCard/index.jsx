@@ -20,7 +20,7 @@ const DetailedCard = () => {
     height: { xl: "58%" }
   }
   return (
-    <Box sx={{ display: "flex", gap: "10px", padding: "20px 0px",margin:"0px 8px" }}>
+    <Box sx={{ display: "flex", gap: "15px", padding: "20px 0px",margin:"0px 8px" }}>
       <Box
         sx={{
           width: "50%",
@@ -32,6 +32,8 @@ const DetailedCard = () => {
             lg: "15px 20px 10px 20px",
             xl: "20px 25px 10px 25px ",
           },
+          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
+
         }}
       >
         <Typography
@@ -117,6 +119,8 @@ const DetailedCard = () => {
             lg: "15px 20px 10px 20px",
             xl: "20px 25px 10px 25px ",
           },
+          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
+
           background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "8px",
           marginTop: { xs: "15px", md: "0px" },

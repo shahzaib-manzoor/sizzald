@@ -10,6 +10,8 @@ import sizzldGameSix from '../../assets/sizzldGameSix.svg';
 import sizzldGameSeven from '../../assets/sizzldGameSeven.svg';
 import Image from 'mui-image';
 import SizzaldComp from "./SizzaldComp"
+import DetailedCard from '../../ui-components/DetailCard';
+import Network from '../../ui-components/Network';
 
 const Index = () => {
   // const [open,setOpen]=useState()
@@ -39,7 +41,7 @@ const Index = () => {
 
   const typography = {
     fontSize: '21px',
-    padding:"0px 0px",
+    padding:"0px 8px",
     fontWeight: 700,
     color: '#ffffff',
     textTransform: 'uppercase',
@@ -61,6 +63,7 @@ const Index = () => {
     display: 'flex',
     justifyContent: 'space-around',
     gap: { xs: 0, sm: 2, md: 2, lg: 3, xl: 0 },
+    // padding:"0px 5px"
   };
   const flex2 = {
     display: 'flex',
@@ -70,7 +73,7 @@ const Index = () => {
   const sliderTwo8 = React.useRef(null);
   var settingCardTwo = {
     slidesToShow: 6,
-    rows: 3,
+    rows: 5,
     slidesPerRow: 1,
     responsive: [
       {
@@ -96,20 +99,15 @@ const Index = () => {
     ],
   };
   return (
-    <Box sx={{ width: '100%', }}>
+    <Box sx={{ width: '100%',padding:"0px 20px",boxSizing:"border-box" }}>
       <Typography sx={typography}> Sizzld Top Games </Typography>
-      <Box
-        sx={{
-          mb: '20px',
-          paddingLeft: { xs: '0px', sm: '0px', lg: '20px', xl: '0px' },
-        }}
-      >
+      <Box>
         <Box sx={flex}>
           {sizzldData.map((data) => {
             console.log('data', data);
             return (
               <Box sx={flex2}>
-                <Image src={data.image}></Image>,
+                <img style={{width:"100%"}} src={data.image}/>,
                 <Button sx={button}>Play</Button>
               </Box>
             );
@@ -117,6 +115,11 @@ const Index = () => {
         </Box>
       </Box >
       <SizzaldComp sliderTwo={sliderTwo8} settingCardTwo={settingCardTwo}/>
+      <Box sx={{padding:"0px 20px"}}>
+      <DetailedCard/>  
+      <Network/>
+      </Box>
+      
     </Box>
     
   );

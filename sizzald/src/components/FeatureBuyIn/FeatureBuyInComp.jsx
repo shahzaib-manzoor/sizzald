@@ -65,7 +65,39 @@ function FeatureBuyInComp({ sliderTwo, settingCardTwo }) {
               sx={{ fontSize: { xs: "16px", md: "19px" } }}
             />
           </IconButton>
-
+          <Box sx={{ padding: "0px 10px" }}>
+            <Typography
+              sx={{ color: "rgba(52, 53, 89, 1)", paddingLeft: "17px",fontSize:'15px',fontWeight:"5600" }}
+              variant="h6"
+            >
+              <Typography sx={{ color: "rgba(255, 107, 44, 1)",paddingRight:"8px",fontSize:'15px',fontWeight:"500" }} variant="span">
+                {" "}
+                20
+              </Typography>
+              / 1050
+            </Typography>
+            <Box
+              sx={{
+                background: "rgba(52, 53, 89, 1)",
+                borderRadius: "3px",
+                height: "5px",
+                width: "100px",
+                position: "relative",
+              }}
+            >
+              <Box
+                sx={{
+                  borderRadius: "3px",
+                  background: "rgba(255, 107, 44, 1)",
+                  position: "absolute",
+                  height: "5px",
+                  top: 0,
+                  left: 0,
+                  width: "15%",
+                }}
+              ></Box>
+            </Box>
+          </Box>
           <IconButton
             sx={{
               color: "white",

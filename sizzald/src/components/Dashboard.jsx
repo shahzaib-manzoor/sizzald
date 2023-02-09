@@ -37,8 +37,7 @@ import gameProvider5 from "../assets/gameProvider5.png";
 import gameProvider6 from "../assets/gameProvider6.png";
 import Network from "../ui-components/Network";
 import DetailedCard from "../ui-components/DetailCard/index";
-import Footer from "../layout/Footer";
-import RecentBig from "./Picks/RecentBig";
+
 // import { getLocalIPs } from "../utils/getIp";
 // import RecentBigWin from "./Dashboard/RecentBigWin";
 
@@ -457,7 +456,7 @@ export default function Dashboard() {
             textTransform: "uppercase",
           }}
         >
-          Sizzald Original
+          Sizzald Originals
         </Typography>
         <Box>
           <IconButton
@@ -484,7 +483,7 @@ export default function Dashboard() {
             }}
             variant="span"
           >
-            Show all 24
+             {`All 24 `}
             <Typography
               sx={{
                 color: "#ffffff",
@@ -728,7 +727,7 @@ export default function Dashboard() {
             }}
             variant="span"
           >
-            Show all 24
+            {`All 24 `}
             <Typography
               sx={{
                 color: "#ffffff",
