@@ -95,8 +95,8 @@ var signup = async (req, res) => {
     if (!!checkreferral) {
     await referralModel.updateOne({_id:checkreferral._id},{$inc:{referralCount:1}})
     const user = await User.findById(checkreferral.userId);
-    const userLevel = user.vipLevel;
-    const reward = usdRewardRule[userLevel-1].reward;
+    const userLevel = user?.vipLevel;
+    const reward = usdRewardRule[userLevel]?.reward;
     await User.updateOne({_id:checkreferral.userId},{$inc:{reward:reward}})
     }
     const token = await jwtHelper.signAccessToken(newuser);
