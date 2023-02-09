@@ -15,6 +15,7 @@ const CustomCardThree = ({ img }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        borderRadius:"8px"
       }}
     >
       <img src={img}></img>

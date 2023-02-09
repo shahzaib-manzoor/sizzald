@@ -1,5 +1,6 @@
 export const networkContainer = {
- marginBottom:"35px"
+ marginBottom:"35px",
+ 
 };
 export const networkText = {
   padding:"10px 12px",
@@ -20,7 +21,7 @@ export const networkBox = {
   background: "rgba(43, 45, 80, 0.6)",
   padding: "15px  0px",
   margin:"0px 8px",
-
+  boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
   borderRadius: "10px !important",
 };
 export const networkBoxImg = {

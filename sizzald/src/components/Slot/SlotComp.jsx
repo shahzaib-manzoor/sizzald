@@ -95,7 +95,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
               }}
               component="h6"
             >
-              Slot
+              Slots
             </Typography>
             <Button
               sx={{
@@ -174,7 +174,7 @@ function SlotComp({ sliderTwo, settingCardTwo }) {
               sx={{ color: "rgba(52, 53, 89, 1)", paddingLeft: "17px" }}
               variant="h6"
             >
-              <Typography sx={{ color: "rgba(3, 251, 117, 1)" }} variant="span">
+              <Typography sx={{ color: "rgba(255, 107, 44, 1)" }} variant="span">
                 {" "}
                 20
               </Typography>

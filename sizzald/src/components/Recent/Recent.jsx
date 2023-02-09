@@ -29,17 +29,18 @@ function Recent({ sliderTwo, settingCardTwo }) {
               textTransform: "uppercase",
             }}
           >
-            RECENT BIG WINS
+            RECENT
           </Typography>
           <Box>
             <IconButton
               hover={{ background: "#FFFFFF33" }}
               sx={{
                 color: "white",
-                marginRight: "8px",
+                marginRight: "12px",
                 background: "#FFFFFF33",
                 height: { sx: "35px", md: "35px" },
                 width: { sx: "35px", md: "35px" },
+                
               }}
               onClick={() => sliderTwo?.current?.slickPrev()}
             >

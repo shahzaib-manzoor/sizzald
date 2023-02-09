@@ -19,6 +19,7 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
         // width:"240px",
         background: "rgba(43, 45, 80, 1)",
         margin: "12px 6px",
+        boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
         // paddingLeft:'20'
       }}
     >

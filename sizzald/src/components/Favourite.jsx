@@ -16,7 +16,8 @@ const Favourite = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-           margin:"0px 8px"
+           margin:"0px 8px",boxShadow:" 0px 0px 6px 0px rgba(95, 95, 111, 1)",
+
           }}
         >
           <img style={{height:"60%"}} src={frame} alt="" />

@@ -77,7 +77,7 @@ export default function Footer() {
     <footer>
 
    
-    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" }}}>
+    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" },}}>
       <Box
         sx={{
           background: "rgba(43, 45, 80, 0.6)",
@@ -88,6 +88,7 @@ export default function Footer() {
           paddingLeft: "40px",
           justifyContent: "space-between",
           paddingBottom: "40px",
+          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
           // display:{xs:'none',sm:"none",md:"none",lg:"block"}
         }}
       >

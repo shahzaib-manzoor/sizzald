@@ -34,7 +34,7 @@ function SizzaldComp({ sliderTwo, settingCardTwo }) {
             hover={{ background: "#FFFFFF33" }}
             sx={{
               color: "white",
-              marginRight: "8px",
+              marginRight: "12px",
               background: "#FFFFFF33",
               height: { sx: "35px", md: "45px" },
               width: { sx: "35px", md: "45px" },

@@ -132,7 +132,7 @@ function BalanceSlot() {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ width: "45%" ,paddingTop:'20px'}}>
+      <Box sx={{ width: "45%" ,padding:'20px 0'}}>
         <Typography
           sx={{
             fontFamily: "Poppins",
