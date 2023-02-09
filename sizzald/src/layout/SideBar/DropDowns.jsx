@@ -105,7 +105,6 @@ const SubMenu = ({ item }) => {
     marginLeft: "10px",
   };
 
-
   const [gameNav, setGameNav] = useState(false);
   const [subnav, setSubnav] = useState(false);
 
@@ -114,7 +113,7 @@ const SubMenu = ({ item }) => {
     if (title === "Sizzld Games") {
       setGameNav(true);
     } else {
-      console.log("not sizzld");
+      // console.log("not sizzld");
     }
   };
   const sideData = [
@@ -314,10 +313,11 @@ const SubMenu = ({ item }) => {
                 sm: "none",
                 md: "none",
                 lg: "22%",
-                xl: "17%",
+                xl: "18%",
               },
               width: "15%",
-              height: "1000px",
+              height: "100vh",
+              minHeight:'100vh',
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
@@ -345,8 +345,8 @@ const SubMenu = ({ item }) => {
                     variant="h6"
                     sx={{
                       fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: 600,
+                      fontSize: "15px",
+                      fontWeight: 400,
                       lineHeight: "27px",
                       letterSpacing: "0em",
                       textAlign: "left",
@@ -373,29 +373,6 @@ const SubMenu = ({ item }) => {
           to={item.path ? item.path : ""}
           onClick={item.subNav && showSubnav}
         >
-          {/* <Box
-            sx={{
-              // background: 'rgba(95, 95, 111, 0.6)',
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              "&:hover": {
-                background: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "5px",
-              },
-              height: "46px",
-              paddingTop: "7px",
-              paddingBottom: "7px",
-            }}
-          > */}
-          {/* <Box
-              sx={{
-                display: "flex",
-                gap: 1,
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            > */}
           <Box
             sx={{
               display: "flex",
@@ -404,11 +381,12 @@ const SubMenu = ({ item }) => {
               gap: 2,
             }}
           >
-            {item.icon}
+           <img src={item.icon}></img>
             <Typography
               noWrap
               // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
               sx={{
+                 
                 // color: "#BDBDBD",
                 fontFamily: 'Poppins',
                 color: '#FFFFFF',
@@ -447,30 +425,11 @@ const SubMenu = ({ item }) => {
                   to={item.path}
                   key={`key${index}`}
                 >
-                  {/* <Box
-                    sx={{
-                      paddingLeft: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-
-                      // position:'relative',
-                      // marginBottom:"20px",
-
-                      "&:hover": {
-                        background: "rgba(255, 255, 255, 0.1)",
-                        borderRadius: "5px",
-                      },
-                      height: "60px",
-                    }}
-                  > */}
-                  {/* <Box sx={{position:'absolute',right:"40px"}}>
-                  <Typography>thhdhhf</Typography>
-                </Box> */}
-                  {item.icon}
+                 <img src={item.icon}></img>
                   <Typography
 
                     sx={{
+                      color:'#BDBDBD',
                       fontFamily: 'Poppins',
                       fontSize: "16px",
                       fontWeight:item.path === window.location.pathname ? 600 : 400,

@@ -8,8 +8,8 @@ export const cardContent = {
 };
 export const cardContentText = {
   color: "#ffffff",
-  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "22px" },
-  fontWeight: "600",
+  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "15px" },
+  fontWeight: "400",
   lineHeight: { xs: "20px", lg: "30px" },
   fontFamily: "Poppins",
   letterSpacing: "0.30000001192092896px",
@@ -18,9 +18,9 @@ export const cardContentText = {
 };
 export const cardContentTextVS = {
   color: "#03FB75",
-  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "22px" },
-  fontWeight: "600",
-  lineHeight: { xs: "20px", lg: "30px" },
+  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "15px" },
+  fontWeight: "400",
+  lineHeight: { xs: "20px", lg: "20px" },
   fontFamily: "Poppins",
   letterSpacing: "0.30000001192092896px",
   padding: "0px 6px",
@@ -28,9 +28,9 @@ export const cardContentTextVS = {
 };
 export const cardContentTextWar = {
   color: "#ffffff",
-  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "22px" },
-  fontWeight: "600",
-  lineHeight: { xs: "20px", lg: "30px" },
+  fontSize: { xs: "18px", md: "18px", lg: "18px", xl: "15px" },
+  fontWeight: "400",
+  lineHeight: { xs: "20px", lg: "20px" },
   fontFamily: "Poppins",
   letterSpacing: "0.30000001192092896px",
   textTransform: "uppercase",
@@ -40,8 +40,8 @@ export const cardContentIcon = {
   color: "white",
   boxShadow: "2px 2px 12px 0px #45D91E1F",
   background: "rgba(0, 0, 0, 0.3)",
-  height: { lg: "37px" },
-  width: { lg: "37px" },
-  marginRight: "10px",
+  height: { lg: "28px" },
+  width: { lg: "28px" },
+  marginRight: "12px",
 };
-export const cardContentIconSize = { fontSize: "14px" };
+export const cardContentIconSize = { fontSize: "10px" };

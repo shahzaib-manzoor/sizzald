@@ -1,8 +1,10 @@
 export const networkContainer = {
-  padding: { xs: "10px 25px", md: "15px 28px" },
+ marginBottom:"35px",
+ 
 };
 export const networkText = {
-  fontSize: { xs: "16px", md: "24px" },
+  padding:"10px 12px",
+  fontSize: { xs: "14px", md: "17px" },
   fontFamily: "Poppins",
   fontWeight: "700",
   lineHeight: "40px",
@@ -10,15 +12,16 @@ export const networkText = {
   textAlign: "left",
   color: "white",
   textTransform: "uppercase",
-  paddingBottom:"15px"
 };
 export const networkBox = {
-  margin: "20px 0px",
+  // margin: "20px 0px",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
   background: "rgba(43, 45, 80, 0.6)",
   padding: "15px  0px",
+  margin:"0px 8px",
+  boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
   borderRadius: "10px !important",
 };
 export const networkBoxImg = {

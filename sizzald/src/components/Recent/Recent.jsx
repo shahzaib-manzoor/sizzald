@@ -7,19 +7,20 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function Recent({ sliderTwo, settingCardTwo }) {
   return (
-    <Box>
+    <Box sx={{padding:"0px 20px"}}>
       <Box>
         <Box
           sx={{
             textAlign: "right",
-            padding: { xs: "10px 25px", md: "30px 33px" },
+            // padding: { xs: "10px 25px", md: "30px 33px" },
             display: "flex",
             justifyContent: "space-between",
+            padding:"10px 8px"
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "16px", md: "24px" },
+              fontSize: { xs: "16px", md: "17px" },
               fontWeight: "700",
               lineHeight: "40px",
               letterSpacing: "1px",
@@ -28,44 +29,43 @@ function Recent({ sliderTwo, settingCardTwo }) {
               textTransform: "uppercase",
             }}
           >
-            RECENT BIG WINS
+            RECENT
           </Typography>
           <Box>
             <IconButton
               hover={{ background: "#FFFFFF33" }}
               sx={{
                 color: "white",
-                marginRight: "8px",
+                marginRight: "12px",
                 background: "#FFFFFF33",
-                height: { sx: "35px", md: "45px" },
-                width: { sx: "35px", md: "45px" },
+                height: { sx: "35px", md: "35px" },
+                width: { sx: "35px", md: "35px" },
+                
               }}
               onClick={() => sliderTwo?.current?.slickPrev()}
             >
               <KeyboardBackspaceIcon
-                sx={{ fontSize: { xs: "16px", md: "23px" } }}
+                sx={{ fontSize: { xs: "16px", md: "19px" } }}
               />
             </IconButton>
             <IconButton
               sx={{
                 color: "white",
                 background: "#FFFFFF33",
-                height: { sx: "35px", md: "45px" },
-                width: { sx: "35px", md: "45px" },
+                height: { sx: "35px", md: "35px" },
+                width: { sx: "35px", md: "35px" },
               }}
               onClick={() => sliderTwo?.current?.slickNext()}
             >
               <ArrowRightAltIcon
-                sx={{ fontSize: { xs: "16px", md: "23px" } }}
+                sx={{ fontSize: { xs: "16px", md: "19px" } }}
               />
             </IconButton>
           </Box>
         </Box>
         <Carousal sliderTwo={sliderTwo} settingCardTwo={settingCardTwo} />
       </Box>
-      <Box sx={{ marginTop: "30px" }}>
-        <DetailedCard />
-      </Box>
+      <DetailedCard />
       <Network />
     </Box>
   );

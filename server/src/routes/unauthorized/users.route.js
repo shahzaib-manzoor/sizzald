@@ -30,5 +30,9 @@ router.post("/verifyforgotpin", forgotJwtAuth, controller.verifyForgotPinCode);
 //@access   private
 router.post("/resetpassword", forgotJwtAuth, controller.resetPassword);
 router.get("/getCode/:id", referralController.getOne);
+router.get('/get-ip', (req, res) => {
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    res.send({ ip });
+  });
 
 module.exports = router;

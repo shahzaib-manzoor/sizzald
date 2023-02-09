@@ -19,4 +19,4 @@ const layoutSlice = createSlice({
 
 });
 export const { setDrawer } = layoutSlice.actions
-export default   layoutSlice.reducer
+export default   layoutSlice.reducer;

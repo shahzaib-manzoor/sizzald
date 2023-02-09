@@ -17,8 +17,8 @@ const clientHelper = require("../helpers/users.helper");
 const responseHelper = require("../helpers/response.helper");
 const referralController = require("./referral.controller");
 const referralModel = require("../models/referral.model");
-
- 
+///import from hardCodedData
+const { vipLevelSystem, usdRewardRule } = require("../hardCodedData/vipRewards");
 
 //@route    POST auth/login
 //@desc     login user
@@ -29,7 +29,7 @@ var login = async (req, res) => {
   try {
     
 
-    const exists = await User.findOne({ email: email }).populate("referralCode");
+    const exists = await User.findOne({ email: email });
     if (exists) {
       const isMatch = await clientHelper.comparePassword(
         password,
@@ -72,7 +72,7 @@ var signup = async (req, res) => {
       var checkreferral = await referralModel.findOne({
         referralCode: referralCode,
       });
-      console.log(checkreferral);
+   
       if (!checkreferral) {
         let err = "Invalid Referal Code";
         return responseHelper.requestfailure(res, err);
@@ -83,7 +83,7 @@ var signup = async (req, res) => {
     bodyData["password"] = hashpassword;
      if(checkreferral)
      {
-       bodyData["referralCode"] = checkreferral._id;
+       bodyData["referredByCode"] = checkreferral.userId;
 
      }
     const newuser = await User.create(bodyData);
@@ -92,21 +92,12 @@ var signup = async (req, res) => {
 
     var message = "Account Signup successful";
 
-    if (newuser && checkreferral) {
-      const adds = await referralModel.aggregate([
-        {
-          $group: {
-            _id: "$checkreferral._id",
-            // id: { $first: "$_id" },
-            referralCount: { $sum: 1 },
-          },
-        },
-      ]);
-
-      await referralModel.updateOne(
-        { _id: checkreferral._id },
-        { $set: { referralCount: adds[0].referralCount - 1 } }
-      );
+    if (!!checkreferral) {
+    await referralModel.updateOne({_id:checkreferral._id},{$inc:{referralCount:1}})
+    const user = await User.findById(checkreferral.userId);
+    const userLevel = user?.vipLevel;
+    const reward = usdRewardRule[userLevel]?.reward;
+    await User.updateOne({_id:checkreferral.userId},{$inc:{reward:reward}})
     }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };
@@ -246,6 +237,7 @@ var resetPassword = async (req, res) => {
     responseHelper.requestfailure(res, error);
   }
 };
+
 
 module.exports = {
    

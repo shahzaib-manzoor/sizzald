@@ -21,7 +21,7 @@ const Loatry = () => {
         sx={{
           width: '97.5%',
           backgroundImage: `url(${bannerLotary})`,
-          height: '500px',
+          height: '430px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -34,10 +34,10 @@ const Loatry = () => {
             display: 'flex',
             justifyContent: 'space-between',
             marginLeft: '30px',
-            height: '446px',
+            height: '400px',
           }}
         >
-          <Box sx={{ paddingTop: '30px' }}>
+          <Box sx={{ paddingTop: '15px' }}>
             <Typography
               sx={{
                 color: '#FFFFFF',
@@ -56,9 +56,10 @@ const Loatry = () => {
                 xs: '20px',
                 sm: '20px',
                 lg: '100px',
-                xl: '120px',
+                xl: '240px',
               },
-              mt: '30px',
+              paddingTop:"75px",
+              // mt: '30px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -102,7 +103,7 @@ const Loatry = () => {
           <Box
             sx={{
               display: 'flex',
-              paddingTop: '30px',
+              paddingTop: '15px',
               paddingRight: '20px',
               gap: 2,
             }}
@@ -246,10 +247,7 @@ const Loatry = () => {
         <CocoLotary/>
         <Instruction/>
         <Balance/>
-        <Box sx={{paddingBottom:'60px'}}>
-
         <DetailedCard />
-        </Box>
         <Network/>
 
         {/* <AcceptedNetwork/> */}
