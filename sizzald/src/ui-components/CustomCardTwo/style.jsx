@@ -14,12 +14,7 @@ export const cardTextPrice = {
   lineHeight: "14px",
   fontFamily: "Poppins",
 };
-export const cardAvatar = {
-  height: { xs: "26px", lg: "28px" },
-  width: { xs: "26px", lg: "28px" },
-  marginRight: "4px",
-  marginLeft: {lg:"3px",xl:"7px"},
-};
+
 export const cardFlex = {
   display: "flex",
   justifyContent: "space-between",

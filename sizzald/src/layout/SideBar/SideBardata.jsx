@@ -1,14 +1,12 @@
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import playingcard from "../../assets/playingcard.svg";
 import picksforyou from "../../assets/picksforyou.svg";
 import Rocket from "../../assets/Rocket.svg";
-// import favourites from '../../assets/favourites.svg';
+import slots from "../../assets/slots.svg";
+import favourites from "../../assets/favourites.svg";
 import Vector from "../../assets/Vector.svg";
 import casino from "../../assets/casino.svg";
 import recent from "../../assets/recent.svg";
-// import sizzeled from '../../assets/sizzeled.svg';
-// import slots from '../../assets/slots.svg';
 import Hotgames from "../../assets/Hotgames.svg";
 import highvolatility from "../../assets/highvolatility.svg";
 import star from "../../assets/star.svg";
@@ -42,7 +40,7 @@ export const SidebarData = [
       {
         title: "Favorites",
         path: "/favourite",
-        icon: star,
+        icon: favourites,
       },
       {
         title: "recent",
@@ -59,7 +57,7 @@ export const SidebarData = [
       {
         title: "Slot ",
         path: "/slot",
-        icon: Hotgames,
+        icon: slots,
       },
       {
         title: "Hotgames ",
