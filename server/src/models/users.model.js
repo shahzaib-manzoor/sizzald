@@ -26,6 +26,10 @@ userSchema = new Schema(
     type: Number,
     default: 0,
   },
+  xp: {
+    type: Number,
+    default: 0,
+  },
   balance: {
     type: Number,
     default: 0,

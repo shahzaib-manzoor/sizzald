@@ -17,8 +17,8 @@ const clientHelper = require("../helpers/users.helper");
 const responseHelper = require("../helpers/response.helper");
 const referralController = require("./referral.controller");
 const referralModel = require("../models/referral.model");
-
- 
+///import from hardCodedData
+const { vipLevelSystem, usdRewardRule } = require("../hardCodedData/vipRewards");
 
 //@route    POST auth/login
 //@desc     login user
@@ -94,7 +94,10 @@ var signup = async (req, res) => {
 
     if (!!checkreferral) {
     await referralModel.updateOne({_id:checkreferral._id},{$inc:{referralCount:1}})
-    await User.updateOne({_id:checkreferral.userId},{$inc:{reward:0.5}})
+    const user = await User.findById(checkreferral.userId);
+    const userLevel = user.vipLevel;
+    const reward = usdRewardRule[userLevel-1].reward;
+    await User.updateOne({_id:checkreferral.userId},{$inc:{reward:reward}})
     }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };
