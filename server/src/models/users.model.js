@@ -22,13 +22,21 @@ userSchema = new Schema(
     type: Schema.Types.ObjectId,
     ref: "Refer",
   },
+  vipLevel: {
+    type: Number,
+    default: 0,
+  },
   balance: {
+    type: Number,
+    default: 0,
+  },
+  reward: {
     type: Number,
     default: 0,
   },
   countryRegion: {
     type: String,
-    default: "",
+    default: "US",
   },
   
 

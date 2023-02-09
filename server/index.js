@@ -33,7 +33,7 @@ app.use(route);
  
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "/dist/index.html"));
 });
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
