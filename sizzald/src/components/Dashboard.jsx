@@ -28,9 +28,10 @@ import { Avatar } from "@mui/material";
 
 import avator from ".././assets/avator.png";
 
-import customCard1 from ".././assets/customCard1.png";
-import customCard2 from ".././assets/customCard2.png";
-import customCard3 from ".././assets/customCard3.png";
+import customCard1 from ".././assets/customCard1.svg";
+import customCard2 from ".././assets/customCard2.svg";
+import customCard3 from ".././assets/customCard3.svg";
+import customCard4 from ".././assets/customCard4.svg";
 import CustomCardThree from "../ui-components/CustomCardThree";
 
 import gameProvider1 from "../assets/gameProvider1.png";
@@ -274,6 +275,13 @@ export default function Dashboard() {
           vs="vs"
           teamTwo="Green Bull"
           img={customCard3}
+          warIsOn="WAR IS ON"
+        />
+        <CustomCard
+          teamOne="Red Bull"
+          vs="vs"
+          teamTwo="Green Bull"
+          img={customCard4}
           warIsOn="WAR IS ON"
         />
         <CustomCard
