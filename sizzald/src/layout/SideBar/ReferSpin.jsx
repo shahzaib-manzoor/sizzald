@@ -6,13 +6,17 @@ import Modal from '@mui/material/Modal';
 import spinerBackground from '../../assets/spinerBackground.svg';
 import buttonSpin from '../../assets/buttonSpin.svg';
 import luckyspin from '../../assets/luckyspin.svg';
+import lastSpinBox from '../../assets/lastSpinBox.svg';
 import bronze from '../../assets/bronze.svg';
 import LuckySpinNow from '../../assets/LuckySpinNow.svg';
+import avtarSpin from '../../assets/avtarSpin.svg';
 import Image from 'mui-image';
 import { IconButton } from '@mui/material';
-import CallMadeIcon from "@mui/icons-material/CallMade";
-import Wheel from './Wheel'
+import CallMadeIcon from '@mui/icons-material/CallMade';
+import Wheel from './Wheel';
 import { useState } from 'react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { textAlign } from '@mui/system';
 
 const style = {
   position: 'absolute',
@@ -35,7 +39,8 @@ const style = {
 };
 
 export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
-  const [spin,setSpin]=useState(false)
+  const [spin, setSpin] = useState(false);
+  const [win, setWin] = useState(null);
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -54,7 +59,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
             <img
               style={{
                 position: 'absolute',
-                top: '-5%',
+                top: '-3%',
                 left: '50%',
                 transform: 'translateX(-50%)',
               }}
@@ -88,8 +93,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  borderRadius:'8px'
-
+                  borderRadius: '8px',
                 }}
               >
                 {/* bronze box */}
@@ -191,16 +195,23 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
+              paddingTop: '30px',
             }}
           >
-            <Wheel spin={spin} setSpin={()=>setSpin(false)}/>
+            <Wheel spin={spin} setSpin={() => setSpin(false)}  setWin={setWin}/>
           </Box>
           {/* second box banner spin  */}
           <Box>
             <Image src={LuckySpinNow}></Image>
           </Box>
           {/* button Box*/}
-          <Box sx={{display:'flex',justifyContent:'center',marginTop:'30px'}}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: '30px',
+            }}
+          >
             <Button
               sx={{
                 background: '#5842F4',
@@ -212,7 +223,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
                 
                 
               }}
-              onClick={()=>setSpin(true)}
+              onClick={() => setSpin(true)}
               variant='contained'
             >
               Spin now
@@ -223,8 +234,120 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
           </Box>
           {/* last box */}
 
+          <Box
+            sx={{
+              backgroundImage: `url(${lastSpinBox})`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              width: '100%',
+              height: '100px',
+              marginTop: '20px',
+              display: 'flex',
+            }}
+          >
+            {/* first box */}
+            <Box
+              sx={{
+                width: '40%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                  fontWeight: 400,
+                  fontFamily: 'Poppins',
+                  color: '#ffffff',
+                }}
+              >
+                SPIN BONUS TOTAL
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '18px',
+                  fontWeight: 700,
+                  fontFamily: 'Poppins',
+                  color: '#FFA325',
+                  textTransform: 'uppercase',
+                  textAlign: 'left',
+                }}
+              >
+                $4,601,560.21
+              </Typography>
+            </Box>
+            {/* second Box */}
+            <Box sx={{ width: '60%', display: 'flex',gap:3,justifyContent:'center',alignItems:'center' }}>
+              {/* first Box */}
+              <Box>
+                <Image src={avtarSpin}></Image>
+              </Box>
+              {/* second Box */}
+              <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <Typography
+                  sx={{
+                    fontSize: '18px',
+                    fontWeight: 400,
+                    color: '#ffffff',
+                    fontFamily: 'Poppins',
+                  }}
+                >
+                  252MART
+                </Typography>
+                <Box sx={{ display: 'flex' ,gap:1,alignItems:'center'}}>
+                  <Typography
+                    sx={{
+                      fontSize: '18px',
+                      fontWeight: 500,
+                      fontFamily: 'Poppins',
+                      color: '#969696',
+                    }}
+                  >
+                    WIN
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: '18px',
+                      color: '#03FB75',
+                      fontWeight: 700,
+                      fontFamily: 'Poppins',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                   {win?.name?win?.name:0}
+                  </Typography>
+                  <Typography><ArrowForwardIosIcon sx={{color:'#ffffff',fontSize:'15px'}}/></Typography>
+                </Box>
           <Box>
-
+                  <Box sx={{ display: 'flex',gap:1 }}>
+                    <Typography
+                      sx={{
+                        fontSize: '18px',
+                        fontWeight: 500,
+                        fontFamily: 'Poppins',
+                        color: '#969696',
+                      }}
+                    >
+                      IN
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontSize: '18px',
+                        color: '#FFA325',
+                        fontWeight: 700,
+                        fontFamily: 'Poppins',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      23000 shib
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Modal>

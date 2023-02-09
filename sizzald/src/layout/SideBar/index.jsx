@@ -8,8 +8,6 @@ import {
 } from '@mui/material';
 // import SideBar from '../../layout/SideBar/SideBar'
 import Card from '../../layout/SideBar/Card';
-// import Card from "../../layout/SideBar/Card";
-
 import DropDowns from '../../layout/SideBar/DropDowns';
 import spinImage from '../../assets/Frame.svg';
 import piggy from '../../assets/piggy.svg';
