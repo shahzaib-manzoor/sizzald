@@ -8,7 +8,7 @@ const cors = require("cors"),
 require("./src/config/connect-mongoose.js");
 require("./src/models");
 
-app.use(express.static(path.join(__dirname, "/dist")));
+app.use(express.static(path.join(__dirname, "./dist")));
 app.use(function (err, req, res, next) {
   if (err.name === "UnauthorizedError") {
     res.status(401);
@@ -33,7 +33,7 @@ app.use(route);
  
 
 app.get("*", function (req, res) {
-  res.sendFile(path.resolve(__dirname, "/dist/index.html"));
+  res.sendFile(path.resolve(__dirname, "./dist/index.html"));
 });
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
