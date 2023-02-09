@@ -94,6 +94,7 @@ var signup = async (req, res) => {
 
     if (!!checkreferral) {
     await referralModel.updateOne({_id:checkreferral._id},{$inc:{referralCount:1}})
+    await User.updateOne({_id:checkreferral.userId},{$inc:{reward:0.5}})
     }
     const token = await jwtHelper.signAccessToken(newuser);
     var responseData = { token: "Bearer " + token, user: newuser };
@@ -233,6 +234,7 @@ var resetPassword = async (req, res) => {
     responseHelper.requestfailure(res, error);
   }
 };
+
 
 module.exports = {
    
