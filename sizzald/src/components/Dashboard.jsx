@@ -23,7 +23,6 @@ import coinFlip from "./../assets/coinFlip.svg"
 import plinko from "./../assets/plinko.svg"  
 import mine from "./../assets/mine.svg"
 import towerOfLegend from "./../assets/towerOfLegend.svg"
-
 import { Avatar } from "@mui/material";
 
 import avator from ".././assets/avator.png";
