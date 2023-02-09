@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 import { ethers } from 'ethers';
 import { Web3ReactProvider } from '@web3-react/core';
 import { Provider } from 'react-redux';
-import store from './store/store';
+import {persistor,store} from './store/store';
 function App() {
   const getLibrary = (provider) => {
     return new ethers.providers.Web3Provider(provider);
