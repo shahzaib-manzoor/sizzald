@@ -144,21 +144,16 @@ export default function SideBar() {
               <Card
                 text={'rECHARGE'}
                 img={fourCardImage}
-                // background={"#03FB75"}
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardFour})`}
                 marginLeft={'-8px'}
-                // marginLeft={'10px'}
               />
             </Box>
             <Box sx={{ display: 'flex', mt: '10px' }}>
               <Card
                 text={'bONUSCODE'}
                 img={fiveCardImage}
-                // background={
-                //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
-                // }
                 unlocked={'vip 22'}
                 backgroundImage={`url(${cardFive})`}
                 marginLeft={{
@@ -172,9 +167,6 @@ export default function SideBar() {
               <Card
                 text={'bONUS'}
                 img={sixCardImage}
-                // background={
-                //   "linear-gradient(282.29deg, #F8D82F 0%, rgba(20, 22, 61, 0) 100%)"
-                // }
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardSix})`}

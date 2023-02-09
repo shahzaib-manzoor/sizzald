@@ -3,9 +3,16 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import close from '../../assets/close.svg';
 import Modal from '@mui/material/Modal';
-import { useEffect, useState } from 'react';
-import ApiServices from '../../services/ApiServices';
-import url from '../../constants/urls';
+import spinerBackground from '../../assets/spinerBackground.svg';
+import buttonSpin from '../../assets/buttonSpin.svg';
+import luckyspin from '../../assets/luckyspin.svg';
+import bronze from '../../assets/bronze.svg';
+import LuckySpinNow from '../../assets/LuckySpinNow.svg';
+import Image from 'mui-image';
+import { IconButton } from '@mui/material';
+import CallMadeIcon from "@mui/icons-material/CallMade";
+import Wheel from './Wheel'
+import { useState } from 'react';
 
 const style = {
   position: 'absolute',
@@ -20,15 +27,15 @@ const style = {
   backdropFilter: 'blur(50px)',
   p: 5,
   borderRadius: '8px',
-  //   border: "none",
   outline: 'none',
-  //   border: "2px solid",
-
-  //   borderImageSource:
-  //     "linear-gradient(235.94deg, #FF6B2C 16.21%, #BF4B5A 47.23%, #B102CD 94.02%)",
+  backgroundImage: `url(${spinerBackground})`,
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  padding: '0px',
 };
 
 export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
+  const [spin,setSpin]=useState(false)
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -56,7 +63,169 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
               onClick={handleCloseSpin}
             />
           </Box>
-          <Box sx={{ padding: '38px 0px' }}></Box>
+          <Box
+            sx={{
+              paddingTop: '40px',
+              paddingLeft: '20px',
+              paddingRight: '20px',
+            }}
+          >
+            {/* first box */}
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                // backgroundColor:'red',
+                position: 'relative',
+              }}
+            >
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '85px',
+                  backgroundColor: ' rgba(14, 6, 61, 0.3)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  borderRadius:'8px'
+
+                }}
+              >
+                {/* bronze box */}
+                <Box>
+                  <Button
+                    sx={{
+                      width: '88px',
+                      height: '71px',
+                      backgroundColor: '#5842F4',
+                      position: 'relative',
+                      marginRight: '10px',
+                      marginLeft: '10px',
+                    }}
+                  >
+                    <Box>
+                      <Box
+                        sx={{ position: 'absolute', top: '-8px', left: '17px' }}
+                      >
+                        <img src={luckyspin}></img>
+                      </Box>
+                      <Box sx={{ mt: '20px' }}>
+                        <img src={buttonSpin}></img>
+                      </Box>
+                    </Box>
+                  </Button>
+                  <Button
+                    sx={{
+                      width: '88px',
+                      height: '71px',
+                      backgroundColor: '#5842F4',
+                      position: 'relative',
+                      marginRight: '10px',
+                    }}
+                  >
+                    <Box>
+                      <Box
+                        sx={{ position: 'absolute', top: '-8px', left: '17px' }}
+                      >
+                        <img src={luckyspin}></img>
+                      </Box>
+                      <Box sx={{ mt: '20px' }}>
+                        <img src={buttonSpin}></img>
+                      </Box>
+                    </Box>
+                  </Button>
+                  <Button
+                    sx={{
+                      width: '88px',
+                      height: '71px',
+                      backgroundColor: '#5842F4',
+                      position: 'relative',
+                    }}
+                  >
+                    <Box>
+                      <Box
+                        sx={{ position: 'absolute', top: '-8px', left: '17px' }}
+                      >
+                        <img src={luckyspin}></img>
+                      </Box>
+                      <Box sx={{ mt: '20px' }}>
+                        <img src={buttonSpin}></img>
+                      </Box>
+                    </Box>
+                  </Button>
+                </Box>
+                <Box sx={{ position: 'relative' }}>
+                  <img src={bronze}></img>
+                  <Typography
+                    sx={{
+                      position: 'absolute',
+                      color: '#A7330E',
+                      fontSize: '20px',
+                      fontWeight: 600,
+                      top: '10px',
+                      left: '50px',
+                    }}
+                  >
+                    Bronze
+                  </Typography>
+                  <Typography
+                    sx={{
+                      position: 'absolute',
+                      top: '53px',
+                      fontSize: '15px',
+                      color: '#ffffff',
+                      fontWeight: 600,
+                      fontFamily: 'Poppins',
+                    }}
+                  >
+                    Level 0 or Above
+                  </Typography>
+                </Box>
+                {/* second box bronz */}
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Wheel spin={spin} setSpin={()=>setSpin(false)}/>
+          </Box>
+          {/* second box banner spin  */}
+          <Box>
+            <Image src={LuckySpinNow}></Image>
+          </Box>
+          {/* button Box*/}
+          <Box sx={{display:'flex',justifyContent:'center',marginTop:'30px'}}>
+            <Button
+              sx={{
+                background: '#5842F4',
+                borderRadius: '50px',
+                boxShadow: '0px 4px 4px 0px rgba(5, 5, 5, 0.25)',
+                // marginTop: { sx: "10px", lg: "10px", xl: "30px" },
+                padding: '5px 10px',
+                height: '37px',
+                
+                
+              }}
+              onClick={()=>setSpin(true)}
+              variant='contained'
+            >
+              Spin now
+              <IconButton sx={{ background: 'white', marginLeft: '12px' }}>
+                <CallMadeIcon sx={{ fontSize: '10px' }} />
+              </IconButton>
+            </Button>
+          </Box>
+          {/* last box */}
+
+          <Box>
+
+          </Box>
         </Box>
       </Modal>
     </div>
