@@ -386,6 +386,7 @@ const SubMenu = ({ item }) => {
               noWrap
               // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
               sx={{
+                 
                 // color: "#BDBDBD",
                 fontFamily: 'Poppins',
                 color: '#FFFFFF',
