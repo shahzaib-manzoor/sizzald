@@ -2,7 +2,7 @@ export const networkContainer = {
  marginBottom:"35px"
 };
 export const networkText = {
-  padding:"10px 8px",
+  padding:"10px 12px",
   fontSize: { xs: "14px", md: "17px" },
   fontFamily: "Poppins",
   fontWeight: "700",

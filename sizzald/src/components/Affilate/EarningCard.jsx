@@ -4,11 +4,11 @@ import advertisment2 from "../../assets/advertisment2.svg";
 
 function EarningCard() {
   return (
-    <Box sx={{ padding: "30px 0px" }}>
+    <Box sx={{ padding: "20px 0px" }}>
       <Typography
         sx={{
           fontFamily: "Poppins",
-          fontSize: "30px",
+          fontSize: "28px",
           fontWeight: 400,
           lineHeight: "40px",
           letterSpacing: "1px",
@@ -32,7 +32,7 @@ function EarningCard() {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              fontSize: { lg: "20px", xl: "30px" },
+              fontSize: { lg: "20px", xl: "26px" },
               fontStyle: "italic",
               fontWeight: 400,
               lineheight: "40px",
@@ -49,10 +49,10 @@ function EarningCard() {
             sx={{
               padding: "15px 0px",
               fontFamily: "Poppins",
-              fontSize: { lg: "15px", xl: "18px" },
+              fontSize: { lg: "12px", xl: "15px" },
               fontWeight: "700",
               lineHeight: "26px",
-              letterSpacing: "0.01em",
+              letterSpacing: "0.03em",
               textAlign: "left",
               color: "#ffff",
             }}
@@ -63,16 +63,17 @@ function EarningCard() {
           <Typography
             sx={{
               fontFamily: "Poppins",
-              fontSize: { lg: "15px", xl: "18px" },
+              fontSize: { lg: "12px", xl: "15px" },
               fontWeight: "700",
               lineHeight: "26px",
-              letterSpacing: "0.01em",
+              letterSpacing: "0.03em",
               textAlign: "left",
               color: "#ffff",
               paddingBottom: "20px",
             }}
           >
-            SIZZLD.GAME is not just games, it’s a platform to realize the
+            <Typography sx={{color:"rgba(3, 251, 117, 1)"}} variant="span">
+            SIZZLD.GAME </Typography> is not just games, it’s a platform to realize the
             potential of your hidden dreams. Join SIZZLD.GAME and set sail on a
             new chapter in your wealth journey immediately!
           </Typography>
@@ -87,30 +88,30 @@ function EarningCard() {
             position: "relative",
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Poppins",
-              fontSize: { lg: "20px", xl: "30px" },
-              fontStyle: "italic",
-              fontWeight: 400,
-              lineheight: "40px",
-              letterSpacing: "1px",
-              textAlign: "left",
-              color: "rgba(3, 251, 117, 1)",
-              textTransform: "uppercase",
-              paddingBottom: "15px",
-            }}
-          >
+          <Typography sx={{   
+           fontFamily: "Poppins",
+           fontSize: { lg: "20px", xl: "26px" },
+           fontStyle: "italic",
+           fontWeight: 400,
+           lineheight: "40px",
+           letterSpacing: "1px",
+           textAlign: "left",
+           color: "rgba(3, 251, 117, 1)",
+           textTransform: "uppercase",
+           paddingBottom: "15px",  
+          }}
+         >
             Build A Casino Website <br /> With Your Own <br /> Domain.
           </Typography>
           <Typography
             sx={{
+              // padding: "15px 0px",
               padding: "15px 0px",
               fontFamily: "Poppins",
-              fontSize: { lg: "15px", xl: "18px" },
+              fontSize: { lg: "12px", xl: "15px" },
               fontWeight: "700",
               lineHeight: "26px",
-              letterSpacing: "0.01em",
+              letterSpacing: "0.03em",
               textAlign: "left",
               color: "#ffff",
             }}
@@ -122,13 +123,15 @@ function EarningCard() {
           </Typography>
           <Typography
             sx={{
+              // padding: "15px 0px",
               fontFamily: "Poppins",
-              fontSize: { lg: "15px", xl: "18px" },
+              fontSize: { lg: "12px", xl: "15px" },
               fontWeight: "700",
               lineHeight: "26px",
-              letterSpacing: "0.01em",
+              letterSpacing: "0.03em",
               textAlign: "left",
               color: "#ffff",
+              // color: "#ffff",
               paddingBottom: "20px",
             }}
           >
@@ -136,13 +139,14 @@ function EarningCard() {
             <Typography
               sx={{
                 fontFamily: "Poppins",
-                fontSize: { lg: "15px", xl: "18px" },
+                fontSize: { lg: "12px", xl: "15px" },
                 fontWeight: "700",
                 lineHeight: "26px",
                 letterSpacing: "0.01em",
                 textAlign: "left",
                 color: "rgba(3, 251, 117, 1)",
                 padding: "0px 10px",
+                textDecoration:"underline"
               }}
               variant="span"
             >

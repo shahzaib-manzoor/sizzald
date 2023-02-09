@@ -7,18 +7,18 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 function SizzaldComp({ sliderTwo, settingCardTwo }) {
   return (
-    <Box sx={{ margin: "28px 0px" }}>
+    <Box sx={{ margin: "28px 20px" }}>
   <Box
         sx={{
           textAlign: "right",
-          padding: { xs: "10px 25px", md: "30px 28px" },
+         
           display: "flex",
           justifyContent: "space-between",
         }}
       >
         <Typography
           sx={{
-            fontSize: { xs: "16px", md: "24px" },
+            fontSize: { xs: "16px", md: "17px" },
             fontWeight: "700",
             lineHeight: "40px",
             letterSpacing: "1px",

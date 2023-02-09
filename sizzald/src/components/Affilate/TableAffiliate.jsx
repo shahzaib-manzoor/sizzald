@@ -11,23 +11,27 @@ import { Box } from "@mui/material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    background: "rgba(48, 50, 85, 0.8)",
+    padding:"17px 30px",
+    background: "rgba(48, 50, 85, 0.8)    ",
     color: theme.palette.common.white,
-    bordrRadius: "8px",
     fontFamily: "Poppins",
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "22px",
     letterSpacing: "0px",
     textAlign: "left",
+    borderBottom:'none',
+   
   },
   [`&.${tableCellClasses.body}`]: {
+    padding:"17px 30px",
     // fontSize: 14,
     // background: "rgba(1, 2, 47, 1)",
     color: "white",
-
-    borderBottom: "none",
-    bordrRadius: "8px",
+    // height:"20px",
+    // borderBottom: "none",
+    borderBottom: "1px solid rgba(26, 28, 67, 0.6)",
+    // borderRadius: "8px",
     fontFamily: "Poppins",
     fontsize: "16px",
     fontWeight: "700",
@@ -35,16 +39,30 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     letterSpacing: "0px",
     textAlign: "left",
   },
+  
 }));
 
+// const StyledContainer = styled(Box)`
+// background-color: blue;
+// &:hover{
+// background-color:red;
+// }
+// .abc{
+//   color:pink;
+// }
+// `
+
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
+  backgroundColor: "rgba(1, 2, 47, 1)",
+  "&:last-child": {
+    background: "linear-gradient(154deg, rgba(3, 251, 117, 0.4) 41.56%, rgba(20, 22, 61, 0) 105.75%)",
   },
+  padding:0,
+
   // hide last border
-  "&:first-child td, &:last-child th": {
-    border: 0,
-  },
+  // "&:first-child td, &:last-child th": {
+  //   border: 0,
+  // },
 }));
 
 const tableData = [
@@ -59,28 +77,29 @@ const tableData = [
 
 export default function CustomizedTables() {
   return (
-    <TableContainer sx={{ borderRadius: "9px" }}>
+    <TableContainer sx={{ borderRadius: "9px", }}>
       <Table
-        sx={{ width: "100%", height: "500px" }}
+        sx={{ width: "100%", height: "400px" }}
         aria-label="customized table"
       >
-        <TableHead>
-          <TableRow sx={{ borderRadius: "20px" }}>
+        <TableHead >
+          <StyledTableRow>
             <StyledTableCell>Invitees’ VIP Level</StyledTableCell>
             <StyledTableCell>Total Wager</StyledTableCell>
             <StyledTableCell>Rewards</StyledTableCell>
-          </TableRow>
+          </StyledTableRow>
         </TableHead>
         <TableBody>
           {tableData.map((tableData, index) => (
-            <TableRow
+            <StyledTableRow
               key={index}
               sx={{
-                border: "1px solid rgba(26, 28, 67, 0.6)",
-                background:
-                  index === 3
-                    ? "linear-gradient(154deg, rgba(3, 251, 117, 0.4) 41.56%, rgba(20, 22, 61, 0) 105.75%)"
-                    : "rgba(1, 2, 47, 1) !important",
+                
+               
+                // background:
+                //   index === 3
+                //     ? "linear-gradient(154deg, rgba(3, 251, 117, 0.4) 41.56%, rgba(20, 22, 61, 0) 105.75%)"
+                //     : "rgba(1, 2, 47, 1) !important",
               }}
             >
               <StyledTableCell component="th" scope="row">
@@ -98,7 +117,7 @@ export default function CustomizedTables() {
                   <img src={tableData.img} alt="" /> {tableData.currency}
                 </Box>
               </StyledTableCell>
-            </TableRow>
+            </StyledTableRow>
           ))}
         </TableBody>
       </Table>

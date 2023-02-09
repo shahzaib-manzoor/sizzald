@@ -13,7 +13,7 @@ const Card = () => {
       <Typography
         sx={{
           color: '#ffffff',
-          fontSize: '30px',
+          fontSize: '23px',
           fontWeight: 700,
           fontFamily: 'Poppins',
           lineHeight: '40px',
