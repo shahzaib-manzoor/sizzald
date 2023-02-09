@@ -13,15 +13,18 @@ function App() {
     return new ethers.providers.Web3Provider(provider);
   };
 
+
   return (
-    <Provider store={store}> 
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <BrowserRouter>
-          <Box sx={{ background: '#01022F' }}>
-            <Routes exact />
-          </Box>
-        </BrowserRouter>
-      </Web3ReactProvider>
+    <Provider store={store}>
+      {/* <ThemeProvider theme={theme}> */}
+        <Web3ReactProvider getLibrary={getLibrary}>
+          <BrowserRouter>
+            <Box sx={{ background: '#01022F', }}>
+              <Routes exact />
+            </Box>
+          </BrowserRouter>
+        </Web3ReactProvider>
+      {/* </ThemeProvider> */}
     </Provider>
   );
 }

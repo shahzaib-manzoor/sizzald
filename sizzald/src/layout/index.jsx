@@ -29,6 +29,7 @@ const Layout = () => {
   };
   // console.log(isMediumScreen)
   //  ui
+  
   const sideBar = {
     width: openDrawer
       ? "4%"
