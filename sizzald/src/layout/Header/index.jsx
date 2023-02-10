@@ -216,7 +216,7 @@ export default function PrimarySearchAppBar({
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerRadioButton}>
             <ButtonGroup
-              sx={{ borderRadius: "8px", border: "1px solid #2B2D50",marginLeft:"25px" }}
+              sx={{ borderRadius: "8px", border: "1px solid #2B2D50",marginLeft:"50px" }}
             >
               <Button
                 sx={{
