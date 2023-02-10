@@ -9,6 +9,16 @@ import Roulette from "../../assets/roulette_rounded.png";
 import ultimateDice from "../../assets/ultimate_dice.png";
 import caveRounded from "../../assets/cave_rounded.png";
 import coinFlip from "../../assets/coinflip_rounded.png";
+import videoPoker from "../../assets/videoPoker_rounded.png";
+import kenoMultiplyer from "../../assets/kenoMultoiplayer_rounded.png";
+import mineIcon from "../../assets/mine.svg"
+import baccaratIcon from "../../assets/baccarat_rounded.png"
+import ringOfFortune from "../../assets/ringOfFortune.svg";
+import blackJack from "../../assets/blackJack.svg";
+import hiloIcon from "../../assets/Hilo.png";
+import classicDiceIcon from "../../assets/classicDice.svg";
+import wheelIcon from "../../assets/wheel.png";
+import towerOfLegend from "../../assets/towerOfLegend.svg";
 import { NavLink } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
@@ -198,22 +208,22 @@ const SubMenu = ({ item }) => {
       path: "/coinflip",
     },
     {
-      title: "Limbo",
+      title: "Video Poker",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={limboRounded}
+          src={videoPoker}
           alt=""
         />
       ),
       path: "/limbo",
     },
     {
-      title: "Crash",
+      title: "Keno Multiplayer",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={carshRounded}
+          src={kenoMultiplyer}
           alt=""
         />
       ),
@@ -221,66 +231,66 @@ const SubMenu = ({ item }) => {
     },
 
     {
-      title: "Keno",
+      title: "Mine",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={kenoRounded}
+          src={mineIcon}
           alt=""
         />
       ),
       path: "/keno",
     },
     {
-      title: "Hash Dice",
+      title: "Baccarat",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={hashRounded}
+          src={baccaratIcon}
           alt=""
         />
       ),
       path: "/hashdice",
     },
     {
-      title: "Roulette",
+      title: "Ring Of Fortune",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={ringOfFortune} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Backjack",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={blackJack} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Hilo",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={hiloIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Classic Dice",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={classicDiceIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Wheel",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={wheelIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Tower Of Legend",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={towerOfLegend} alt="" />
       ),
       path: "/roulette",
     },
