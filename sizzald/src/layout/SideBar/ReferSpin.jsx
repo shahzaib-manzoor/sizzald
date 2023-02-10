@@ -14,10 +14,10 @@ import Image from 'mui-image';
 import { IconButton } from '@mui/material';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Wheel from './Wheel';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { textAlign } from '@mui/system';
-
+import Timer from './Timer';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -41,6 +41,8 @@ const style = {
 export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
   const [spin, setSpin] = useState(false);
   const [win, setWin] = useState(null);
+  const [timer,setTimer]=useState('00:00:00');
+
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -205,7 +207,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
             <Image src={LuckySpinNow}></Image>
           </Box>
           {/* button Box*/}
-          <Box
+      {!spin?( <Box
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -231,9 +233,8 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
                 <CallMadeIcon sx={{ fontSize: '10px' }} />
               </IconButton>
             </Button>
-          </Box>
+          </Box>):(<Timer timer={timer} setTimer={setTimer}/>)}
           {/* last box */}
-
           <Box
             sx={{
               backgroundImage: `url(${lastSpinBox})`,
