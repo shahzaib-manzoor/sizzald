@@ -21,7 +21,8 @@ const index = () => {
   const [reward, setReward] = useState(null);
   const {user}=useSelector((state)=>state.user);
 useEffect(() => {
-  const token=window.atob(user?.token);
+
+  const token=window.atob(user?.token?user?.token:'');
   // console.log(token);
   if (user) {
     fetch(`${import.meta.env.VITE_API_BASE_URL}/users`, {
