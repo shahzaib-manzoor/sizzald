@@ -34,12 +34,16 @@ export const vip = {
   color: "#FFA325",
   lineHeight: "36px",
   fontFamily: "Poppins",
+  fontWeight:600,
+  fontStyle: "italic",
+
 };
 export const font = {
   color: "#ffffff",
   textTransform: "uppercase",
   fontSize: "13px",
   marginRight: "10px",
+  fontWeight:500,
 };
 export const flex = {
   display: "flex",

@@ -81,7 +81,7 @@ export default function Footer() {
       <Box
         sx={{
           background: "rgba(43, 45, 80, 0.6)",
-          marginLeft: "20px",
+          marginLeft: "28px",
           // marginRight:'30px',
           display: "flex",
           flexDirection: "row",

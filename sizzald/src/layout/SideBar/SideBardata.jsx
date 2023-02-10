@@ -2,7 +2,7 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import picksforyou from "../../assets/picksforyou.svg";
 import Rocket from "../../assets/Rocket.svg";
-import slots from "../../assets/slots.svg";
+import slots from "../../assets/slot.png";
 import favourites from "../../assets/favourites.svg";
 import Vector from "../../assets/Vector.svg";
 import casino from "../../assets/casino.svg";
@@ -23,6 +23,9 @@ import headphones from "../../assets/headphones.svg";
 import languages from "../../assets/languages.svg";
 import sponsership from "../../assets/sponsership.svg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import liveCasino from "../../assets/liveCasino.png";
+import promotion from '../../assets/promotion.png'
+
 export const SidebarData = [
   {
     title: "casino",
@@ -58,6 +61,11 @@ export const SidebarData = [
         title: "Slot ",
         path: "/slot",
         icon: slots,
+      },
+      {
+        title: "Live Casino",
+        path: "/livecasino",
+        icon: liveCasino,
       },
       {
         title: "Hotgames ",
@@ -97,10 +105,16 @@ export const SidebarData = [
     icon: lotery,
   },
   {
+    title: "Promotions",
+    path: '/promotions',
+    icon: promotion,
+  },
+  {
     title: "Affiliate",
     path: '/affilate',
     icon: affilate,
   },
+ 
   {
     title: "probably fair ",
     path: '/probablyfair',

@@ -22,7 +22,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/More";
 import Message from "@mui/icons-material/Message";
-import logo from "../../assets/sizzld-logo.png";
+// import logo from "../../assets/sizzld-logo.png";
+import logo from "../../assets/logo1.png";
+
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
@@ -214,7 +216,7 @@ export default function PrimarySearchAppBar({
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerRadioButton}>
             <ButtonGroup
-              sx={{ borderRadius: "8px", border: "1px solid #2B2D50" }}
+              sx={{ borderRadius: "8px", border: "1px solid #2B2D50",marginLeft:"25px" }}
             >
               <Button
                 sx={{

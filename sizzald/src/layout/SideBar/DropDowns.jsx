@@ -350,7 +350,7 @@ const SubMenu = ({ item }) => {
                       lineHeight: "27px",
                       letterSpacing: "0em",
                       textAlign: "left",
-                      color: "#ffffff",
+                      color: '#ffffff',
                       paddingLeft: "10px",
                       transition: "all .3s",
                       "&:hover": {
@@ -389,11 +389,12 @@ const SubMenu = ({ item }) => {
                  
                 // color: "#BDBDBD",
                 fontFamily: 'Poppins',
-                color: '#FFFFFF',
+                color: item.title ==="vip Club" ? '#FBB315':'#FFFFFF',
                 textTransform: "capitalize",
                 fontSize: "16px",
-                fontWeight: item.path === window.location.pathname ? 600 : 400,
+                fontWeight: item.path === window.location.pathname ? 600 :item.title ==="vip Club"?900: 400,
                 textDecoration: "none",
+                fontStyle:item.title ==="vip Club"?'italic': 'normal'
               }}
             >
               {item.title}

@@ -97,7 +97,8 @@ export default function SideBar() {
                 }}
               >
                 <Typography sx={vip}>My VIP </Typography>
-                <Typography sx={{ color: '#ffffff', marginLeft: '5px' }}>
+                <Typography sx={{ color: '#ffffff', marginLeft: '5px',fontWeight:600,
+  fontStyle: "italic", }}>
                   Perks{' '}
                 </Typography>
               </Box>
@@ -194,6 +195,7 @@ export default function SideBar() {
               color: '#FBB315',
               fontWeight: 900,
               textTransform: 'capitalize',
+              fontStyle: 'italic',
             }}
           >
             Refer and Earn
