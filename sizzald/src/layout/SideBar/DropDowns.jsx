@@ -11,12 +11,12 @@ import caveRounded from "../../assets/cave_rounded.png";
 import coinFlip from "../../assets/coinflip_rounded.png";
 import videoPoker from "../../assets/videoPoker_rounded.png";
 import kenoMultiplyer from "../../assets/kenoMultoiplayer_rounded.png";
-import mineIcon from "../../assets/mine.svg"
+import mineIcon from "../../assets/mine.png"
 import baccaratIcon from "../../assets/baccarat_rounded.png"
-import ringOfFortune from "../../assets/ringOfFortune.svg";
-import blackJack from "../../assets/blackJack.svg";
+import ringOfFortune from "../../assets/ringOfFortune.png";
+import blackJack from "../../assets/blackJack.png";
 import hiloIcon from "../../assets/Hilo.png";
-import classicDiceIcon from "../../assets/classicDice.svg";
+import classicDiceIcon from "../../assets/classicDice.png";
 import wheelIcon from "../../assets/wheel.png";
 import towerOfLegend from "../../assets/towerOfLegend.svg";
 import { NavLink } from "react-router-dom";
@@ -260,7 +260,7 @@ const SubMenu = ({ item }) => {
       path: "/roulette",
     },
     {
-      title: "Backjack",
+      title: "Blackjack",
       icon: (
         <img style={{ height: "32px", width: "32px" }} src={blackJack} alt="" />
       ),
