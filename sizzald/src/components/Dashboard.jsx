@@ -7,6 +7,7 @@ import CustomCarousal from "../ui-components/CustomCarousal";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import questionMark from "../assets/question-mark-circle.png";
+import arrowIcon from ".././assets/arrow.png";
 import Keno from ".././assets/keno.svg" 
 import videoPoker from ".././assets/videoPoker.svg"
 import Baccarat from ".././assets/baccarat.svg"
@@ -32,7 +33,6 @@ import customCard2 from ".././assets/customCard2.svg";
 import customCard3 from ".././assets/customCard3.svg";
 import customCard4 from ".././assets/customCard4.svg";
 import CustomCardThree from "../ui-components/CustomCardThree";
-
 import gameProvider1 from "../assets/gameProvider1.png";
 import gameProvider2 from "../assets/gameProvider2.png";
 import gameProvider3 from "../assets/gameProvider3.png";
@@ -367,7 +367,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={coinFlip}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -385,7 +385,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={plinko}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -403,7 +403,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={mine}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -421,7 +421,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={towerOfLegend}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -439,7 +439,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={blackJack}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -457,7 +457,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={crash}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -475,7 +475,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={limbo}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{
@@ -493,7 +493,7 @@ export default function Dashboard() {
           balance="$ 5346362"
           img={wheel}
           icon={
-            <img style={{ height: "26px", width: "26px" }} src={questionMark} />
+            <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
           avator = {<Avatar
             sx={{

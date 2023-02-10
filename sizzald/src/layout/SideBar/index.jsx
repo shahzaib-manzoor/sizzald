@@ -115,7 +115,7 @@ export default function SideBar() {
                 // background={"#4DF3E2"}
                 backgroundImage={`url(${firstCard})`}
                 unlocked={'unlocked'}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
               />
               <Card
                 text={'spin'}
@@ -124,7 +124,7 @@ export default function SideBar() {
                 backgroundImage={`url(${secondCard})`}
                 unlocked={'unlocked'}
                 marginRight={'10px'}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
                 // handleOpenSpin={handleOpenSpin}
                 // handleCloseSpin={handleCloseSpin}
               />
@@ -138,7 +138,7 @@ export default function SideBar() {
                 // }
                 unlocked={'vip 14'}
                 backgroundImage={`url(${cardThird})`}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
               />
               <Card
                 text={'rECHARGE'}
@@ -147,7 +147,7 @@ export default function SideBar() {
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardFour})`}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
                 // marginLeft={'10px'}
               />
             </Box>
@@ -163,8 +163,8 @@ export default function SideBar() {
                 marginLeft={{
                   xs: '2px',
                   sm: '2px',
-                  md: '2px',
-                  lg: '2px',
+                  md: '4px',
+                  lg: '4px',
                   xl: '-1px',
                 }}
               />
@@ -177,7 +177,7 @@ export default function SideBar() {
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardSix})`}
-                marginLeft={'-6px'}
+                marginLeft={'4px'}
                 // marginLeft={'13px'}
               />
             </Box>

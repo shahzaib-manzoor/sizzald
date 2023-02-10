@@ -61,13 +61,13 @@ export const mainBox = {
 export const typography = {
   color: "#ffffff",
   textTransform: "uppercase",
-  fontSize: " 8px",
+  fontSize: " 14px",
   fontWeight: 600,
 };
 export const unlock = {
   color: "#B3B3B3",
   textTransform: "uppercase",
-  fontSize: " 8px",
+  fontSize: " 14px",
   fontWeight: 600,
 };
 export const secondflex = {

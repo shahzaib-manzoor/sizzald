@@ -15,7 +15,7 @@ import tablegames from "../../assets/tablegames.svg";
 import sports from "../../assets/sports.svg";
 import lotery from "../../assets/lotery.svg";
 import affilate from "../../assets/affilate.svg";
-import fair from "../../assets/fair.svg";
+import fair from "../../assets/fair.png";
 import vipClub from "../../assets/vipClub.svg";
 import fourm from "../../assets/fourm.svg";
 import blog from "../../assets/blog.svg";
