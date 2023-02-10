@@ -9,8 +9,10 @@ import RightImg from "../../assets/RightImg.svg";
 import Table from "./TableAffiliate";
 
 import CallMadeIcon from "@mui/icons-material/CallMade";
+import { useSelector } from "react-redux";
 
-function AffiliateReward() {
+function AffiliateReward({reward}) {
+  const {user}=useSelector((state)=>state.user);
   return (
     <Box>
       <Typography
@@ -161,7 +163,7 @@ function AffiliateReward() {
                     textAlign: "left",
                   }}
                 >
-                  $1,000.00
+                  ${user?.reward}.00
                 </Typography>
                 <Button
                   sx={{

@@ -29,6 +29,8 @@ import {
 } from 'reactjs-social-login'
 import ApiServices from "../services/ApiServices";
 import url from "../constants/urls";
+import { setUser } from "../store/slices/userSlice";
+import { useDispatch } from "react-redux";
 
 const Signin = () => {
   const [input, setInput] = useState({
@@ -37,6 +39,7 @@ const Signin = () => {
   });
   const [open, setOpen] = useState(false)
   const navigate = useNavigate();
+  const dispatch=useDispatch();
   const [address, setAddress] = useState('')
   const handleSocialLogin = (user, err) => {
 
@@ -62,7 +65,11 @@ const Signin = () => {
   const handleLogin = () => {
   
     ApiServices.post(url.login, input).then((res) => {
-      console.log(res)
+      console.log(res);
+      dispatch(setUser({
+        ...res?.data?.data?.user,
+        token:window.btoa(res?.data?.data?.token)
+      }))
       localStorage.setItem('auth', true);
       localStorage.setItem('uid',res?.data?.data?.user?._id);
       navigate('/')

@@ -46,7 +46,10 @@ const Signup = () => {
   const handleSignup = () => {
     
     ApiServices.post(url.signup, input).then((res) => {
-      dispatch(setUser(res?.data?.data?.user))
+      dispatch(setUser({
+        ...res?.data?.data?.user,
+        token:window.btoa(res?.data?.data?.token)
+      }))
       localStorage.setItem('uid',res?.data?.data?.user?._id);
       localStorage.setItem('auth', true)
 

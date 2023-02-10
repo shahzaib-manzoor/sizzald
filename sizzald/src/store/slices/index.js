@@ -6,5 +6,6 @@ import userSlice from "./userSlice";
  const reducer =combineReducers({
     counter: counterSliceReducers,
     layout:layoutSlice,
+    user:userSlice,
  })
 export default reducer
