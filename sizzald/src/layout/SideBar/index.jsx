@@ -124,8 +124,8 @@ export default function SideBar() {
                 unlocked={'unlocked'}
                 marginRight={'10px'}
                 marginLeft={'-8px'}
-                handleOpenSpin={handleOpenSpin}
-                handleCloseSpin={handleCloseSpin}
+                // handleOpenSpin={handleOpenSpin}
+                // handleCloseSpin={handleCloseSpin}
               />
             </Box>
             <Box sx={{ display: 'flex', mt: '10px' }}>
