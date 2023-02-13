@@ -102,12 +102,8 @@ export default function SideBar() {
                     marginLeft: '5px',
                     fontWeight: 600,
                     fontStyle: 'italic',
-<<<<<<< Updated upstream
-                  }}>
-=======
                   }}
                 >
->>>>>>> Stashed changes
                   Perks{' '}
                 </Typography>
               </Box>
@@ -231,12 +227,8 @@ export default function SideBar() {
               border: '1px solid rgba(95, 95, 111, 0.6)',
               mt: '30px',
               marginLeft: '15px',
-<<<<<<< Updated upstream
-            }}>
-=======
             }}
           >
->>>>>>> Stashed changes
             <Button
               sx={{
                 background: ' #01022F',
