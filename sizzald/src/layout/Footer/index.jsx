@@ -37,7 +37,7 @@ export default function Footer() {
   const typography = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
+    fontSize: { xs: "18px", sm: "17px", md: "17px", lg: "20px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginBottom: "20px",
@@ -45,7 +45,7 @@ export default function Footer() {
     fontFamily: "Poppins",
   };
   const subnav = {
-    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "16px" },
+    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "13px" },
     fontWeight: 400,
     lineHeight: "28px",
     color: "#F2F2F2",
@@ -53,7 +53,7 @@ export default function Footer() {
     marginRight: "25px",
   };
   const aboutSubnev={
-    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "16px" },
+    fontSize: { xs: "12px", sm: "12px", md: "12px", lg: "13px" },
     fontWeight: 400,
     lineHeight: "28px",
     color: "#F2F2F2",
@@ -64,7 +64,7 @@ export default function Footer() {
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "20px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",
@@ -77,17 +77,18 @@ export default function Footer() {
     <footer>
 
    
-    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" }}}>
+    <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" },}}>
       <Box
         sx={{
           background: "rgba(43, 45, 80, 0.6)",
-          marginLeft: "20px",
+          marginLeft: "28px",
           // marginRight:'30px',
           display: "flex",
           flexDirection: "row",
           paddingLeft: "40px",
           justifyContent: "space-between",
           paddingBottom: "40px",
+          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
           // display:{xs:'none',sm:"none",md:"none",lg:"block"}
         }}
       >

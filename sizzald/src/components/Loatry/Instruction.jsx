@@ -7,9 +7,9 @@ function LotteryInfo() {
       <Box
         sx={{
           width: "50%",
-          background: "#2B2D50",
+          background: "rgba(43, 45, 80, 0.6)",
           borderRadius: "5px",
-          padding: "30px 20px",
+          padding: "25px 20px",
         }}
       >
         <Typography
@@ -21,6 +21,7 @@ function LotteryInfo() {
             letterSpacing: "1px",
             textAlign: "left",
             color: "#FFFFFF",
+            textTransform:"uppercase"
           }}
           variant="h6"
         >
@@ -29,7 +30,7 @@ function LotteryInfo() {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: "14px",
+            fontSize: "13px",
             fontWeight: "400",
             lineHeight: "28px",
             letterSpacing: "0.01em",
@@ -52,9 +53,9 @@ function LotteryInfo() {
       <Box
         sx={{
           width: "50%",
-          background: "#2B2D50",
+          background: "rgba(43, 45, 80, 0.6) ",
           borderRadius: "5px",
-          padding: "30px 20px",
+          padding: "25px 20px",
         }}
       >
         <Typography
@@ -66,6 +67,7 @@ function LotteryInfo() {
             letterSpacing: "1px",
             textAlign: "left",
             color: "#FFFFFF",
+            textTransform:"uppercase"
           }}
           variant="h6"
         >
@@ -74,7 +76,7 @@ function LotteryInfo() {
         <Typography
           sx={{
             fontFamily: "Poppins",
-            fontSize: "14px",
+            fontSize: "13px",
             fontWeight: "300",
             lineHeight: "28px",
             letterSpacing: "0.01em",
@@ -96,7 +98,7 @@ function LotteryInfo() {
           sx={{
             marginTop: "10px",
             fontFamily: "Poppins",
-            fontSize: "16px",
+            fontSize: "13px",
             fontWeight: "600",
             lineHeight: "24px",
             textAlign: "left",
@@ -104,15 +106,18 @@ function LotteryInfo() {
             borderRadius: "80px",
             padding: "10px 15px",
             background: "#00B252",
+            marginRight:"40px"
           }}
           variant="contained"
           endIcon={
             <ArrowForwardIcon
               sx={{
-                padding: "4px",
+                padding: "2px",
                 background: "#FFFFFF",
                 color: "#03FB75",
                 borderRadius: "50%",
+                fontSize:"2px"
+                
               }}
             />
           }

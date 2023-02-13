@@ -27,7 +27,10 @@ import {
 import ApiServices from "../services/ApiServices";
 import url from "../constants/urls";
 import { useEffect } from "react";
+import { setUser } from "../store/slices/userSlice";
+import { useDispatch } from "react-redux";
 const Signup = () => {
+  const dispatch=useDispatch();
   const { code } = useParams();
   const [input, setInput] = React.useState({
     email: '',
@@ -43,6 +46,10 @@ const Signup = () => {
   const handleSignup = () => {
     
     ApiServices.post(url.signup, input).then((res) => {
+      dispatch(setUser({
+        ...res?.data?.data?.user,
+        token:window.btoa(res?.data?.data?.token)
+      }))
       localStorage.setItem('uid',res?.data?.data?.user?._id);
       localStorage.setItem('auth', true)
 

@@ -64,8 +64,9 @@ const rows = [
   },
 ];
 const typo = {
-  fontSize: '16px',
-  fontWeight: 400,
+  fontSize: '14px',
+  fontWeight: 600,
+  letterSpacing:"1px",
   color: '#ffffff',
   padding: '0px',
   height: '40px',
@@ -95,7 +96,7 @@ export default function CustomizedTables() {
               <StyledTableCell
                 sx={{
                   minWidth: '124px',
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 400,
                   fontFamily: 'Poppins',
                   padding: '0px',
@@ -106,7 +107,7 @@ export default function CustomizedTables() {
               </StyledTableCell>
               <StyledTableCell
                 align='right'
-                sx={{ padding: '0px', height: '50px', paddingRight: '30px' }}
+                sx={{ padding: '0px', height: '50px', paddingRight: '30px',fontSize:"16px",fontWeight:'700',letterSpacing:"1px" }}
               >
                 Commission/Rewards
               </StyledTableCell>
@@ -119,13 +120,14 @@ export default function CustomizedTables() {
                   component='th'
                   scope='row'
                   align='left'
-                  sx={{ padding: '0px', paddingLeft: '25px' }}
+                  sx={{ padding:"15px 27px"}}
                 >
                   <Typography
                     sx={{
                       color: '#ffffff',
-                      fontSize: '16px',
-                      fontWeight: 400,
+                      fontSize: '14px',
+                      fontWeight: 600,
+                      letterSpacing:"1px",
                       fontFamily: 'Poppins',
                     }}
                   >
@@ -146,8 +148,9 @@ export default function CustomizedTables() {
                     <Typography
                       sx={{
                         color: '#ffffff',
-                        fontSize: '16px',
+                        fontSize: '14px',
                         fontWeight: 600,
+                        letterSpacing:"1px",
                         fontFamily: 'poppins',
                       }}
                     >

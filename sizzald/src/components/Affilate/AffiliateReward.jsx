@@ -9,19 +9,22 @@ import RightImg from "../../assets/RightImg.svg";
 import Table from "./TableAffiliate";
 
 import CallMadeIcon from "@mui/icons-material/CallMade";
+import { useSelector } from "react-redux";
 
-function AffiliateReward() {
+function AffiliateReward({reward}) {
+  const {user}=useSelector((state)=>state.user);
   return (
     <Box>
       <Typography
         sx={{
           fontFamily: "Poppins",
-          fontSize: "30px",
+          fontSize: "24px",
           fontWeight: "400",
           lineHeight: "40px",
           letterSpacing: "1px",
           textAlign: "center",
           color: "rgba(3, 251, 117, 1)",
+          
         }}
       >
         AFFILIATE
@@ -30,11 +33,12 @@ function AffiliateReward() {
           sx={{
             color: "#ffffff",
             fontFamily: "Poppins",
-            fontSize: "30px",
+            fontSize: "24px",
             fontWeight: "400",
             lineHeight: "40px",
             letterSpacing: "1px",
             textAlign: "center",
+            paddingLeft:"10px"
           }}
         >
           REWARD SYSTEM
@@ -43,22 +47,23 @@ function AffiliateReward() {
       <Typography
         sx={{
           fontFamily: "Poppins",
-          fontSize: "18px",
-          fontWeight: 500,
+          fontSize: "15px",
+          fontWeight: 600,
           lineHeight: "26px",
           letterSpacing: "0.01em",
           textAlign: "center",
-          width: "90%",
+          width: "58%",
           margin: "0 auto",
           color: "#ffffff",
           padding: "15px",
+        
         }}
       >
         BC.GAME sets up a reward of 1000 USD for each referral you invite in
         addition to commission. Click "Create Referral Code Now" and set sail on
         a new chapter on your journey of wealth immediately!
       </Typography>
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center",padding:"15px 0px" }}>
         <img style={{ margin: "0 auto" }} src={arrowGreenDown} alt="" />
         <Box sx={{ display: "flex", position: "relative" }}>
           <img
@@ -72,17 +77,17 @@ function AffiliateReward() {
               // marginTop: "15px",
               margin: "15px auto",
               background: "rgba(43, 45, 80, 0.6)",
-              padding: "15px 0px",
-              width: "35%",
+              padding: "20px 0px",
+              width: "26%",
               borderRadius: "8px",
             }}
           >
-            <img src={medal} alt="" />
+            <img style={{height:"60px"}} src={medal} alt="" />
             <Typography
               sx={{
-                padding: "0px 20px",
+                padding: "0 20px",
                 fontFamily: "Poppins",
-                fontSize: "30px",
+                fontSize: "26px",
                 fontWeight: "400",
                 lineHeight: " 40px",
                 letterSpacing: "1px",
@@ -120,7 +125,7 @@ function AffiliateReward() {
               <Typography
                 sx={{
                   fontFamily: "Poppins",
-                  fontSize: { lg: "26px", xl: "30px" },
+                  fontSize: { lg: "22px", xl: "26px" },
                   fontStyle: "italic",
                   fontWeight: 400,
                   lineHeight: "40px",
@@ -134,7 +139,7 @@ function AffiliateReward() {
               <Typography
                 sx={{
                   fontFamily: "Poppins",
-                  fontSize: { lg: "16px", xl: "18px" },
+                  fontSize: { lg: "12px", xl: "14px" },
                   fontWeight: 700,
                   lineHeight: "26px",
                   letterSpacing: "0.08em",
@@ -150,7 +155,7 @@ function AffiliateReward() {
                   sx={{
                     color: "rgba(251, 179, 21, 1)",
                     fontFamily: "Poppins",
-                    fontSize: { lg: "19px", xl: "30px" },
+                    fontSize: { lg: "19px", xl: "26px" },
                     fontStyle: "italic",
                     fontWeight: 400,
                     lineHeight: "40px",
@@ -158,7 +163,7 @@ function AffiliateReward() {
                     textAlign: "left",
                   }}
                 >
-                  $1,000.00
+                  ${user?.reward}.00
                 </Typography>
                 <Button
                   sx={{
@@ -170,8 +175,8 @@ function AffiliateReward() {
                     height: "44px",
                     // marginLeft: "7px",
                     fontFamily: "Poppins",
-                    fontSize: { lg: "12px", xl: "13px" },
-                    fontWeight: "700",
+                    fontSize: { lg: "10px", xl: "12px" },
+                    fontWeight: "500",
                     letterSpacing: "0.01em",
                     textAlign: "left",
                     marginLeft: "20px",
@@ -206,11 +211,11 @@ function AffiliateReward() {
               display: "flex",
             }}
           >
-            <Box sx={{ width: "70%" }}>
+            <Box sx={{ width: "65%" }}>
               <Typography
                 sx={{
                   fontFamily: "Poppins",
-                  fontSize: { lg: "26px", xl: "30px" },
+                  fontSize: { lg: "22px", xl: "26px" },
                   fontStyle: "italic",
                   fontWeight: 400,
                   lineHeight: "40px",
@@ -225,8 +230,9 @@ function AffiliateReward() {
               </Typography>
               <Typography
                 sx={{
+                  width:"90%",
                   fontFamily: "Poppins",
-                  fontSize: { lg: "16px", xl: "18px" },
+                  fontSize: { lg: "12px", xl: "14px" },
                   fontWeight: 700,
                   lineHeight: "26px",
                   letterSpacing: "0.01em",
@@ -247,13 +253,14 @@ function AffiliateReward() {
               // width: "97%",
               background: "#01022F",
               width: "90%",
-              height: "500px",
+              height: "450px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               margin: "0 auto",
               borderRadius: "8px",
               marginBottom: "20px",
+              marginTop:"13px"
             }}
           >
             <img style={{ width: "75%" }} src={RightImg} alt="" />

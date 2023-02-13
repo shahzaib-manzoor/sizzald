@@ -7,10 +7,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CustomCardTwoImg from "../../assets/customCardTwo.png";
-import { Avatar } from "@mui/material";
-import avator from "../../assets/avator.png";
+
 import IconButton from "@mui/material/IconButton";
-export default function CustomCardTwo({ img, name, balance, icon }) {
+export default function CustomCardTwo({ img, name, balance, icon,avator }) {
   return (
     <Card
       sx={{
@@ -18,7 +17,8 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
         // width: { xs: "95%", sm: "94%", md: "94%", lg: "94%", xl: "100%" },
         // width:"240px",
         background: "rgba(43, 45, 80, 1)",
-        margin: "4px",
+        margin: "12px 6px",
+        boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
         // paddingLeft:'20'
       }}
     >
@@ -41,7 +41,7 @@ export default function CustomCardTwo({ img, name, balance, icon }) {
       />
       <CardContent sx={style.cardFlex}>
         <Box sx={style.cardFlexTwo}>
-          <Avatar sx={style.cardAvatar} alt="Cindy Baker" src={avator} />
+          {avator}
           <Box sx={{ padding: "4px" }}>
             <Typography sx={style.cardTextName} component="div">
               {name}

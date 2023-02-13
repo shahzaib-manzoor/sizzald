@@ -4,11 +4,14 @@ import Limbo from "./Limbo";
 import LimboFeatures from "./LimboFeatures";
 import limbo from "../../../assets/limbo.png";
 
+
 const index = () => {
   return (
     <div>
       <Limbo />
       <LimboFeatures img={limbo} />
+      
+     
     </div>
   );
 };

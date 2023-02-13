@@ -9,6 +9,16 @@ import Roulette from "../../assets/roulette_rounded.png";
 import ultimateDice from "../../assets/ultimate_dice.png";
 import caveRounded from "../../assets/cave_rounded.png";
 import coinFlip from "../../assets/coinflip_rounded.png";
+import videoPoker from "../../assets/videoPoker_rounded.png";
+import kenoMultiplyer from "../../assets/kenoMultoiplayer_rounded.png";
+import mineIcon from "../../assets/mine.png"
+import baccaratIcon from "../../assets/baccarat_rounded.png"
+import ringOfFortune from "../../assets/ringOfFortune.png";
+import blackJack from "../../assets/blackJack.png";
+import hiloIcon from "../../assets/Hilo.png";
+import classicDiceIcon from "../../assets/classicDice.png";
+import wheelIcon from "../../assets/wheel.png";
+import towerOfLegend from "../../assets/towerOfLegend.svg";
 import { NavLink } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
@@ -105,7 +115,6 @@ const SubMenu = ({ item }) => {
     marginLeft: "10px",
   };
 
-
   const [gameNav, setGameNav] = useState(false);
   const [subnav, setSubnav] = useState(false);
 
@@ -114,7 +123,7 @@ const SubMenu = ({ item }) => {
     if (title === "Sizzld Games") {
       setGameNav(true);
     } else {
-      console.log("not sizzld");
+      // console.log("not sizzld");
     }
   };
   const sideData = [
@@ -199,22 +208,22 @@ const SubMenu = ({ item }) => {
       path: "/coinflip",
     },
     {
-      title: "Limbo",
+      title: "Video Poker",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={limboRounded}
+          src={videoPoker}
           alt=""
         />
       ),
       path: "/limbo",
     },
     {
-      title: "Crash",
+      title: "Keno Multiplayer",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={carshRounded}
+          src={kenoMultiplyer}
           alt=""
         />
       ),
@@ -222,66 +231,66 @@ const SubMenu = ({ item }) => {
     },
 
     {
-      title: "Keno",
+      title: "Mine",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={kenoRounded}
+          src={mineIcon}
           alt=""
         />
       ),
       path: "/keno",
     },
     {
-      title: "Hash Dice",
+      title: "Baccarat",
       icon: (
         <img
           style={{ height: "32px", width: "32px" }}
-          src={hashRounded}
+          src={baccaratIcon}
           alt=""
         />
       ),
       path: "/hashdice",
     },
     {
-      title: "Roulette",
+      title: "Ring Of Fortune",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={ringOfFortune} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Blackjack",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={blackJack} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Hilo",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={hiloIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Classic Dice",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={classicDiceIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Wheel",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={wheelIcon} alt="" />
       ),
       path: "/roulette",
     },
     {
-      title: "Roulette",
+      title: "Tower Of Legend",
       icon: (
-        <img style={{ height: "32px", width: "32px" }} src={Roulette} alt="" />
+        <img style={{ height: "32px", width: "32px" }} src={towerOfLegend} alt="" />
       ),
       path: "/roulette",
     },
@@ -314,10 +323,11 @@ const SubMenu = ({ item }) => {
                 sm: "none",
                 md: "none",
                 lg: "22%",
-                xl: "17%",
+                xl: "18%",
               },
               width: "15%",
-              height: "1000px",
+              height: "100vh",
+              minHeight:'100vh',
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
@@ -345,12 +355,12 @@ const SubMenu = ({ item }) => {
                     variant="h6"
                     sx={{
                       fontFamily: "Poppins",
-                      fontSize: "18px",
-                      fontWeight: 600,
+                      fontSize: "15px",
+                      fontWeight: 400,
                       lineHeight: "27px",
                       letterSpacing: "0em",
                       textAlign: "left",
-                      color: "#ffffff",
+                      color: '#ffffff',
                       paddingLeft: "10px",
                       transition: "all .3s",
                       "&:hover": {
@@ -373,29 +383,6 @@ const SubMenu = ({ item }) => {
           to={item.path ? item.path : ""}
           onClick={item.subNav && showSubnav}
         >
-          {/* <Box
-            sx={{
-              // background: 'rgba(95, 95, 111, 0.6)',
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              "&:hover": {
-                background: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "5px",
-              },
-              height: "46px",
-              paddingTop: "7px",
-              paddingBottom: "7px",
-            }}
-          > */}
-          {/* <Box
-              sx={{
-                display: "flex",
-                gap: 1,
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            > */}
           <Box
             sx={{
               display: "flex",
@@ -404,18 +391,20 @@ const SubMenu = ({ item }) => {
               gap: 2,
             }}
           >
-            {item.icon}
+           <img src={item.icon}></img>
             <Typography
               noWrap
               // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
               sx={{
+                 
                 // color: "#BDBDBD",
                 fontFamily: 'Poppins',
-                color: '#FFFFFF',
+                color: item.title ==="vip Club" ? '#FBB315':'#FFFFFF',
                 textTransform: "capitalize",
                 fontSize: "16px",
-                fontWeight: item.path === window.location.pathname ? 600 : 400,
+                fontWeight: item.path === window.location.pathname ? 600 :item.title ==="vip Club"?900: 400,
                 textDecoration: "none",
+                fontStyle:item.title ==="vip Club"?'italic': 'normal'
               }}
             >
               {item.title}
@@ -447,30 +436,11 @@ const SubMenu = ({ item }) => {
                   to={item.path}
                   key={`key${index}`}
                 >
-                  {/* <Box
-                    sx={{
-                      paddingLeft: "20px",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-
-                      // position:'relative',
-                      // marginBottom:"20px",
-
-                      "&:hover": {
-                        background: "rgba(255, 255, 255, 0.1)",
-                        borderRadius: "5px",
-                      },
-                      height: "60px",
-                    }}
-                  > */}
-                  {/* <Box sx={{position:'absolute',right:"40px"}}>
-                  <Typography>thhdhhf</Typography>
-                </Box> */}
-                  {item.icon}
+                 <img src={item.icon}></img>
                   <Typography
 
                     sx={{
+                      color:'#BDBDBD',
                       fontFamily: 'Poppins',
                       fontSize: "16px",
                       fontWeight:item.path === window.location.pathname ? 600 : 400,

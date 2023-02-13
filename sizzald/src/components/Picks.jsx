@@ -33,9 +33,9 @@ const Picks = () => {
     ],
   };
   return (
-    <Box>
+    <Box sx={{padding:"0px 20px"}}>
       <RecentBig settingCardTwo={settingCardTwo} sliderTwo={sliderTwo2} />
-      <Box sx={{ marginTop: "30px" }}>
+      <Box>
         <DetailedCard />
       </Box>
       <Network />

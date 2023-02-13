@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import affilateRocket from '../../assets/affilateRocket.svg';
 const SectionFour = () => {
   const typography = {
-    fontSize: '30px',
+    fontSize: '25px',
     fontweight: 400,
     lineHeight: '40px',
     textTransform: 'uppercase',
@@ -13,7 +13,7 @@ const SectionFour = () => {
     paddingLeft: '20px',
   };
   const typography2 = {
-    fontSize: '30px',
+    fontSize: '25px',
     fontweight: 400,
     lineHeight: '40px',
     textTransform: 'uppercase',
@@ -23,10 +23,10 @@ const SectionFour = () => {
     paddingBottom: '30px',
   };
   const typography3 = {
-    fontSize: '18px',
+    fontSize: '16px',
     fontweight: 700,
     lineHeight: '26px',
-    textTransform: 'uppercase',
+    // textTransform: 'uppercase',
     color: '#ffffff',
     fontFamily: 'Poppins',
     paddingLeft: '20px',
@@ -51,7 +51,7 @@ const SectionFour = () => {
             <Typography sx={typography3}>
               If you have any special offers regarding cooperation or you have
               access to a large audience.{' '}
-              <Typography>
+              <Typography sx={{ fontSize: '16px',fontweight: 700,lineHeight: '26px',color: '#ffffff',fontFamily: 'Poppins',}}>
                 Please feel free to contact our manager by Telegram. We're happy
                 to discuss individual terms of
               </Typography>

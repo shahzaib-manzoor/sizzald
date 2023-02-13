@@ -4,7 +4,7 @@ import price from '../../assets/price.svg';
 import fiveGold from '../../assets/fiveGold.svg';
 const SectionFiveCard = () => {
   const typo = {
-    fontSize: '30px',
+    fontSize: '26px',
     fontWeight: '400',
     fontFamily: 'Poppins',
     lineHeight: '40px',
@@ -14,7 +14,7 @@ const SectionFiveCard = () => {
     paddingBottom:'30px'
   };
   const typography = {
-    fontSize: '30px',
+    fontSize: '24px',
     fontweight: 400,
     lineHeight: '40px',
     textTransform: 'uppercase',
@@ -25,7 +25,7 @@ const SectionFiveCard = () => {
    
   };
   const typography2 = {
-    fontSize: '30px',
+    fontSize: '24px',
     fontweight: 400,
     lineHeight: '40px',
     textTransform: 'uppercase',
@@ -64,6 +64,7 @@ const SectionFiveCard = () => {
                 borderRadius: '8px',
                 marginLeft: '28px',
                 marginTop: '20px',
+                boxShadow: "0px 0px 6px #5F5F6F",
               }}
             >
               <Typography
@@ -73,7 +74,7 @@ const SectionFiveCard = () => {
                   fontWeight: 400,
                   lineHeight: '0px',
                   textAlign:'center',
-                  paddingTop:'30px'
+                  paddingTop:'30px',
                 }}
               >
                 {' '}
@@ -111,6 +112,7 @@ const SectionFiveCard = () => {
                 borderRadius: '8px',
                 marginLeft: '28px',
                 marginTop: '20px',
+                boxShadow: "0px 0px 6px #5F5F6F",
               }}
             >
               <Typography

@@ -12,10 +12,6 @@ const referralSchema = new Schema({
         type: String,
         default: "",
     },
-    referralCodeUsedBy: {
-        type: String,
-        default: "",
-    },
     referralCount: {
         type: Number,
         default: 0,
