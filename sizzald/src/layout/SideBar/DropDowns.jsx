@@ -23,14 +23,10 @@ import { NavLink } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
-    // paddingLeft: "45px",
     display: "flex",
     alignItems: "center",
-    // gap: 1,
     textDecoration: "none",
     color: "white",
-    // position:'relative',
-    // marginBottom:"20px",
     justifyContent: "space-between",
 
     "&:hover": {
