@@ -17,6 +17,7 @@ import Loatry from "../components/Loatry";
 import Limbo from "../components/SizzldGames/Limbo";
 import SizzldMainPage from "../components/SizzldMainPage";
 import Affilate from "../components/Affilate";
+import { appRoutes } from "../static/routeNames";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -28,55 +29,55 @@ const MainRoutes = {
       element:  <Dashboard />
     },
     {
-      path: "/picksforyou",
+      path: appRoutes.PicksForYou,
       element: <Picks />,
     },
     {
-      path: "/favourite",
+      path: appRoutes.Favourite,
       element: <Favourite />,
     },
     {
-      path: "/recent",
+      path: appRoutes.Recent,
       element: <RecentComp />,
     },
     {
-      path: "/slot",
+      path: appRoutes.Slot,
       element: <Slot />,
     },
     {
-      path: "/hotgame",
+      path: appRoutes.Hotgame,
       element: <HotGame />,
     },
     {
-      path: "/newrelease",
+      path: appRoutes.Newrelease,
       element: <NewRelease />,
     },
     {
-      path: "/highvolatility",
+      path:appRoutes.Highvolatility,
       element: <HighVolatility />,
     },
     {
-      path: "/featurebuyin",
+      path: appRoutes.Featurebuyin,
       element: <FeatureBuyIn />,
     },
     {
-      path: "/tablegame",
+      path: appRoutes.Tablegame,
       element: <TableGame />,
     },
     {
-      path: "/loatry",
+      path: appRoutes.Loatry,
       element: <Loatry />,
     },
     {
-      path: "/limbo",
+      path: appRoutes.Limbo,
       element: <Limbo />,
     },
     {
-      path: "/sizzldGames",
+      path: appRoutes.SizzldGames,
       element: <SizzldMainPage />,
     },
     {
-      path: "/affilate",
+      path: appRoutes.Affilate,
       element: <Affilate />,
     },
   ],
