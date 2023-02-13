@@ -8,18 +8,18 @@ import {
   Typography,
   Snackbar
 } from "@mui/material";
-import img from "../assets/background.png";
-import img2 from "../assets/backgroundSign.png";
+import img from "../../assets/background.png";
+import img2 from "../../assets/backgroundSign.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import img3 from '../assets/facebookicon.png'
-import img4 from '../assets/VectorA.png'
-import img5 from '../assets/Ellipse 175.png'
-import img6 from '../assets/fox 1.png'
-import SocialButton from "../ui-components/SocialButton";
+import img3 from '../../assets/facebookicon.png'
+import img4 from '../../assets/VectorA.png'
+import img5 from '../../assets/Ellipse 175.png'
+import img6 from '../../assets/fox 1.png'
+import SocialButton from "../../ui-components/SocialButton";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import Web3 from "web3";
-import WalletConnect from "../ui-components/WalletConnect";
+import WalletConnect from "../../ui-components/WalletConnect";
  
 
 import {
@@ -27,9 +27,9 @@ import {
   LoginSocialFacebook
 
 } from 'reactjs-social-login'
-import ApiServices from "../services/ApiServices";
-import url from "../constants/urls";
-import { setUser } from "../store/slices/userSlice";
+import ApiServices from "../../services/ApiServices";
+import url from "../../constants/urls";
+import { setUser } from "../../store/slices/userSlice";
 import { useDispatch } from "react-redux";
 
 const Signin = () => {
