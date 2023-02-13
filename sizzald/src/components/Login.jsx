@@ -163,15 +163,17 @@ const handleInput = (e) => {
         >
           <Box sx={{ mt: '60px' }}>
             <Typography
+            //  color={'primary'}
               sx={{
                 fontWeight: 700,
                 fontSize: { xs: "16px", sm: "18px", md: "30px", lg: "30px" },
-                color: "#ffffff",
+                color: "text.secondary",
+              //  color:'var(--primary-color)',
                 textShadow: "1px 2px 4px rgba(175, 175, 175, 0.18)",
                 textAlign: "center",
               }}
             >
-              BULID THE BEST
+              BULID THE BEST  
             </Typography>
             <Typography
               sx={{

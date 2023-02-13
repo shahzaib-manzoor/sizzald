@@ -9,3 +9,7 @@ body{
   }
    /* IE and Edge */
  /* Firefox */
+ :root {
+  --primary-color: red;
+  --color:#173A5E;
+ }
