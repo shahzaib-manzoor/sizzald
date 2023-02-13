@@ -132,10 +132,11 @@ export default function CustomizedTables() {
               background: '#45D91E',
               borderRadius: '62px',
               color: '#ffffff',
-              fontSize: '10px',
               fontWeight:"700",
               height: '38px',
-              width: '110px',
+              width: '123px',
+              fontSize:"14px",
+              fontStyle:"semi-bold"
             }}
           >
             latest bets
@@ -145,9 +146,10 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
-              fontSize: '10px',
               height: '38px',
-              width: "110px",
+              width: "135px",
+              fontSize:"14px",
+              fontStyle:"semi-bold"
             }}
           >
             High Rollers
@@ -157,9 +159,10 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
-              fontSize: '10px',
               height: '38px',
-              width: '110px',
+              width: '135px',
+              fontSize:"12px",
+              fontStyle:"semi-bold"
             }}
           >
             Wager Contest

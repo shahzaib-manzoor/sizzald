@@ -37,9 +37,7 @@ const Wheel = ({ spin, setSpin,setWin }) => {
 
     // Calculate the rotation angle
     const angle = (360 / prizes.length) * randomIndex;
-    console.log(angle);
-    setRotation(angle + 1800);
-
+    setRotation(angle + 360 * 5);
     // Update the rotation state
     let angleC = (360 / prizes.length) * randomIndex + 720 + 360 * 5;
     //angle + 720 + Math.floor(Math.random() * 360)

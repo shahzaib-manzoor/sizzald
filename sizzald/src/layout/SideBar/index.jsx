@@ -94,10 +94,15 @@ export default function SideBar() {
                   display: 'flex',
                   alignItems: 'center',
                   marginLeft: '10px',
-                }}
-              >
+                }}>
                 <Typography sx={vip}>My VIP </Typography>
-                <Typography sx={{ color: '#ffffff', marginLeft: '5px' }}>
+                <Typography
+                  sx={{
+                    color: '#ffffff',
+                    marginLeft: '5px',
+                    fontWeight: 600,
+                    fontStyle: 'italic',
+                  }}>
                   Perks{' '}
                 </Typography>
               </Box>
@@ -114,7 +119,7 @@ export default function SideBar() {
                 // background={"#4DF3E2"}
                 backgroundImage={`url(${firstCard})`}
                 unlocked={'unlocked'}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
               />
               <Card
                 text={'spin'}
@@ -123,7 +128,7 @@ export default function SideBar() {
                 backgroundImage={`url(${secondCard})`}
                 unlocked={'unlocked'}
                 marginRight={'10px'}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
                 // handleOpenSpin={handleOpenSpin}
                 // handleCloseSpin={handleCloseSpin}
               />
@@ -137,7 +142,7 @@ export default function SideBar() {
                 // }
                 unlocked={'vip 14'}
                 backgroundImage={`url(${cardThird})`}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
               />
               <Card
                 text={'rECHARGE'}
@@ -146,7 +151,7 @@ export default function SideBar() {
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardFour})`}
-                marginLeft={'-8px'}
+                marginLeft={'4px'}
                 // marginLeft={'10px'}
               />
             </Box>
@@ -162,8 +167,8 @@ export default function SideBar() {
                 marginLeft={{
                   xs: '2px',
                   sm: '2px',
-                  md: '2px',
-                  lg: '2px',
+                  md: '4px',
+                  lg: '4px',
                   xl: '-1px',
                 }}
               />
@@ -176,7 +181,7 @@ export default function SideBar() {
                 unlocked={'vip 22'}
                 marginRight={'10px'}
                 backgroundImage={`url(${cardSix})`}
-                marginLeft={'-6px'}
+                marginLeft={'4px'}
                 // marginLeft={'13px'}
               />
             </Box>
@@ -194,8 +199,8 @@ export default function SideBar() {
               color: '#FBB315',
               fontWeight: 900,
               textTransform: 'capitalize',
-            }}
-          >
+              fontStyle: 'italic',
+            }}>
             Refer and Earn
           </Typography>
         </Box>
@@ -207,8 +212,7 @@ export default function SideBar() {
             // height:'1500px'
             background: 'rgba(43, 45, 80, 0.6)',
             paddingBottom: '80px',
-          }}
-        >
+          }}>
           {SidebarData.map((item, index) => {
             return (
               <>
@@ -221,9 +225,8 @@ export default function SideBar() {
               borderRadius: '8px',
               border: '1px solid rgba(95, 95, 111, 0.6)',
               mt: '30px',
-              marginLeft:'15px'
-            }}
-          >
+              marginLeft: '15px',
+            }}>
             <Button
               sx={{
                 background: ' #01022F',
@@ -231,16 +234,14 @@ export default function SideBar() {
                 width: '123px',
                 height: '52px',
                 color: '#ffffff',
-              }}
-            >
+              }}>
               <Avatar
                 sx={{
                   background: '#ffffff',
                   marginRight: '5px',
                   width: '38%',
                   height: '35px',
-                }}
-              >
+                }}>
                 <DarkModeOutlinedIcon sx={{ color: 'black' }} />{' '}
               </Avatar>{' '}
               Dark
@@ -253,8 +254,7 @@ export default function SideBar() {
                 height: '52px',
                 color: '#ffffff',
                 border: '1px solid rgba(95, 95, 111, 0.6)',
-              }}
-            >
+              }}>
               {' '}
               <LightModeOutlinedIcon
                 sx={{ color: '#ffffff', marginRight: '10px' }}

@@ -64,7 +64,7 @@ export default function Footer() {
   const About = {
     color: "#ffffff",
     textTransform: "upperCase",
-    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "24px" },
+    fontSize: { xs: "18px", sm: "18px", md: "20px", lg: "20px" },
     fontWeight: 700,
     lineHeight: "150%",
     marginRight: "22px",
@@ -81,7 +81,7 @@ export default function Footer() {
       <Box
         sx={{
           background: "rgba(43, 45, 80, 0.6)",
-          marginLeft: "20px",
+          marginLeft: "28px",
           // marginRight:'30px',
           display: "flex",
           flexDirection: "row",

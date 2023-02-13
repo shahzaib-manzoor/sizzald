@@ -4,7 +4,7 @@ import NorthEastIcon from "@mui/icons-material/NorthEast";
 
 const CustomCard = ({ teamOne, vs, teamTwo, img, warIsOn }) => {
   return (
-    <Box sx={{ height: "240px",position:"relative",borderRadius:"8px",margin:"0px 8px" }}>
+    <Box sx={{ height: "230px",position:"relative",borderRadius:"8px",margin:"0px 8px" }}>
         <Box sx={{position:"absolute",background:"linear-gradient(357.95deg, rgba(0, 0, 0, 0.4) 32.88%, rgba(0, 0, 0, 0) 98.27%, rgba(0, 0, 0, 0) 98.27%);",width:"100%",height:"100%"}}  >
 
         </Box>

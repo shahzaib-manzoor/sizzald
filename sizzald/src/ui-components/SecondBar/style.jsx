@@ -8,7 +8,8 @@ export const buttonActive = {
   background: "rgba(255, 200, 72, 1)",
   fontWeight: "400",
   padding:"7px 13px",
-  fontSize: "9px",
+  fontSize: "16px",
+  fontStyle:"semi-bold",
 };
 export const buttonNotActive = {
   borderRadius: "50px",
@@ -16,9 +17,10 @@ export const buttonNotActive = {
   color: "rgba(255, 255, 255, 1)",
   fontWeight: "400",
   padding:"7px 13px",
-  fontSize: "9px",
+  fontSize: "16px",
   marginLeft: "8px",
   marginRight: "0px",
+  fontStyle:"semi-bold",
 };
 export const containerLeft = { width: { sx: "100%", md: "35%" } };
 export const containerRight = { width: { sx: "0", md: "40%" } };
