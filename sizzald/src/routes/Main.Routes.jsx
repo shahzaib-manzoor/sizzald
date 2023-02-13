@@ -1,7 +1,7 @@
-import { lazy } from "react";
-
-import Dashboard from "../components/Dashboard";
+import { lazy,Suspense } from "react";
+// const Dashboard=lazy(()=>import('../components/Dashboard'))
 // import Dashboard from "../components/Dashboard";
+import Dashboard from "../components/Dashboard";
 import Favourite from "../components/Favourite";
 import Picks from "../components/Picks";
 import Signup from "../components/Signup";
@@ -25,7 +25,7 @@ const MainRoutes = {
   children: [
     {
       path: "/",
-      element: <Dashboard />,
+      element:  <Dashboard />
     },
     {
       path: "/picksforyou",
