@@ -59,7 +59,7 @@ export const mainBox = {
   // marginRight:'10px'
 };
 export const typography = {
-  color: "#ffffff",
+  color: 'text.primary',
   textTransform: "uppercase",
   fontSize: " 14px",
   fontWeight: 600,
