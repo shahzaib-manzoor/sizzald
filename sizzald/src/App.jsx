@@ -19,7 +19,7 @@ function App() {
     },
     palette: {
       text: {
-        primary: '#173A5E',
+        primary: '#ffffff',
         secondary: '#ddad1e',
       },
       backgrounds:{

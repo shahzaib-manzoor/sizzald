@@ -167,7 +167,7 @@ const handleInput = (e) => {
               sx={{
                 fontWeight: 700,
                 fontSize: { xs: "16px", sm: "18px", md: "30px", lg: "30px" },
-                color: "text.secondary",
+                color: "text.primary",
               //  color:'var(--primary-color)',
                 textShadow: "1px 2px 4px rgba(175, 175, 175, 0.18)",
                 textAlign: "center",
