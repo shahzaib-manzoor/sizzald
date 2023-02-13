@@ -1,5 +1,6 @@
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import picksforyou from "../../assets/picksforyou.svg";
 import Rocket from "../../assets/Rocket.svg";
 import slots from "../../assets/slot.png";
@@ -31,7 +32,7 @@ export const SidebarData = [
     title: "casino",
     path: '/',
     icon: casino,
-    iconClosed: <ExpandMoreIcon />,
+    iconClosed: <ExpandLessIcon />,
     iconOpened: <ExpandMoreIcon />,
 
     subNav: [
@@ -142,17 +143,30 @@ export const SidebarData = [
   },
   {
     title: "languages",
-    path: '/languages',
+    path: '/',
     icon: (
-     
        languages
-      
-      
     ),
+    iconClosed: <ExpandLessIcon />,
+    iconOpened: <ExpandMoreIcon />,
+    subNav: [
+      {
+        title: "picks for you",
+        path: "/picksforyou",
+        icon:picksforyou,
+      },]
   },
   {
     title: "Sponsorships",
-    path: '/Sponsorships',
+    path: '/',
     icon: sponsership,
+    iconClosed: <ExpandLessIcon />,
+    iconOpened: <ExpandMoreIcon />,
+    subNav: [
+      {
+        title: "picks for you",
+        path: "/picksforyou",
+        icon:picksforyou,
+      },]
   },
 ];
