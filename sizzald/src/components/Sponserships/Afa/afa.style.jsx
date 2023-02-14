@@ -3,7 +3,6 @@ import afaCelebrete from "../../../assets/sponserships/afaCelebrete.svg";
 import afaPlayers from "../../../assets/sponserships/afaPlayers.svg";
 import afaWelcome from "../../../assets/sponserships/afaWelcome.svg";
 import afaGroup from "../../../assets/sponserships/afaGroup.svg";
-
 const bgImg = (img) => {
   return {
     backgroundImage: `url(${img})`,
