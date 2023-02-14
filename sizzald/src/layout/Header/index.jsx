@@ -32,6 +32,7 @@ import arrowDown from "../../assets/arrow-down.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import navIcon from "../../assets/navIcon.png";
+import GlobalChat from "./Popups/GlobalChat";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,8 +68,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
-    
-  
+
     [theme.breakpoints.up("sm")]: {
       width: "30ch",
     },
@@ -112,9 +112,9 @@ export default function PrimarySearchAppBar({
     setMobileMoreAnchorEl(event.currentTarget);
   };
   const handleLogout = () => {
-    localStorage.removeItem("auth")
-    navigate("/")
-   }
+    localStorage.removeItem("auth");
+    navigate("/");
+  };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -132,8 +132,8 @@ export default function PrimarySearchAppBar({
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem >Profile</MenuItem>
-      <MenuItem onClick={()=>handleLogout()}>Logout</MenuItem>
+      <MenuItem>Profile</MenuItem>
+      <MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
     </Menu>
   );
 
@@ -201,8 +201,7 @@ export default function PrimarySearchAppBar({
           // width: "99%",
           // borderRadius: "8px",
           // boxShadow: "0px 0px 6px #5F5F6F",
-          backgroundColor:'rgba(43, 45, 80, 0.6) !important'
-         
+          backgroundColor: "rgba(43, 45, 80, 0.6) !important",
         }}
       >
         <Toolbar sx={style.Toolbar}>
@@ -216,13 +215,17 @@ export default function PrimarySearchAppBar({
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerRadioButton}>
             <ButtonGroup
-              sx={{ borderRadius: "8px", border: "1px solid #2B2D50",marginLeft:"50px" }}
+              sx={{
+                borderRadius: "8px",
+                border: "1px solid #2B2D50",
+                marginLeft: "50px",
+              }}
             >
               <Button
                 sx={{
                   background: "#5842F4",
                   borderRadius: "8px",
-                  width: {lg:"90px",xl:"129px"},
+                  width: { lg: "90px", xl: "129px" },
                   height: "47px",
                   color: "#ffffff",
                 }}
@@ -233,7 +236,7 @@ export default function PrimarySearchAppBar({
                 sx={{
                   background: "#2B2D50",
                   borderRadius: "8px",
-                  width: {lg:"90px",xl:"129px"},
+                  width: { lg: "90px", xl: "129px" },
                   height: "47px",
                   color: "#ffffff",
                   border: "1px solid #2B2D50",
@@ -328,6 +331,7 @@ export default function PrimarySearchAppBar({
                   <Message />
                 </Badge>
               </IconButton>
+              <GlobalChat />
               <Button
                 className="!bg-clwhite"
                 sx={style.headerButton}
