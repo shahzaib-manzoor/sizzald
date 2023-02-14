@@ -133,9 +133,8 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               fontWeight:"700",
-              height: '38px',
-              width: '123px',
-              fontSize:"14px",
+              padding:{xs:"4px 12px",lg:"7px 13px"},
+              fontSize:{xs:"10px",lg:"14px"},
               fontStyle:"semi-bold"
             }}
           >
@@ -146,9 +145,8 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
-              height: '38px',
-              width: "135px",
-              fontSize:"14px",
+              fontSize:{xs:"10px",lg:"14px"},
+              padding:{xs:"4px 12px",lg:"7px 13px"},
               fontStyle:"semi-bold"
             }}
           >
@@ -159,9 +157,8 @@ export default function CustomizedTables() {
               borderRadius: '62px',
               color: '#ffffff',
               border: '1px solid rgba(3, 251, 117, 0.22)',
-              height: '38px',
-              width: '135px',
-              fontSize:"12px",
+              fontSize:{xs:"10px",lg:"14px"},
+              padding:{xs:"4px 12px",lg:"7px 13px"},
               fontStyle:"semi-bold"
             }}
           >

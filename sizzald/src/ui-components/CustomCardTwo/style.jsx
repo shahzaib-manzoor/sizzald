@@ -1,6 +1,5 @@
 export const cardTextName = {
-  // fontSize: "16px",
-  fontSize: {lg:"12px"},
+  fontSize: {xs:"12px",lg:"14px"},
   fontWeight: "400",
   lineHeight: "10px",
   color: "#ffffff",
@@ -9,19 +8,16 @@ export const cardTextName = {
 };
 export const cardTextPrice = {
   color: "rgba(3, 251, 117, 1)",
-  fontSize: {lg:"12px"},
+  fontSize: {xs:"12px",lg:"14px"},
   fontWeight: "400",
   lineHeight: "14px",
   fontFamily: "Poppins",
+  paddingTop:"2px"
 };
 
 export const cardFlex = {
   display: "flex",
   justifyContent: "space-between",
-  
-  // alignaItems: "flex-center",
-  // justifyContent: "space-between",
-
   backgroundColor: " rgba(61, 61, 61, 0.49) ",
   width: "95%",
   margin: "5px auto",
@@ -33,11 +29,15 @@ export const cardFlex = {
 
 export const cardFlexTwo = {
   display: "flex",
-  // alignaItems: "center",
   justifyContent: "space-between",
   alignItems:'center',
 };
 export const cardContentIconSize = {
-  //  fontSize: "14px"
   fontSize: "12px",
 };
+export const cardContainer ={
+  marginTop: "10px",
+  background: "rgba(43, 45, 80, 1)",
+  margin: "12px 6px",
+  boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
+} 

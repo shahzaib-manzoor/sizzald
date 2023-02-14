@@ -45,3 +45,23 @@ export const cardContentIcon = {
   marginRight: "12px",
 };
 export const cardContentIconSize = { fontSize: "10px" };
+export const cardContainer = {
+  height: { xs: "180px", lg: "230px" },
+  position: "relative",
+  borderRadius: "8px",
+  margin: "0px 8px",
+};
+export const cardOverlay = {
+  position: "absolute",
+  background: "linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))",
+  width: "100%",
+  height: "100%",
+};
+export const textContainer = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  position: "absolute",
+  bottom: "10px",
+  width: "100%",
+};
