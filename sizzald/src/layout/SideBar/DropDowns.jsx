@@ -23,14 +23,10 @@ import { NavLink } from "react-router-dom";
 
 const SubMenu = ({ item }) => {
   let subMenuStyle = {
-    // paddingLeft: "45px",
     display: "flex",
     alignItems: "center",
-    // gap: 1,
     textDecoration: "none",
     color: "white",
-    // position:'relative',
-    // marginBottom:"20px",
     justifyContent: "space-between",
 
     "&:hover": {
@@ -411,13 +407,16 @@ const SubMenu = ({ item }) => {
             </Typography>
           </Box>
           {/* </Box> */}
-
           <div>
-            {item.subNav && subnav
+          {item.subNav && item.iconOpened && subnav
+              ?item.iconClosed
+              :item.iconOpened
+               }
+            {/* {item.subNav && subnav
               ? item.iconOpened
               : item.subNav
                 ? item.iconClosed
-                : null}
+                : null} */}
           </div>
           {/* </Box> */}
         </NavLink>

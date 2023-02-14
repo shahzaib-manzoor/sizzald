@@ -14,8 +14,6 @@ export default function ThemeRoutes() {
   const isAuthenticated = localStorage.getItem("auth");
 
   let location = useLocation();
-  console.log(location);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);

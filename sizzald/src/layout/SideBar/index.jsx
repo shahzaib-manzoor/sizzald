@@ -102,7 +102,8 @@ export default function SideBar() {
                     marginLeft: '5px',
                     fontWeight: 600,
                     fontStyle: 'italic',
-                  }}>
+                  }}
+                >
                   Perks{' '}
                 </Typography>
               </Box>
@@ -226,7 +227,8 @@ export default function SideBar() {
               border: '1px solid rgba(95, 95, 111, 0.6)',
               mt: '30px',
               marginLeft: '15px',
-            }}>
+            }}
+          >
             <Button
               sx={{
                 background: ' #01022F',
