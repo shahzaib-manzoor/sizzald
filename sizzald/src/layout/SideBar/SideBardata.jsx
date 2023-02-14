@@ -26,6 +26,7 @@ import sponsership from "../../assets/sponsership.svg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import liveCasino from "../../assets/liveCasino.png";
 import promotion from '../../assets/promotion.png'
+import { appRoutes } from "../../static/routeNames";
 
 export const SidebarData = [
   {
@@ -143,30 +144,43 @@ export const SidebarData = [
   },
   {
     title: "languages",
-    path: '/',
+    path: '/languages',
     icon: (
        languages
     ),
-    iconClosed: <ExpandLessIcon />,
-    iconOpened: <ExpandMoreIcon />,
+    hover:true,
+    iconClosed: <ExpandMoreIcon />,
+    iconOpened: <ArrowForwardIosIcon sx={{fontSize:"15px"}}/>,
     subNav: [
       {
-        title: "picks for you",
+        title: "English",
         path: "/picksforyou",
-        icon:picksforyou,
+        // icon:picksforyou,
       },]
   },
   {
     title: "Sponsorships",
-    path: '/',
+    path: appRoutes.sponsership.root,
     icon: sponsership,
     iconClosed: <ExpandLessIcon />,
     iconOpened: <ExpandMoreIcon />,
     subNav: [
       {
-        title: "picks for you",
-        path: "/picksforyou",
-        icon:picksforyou,
-      },]
+        title: "AFA",
+        path: appRoutes.sponsership.afa,
+        // icon:picksforyou,
+      },
+      {
+        title: "Cloud 9",
+        path: appRoutes.sponsership.cloud9,
+        // icon:picksforyou,
+      },
+      {
+        title: "David Luiz",
+        path: appRoutes.sponsership.davidLuiz,
+        // icon:picksforyou,
+      },
+    
+    ]
   },
 ];
