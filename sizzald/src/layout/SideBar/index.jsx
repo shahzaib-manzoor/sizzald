@@ -43,6 +43,7 @@ import { height } from '@mui/system';
 import { useSelector } from 'react-redux';
 import ReferPopup from './ReferPopup';
 import ReferSpin from './ReferSpin';
+import TaskPopUp from './TaskPopUp';
 import { useState } from 'react';
 
 export default function SideBar() {
@@ -85,6 +86,7 @@ export default function SideBar() {
         handleCloseSpin={handleCloseSpin}
         open={openSpin}
       />
+      <TaskPopUp/>
       <HiddenScroll sx={{ ...style }} className='child'>
         <Box sx={firstChild}>
           <Box>
