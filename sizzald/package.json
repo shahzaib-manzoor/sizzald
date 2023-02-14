@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.4",
+    "@mui/styles": "^5.11.7",
     "@reduxjs/toolkit": "^1.9.2",
     "@walletconnect/types": "^2.3.0",
     "@web3-react/core": "^6.1.9",

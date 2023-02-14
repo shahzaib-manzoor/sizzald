@@ -93,7 +93,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -120,7 +120,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -149,7 +149,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -176,7 +176,7 @@ export default function Dashboard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -198,7 +198,7 @@ export default function Dashboard() {
   };
 
   return (
-    <section style={{padding:"0px 20px"}}>
+    <section style={{padding:"0px 25px"}}>
       <Box
         sx={{
           textAlign: "right",

@@ -3,7 +3,8 @@ import detailCard from "../../assets/detailCard.png";
 import { Typography } from "@mui/material";
 import ButtonDetailedCard from "./ButtonDetailedCard";
 import feedback from "../../assets/feedback.png";
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
+import * as style from "./style";
 const DetailedCard = () => {
   const { drawer } = useSelector((state) => state.layout);
   const detailCardImgStyle = !drawer ? {
@@ -20,51 +21,19 @@ const DetailedCard = () => {
     height: { xl: "58%" }
   }
   return (
-    <Box sx={{ display: "flex", gap: "15px", padding: "20px 0px",margin:"0px 8px" }}>
+    <Box sx={style.container}>
       <Box
-        sx={{
-          width: "50%",
-          position: "relative",
-          background: "rgba(43, 45, 80, 0.6)",
-          borderRadius: "8px",
-          padding: {
-            xs: "10px 15px 10px 15px",
-            lg: "15px 20px 10px 20px",
-            xl: "20px 25px 10px 25px ",
-          },
-          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
-
-        }}
+        sx={style.detailCard}
       >
         <Typography
-          sx={{
-            fontSize: { lg: "14px", xl: "17px" },
-            fontWeight: "700",
-            lineHeight: "40px",
-            letterSpacing: "1px",
-            textAlign: "left",
-            fontFamily: "Poppins",
-            color: "#ffffff",
-            paddingTop: "4px",
-            paddingBottom: "8px",
-          }}
+          sx={style.detailCardHeading}
         >
           Crypto Online Casino
         </Typography>
-
         <Typography
           variant="h6"
           className="detailCardText"
-          sx={{
-            fontSize: {
-              xs: "16px",
-              sm: "16px",
-              md: "16x",
-              lg: "14px",
-              xl: "15px",
-            },
-            color: "#E0E0E0",
-          }}
+          sx={style.detailCardParagraph}
         >
           Casinos online have not always been around, but we can safely say that
           online casinos have been used a lot since they came on the market. And
@@ -77,26 +46,16 @@ const DetailedCard = () => {
             <Typography
               variant="h6"
               className="detailCardText"
-              sx={{
-                fontSize: {
-                  xs: "16px",
-                  sm: "16px",
-                  md: "16x",
-                  lg: "14px",
-                  xl: "15px",
-                },
-                color: "#E0E0E0",
-                whiteSpace: "pre-line",
-              }}
+              sx={style.detailCardParagraphPre}
             >
-              {` Players are always looking for something 
-             new, which will help make the gaming 
-             experience so much better and more 
+              {` Players are always looking for something
+             new, which will help make the gaming
+             experience so much better and more
              accessible. Allowing the player to focus
              on the absolute fun of a casino, that's
              right,the games themselves.`}
             </Typography>
-            <Box sx={{ paddingTop: "40px", paddingBottom: "7px" }}>
+            <Box sx={style.detailCardButton}>
               <ButtonDetailedCard color="#8C57F5" />
             </Box>
           </Box>
@@ -112,33 +71,10 @@ const DetailedCard = () => {
         </Box>
       </Box>
       <Box
-        sx={{
-          width: "50%",
-          padding: {
-            xs: "10px 15px 10px 15px",
-            lg: "15px 20px 10px 20px",
-            xl: "20px 25px 10px 25px ",
-          },
-          boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
-
-          background: "rgba(43, 45, 80, 0.6)",
-          borderRadius: "8px",
-          marginTop: { xs: "15px", md: "0px" },
-          position: "relative",
-        }}
+        sx={style.detailCard}
       >
         <Typography
-          sx={{
-            fontFamily: "Poppins",
-            fontSize: { lg: "14px", xl: "17px" },
-            fontWeight: "700",
-            lineHeight: "40px",
-            letterSpacing: "1px",
-            textAlign: "left",
-            color: "white",
-            paddingBottom: "20px",
-            textTransform: "uppercase",
-          }}
+          sx={style.detailCardHeadingTwo}
           variant="h6"
         >
           Help us to improve Your Experience
@@ -158,46 +94,23 @@ const DetailedCard = () => {
         />
         <Box>
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
+            sx={style.detailCardFlex}
           >
             <Typography
-              sx={{
-                fontSize: { lg: "13px", xl: "16px" },
-                fontWeight: "400",
-                lineHeight: "28px",
-                letterSpacing: "0.01em",
-                textAlign: "left",
-                color: "#E0E0E0",
-                paddingTop: { xs: "5px", md: "10px", lg: "15px" },
-              }}
+              sx={style.detailCardText}
             >
               Now get rewarded for your valuable feedback.
             </Typography>
-            <Box sx={{ padding: { lg: "17px 0px", xl: "25px 0px" } }}>
+            <Box sx={style.detailCardPadding}>
               <ButtonDetailedCard color="rgba(49, 167, 57, 1)" />
             </Box>
             <Typography
-              sx={{
-                color: "white ",
-                fontWeight: "600",
-                fontSize: { lg: "13px", xl: "16px" },
-                paddingBottom:'10px'
-                // paddingTop: { xs: "5px", md: "20px", lg: "15px", xl: "62px" },
-                // paddingBottom: { xs: "10px", md: "0px" },
-              }}
+              sx={style.detailCardEmailUs}
               variant="h6"
             >
               Or Email us:
               <Typography
-                sx={{
-                  color: "rgba(3, 251, 117, 1)",
-                  fontWeight: "400",
-                  paddingLeft: "5px",
-                 
-                }}
+                sx={style.detailCardEmail}
                 variant="span"
               >
                 feedback@Sizzldgame.com
@@ -205,12 +118,7 @@ const DetailedCard = () => {
             </Typography>
           </Box>
           <Box
-            sx={{
-              position: "absolute",
-              right: "0",
-              bottom: "0",
-              display: { xs: "none", sm: "none", md: "none", lg: "block" },
-            }}
+            sx={style.DetailedCardImageBottom}
           >
             <img className="imgRight" src={feedback} alt="" />
           </Box>
@@ -219,5 +127,4 @@ const DetailedCard = () => {
     </Box>
   );
 };
-
 export default DetailedCard;
