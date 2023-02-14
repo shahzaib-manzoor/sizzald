@@ -143,30 +143,43 @@ export const SidebarData = [
   },
   {
     title: "languages",
-    path: '/',
+    path: '/languages',
     icon: (
        languages
     ),
-    iconClosed: <ExpandLessIcon />,
-    iconOpened: <ExpandMoreIcon />,
+    hover:true,
+    iconClosed: <ExpandMoreIcon />,
+    iconOpened: <ArrowForwardIosIcon sx={{fontSize:"15px"}}/>,
     subNav: [
       {
-        title: "picks for you",
+        title: "English",
         path: "/picksforyou",
-        icon:picksforyou,
+        // icon:picksforyou,
       },]
   },
   {
     title: "Sponsorships",
-    path: '/',
+    path: '/sponserships',
     icon: sponsership,
     iconClosed: <ExpandLessIcon />,
     iconOpened: <ExpandMoreIcon />,
     subNav: [
       {
-        title: "picks for you",
-        path: "/picksforyou",
-        icon:picksforyou,
-      },]
+        title: "AFA",
+        path: "/sponserships/afa",
+        // icon:picksforyou,
+      },
+      {
+        title: "Cloud 9",
+        path: "/sponserships/cloud9",
+        // icon:picksforyou,
+      },
+      {
+        title: "David Luiz",
+        path: "/sponserships/davidLuiz",
+        // icon:picksforyou,
+      },
+    
+    ]
   },
 ];

@@ -29,6 +29,14 @@ const MainRoutes = {
       element:  <Dashboard />
     },
     {
+      path: "/languages",
+      element:  <Dashboard />
+    },
+    {
+      path: "/sponserships/*",
+      element:  <Dashboard />
+    },
+    {
       path: appRoutes.PicksForYou,
       element: <Picks />,
     },
