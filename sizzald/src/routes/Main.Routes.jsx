@@ -18,6 +18,7 @@ import Limbo from "../components/SizzldGames/Limbo";
 import SizzldMainPage from "../components/SizzldMainPage";
 import Affilate from "../components/Affilate";
 import { appRoutes } from "../static/routeNames";
+import Afa from "../components/Sponserships/Afa/Afa";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -28,14 +29,7 @@ const MainRoutes = {
       path: "/",
       element:  <Dashboard />
     },
-    {
-      path: "/languages",
-      element:  <Dashboard />
-    },
-    {
-      path: "/sponserships/*",
-      element:  <Dashboard />
-    },
+   
     {
       path: appRoutes.PicksForYou,
       element: <Picks />,
@@ -87,6 +81,18 @@ const MainRoutes = {
     {
       path: appRoutes.Affilate,
       element: <Affilate />,
+    },
+    {
+      path: "/languages",
+      element:  <Dashboard />
+    },
+    {
+      path: appRoutes.sponsership.root,
+      element:  <Dashboard />
+    },
+    {
+      path: appRoutes.sponsership.afa,
+      element:  <Afa/>
     },
   ],
 };
