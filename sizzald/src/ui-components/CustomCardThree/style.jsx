@@ -1,6 +1,5 @@
-import { makeStyles } from "@mui/styles";
-
-export const customCardThreeStyle = makeStyles({
+ 
+export const customCardThreeStyle =  {
   cardContainer: {
     width: "100%",
     background: "rgba(43, 45, 80, 0.6)",
@@ -11,4 +10,4 @@ export const customCardThreeStyle = makeStyles({
     borderRadius: "8px",
   },
   container: { margin: "0px 8px" },
-});
+};
