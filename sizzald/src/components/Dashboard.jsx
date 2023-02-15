@@ -8,22 +8,22 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import questionMark from "../assets/question-mark-circle.png";
 import arrowIcon from ".././assets/arrow.png";
-import Keno from ".././assets/keno.svg" 
-import videoPoker from ".././assets/videoPoker.svg"
-import Baccarat from ".././assets/baccarat.svg"
-import hillo from "../assets/hillo.svg"
-import blackJack from ".././assets/blackJack.svg"
-import crash from ".././assets/crash.svg"
-import limbo from ".././assets/limbo.svg"
-import wheel from ".././assets/wheel.svg"
+import Keno from ".././assets/keno.svg";
+import videoPoker from ".././assets/videoPoker.svg";
+import Baccarat from ".././assets/baccarat.svg";
+import hillo from "../assets/hillo.svg";
+import blackJack from ".././assets/blackJack.svg";
+import crash from ".././assets/crash.svg";
+import limbo from ".././assets/limbo.svg";
+import wheel from ".././assets/wheel.svg";
 import ultimateDice from ".././assets/ultimateDice.svg";
-import ringOfFortune from "../assets/ringOfFortune.svg"
-import kenoMultiplayer from ".././assets/kenoMultiplayer.svg"
-import caveOfPlunder from "./../assets/caveOfPlunder.svg"
-import coinFlip from "./../assets/coinFlip.svg"
-import plinko from "./../assets/plinko.svg"  
-import mine from "./../assets/mine.svg"
-import towerOfLegend from "./../assets/towerOfLegend.svg"
+import ringOfFortune from "../assets/ringOfFortune.svg";
+import kenoMultiplayer from ".././assets/kenoMultiplayer.svg";
+import caveOfPlunder from "./../assets/caveOfPlunder.svg";
+import coinFlip from "./../assets/coinFlip.svg";
+import plinko from "./../assets/plinko.svg";
+import mine from "./../assets/mine.svg";
+import towerOfLegend from "./../assets/towerOfLegend.svg";
 import { Avatar } from "@mui/material";
 
 import avator from ".././assets/avator.png";
@@ -54,7 +54,6 @@ export default function Dashboard() {
   const sliderSix = React.useRef(null);
   const sliderSeven = React.useRef(null);
 
-   
   var settingCardOne = {
     slidesToShow: 5,
 
@@ -76,14 +75,13 @@ export default function Dashboard() {
         settings: {
           slidesToShow: 3,
         },
-      },{
+      },
+      {
         breakpoint: 2000,
         settings: {
           slidesToShow: 4,
         },
       },
-      
-     
     ],
   };
   var settingCardTwo = {
@@ -108,8 +106,6 @@ export default function Dashboard() {
           slidesToShow: 5,
         },
       },
-      
-     
     ],
   };
   var settingCardThree = {
@@ -135,10 +131,7 @@ export default function Dashboard() {
           slidesToShow: 5,
         },
       },
-      
-     
     ],
-   
   };
   var settingCardFour = {
     slidesToShow: 6,
@@ -164,8 +157,6 @@ export default function Dashboard() {
           slidesToShow: 5,
         },
       },
-      
-     
     ],
   };
   var settingCardFive = {
@@ -182,7 +173,13 @@ export default function Dashboard() {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
         },
       },
       {
@@ -191,14 +188,11 @@ export default function Dashboard() {
           slidesToShow: 5,
         },
       },
-      
-     
     ],
-   
   };
 
   return (
-    <section style={{padding:"0px 25px"}}>
+    <section style={{ padding: "0px 25px" }}>
       <Box
         sx={{
           textAlign: "right",
@@ -307,8 +301,8 @@ export default function Dashboard() {
       </CustomCarousal>
       <Box
         sx={{
-          marginTop:"20px",
-                    textAlign: "right",
+          marginTop: "20px",
+          textAlign: "right",
           padding: { xs: "10px 8px", lg: "10px 8px" },
           display: "flex",
           justifyContent: "space-between",
@@ -362,23 +356,25 @@ export default function Dashboard() {
         carousalRef={sliderTwo}
         settingCard={settingCardTwo}
       >
-         <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
           img={coinFlip}
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -387,16 +383,18 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -405,16 +403,18 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -423,34 +423,38 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
-         <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance="$ 5346362"
           img={blackJack}
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -459,16 +463,18 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -477,16 +483,18 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
         <CustomCardTwo
           name="Classic Dice"
@@ -495,22 +503,23 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={arrowIcon} />
           }
-          avator = {<Avatar
-            sx={{
-              height: { xs: "26px", lg: "28px" },
-              width: { xs: "26px", lg: "28px" },
-              marginRight: "4px",
-              marginLeft: { lg: "3px", xl: "7px" },
-            }}
-            alt="Cindy Baker"
-            src={avator}
-          />}
+          avator={
+            <Avatar
+              sx={{
+                height: { xs: "26px", lg: "28px" },
+                width: { xs: "26px", lg: "28px" },
+                marginRight: "4px",
+                marginLeft: { lg: "3px", xl: "7px" },
+              }}
+              alt="Cindy Baker"
+              src={avator}
+            />
+          }
         />
       </CustomCarousal>
-      <Box sx={{ marginTop:"5px",}} >
+      <Box sx={{ marginTop: "5px" }}>
         <Typography
           sx={{
-           
             fontSize: { xs: "14px", lg: "17px" },
             fontFamily: "Poppins",
             fontWeight: "700",
@@ -528,7 +537,6 @@ export default function Dashboard() {
       </Box>
       <Box
         sx={{
-         
           textAlign: "right",
           padding: { xs: "10px 8px", lg: "10px 8px" },
           display: "flex",
@@ -574,7 +582,7 @@ export default function Dashboard() {
             }}
             variant="span"
           >
-             {`All 24 `}
+            {`All 24 `}
             <Typography
               sx={{
                 color: "#ffffff",
@@ -667,7 +675,8 @@ export default function Dashboard() {
           icon={
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
-        /> <CustomCardTwo
+        />{" "}
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={ultimateDice}
@@ -699,11 +708,6 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-
-
-
-
-
         <CustomCardTwo
           name="Classic Dice"
           balance=""
@@ -736,7 +740,7 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-         <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={blackJack}
@@ -768,7 +772,6 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-
       </CustomCarousal>
       <Box
         sx={{
@@ -776,7 +779,7 @@ export default function Dashboard() {
           padding: { xs: "8px 8px", lg: "8px 8px" },
           display: "flex",
           justifyContent: "space-between",
-          marginTop:"10px",
+          marginTop: "10px",
         }}
       >
         <Typography
@@ -848,7 +851,7 @@ export default function Dashboard() {
         carousalRef={sliderFour}
         settingCard={settingCardFour}
       >
-              <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={coinFlip}
@@ -880,7 +883,7 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-              <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={ultimateDice}
@@ -912,7 +915,7 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-    <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={Keno}
@@ -944,11 +947,6 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-
-
-
-
-       
       </CustomCarousal>
       <Box
         sx={{
@@ -1013,67 +1011,23 @@ export default function Dashboard() {
           img={gameProvider1}
           marginRight="20px"
         />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider2}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider3}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider4}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider5}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider6}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider1}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider2}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider3}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider4}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider5}
-        />
-        <CustomCardThree
-          name="Mr SCHEMER"
-          balance=""
-          img={gameProvider6}
-        />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider2} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider3} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider4} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider5} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider6} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider1} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider2} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider3} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider4} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider5} />
+        <CustomCardThree name="Mr SCHEMER" balance="" img={gameProvider6} />
       </CustomCarousal>
       <Lobby />
       <Box
         sx={{
-          marginTop:"20px",
-                    textAlign: "right",
+          marginTop: "20px",
+          textAlign: "right",
           padding: { xs: "10px 8px", lg: "10px 8px" },
           display: "flex",
           justifyContent: "space-between",
@@ -1127,7 +1081,7 @@ export default function Dashboard() {
         carousalRef={sliderSeven}
         settingCard={settingCardTwo}
       >
-         <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={coinFlip}
@@ -1159,7 +1113,7 @@ export default function Dashboard() {
             <img style={{ height: "26px", width: "26px" }} src={questionMark} />
           }
         />
-         <CustomCardTwo
+        <CustomCardTwo
           name="Classic Dice"
           balance=""
           img={blackJack}

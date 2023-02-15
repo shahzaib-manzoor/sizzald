@@ -24,9 +24,6 @@ import cardFour from '../../assets/cardFour.png';
 import cardFive from '../../assets/cardFive.png';
 import cardSix from '../../assets/cardSix.png';
 import arrowplane from '../../assets/arrowplane.svg';
-import group from '../../assets/group.svg';
-import gold from '../../assets/gold.svg';
-import spinner from '../../assets/spiner.svg';
 import icon from '../../assets/coins.svg';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
@@ -43,11 +40,18 @@ import { height } from '@mui/system';
 import { useSelector } from 'react-redux';
 import ReferPopup from './ReferPopup';
 import ReferSpin from './ReferSpin';
+import TaskPopUp from './TaskPopUp';
+import BonusPop from './BonusPop';
 import { useState } from 'react';
 
 export default function SideBar() {
-  const [open, setOpen] = useState(false);
-  const [openSpin, setOpenSpin] = useState(false);
+  const [model, setModel] = useState({
+    referModel: false,
+    spinModel: false,
+    taskModel: false,
+    bonusModel:false
+  });
+  // const [openSpin, setOpenSpin] = useState(false);
   //   const styles = {
   //     sidebar: {
   //         overflow: 'auto',
@@ -69,22 +73,39 @@ export default function SideBar() {
     scrollbar-width: none; /* Firefox */
   `;
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const handleOpenSpin = () => setOpenSpin(true);
-  const handleCloseSpin = () => setOpenSpin(false);
+  // const handleOpenSpin = () => setOpenSpin(true);
+  // const handleCloseSpin = () => setOpenSpin(false);
+  const modelOpenhandler = (name) => {
+    console.log(name);
+    let obj = model;
+    obj[name] = true;
+    setModel({ ...obj });
+  };
+  const modelClosehandler = (name) => {
+    let obj = model;
+    obj[name] = false;
+    setModel({ ...obj });
+  };
   return (
     <div style={{ position: 'relative' }}>
       <ReferPopup
-        handleOpen={handleOpen}
-        handleClose={handleClose}
-        open={open}
+        handleOpen={() => modelOpenhandler('referModel')}
+        handleClose={() => modelClosehandler('referModel')}
+        open={model?.referModel}
       />
       <ReferSpin
-        handleOpenSpin={handleOpenSpin}
-        handleCloseSpin={handleCloseSpin}
-        open={openSpin}
+        handleOpen={() => modelOpenhandler('spinModel')}
+        handleClose={() => modelClosehandler('spinModel')}
+        open={model?.spinModel}
       />
+      <TaskPopUp
+        handleOpen={() => modelOpenhandler('taskModel')}
+        handleClose={() => modelClosehandler('taskModel')}
+        open={model.taskModel}
+      />
+      <BonusPop  handleOpen={() => modelOpenhandler('bonusModel')}
+        handleClose={() => modelClosehandler('bonusModel')}
+        open={model.bonusModel}/>
       <HiddenScroll sx={{ ...style }} className='child'>
         <Box sx={firstChild}>
           <Box>
@@ -94,7 +115,8 @@ export default function SideBar() {
                   display: 'flex',
                   alignItems: 'center',
                   marginLeft: '10px',
-                }}>
+                }}
+              >
                 <Typography sx={vip}>My VIP </Typography>
                 <Typography
                   sx={{
@@ -121,6 +143,8 @@ export default function SideBar() {
                 backgroundImage={`url(${firstCard})`}
                 unlocked={'unlocked'}
                 marginLeft={'4px'}
+                handleOpen={() => modelOpenhandler('taskModel')}
+                handleClose={() => modelClosehandler('taskModel')}
               />
               <Card
                 text={'spin'}
@@ -130,8 +154,8 @@ export default function SideBar() {
                 unlocked={'unlocked'}
                 marginRight={'10px'}
                 marginLeft={'4px'}
-                // handleOpenSpin={handleOpenSpin}
-                // handleCloseSpin={handleCloseSpin}
+                handleOpen={() => modelOpenhandler('spinModel')}
+                handleClose={() => modelClosehandler('spinModel')}
               />
             </Box>
             <Box sx={{ display: 'flex', mt: '10px' }}>
@@ -172,6 +196,8 @@ export default function SideBar() {
                   lg: '4px',
                   xl: '-1px',
                 }}
+                handleOpen={() => modelOpenhandler('bonusModel')}
+                handleClose={() => modelClosehandler('bonusModel')}
               />
               <Card
                 text={'bONUS'}
@@ -189,10 +215,10 @@ export default function SideBar() {
           </Box>
         </Box>
         {/* second div */}
-        <Box sx={secondChild} onClick={handleOpen}>
+        <Box sx={secondChild} onClick={() => modelOpenhandler('referModel')}>
           <img
             src={icon}
-            alt=''
+            // alt=''
             style={{ maxWidth: '100%', marginLeft: '15px' }}
           />
           <Typography
@@ -201,7 +227,8 @@ export default function SideBar() {
               fontWeight: 900,
               textTransform: 'capitalize',
               fontStyle: 'italic',
-            }}>
+            }}
+          >
             Refer and Earn
           </Typography>
         </Box>
@@ -213,7 +240,8 @@ export default function SideBar() {
             // height:'1500px'
             background: 'rgba(43, 45, 80, 0.6)',
             paddingBottom: '80px',
-          }}>
+          }}
+        >
           {SidebarData.map((item, index) => {
             return (
               <>
@@ -236,14 +264,16 @@ export default function SideBar() {
                 width: '123px',
                 height: '52px',
                 color: '#ffffff',
-              }}>
+              }}
+            >
               <Avatar
                 sx={{
                   background: '#ffffff',
                   marginRight: '5px',
                   width: '38%',
                   height: '35px',
-                }}>
+                }}
+              >
                 <DarkModeOutlinedIcon sx={{ color: 'black' }} />{' '}
               </Avatar>{' '}
               Dark
@@ -256,7 +286,8 @@ export default function SideBar() {
                 height: '52px',
                 color: '#ffffff',
                 border: '1px solid rgba(95, 95, 111, 0.6)',
-              }}>
+              }}
+            >
               {' '}
               <LightModeOutlinedIcon
                 sx={{ color: '#ffffff', marginRight: '10px' }}
