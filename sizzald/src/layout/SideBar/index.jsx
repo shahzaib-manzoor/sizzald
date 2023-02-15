@@ -42,6 +42,7 @@ import ReferPopup from './ReferPopup';
 import ReferSpin from './ReferSpin';
 import TaskPopUp from './TaskPopUp';
 import BonusPop from './BonusPop';
+import BonusSimplePop from './BonusSimplePop';
 import { useState } from 'react';
 
 export default function SideBar() {
@@ -49,7 +50,8 @@ export default function SideBar() {
     referModel: false,
     spinModel: false,
     taskModel: false,
-    bonusModel:false
+    bonusModel: false,
+    bousSimple: false,
   });
   // const [openSpin, setOpenSpin] = useState(false);
   //   const styles = {
@@ -103,9 +105,16 @@ export default function SideBar() {
         handleClose={() => modelClosehandler('taskModel')}
         open={model.taskModel}
       />
-      <BonusPop  handleOpen={() => modelOpenhandler('bonusModel')}
+      <BonusPop
+        handleOpen={() => modelOpenhandler('bonusModel')}
         handleClose={() => modelClosehandler('bonusModel')}
-        open={model.bonusModel}/>
+        open={model.bonusModel}
+      />
+      <BonusSimplePop
+        handleOpen={() => modelOpenhandler('bousSimple')}
+        handleClose={() => modelClosehandler('bousSimple')}
+        open={model.bousSimple}
+      />
       <HiddenScroll sx={{ ...style }} className='child'>
         <Box sx={firstChild}>
           <Box>
@@ -209,6 +218,8 @@ export default function SideBar() {
                 marginRight={'10px'}
                 backgroundImage={`url(${cardSix})`}
                 marginLeft={'4px'}
+                handleOpen={() => modelOpenhandler('bousSimple')}
+                handleClose={() => modelClosehandler('bousSimple')}
                 // marginLeft={'13px'}
               />
             </Box>

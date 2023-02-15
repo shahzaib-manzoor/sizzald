@@ -108,16 +108,16 @@ export default function TaskPopUp({ handleOpen, handleClose, open }) {
                   </Box>
                   <Box sx={{ mt: '25px' }}>
                     <Box>
-                      <Image src={firstBoxTask}></Image>
+                      <img src={firstBoxTask} style={Styles.img}></img>
                     </Box>
                     <Box>
-                      <Image src={firstBoxTask}></Image>
+                    <img src={firstBoxTask} style={Styles.img}></img>
                     </Box>
                     <Box>
-                      <Image src={firstBoxTask}></Image>
+                    <img src={firstBoxTask} style={Styles.img}></img>
                     </Box>
                     <Box>
-                      <Image src={firstBoxTask}></Image>
+                    <img src={firstBoxTask} style={Styles.img}></img>
                     </Box>
                   </Box>
                 </Container>

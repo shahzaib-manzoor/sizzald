@@ -28,6 +28,17 @@ export const Styles = {
     marginTop: '5px',
     boxShadow:'1px 1px 10px rgba(255, 1, 62, 0.18)'
   },
+  secondBoxbonus: {
+    width: '351px',
+    height: '86px',
+    backgroundColor: 'rgba(14, 6, 61, 0.3)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '6.58px',
+    marginTop: '5px',
+    boxShadow:'1px 1px 10px rgba(255, 1, 62, 0.18)'
+  },
   taskHub: {
     backgroundImage: `url(${TaskHub})`,
     backgroundPosition: 'center',
@@ -190,7 +201,8 @@ export const Styles = {
     fontFamily: 'Poppins',
     color: '#ffffff',
     lineHeight: '26PX',
-    paddingTop:'10px'
+    paddingTop:'10px',
+    paddingBottom:'10px'
     
  },
  li:{
@@ -201,12 +213,120 @@ export const Styles = {
   lineHeight: '26PX',
   paddingTop:'10px'
  },
+ sizzld:{
+  fontSize: '30px',
+  fontWeight: 700,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '40PX',
+
+  textTransform:"uppercase",
+  textShadow:'1px 2px 4px rgba(175, 175, 175, 0.18)'
+ },
+ sizzld2:{
+  fontSize: '16px',
+  fontWeight: 400,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '26PX',
+  textShadow:'1px 2px 4px rgba(175, 175, 175, 0.18)',mt:'20px'
+ },
+ sizzld3:{
+  fontSize: '20px',
+  fontWeight: 700,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '26PX',
+  textShadow:'1px 2px 4px rgba(175, 175, 175, 0.18)',
+  paddingTop: '20px'
+ },
+ sizzld4:{
+  fontSize: '20px',
+  fontWeight: 600,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '26PX',
+  textShadow:'1px 2px 4px rgba(175, 175, 175, 0.18)',
+  textAlign:'center'
+ },
  li2:{
   fontSize: '15px',
   fontWeight: 300,
   fontFamily: 'Poppins',
   color: '#ffffff',
   lineHeight: '26PX',
+
  
+ },
+ unlockSizzld:{
+  fontSize: '20px',
+  fontWeight: 700,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '40PX',
+
+ 
+ },
+ unlockSizzld5:{
+  fontSize: '20px',
+  fontWeight: 700,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '40PX',
+  textTransform:'uppercase',
+  mt:'20px'
+
+ 
+ },
+ unlockSizzld3:{
+  fontSize: '20px',
+  fontWeight: 700,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '40PX',
+  mt:'15px'
+
+ 
+ },
+ unlockSizzld2:{
+  fontSize: '16px',
+  fontWeight: 400,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '26PX',
+
+ 
+ },
+ unlockSizzld6:{
+  fontSize: '16px',
+  fontWeight: 400,
+  fontFamily: 'Poppins',
+  color: '#ffffff',
+  lineHeight: '26PX',
+
+ 
+ },
+ img:{
+  objectFit:'cover',width:'100%',height:'100%'
+ },
+ img2:{
+  objectFit:'contain',width:'100%',height:'100%'
+ },
+ bonusFlex:{
+  display: 'flex', justifyContent: 'space-between',
+  mt:'35px'
+ },
+ unlockBox:{
+  bakcgorund:'rgba(14, 6, 61, 0.3)',
+  borderRadius:'6.58px',
+  boxShadow: '1px 1px 10px rgba(255, 1, 62, 0.18)',mt:'20px'
+ },
+ amountUnlock:{
+  background:'rgba(14, 6, 61, 0.3)',
+  borderRadius:'8px',
+  width:'100%',
+  height:'54px',
+  display:'flex',
+  alignItems: 'center',justifyContent:'center',mt:'15px'
  }
 };
