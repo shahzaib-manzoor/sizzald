@@ -3,7 +3,6 @@ import cloud9Celebrete from "../../../assets/sponserships/cloud9Celebrete.svg";
 import cloud9Players from "../../../assets/sponserships/cloud9Players.svg";
 import cloud9Welcome from "../../../assets/sponserships/cloud9Welcome.svg";
 import cloud9Group from "../../../assets/sponserships/cloud9group.svg";
-
 const bgImg = (img) => {
   return {
     backgroundImage: `url(${img})`,
