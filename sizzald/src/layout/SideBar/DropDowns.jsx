@@ -112,6 +112,8 @@ const SubMenu = ({ item }) => {
   };
 
   const [gameNav, setGameNav] = useState(false);
+  const [languageNav, setlanguageNav] = useState(false);
+
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
@@ -291,6 +293,31 @@ const SubMenu = ({ item }) => {
       path: "/roulette",
     },
   ];
+
+  const languages= [
+    {
+      title: "English",
+      // icon: (
+      //   <img
+      //     style={{ height: "32px", width: "32px" }}
+      //     src={limboRounded}
+      //     alt=""
+      //   />
+      // ),
+      // path: "/limbo",
+    },
+    {
+      title: "German",
+      // icon: (
+      //   <img
+      //     style={{ height: "32px", width: "32px" }}
+      //     src={limboRounded}
+      //     alt=""
+      //   />
+      // ),
+      // path: "/limbo",
+    },
+  ]
   const HiddenScroll = styled(Box)`
     ::-webkit-scrollbar {
       display: none;
@@ -313,7 +340,7 @@ const SubMenu = ({ item }) => {
               position: "fixed",
               top: "8.5%",
               right: "0",
-              
+
               left: {
                 xs: "none",
                 sm: "none",
@@ -323,7 +350,7 @@ const SubMenu = ({ item }) => {
               },
               width: "15%",
               height: "100vh",
-              minHeight:'100vh',
+              minHeight: '100vh',
               background: "rgba(43, 45, 80, 1)",
               borderRadius: "8px",
               overflowX: "hidden",
@@ -346,7 +373,77 @@ const SubMenu = ({ item }) => {
                     padding: "13px 44px 13px 20px",
                   }}
                 >
-                  {item.icon}
+                  {item?.icon}
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontFamily: "Poppins",
+                      fontSize: "15px",
+                      fontWeight: 400,
+                      lineHeight: "27px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: '#ffffff',
+                      paddingLeft: "10px",
+                      transition: "all .3s",
+                      "&:hover": {
+                        fontSize: "20px",
+                      },
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Box>
+              </NavLink>
+            ))}
+          </HiddenScroll>
+        </div>
+      )}
+
+{languageNav && (
+        <div
+          onMouseOver={() => setlanguageNav(true)}
+          onMouseOut={() => setlanguageNav(false)}
+        >
+          <HiddenScroll
+            sx={{
+              position: "fixed",
+              top: "8.5%",
+              right: "0",
+
+              left: {
+                xs: "none",
+                sm: "none",
+                md: "none",
+                lg: "22%",
+                xl: "18%",
+              },
+              width: "10%",
+              height: "fit-content",
+              minHeight: '100vh',
+              background: "rgba(43, 45, 80, 1)",
+              borderRadius: "8px",
+              overflowX: "hidden",
+              overflowY: "auto",
+              // paddingTop: "20px",
+              // paddingBottom: "80px",
+              // marginBottom: "40px",
+              "&:lastChild": {
+                marginBottom: "50px",
+                color: "red",
+              },
+            }}
+          >
+            {languages?.map((item, index) => (
+              <NavLink style={{ textDecoration: "none" }} to={item?.path}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    padding: "13px 44px 13px 20px",
+                  }}
+                >
+                  {item?.icon}
                   <Typography
                     variant="h6"
                     sx={{
@@ -377,7 +474,9 @@ const SubMenu = ({ item }) => {
         <NavLink
           style={({ isActive }) => (isActive ? activeMenuStyle : menuStyle)}
           to={item.path ? item.path : ""}
-          onClick={item.subNav && showSubnav}
+          onClick={item.subNav && !item.hover && showSubnav }
+          // onMouseOver={ () =>item.hover && setlanguageNav(true)}
+          // onMouseOut={() =>item.hover && setlanguageNav(false)}
         >
           <Box
             sx={{
@@ -387,33 +486,35 @@ const SubMenu = ({ item }) => {
               gap: 2,
             }}
           >
-           <img src={item.icon}></img>
+            <img src={item.icon}></img>
             <Typography
               noWrap
               // style={({ isActive }) => isActive ? activeTypography : notActiveTypography}
               sx={{
-                 
                 // color: "#BDBDBD",
                 fontFamily: 'Poppins',
-                color: item.title ==="vip Club" ? '#FBB315':'#FFFFFF',
+                color: item.title === "vip Club" ? '#FBB315' : '#FFFFFF',
                 textTransform: "capitalize",
                 fontSize: "16px",
-                fontWeight: item.path === window.location.pathname ? 600 :item.title ==="vip Club"?900: 400,
+                fontWeight: item.path === window.location.pathname ? 600 : item.title === "vip Club" ? 900 : 400,
                 textDecoration: "none",
-                fontStyle:item.title ==="vip Club"?'italic': 'normal'
+                fontStyle: item.title === "vip Club" ? 'italic' : 'normal'
               }}
             >
               {item.title}
             </Typography>
           </Box>
           {/* </Box> */}
-
           <div>
-            {item.subNav && subnav
+            {item.subNav && item.iconOpened && subnav
+              ? item.iconClosed
+              : item.iconOpened
+            }
+            {/* {item.subNav && subnav
               ? item.iconOpened
               : item.subNav
                 ? item.iconClosed
-                : null}
+                : null} */}
           </div>
           {/* </Box> */}
         </NavLink>
@@ -427,19 +528,19 @@ const SubMenu = ({ item }) => {
               >
                 <NavLink
                   style={({ isActive }) =>
-                    isActive ? { ...subMenuActiveStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "45px" } : { ...subMenuStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "45px" }
+                    isActive ? { ...subMenuActiveStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "50px" } : { ...subMenuStyle, paddingLeft: item?.title === "Sizzld Games" ? "38px" : "45px" }
                   }
                   to={item.path}
                   key={`key${index}`}
                 >
-                 <img src={item.icon}></img>
+                  <img src={item?.icon?item?.icon:''}></img>
                   <Typography
 
                     sx={{
-                      color:'#BDBDBD',
+                      color: window.location.pathname ? '#ffffff' : '#BDBDBD',
                       fontFamily: 'Poppins',
                       fontSize: "16px",
-                      fontWeight:item.path === window.location.pathname ? 600 : 400,
+                      fontWeight: item.path === window.location.pathname ? 600 : 400,
                       textTransform: "capitalize",
                       flexGrow: 1,
                       marginLeft: "10px",

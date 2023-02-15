@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import IconButton from "@mui/material/IconButton";
+import * as style from "./style"
 
 function ButtonDetailedCard({ color, margin }) {
   return (
@@ -9,7 +10,6 @@ function ButtonDetailedCard({ color, margin }) {
         background: color,
         borderRadius: "50px",
         boxShadow: "0px 4px 4px 0px rgba(5, 5, 5, 0.25)",
-        // marginTop: { sx: "10px", lg: "10px", xl: "30px" },
         padding: "5px 10px",
         height: "37px",
       }}

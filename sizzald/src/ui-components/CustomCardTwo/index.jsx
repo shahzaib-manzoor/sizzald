@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import CustomCardTwoImg from "../../assets/customCardTwo.png";
 
 import IconButton from "@mui/material/IconButton";
-export default function CustomCardTwo({ img, name, balance, icon,avator }) {
+export default function CustomCardTwo({ img, name, balance, icon, avator }) {
   return (
     <Card
       sx={{
@@ -43,12 +43,8 @@ export default function CustomCardTwo({ img, name, balance, icon,avator }) {
         <Box sx={style.cardFlexTwo}>
           {avator}
           <Box sx={{ padding: "4px" }}>
-            <Typography sx={style.cardTextName} component="div">
-              {name}
-            </Typography>
-            <Typography sx={style.cardTextPrice} component="div">
-              {balance}
-            </Typography>
+            <Typography sx={style.cardTextName}>{name}</Typography>
+            <Typography sx={style.cardTextPrice}>{balance}</Typography>
           </Box>
         </Box>
         <Box sx={{ marginRight: "6px" }}>{icon}</Box>

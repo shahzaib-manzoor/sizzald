@@ -40,7 +40,7 @@ const style = {
 
 };
 
-export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
+export default function BasicModal({ handleOpen, handleClose, open }) {
   const [spin, setSpin] = useState(false);
   const [win, setWin] = useState(null);
   const [show, setShow] = useState(false);
@@ -60,7 +60,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
       <Modal
         open={open}
         onClose={()=>{
-          handleCloseSpin();
+          handleClose();
         }}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
@@ -87,7 +87,7 @@ export default function BasicModal({ handleOpen, handleCloseSpin, open }) {
                 }}
                 src={close}
                 alt=''
-                onClick={handleCloseSpin}
+                onClick={handleClose}
               />
             </Box>
             <Box
