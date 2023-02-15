@@ -81,8 +81,15 @@ export default function TemporaryDrawer() {
     ) {
       return;
     }
+    const Appbar = document.getElementById("Appbar");
 
     setState({ ...state, [anchor]: open });
+    console.log(state);
+    {
+      state.right
+        ? (Appbar.style.position = "fixed")
+        : (Appbar.style.position = "static");
+    }
   };
 
   const list = (anchor) => (
@@ -142,15 +149,7 @@ export default function TemporaryDrawer() {
               <img style={style.emoji} src={emoji} alt="" />
             </IconButton>
           </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "0 auto",
-              display: "flex",
-              justifyContent: "space-between",
-              paddingTop: "10px",
-            }}
-          >
+          <Box sx={style.flexBottom}>
             <Box sx={style.chatImgBottom}>
               <img src={drop} alt="" />
               <img src={angle} alt="" />
@@ -170,6 +169,8 @@ export default function TemporaryDrawer() {
           <IconButton
             onClick={toggleDrawer(anchor, true)}
             sx={{
+              position: "relative",
+              zIndex: "12330",
               marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
               height: "40px",
               width: "40px",
@@ -186,6 +187,7 @@ export default function TemporaryDrawer() {
           </IconButton>
 
           <Drawer
+            // sx={{ zIndex: "1200" }}
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}

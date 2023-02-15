@@ -7,7 +7,7 @@ export const chatContainer = {
 };
 export const chatSection = {
   position: "absolute",
-  top: "7%",
+  top: "8%",
   left: "5%",
   width: "85%",
   height: "90%",
@@ -118,4 +118,11 @@ export const chatMessg = {
   borderRadius: "6px",
   color: "rgba(3, 251, 117, 1)",
   paddingRight: "6px",
+};
+export const flexBottom = {
+  width: "95%",
+  margin: "0 auto",
+  display: "flex",
+  justifyContent: "space-between",
+  paddingTop: "10px",
 };

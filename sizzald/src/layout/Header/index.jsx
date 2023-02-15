@@ -13,7 +13,7 @@ import {
   Avatar,
   ButtonGroup,
 } from "@mui/material";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import * as style from "./style/style";
 import searchIcon from "../../assets/searchIcon.png";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,15 +21,14 @@ import EmailIcon from "@mui/icons-material/Email";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/More";
-import Message from "@mui/icons-material/Message";
 // import logo from "../../assets/sizzld-logo.png";
-import logo from "../../assets/logo1.png";
+import logo from "../../assets/logo.svg";
 
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import navIcon from "../../assets/navIcon.png";
 import GlobalChat from "./Popups/GlobalChat";
@@ -192,15 +191,9 @@ export default function PrimarySearchAppBar({
   return (
     <Box sx={style.containerNav}>
       <AppBar
+        id="Appbar"
         sx={{
-          // margin: "20px 10px",
           padding: "0px",
-          // top: "20px",
-          // left: "50%",
-          // transform: "translateX(-50%)",
-          // width: "99%",
-          // borderRadius: "8px",
-          // boxShadow: "0px 0px 6px #5F5F6F",
           backgroundColor: "rgba(43, 45, 80, 0.6) !important",
         }}
       >
