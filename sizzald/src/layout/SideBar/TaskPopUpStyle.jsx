@@ -62,10 +62,13 @@ export const Styles = {
     fontFamily: 'Poppins ',
     textTransform: 'uppercase',
     fontSize: '22px ',
-    mt:'30px',
+    mt:'19px',
  
     // textAlign: 'center',
     fontWeight: 500 ,
+  },
+  display:{
+    display:'none'
   },
   aboutVip: {
     color: '#03FB75',
@@ -132,6 +135,14 @@ export const Styles = {
     borderColor: 'rgba(43, 45, 80, 1)',
     borderRadius: '8px',
     color: '#ffffff',
+    fontSize: '16px',
+    fontWeight: 500,
+    fontFamily: 'Poppins',
+    textTransform: 'capitalize',
+  },
+  toggle:{
+    background:'#5842F4',
+    color:"#ffffff",
     fontSize: '16px',
     fontWeight: 500,
     fontFamily: 'Poppins',
@@ -307,7 +318,8 @@ export const Styles = {
  
  },
  img:{
-  objectFit:'cover',width:'100%',height:'100%'
+  objectFit:'cover',width:'100%',height:'100%',
+  display:'block'
  },
  img2:{
   objectFit:'contain',width:'100%',height:'100%'
@@ -328,5 +340,42 @@ export const Styles = {
   height:'54px',
   display:'flex',
   alignItems: 'center',justifyContent:'center',mt:'15px'
+ },
+ mainStyle:{
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 530,
+  height: '90vh',
+  //   bgcolor: "background.paper",
+
+  background: 'rgba(14, 6, 61, 0.3)',
+  boxShadow: '1px 1px 10px rgba(255, 1, 62, 0.18)',
+  backdropFilter: 'blur(50px)',
+  p: 5,
+  borderRadius: '8px',
+  //   border: "none",
+  outline: 'none',
+  padding: '20px',
+ },
+ mainStyle2:{
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 530,
+  height: '60vh',
+  //   bgcolor: "background.paper",
+
+  background: 'rgba(14, 6, 61, 0.3)',
+  boxShadow: '1px 1px 10px rgba(255, 1, 62, 0.18)',
+  backdropFilter: 'blur(50px)',
+  p: 5,
+  borderRadius: '8px',
+  //   border: "none",
+  outline: 'none',
+  padding: '20px',
  }
+
 };

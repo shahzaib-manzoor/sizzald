@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import close from '../../assets/close.svg';
+import taskhubSecond from '../../assets/taskhubSecond.svg';
 import Modal from '@mui/material/Modal';
 import { useEffect, useState } from 'react';
 import ApiServices from '../../services/ApiServices';
@@ -14,30 +15,14 @@ import firstBoxTask from '../../assets/firstBoxTask.svg';
 import { borderRadius } from '@mui/system';
 import Image from 'mui-image';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 530,
-  height: '90vh',
-  //   bgcolor: "background.paper",
-
-  background: 'rgba(14, 6, 61, 0.3)',
-  boxShadow: '1px 1px 10px rgba(255, 1, 62, 0.18)',
-  backdropFilter: 'blur(50px)',
-  p: 5,
-  borderRadius: '8px',
-  //   border: "none",
-  outline: 'none',
-  padding: '20px',
-  //   border: "2px solid",
-
-  //   borderImageSource:
-  //     "linear-gradient(235.94deg, #FF6B2C 16.21%, #BF4B5A 47.23%, #B102CD 94.02%)",
-};
-
 export default function TaskPopUp({ handleOpen, handleClose, open }) {
+  const [color, setColor] = useState(false);
+  const changeHandler = () => {
+    setColor(true);
+  };
+  const changeColorHandler = () => {
+    setColor(false);
+  };
   return (
     <div>
       {/* <Button onClick={handleOpen}>Open modal</Button> */}
@@ -47,7 +32,7 @@ export default function TaskPopUp({ handleOpen, handleClose, open }) {
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style}>
+        <Box sx={color ? Styles.mainStyle2 : Styles.mainStyle}>
           <Box
             sx={{
               width: '100%',
@@ -93,8 +78,18 @@ export default function TaskPopUp({ handleOpen, handleClose, open }) {
                   <Box sx={Styles.containerFirstFlex}>
                     <Box>
                       <ButtonGroup sx={Styles.buttonGroup}>
-                        <Button sx={Styles.firstButton}>Daily Task</Button>
-                        <Button sx={Styles.secondButton}>weekly task</Button>
+                        <Button
+                          sx={color ? Styles.secondButton : Styles.firstButton}
+                          onClick={changeColorHandler}
+                        >
+                          Daily Task
+                        </Button>
+                        <Button
+                          sx={color ? Styles.toggle : Styles.secondButton}
+                          onClick={changeHandler}
+                        >
+                          weekly task
+                        </Button>
                       </ButtonGroup>
                     </Box>
                     <Box>
@@ -108,25 +103,34 @@ export default function TaskPopUp({ handleOpen, handleClose, open }) {
                   </Box>
                   <Box sx={{ mt: '25px' }}>
                     <Box>
-                      <img src={firstBoxTask} style={Styles.img}></img>
+                      {color ? (
+                        <img src={taskhubSecond} style={Styles.img}></img>
+                      ) : (
+                        <img src={firstBoxTask} style={Styles.img}></img>
+                      )}
                     </Box>
                     <Box>
-                    <img src={firstBoxTask} style={Styles.img}></img>
+                      <img
+                        src={firstBoxTask}
+                        style={color ? Styles.display : Styles.img}
+                      ></img>
                     </Box>
                     <Box>
-                    <img src={firstBoxTask} style={Styles.img}></img>
+                      <img
+                        src={firstBoxTask}
+                        style={color ? Styles.display : Styles.img}
+                      ></img>
                     </Box>
                     <Box>
-                    <img src={firstBoxTask} style={Styles.img}></img>
+                      <img
+                        src={firstBoxTask}
+                        style={color ? Styles.display : Styles.img}
+                      ></img>
                     </Box>
                   </Box>
                 </Container>
               </Box>
-              <Typography
-                sx={Styles.expires}
-              >
-                Expires in 16:59:56
-              </Typography>
+              <Typography sx={Styles.expires}>Expires in 16:59:56</Typography>
             </Box>
           </Box>
         </Box>
