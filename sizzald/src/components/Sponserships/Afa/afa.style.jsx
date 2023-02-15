@@ -82,6 +82,7 @@ export const useStyle = {
         lineHeight: "90px",
         color: "#FFFFFF",
         textAlign: 'center'
+        //jjj
       },
       cryptoTxt: {
         fontFamily: "Poppins",
