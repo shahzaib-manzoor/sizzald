@@ -3,7 +3,7 @@ export const containerNav = {
   width: "100%",
   flexGrow: 1,
   padding: "0px !impotant",
-  backgroundColor:'none'
+  backgroundColor: "none",
 };
 
 export const Toolbar = {
@@ -50,4 +50,3 @@ export const headerButtonIcon = {
   width: "14px",
 };
 export const headerDNone = { display: "none" };
- 
