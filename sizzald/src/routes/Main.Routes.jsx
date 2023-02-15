@@ -19,6 +19,8 @@ import SizzldMainPage from "../components/SizzldMainPage";
 import Affilate from "../components/Affilate";
 import { appRoutes } from "../static/routeNames";
 import Afa from "../components/Sponserships/Afa/Afa";
+import Cloud9 from "../components/Sponserships/Cloud9/Cloud9";
+import DavidLuiz from "../components/Sponserships/davidLuiz/DavidLuiz";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -93,6 +95,14 @@ const MainRoutes = {
     {
       path: appRoutes.sponsership.afa,
       element:  <Afa/>
+    },
+    {
+      path: appRoutes.sponsership.cloud9,
+      element:  <Cloud9/>
+    },
+    {
+      path: appRoutes.sponsership.davidLuiz,
+      element:  <DavidLuiz/>
     },
   ],
 };

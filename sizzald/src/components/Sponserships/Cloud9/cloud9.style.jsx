@@ -1,8 +1,8 @@
-import afaBanner from "../../../assets/sponserships/afaBanner.svg";
-import afaCelebrete from "../../../assets/sponserships/afaCelebrete.svg";
-import afaPlayers from "../../../assets/sponserships/afaPlayers.svg";
-import afaWelcome from "../../../assets/sponserships/afaWelcome.svg";
-import afaGroup from "../../../assets/sponserships/afaGroup.svg";
+import cloud9banner from "../../../assets/sponserships/cloud9banner.svg";
+import cloud9Celebrete from "../../../assets/sponserships/cloud9Celebrete.svg";
+import cloud9Players from "../../../assets/sponserships/cloud9Players.svg";
+import cloud9Welcome from "../../../assets/sponserships/cloud9Welcome.svg";
+import cloud9Group from "../../../assets/sponserships/cloud9Group.svg";
 
 const bgImg = (img) => {
   return {
@@ -21,8 +21,9 @@ export const useStyle = {
   sponserContainer: {
     color: "white",
   },
+
   banner: {
-    ...bgImg(afaBanner),
+    ...bgImg(cloud9banner),
     width: "100%",
     height: "350px",
   },
@@ -39,6 +40,7 @@ export const useStyle = {
     letterSpacing: " 0.01em",
     color: "#FFFFFF",
     textTransform: 'uppercase'
+
   },
   normalText: {
     fontFamily: "Poppins",
@@ -52,12 +54,12 @@ export const useStyle = {
   gridimg1: {
     width: "100%",
     height: "100%",
-    ...bgImg(afaCelebrete),
+    ...bgImg(cloud9Celebrete),
   },
   gridimg2: {
     width: "100%",
     height: "100%",
-    ...bgImg(afaPlayers),
+    ...bgImg(cloud9Players),
   },
   last: {
     width: "100%",
@@ -73,7 +75,7 @@ export const useStyle = {
     justifyContent: "space-around",
     alignItems: "center",
     flexDirection: "column",
-    ...bgImg(afaWelcome),
+    ...bgImg(cloud9Welcome),
     content: {
       welcomeTxt: {
         fontFamily: "Poppins",
@@ -92,7 +94,7 @@ export const useStyle = {
         lineHeight: "60px",
         color: "#00FF11",
       },
-      groupImgSrc:afaGroup,
+      groupImgSrc:cloud9Group,
       groupImg:{
         height:"100%",
         width:'100%',

@@ -4,15 +4,23 @@ export default function AfaComp() {
   return (
     <>
       <Box sx={useStyle.sponserContainer}>
-        <Grid container spacing={1}>
+        <Grid container spacing={2}>
           <Grid item xs={12}>
             <Box sx={useStyle.banner} />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography sx={useStyle.boldText}>
+              {"Sponsorships > "}{" "}
+              <span style={{ ...useStyle.boldText, color: "#03FB75" }}>
+                Afa
+              </span>
+            </Typography>
           </Grid>
           <Grid item container spacing={2}>
             <Grid item xs={6}>
               <Box sx={useStyle.gridimg1} />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item  xs={6}>
               <Box sx={useStyle.gridContent}>
                 <Typography sx={useStyle.boldText}>
                   Official AFA Sponsor

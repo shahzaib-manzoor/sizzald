@@ -14,7 +14,7 @@ export const appRoutes = {
   SizzldGames:"/sizzldGames",
   Affilate:"/affilate",
   sponsership:{
-    root:'/sponserships',
+    root:'/sponsership',
     afa:'/sponserships/afa',
     cloud9:'/sponserships/cloud9',
     davidLuiz:'/sponserships/davidLuiz',

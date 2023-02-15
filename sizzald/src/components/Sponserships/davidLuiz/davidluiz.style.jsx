@@ -1,8 +1,8 @@
-import afaBanner from "../../../assets/sponserships/afaBanner.svg";
-import afaCelebrete from "../../../assets/sponserships/afaCelebrete.svg";
-import afaPlayers from "../../../assets/sponserships/afaPlayers.svg";
-import afaWelcome from "../../../assets/sponserships/afaWelcome.svg";
-import afaGroup from "../../../assets/sponserships/afaGroup.svg";
+import davidbanner from "../../../assets/sponserships/davidbanner.svg";
+import davidCelebrete from "../../../assets/sponserships/davidCelebrete.svg";
+import davidPlayers from "../../../assets/sponserships/davidPlayers.svg";
+import davidWelcome from "../../../assets/sponserships/davidWelcome.svg";
+import davidGroup from "../../../assets/sponserships/davidGroup.svg";
 
 const bgImg = (img) => {
   return {
@@ -22,7 +22,7 @@ export const useStyle = {
     color: "white",
   },
   banner: {
-    ...bgImg(afaBanner),
+    ...bgImg(davidbanner),
     width: "100%",
     height: "350px",
   },
@@ -52,12 +52,12 @@ export const useStyle = {
   gridimg1: {
     width: "100%",
     height: "100%",
-    ...bgImg(afaCelebrete),
+    ...bgImg(davidCelebrete),
   },
   gridimg2: {
     width: "100%",
     height: "100%",
-    ...bgImg(afaPlayers),
+    ...bgImg(davidPlayers),
   },
   last: {
     width: "100%",
@@ -73,7 +73,7 @@ export const useStyle = {
     justifyContent: "space-around",
     alignItems: "center",
     flexDirection: "column",
-    ...bgImg(afaWelcome),
+    ...bgImg(davidWelcome),
     content: {
       welcomeTxt: {
         fontFamily: "Poppins",
@@ -83,6 +83,7 @@ export const useStyle = {
         lineHeight: "90px",
         color: "#FFFFFF",
         textAlign: 'center'
+
       },
       cryptoTxt: {
         fontFamily: "Poppins",
@@ -92,7 +93,7 @@ export const useStyle = {
         lineHeight: "60px",
         color: "#00FF11",
       },
-      groupImgSrc:afaGroup,
+      groupImgSrc:davidGroup,
       groupImg:{
         height:"100%",
         width:'100%',
