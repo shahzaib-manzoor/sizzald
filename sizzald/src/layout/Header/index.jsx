@@ -246,41 +246,6 @@ export default function PrimarySearchAppBar({
                 sports
               </Button>
             </ButtonGroup>
-            {/* <div
-              className="grid  grid-cols-2  rounded-xl !bg-clwhite p-1"
-              x-data="app"
-            >
-              <div>
-                <input
-                  type="radio"
-                  name="option"
-                  id="1"
-                  className="peer hidden"
-                  defaultChecked
-                />
-                <label
-                  htmlFor="1"
-                  className="px-5 py-2 block cursor-pointer select-none rounded-xl   text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
-                >
-                  Casino
-                </label>
-              </div>
-
-              <div>
-                <input
-                  type="radio"
-                  name="option"
-                  id="2"
-                  className="peer hidden"
-                />
-                <label
-                  htmlFor="2"
-                  className="px-5 py-2 block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
-                >
-                  Sport
-                </label>
-              </div>
-            </div> */}
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerFlex}>
@@ -318,17 +283,6 @@ export default function PrimarySearchAppBar({
               >
                 <Badge badgeContent={17} color="error">
                   <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                className="!bg-clwhite"
-                sx={style.headerIcons}
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="error">
-                  <Message />
                 </Badge>
               </IconButton>
               <GlobalChat />
