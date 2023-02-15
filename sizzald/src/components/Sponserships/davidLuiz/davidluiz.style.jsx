@@ -44,7 +44,7 @@ export const useStyle = {
     fontFamily: "Poppins",
     fontStyle: "normal",
     fontWeight: "400",
-    fontSize: {xs:'13px',xl:"17px",lg:"15px"},
+    fontSize: {xs:'13px',xl:"15px",lg:"14px"},
     lineHeight: "26px",
     letterSpacing: " 0.01em",
     color: "#FFFFFF",
@@ -61,7 +61,7 @@ export const useStyle = {
   },
   last: {
     width: "100%",
-    height: "500px",
+    height: "450px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
