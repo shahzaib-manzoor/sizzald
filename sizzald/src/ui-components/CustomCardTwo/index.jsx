@@ -9,10 +9,18 @@ import Typography from "@mui/material/Typography";
 import CustomCardTwoImg from "../../assets/customCardTwo.png";
 
 import IconButton from "@mui/material/IconButton";
-export default function CustomCardTwo({ img, name, balance, icon,avator }) {
+export default function CustomCardTwo({ img, name, balance, icon, avator }) {
   return (
     <Card
-      sx={style.cardContainer}
+      sx={{
+        marginTop: "10px",
+        // width: { xs: "95%", sm: "94%", md: "94%", lg: "94%", xl: "100%" },
+        // width:"240px",
+        background: "rgba(43, 45, 80, 1)",
+        margin: "12px 6px",
+        boxShadow: "0px 0px 6px 0px rgba(95, 95, 111, 1)",
+        // paddingLeft:'20'
+      }}
     >
       <CardMedia
         sx={{
@@ -29,18 +37,14 @@ export default function CustomCardTwo({ img, name, balance, icon,avator }) {
           backgroundRepeat: "no-repeat",
           borderRadius: "6px",
         }}
-        title="game"
+        title="green iguana"
       />
       <CardContent sx={style.cardFlex}>
         <Box sx={style.cardFlexTwo}>
           {avator}
           <Box sx={{ padding: "4px" }}>
-            <Typography sx={style.cardTextName} >
-              {name}
-            </Typography>
-            <Typography sx={style.cardTextPrice} >
-              {balance}
-            </Typography>
+            <Typography sx={style.cardTextName}>{name}</Typography>
+            <Typography sx={style.cardTextPrice}>{balance}</Typography>
           </Box>
         </Box>
         <Box sx={{ marginRight: "6px" }}>{icon}</Box>

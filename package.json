@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm start --prefix server",
-    "install-client": "cd sizzald && npm install && npm run build && cd ..",
+    "install-client": "cd sizzald && npm install --legacy-peer-deps && npm run build && cd ..",
     "install-server": "cd server && npm install && cd .. ",
     "heroku-postbuild": "npm run install-client && npm run install-server"
 },

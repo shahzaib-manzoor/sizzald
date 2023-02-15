@@ -26,6 +26,7 @@ import sponsership from "../../assets/sponsership.svg";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import liveCasino from "../../assets/liveCasino.png";
 import promotion from '../../assets/promotion.png'
+import { appRoutes } from "../../static/routeNames";
 
 export const SidebarData = [
   {
@@ -159,24 +160,24 @@ export const SidebarData = [
   },
   {
     title: "Sponsorships",
-    path: '/sponserships',
+    path: appRoutes.sponsership.root,
     icon: sponsership,
     iconClosed: <ExpandLessIcon />,
     iconOpened: <ExpandMoreIcon />,
     subNav: [
       {
         title: "AFA",
-        path: "/sponserships/afa",
+        path: appRoutes.sponsership.afa,
         // icon:picksforyou,
       },
       {
         title: "Cloud 9",
-        path: "/sponserships/cloud9",
+        path: appRoutes.sponsership.cloud9,
         // icon:picksforyou,
       },
       {
         title: "David Luiz",
-        path: "/sponserships/davidLuiz",
+        path: appRoutes.sponsership.davidLuiz,
         // icon:picksforyou,
       },
     
