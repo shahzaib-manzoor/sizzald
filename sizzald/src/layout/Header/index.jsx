@@ -13,7 +13,7 @@ import {
   Avatar,
   ButtonGroup,
 } from "@mui/material";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import * as style from "./style/style";
 import searchIcon from "../../assets/searchIcon.png";
 import EmailIcon from "@mui/icons-material/Email";
@@ -21,17 +21,17 @@ import EmailIcon from "@mui/icons-material/Email";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/More";
-import Message from "@mui/icons-material/Message";
 // import logo from "../../assets/sizzld-logo.png";
-import logo from "../../assets/logo1.png";
+import logo from "../../assets/logo.svg";
 
 import avator from "../../assets/avator.png";
 import bitcoin from "../../assets/bitcoin.png";
 import wallet from "../../assets/wallet.png";
 import arrowDown from "../../assets/arrow-down.png";
-import MenuIcon from "@mui/icons-material/Menu";
+// import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import navIcon from "../../assets/navIcon.png";
+import GlobalChat from "./Popups/GlobalChat";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -67,8 +67,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(1)})`,
     transition: theme.transitions.create("width"),
-    
-  
+
     [theme.breakpoints.up("sm")]: {
       width: "30ch",
     },
@@ -112,9 +111,9 @@ export default function PrimarySearchAppBar({
     setMobileMoreAnchorEl(event.currentTarget);
   };
   const handleLogout = () => {
-    localStorage.removeItem("auth")
-    navigate("/")
-   }
+    localStorage.removeItem("auth");
+    navigate("/");
+  };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -132,8 +131,8 @@ export default function PrimarySearchAppBar({
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem >Profile</MenuItem>
-      <MenuItem onClick={()=>handleLogout()}>Logout</MenuItem>
+      <MenuItem>Profile</MenuItem>
+      <MenuItem onClick={() => handleLogout()}>Logout</MenuItem>
     </Menu>
   );
 
@@ -192,17 +191,10 @@ export default function PrimarySearchAppBar({
   return (
     <Box sx={style.containerNav}>
       <AppBar
+        id="Appbar"
         sx={{
-          // margin: "20px 10px",
           padding: "0px",
-          // top: "20px",
-          // left: "50%",
-          // transform: "translateX(-50%)",
-          // width: "99%",
-          // borderRadius: "8px",
-          // boxShadow: "0px 0px 6px #5F5F6F",
-          backgroundColor:'rgba(43, 45, 80, 0.6) !important'
-         
+          backgroundColor: "rgba(43, 45, 80, 0.6) !important",
         }}
       >
         <Toolbar sx={style.Toolbar}>
@@ -216,13 +208,17 @@ export default function PrimarySearchAppBar({
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerRadioButton}>
             <ButtonGroup
-              sx={{ borderRadius: "8px", border: "1px solid #2B2D50",marginLeft:"50px" }}
+              sx={{
+                borderRadius: "8px",
+                border: "1px solid #2B2D50",
+                marginLeft: "50px",
+              }}
             >
               <Button
                 sx={{
                   background: "#5842F4",
                   borderRadius: "8px",
-                  width: {lg:"90px",xl:"129px"},
+                  width: { lg: "90px", xl: "129px" },
                   height: "47px",
                   color: "#ffffff",
                 }}
@@ -233,7 +229,7 @@ export default function PrimarySearchAppBar({
                 sx={{
                   background: "#2B2D50",
                   borderRadius: "8px",
-                  width: {lg:"90px",xl:"129px"},
+                  width: { lg: "90px", xl: "129px" },
                   height: "47px",
                   color: "#ffffff",
                   border: "1px solid #2B2D50",
@@ -243,41 +239,6 @@ export default function PrimarySearchAppBar({
                 sports
               </Button>
             </ButtonGroup>
-            {/* <div
-              className="grid  grid-cols-2  rounded-xl !bg-clwhite p-1"
-              x-data="app"
-            >
-              <div>
-                <input
-                  type="radio"
-                  name="option"
-                  id="1"
-                  className="peer hidden"
-                  defaultChecked
-                />
-                <label
-                  htmlFor="1"
-                  className="px-5 py-2 block cursor-pointer select-none rounded-xl   text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
-                >
-                  Casino
-                </label>
-              </div>
-
-              <div>
-                <input
-                  type="radio"
-                  name="option"
-                  id="2"
-                  className="peer hidden"
-                />
-                <label
-                  htmlFor="2"
-                  className="px-5 py-2 block cursor-pointer select-none rounded-xl p-2 text-center peer-checked:bg-clSky peer-checked:font-bold peer-checked:clLightPurple"
-                >
-                  Sport
-                </label>
-              </div>
-            </div> */}
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={style.headerFlex}>
@@ -317,17 +278,7 @@ export default function PrimarySearchAppBar({
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
-              <IconButton
-                className="!bg-clwhite"
-                sx={style.headerIcons}
-                size="large"
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="error">
-                  <Message />
-                </Badge>
-              </IconButton>
+              <GlobalChat />
               <Button
                 className="!bg-clwhite"
                 sx={style.headerButton}

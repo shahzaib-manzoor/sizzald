@@ -60,15 +60,26 @@ export const mainBox = {
 };
 export const typography = {
   color: "#ffffff",
-  textTransform: "uppercase",
-  fontSize: " 14px",
+  textTransform:"uppercase",
+  fontFamily: "Poppins",
+  fontSize: {lg:"10px",xl:"9px"},
   fontWeight: 600,
+  lineHeight: "15px",
+  letterSpacing: "0.5px",
+  textAlign: "left",
+  
 };
 export const unlock = {
-  color: "#B3B3B3",
-  textTransform: "uppercase",
-  fontSize: " 14px",
+  fontFamily: "Poppins",
+  color:"rgba(179, 179, 179, 1)",
+  textTransform:"uppercase",
+  fontSize: {lg:"10px",xl:"9px"},
+  fontStyle: "italic",
   fontWeight: 600,
+  lineHeight: "15px",
+  letterSpacing: "0.5px",
+  texAlign: "left",
+  
 };
 export const secondflex = {
   display: "flex",

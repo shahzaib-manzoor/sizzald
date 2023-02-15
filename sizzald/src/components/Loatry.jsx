@@ -6,13 +6,15 @@ import jackpot from '../assets/jackpot.svg';
 import loatryButton from '../assets/loatryButton.svg';
 import bannerLotary from '../assets/bannerLotary.png';
 import { textTransform } from '@mui/system';
-import GameId from './Loatry/GameId';
+const GameId=React?.lazy(()=> import('./Loatry/GameId'));
+// import GameId from './Loatry/GameId';
 import Card from './Loatry/Card';
 import CocoLotary from './Loatry/CocoLotary';
 import Instruction from './Loatry/Instruction';
 import  Balance  from './Loatry/Balance';
 import DetailedCard from '../ui-components/DetailCard';
 import Network from "../ui-components/Network";
+import { Suspense } from 'react';
 
 const Loatry = () => {
   return (
@@ -242,7 +244,9 @@ const Loatry = () => {
         </Button>
         {/* components */}
 
+        <Suspense fallback={<h3 style={{textAlign:'center'}}>Please Wait...</h3>}>
         <GameId/>
+        </Suspense>
         <Card/>
         <CocoLotary/>
         <Instruction/>

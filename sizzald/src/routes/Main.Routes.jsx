@@ -1,7 +1,7 @@
-import { lazy } from "react";
-
-import Dashboard from "../components/Dashboard";
+import { lazy,Suspense } from "react";
+// const Dashboard=lazy(()=>import('../components/Dashboard'))
 // import Dashboard from "../components/Dashboard";
+import Dashboard from "../components/Dashboard";
 import Favourite from "../components/Favourite";
 import Picks from "../components/Picks";
 import Signup from "../components/Signup";
@@ -17,6 +17,10 @@ import Loatry from "../components/Loatry";
 import Limbo from "../components/SizzldGames/Limbo";
 import SizzldMainPage from "../components/SizzldMainPage";
 import Affilate from "../components/Affilate";
+import { appRoutes } from "../static/routeNames";
+import Afa from "../components/Sponserships/Afa/Afa";
+import Cloud9 from "../components/Sponserships/Cloud9/Cloud9";
+import DavidLuiz from "../components/Sponserships/davidLuiz/DavidLuiz";
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -25,59 +29,80 @@ const MainRoutes = {
   children: [
     {
       path: "/",
-      element: <Dashboard />,
+      element:  <Dashboard />
     },
+   
     {
-      path: "/picksforyou",
+      path: appRoutes.PicksForYou,
       element: <Picks />,
     },
     {
-      path: "/favourite",
+      path: appRoutes.Favourite,
       element: <Favourite />,
     },
     {
-      path: "/recent",
+      path: appRoutes.Recent,
       element: <RecentComp />,
     },
     {
-      path: "/slot",
+      path: appRoutes.Slot,
       element: <Slot />,
     },
     {
-      path: "/hotgame",
+      path: appRoutes.Hotgame,
       element: <HotGame />,
     },
     {
-      path: "/newrelease",
+      path: appRoutes.Newrelease,
       element: <NewRelease />,
     },
     {
-      path: "/highvolatility",
+      path:appRoutes.Highvolatility,
       element: <HighVolatility />,
     },
     {
-      path: "/featurebuyin",
+      path: appRoutes.Featurebuyin,
       element: <FeatureBuyIn />,
     },
     {
-      path: "/tablegame",
+      path: appRoutes.Tablegame,
       element: <TableGame />,
     },
     {
-      path: "/loatry",
+      path: appRoutes.Loatry,
       element: <Loatry />,
     },
     {
-      path: "/limbo",
+      path: appRoutes.Limbo,
       element: <Limbo />,
     },
     {
-      path: "/sizzldGames",
+      path: appRoutes.SizzldGames,
       element: <SizzldMainPage />,
     },
     {
-      path: "/affilate",
+      path: appRoutes.Affilate,
       element: <Affilate />,
+    },
+    {
+      path: "/languages",
+      element:  <Dashboard />
+    },
+    {
+      path: appRoutes.sponsership.root,
+      element:  <Dashboard />
+    },
+    {
+      path: appRoutes.sponsership.afa,
+      element:  <Afa/>
+    },
+    {
+      path: appRoutes.sponsership.cloud9,
+      element:  <Cloud9/>
+    },
+    {
+      path: appRoutes.sponsership.davidLuiz,
+      element:  <DavidLuiz/>
     },
   ],
 };

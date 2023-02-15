@@ -24,9 +24,6 @@ import cardFour from '../../assets/cardFour.png';
 import cardFive from '../../assets/cardFive.png';
 import cardSix from '../../assets/cardSix.png';
 import arrowplane from '../../assets/arrowplane.svg';
-import group from '../../assets/group.svg';
-import gold from '../../assets/gold.svg';
-import spinner from '../../assets/spiner.svg';
 import icon from '../../assets/coins.svg';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
@@ -43,11 +40,20 @@ import { height } from '@mui/system';
 import { useSelector } from 'react-redux';
 import ReferPopup from './ReferPopup';
 import ReferSpin from './ReferSpin';
+import TaskPopUp from './TaskPopUp';
+import BonusPop from './BonusPop';
+import BonusSimplePop from './BonusSimplePop';
 import { useState } from 'react';
 
 export default function SideBar() {
-  const [open, setOpen] = useState(false);
-  const [openSpin, setOpenSpin] = useState(false);
+  const [model, setModel] = useState({
+    referModel: false,
+    spinModel: false,
+    taskModel: false,
+    bonusModel: false,
+    bousSimple: false,
+  });
+  // const [openSpin, setOpenSpin] = useState(false);
   //   const styles = {
   //     sidebar: {
   //         overflow: 'auto',
@@ -69,21 +75,56 @@ export default function SideBar() {
     scrollbar-width: none; /* Firefox */
   `;
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  const handleOpenSpin = () => setOpenSpin(true);
-  const handleCloseSpin = () => setOpenSpin(false);
+  // const handleOpenSpin = () => setOpenSpin(true);
+  // const handleCloseSpin = () => setOpenSpin(false);
+  const modelOpenhandler = (name) => {
+    let obj = {
+      referModel: false,
+      spinModel: false,
+      taskModel: false,
+      bonusModel: false,
+      bousSimple: false,
+    };
+    obj[name] = true;
+    setModel({ ...obj });
+  };
+  const modelClosehandler = (name) => {
+    let obj = {
+      referModel: false,
+      spinModel: false,
+      taskModel: false,
+      bonusModel: false,
+      bousSimple: false,
+    };
+    obj[name] = false;
+    setModel({ ...obj });
+  };
   return (
     <div style={{ position: 'relative' }}>
       <ReferPopup
-        handleOpen={handleOpen}
-        handleClose={handleClose}
-        open={open}
+        handleOpen={() => modelOpenhandler('referModel')}
+        handleClose={() => modelClosehandler('referModel')}
+        open={model?.referModel}
       />
       <ReferSpin
-        handleOpenSpin={handleOpenSpin}
-        handleCloseSpin={handleCloseSpin}
-        open={openSpin}
+        handleOpen={() => modelOpenhandler('spinModel')}
+        handleClose={() => modelClosehandler('spinModel')}
+        open={model?.spinModel}
+      />
+      <TaskPopUp
+        handleOpen={() => modelOpenhandler('taskModel')}
+        handleClose={() => modelClosehandler('taskModel')}
+        open={model.taskModel}
+      />
+      <BonusPop
+        handleOpen={() => modelOpenhandler('bonusModel')}
+        handleClose={() => modelClosehandler('bonusModel')}
+        open={model.bonusModel}
+      />
+      <BonusSimplePop
+        handleOpen={() => modelOpenhandler('bousSimple')}
+        handleClose={() => modelClosehandler('bousSimple')}
+        open={model.bousSimple}
       />
       <HiddenScroll sx={{ ...style }} className='child'>
         <Box sx={firstChild}>
@@ -97,8 +138,14 @@ export default function SideBar() {
                 }}
               >
                 <Typography sx={vip}>My VIP </Typography>
-                <Typography sx={{ color: '#ffffff', marginLeft: '5px',fontWeight:600,
-  fontStyle: "italic", }}>
+                <Typography
+                  sx={{
+                    color: '#ffffff',
+                    marginLeft: '5px',
+                    fontWeight: 600,
+                    fontStyle: 'italic',
+                  }}
+                >
                   Perks{' '}
                 </Typography>
               </Box>
@@ -116,6 +163,8 @@ export default function SideBar() {
                 backgroundImage={`url(${firstCard})`}
                 unlocked={'unlocked'}
                 marginLeft={'4px'}
+                handleOpen={() => modelOpenhandler('taskModel')}
+                handleClose={() => modelClosehandler('taskModel')}
               />
               <Card
                 text={'spin'}
@@ -125,8 +174,8 @@ export default function SideBar() {
                 unlocked={'unlocked'}
                 marginRight={'10px'}
                 marginLeft={'4px'}
-                // handleOpenSpin={handleOpenSpin}
-                // handleCloseSpin={handleCloseSpin}
+                handleOpen={() => modelOpenhandler('spinModel')}
+                handleClose={() => modelClosehandler('spinModel')}
               />
             </Box>
             <Box sx={{ display: 'flex', mt: '10px' }}>
@@ -167,6 +216,8 @@ export default function SideBar() {
                   lg: '4px',
                   xl: '-1px',
                 }}
+                handleOpen={() => modelOpenhandler('bonusModel')}
+                handleClose={() => modelClosehandler('bonusModel')}
               />
               <Card
                 text={'bONUS'}
@@ -178,16 +229,18 @@ export default function SideBar() {
                 marginRight={'10px'}
                 backgroundImage={`url(${cardSix})`}
                 marginLeft={'4px'}
+                handleOpen={() => modelOpenhandler('bousSimple')}
+                handleClose={() => modelClosehandler('bousSimple')}
                 // marginLeft={'13px'}
               />
             </Box>
           </Box>
         </Box>
         {/* second div */}
-        <Box sx={secondChild} onClick={handleOpen}>
+        <Box sx={secondChild} onClick={() => modelOpenhandler('referModel')}>
           <img
             src={icon}
-            alt=''
+            // alt=''
             style={{ maxWidth: '100%', marginLeft: '15px' }}
           />
           <Typography
@@ -223,7 +276,7 @@ export default function SideBar() {
               borderRadius: '8px',
               border: '1px solid rgba(95, 95, 111, 0.6)',
               mt: '30px',
-              marginLeft:'15px'
+              marginLeft: '15px',
             }}
           >
             <Button

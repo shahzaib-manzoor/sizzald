@@ -52,7 +52,6 @@ const Signup = () => {
       }))
       localStorage.setItem('uid',res?.data?.data?.user?._id);
       localStorage.setItem('auth', true)
-
       navigate('/')
     })
 

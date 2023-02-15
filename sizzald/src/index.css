@@ -1,3 +1,15 @@
 body{
-    font-family: Poppins;
+    font-family: "Poppins";
 }
+
+::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+   /* IE and Edge */
+ /* Firefox */
+ :root {
+  --primary-color: red;
+  --color:#173A5E;
+ }

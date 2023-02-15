@@ -163,7 +163,7 @@ function AffiliateReward({reward}) {
                     textAlign: "left",
                   }}
                 >
-                  ${user?.reward}.00
+                  ${user?.reward} 
                 </Typography>
                 <Button
                   sx={{
