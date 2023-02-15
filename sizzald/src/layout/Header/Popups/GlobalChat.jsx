@@ -1,12 +1,6 @@
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import { Typography, Box, Button, Avatar } from "@mui/material";
 import headerPopup1 from "../../../assets/headerPopup1.svg";
 import headerPopup2 from "../../../assets/headerPopup2.svg";
@@ -19,9 +13,11 @@ import angle from "../../../assets/angle.svg";
 import leave from "../../../assets/leave.svg";
 import gif from "../../../assets/gif.svg";
 import avator from "../../../assets/avator.svg";
+import avator2 from "../../../assets/avator2.svg";
 import { Badge } from "@mui/material";
 import Message from "@mui/icons-material/Message";
 import Input from "@mui/material/Input";
+import award from "../../../assets/award.svg";
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     right: false,
@@ -30,7 +26,7 @@ export default function TemporaryDrawer() {
   let chat = [
     {
       name: "Zealous Michelsen",
-      img: { avator },
+      img: avator,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -38,7 +34,7 @@ export default function TemporaryDrawer() {
     },
     {
       name: "Zealous Michelsen",
-      img: "ok",
+      img: avator2,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -46,7 +42,7 @@ export default function TemporaryDrawer() {
     },
     {
       name: "Zealous Michelsen",
-      img: "ok",
+      img: avator,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -54,7 +50,7 @@ export default function TemporaryDrawer() {
     },
     {
       name: "Zealous Michelsen",
-      img: { avator },
+      img: avator,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -62,7 +58,7 @@ export default function TemporaryDrawer() {
     },
     {
       name: "Zealous Michelsen",
-      img: "ok",
+      img: avator2,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -70,7 +66,7 @@ export default function TemporaryDrawer() {
     },
     {
       name: "Zealous Michelsen",
-      img: "ok",
+      img: avator2,
       icon: "ok",
       level: "VIP 04",
       mention: "@SCAM_alert",
@@ -107,13 +103,20 @@ export default function TemporaryDrawer() {
             <img style={style.chatImgsTop} src={headerPopup3} alt="" />
           </Box>
         </Box>
-        <List sx={{ height: "auto" }}>
+        <List sx={{ height: "70%", overflow: "auto" }}>
           {chat.map((chat, index) => (
             <ListItem key={index} disablePadding>
               <Box sx={style.chatMessage}>
                 <Box>
                   <Avatar sx={style.chatMessageAvatar} src={chat.img} />
                   <Typography sx={style.chatLevel}>Vip 6</Typography>
+                  <Box sx={{ transform: "translateY(-10px)" }}>
+                    <img src={award} alt="" />
+                    <img src={award} alt="" />
+                    <img src={award} alt="" />
+                    <img src={award} alt="" />
+                    <img src={award} alt="" />
+                  </Box>
                 </Box>
                 <Box>
                   <Typography sx={style.chatName}>{chat.name}</Typography>
@@ -166,8 +169,6 @@ export default function TemporaryDrawer() {
         <React.Fragment key={anchor}>
           <IconButton
             onClick={toggleDrawer(anchor, true)}
-            className="!bg-clwhite"
-            // sx={style.headerIcons}
             sx={{
               marginLeft: { xs: "5px", md: "8px", lg: "10px", xl: "20px" },
               height: "40px",
