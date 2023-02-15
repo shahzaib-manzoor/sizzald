@@ -110,7 +110,7 @@ export default function TemporaryDrawer() {
             <img style={style.chatImgsTop} src={headerPopup3} alt="" />
           </Box>
         </Box>
-        <List sx={{ height: "70%", overflow: "auto" }}>
+        <List sx={{ height: "75%", overflow: "auto" }}>
           {chat.map((chat, index) => (
             <ListItem key={index} disablePadding>
               <Box sx={style.chatMessage}>
