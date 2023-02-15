@@ -78,13 +78,24 @@ export default function SideBar() {
   // const handleOpenSpin = () => setOpenSpin(true);
   // const handleCloseSpin = () => setOpenSpin(false);
   const modelOpenhandler = (name) => {
-    console.log(name);
-    let obj = model;
+    let obj = {
+      referModel: false,
+      spinModel: false,
+      taskModel: false,
+      bonusModel: false,
+      bousSimple: false,
+    };
     obj[name] = true;
     setModel({ ...obj });
   };
   const modelClosehandler = (name) => {
-    let obj = model;
+    let obj = {
+      referModel: false,
+      spinModel: false,
+      taskModel: false,
+      bonusModel: false,
+      bousSimple: false,
+    };
     obj[name] = false;
     setModel({ ...obj });
   };
