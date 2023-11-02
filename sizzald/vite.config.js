@@ -12,12 +12,7 @@ export default defineConfig({
     outDir: "../server/dist",
     
     
-  },
-  
-
-
-
- 
+  };
 
   define: {global: 'window'}
 });
