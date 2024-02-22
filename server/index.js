@@ -14,6 +14,9 @@ app.use(function (err, req, res, next) {
     res.status(401);
     res.json({ message: err.name + ": " + err.message });
   }
+  
+  
+  
 });
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(cors());
